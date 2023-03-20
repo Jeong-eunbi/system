@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역설정</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/buga.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+    <script type="text/javascript" defer src="../../js/buga.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="jungpopbtn" onclick="jungpopbtn()">중계기</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="jumpopbtn()">점멸기</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../boan/selectcontrol.html">중계기선택제어</a></li>
+                                    <li><a href="#a" onclick="jung_show()">중계기전체제어</a></li>
+                                    <li><a href="../boan/iotcontrol.html">IoT점멸기선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="data2/jungset.html">중계기선택설정</a></li>
+                                    <li><a href="#a" onclick="j_setbox()">중계기전체설정</a></li>
+                                    <li><a href="../data2/iotselect.html">IoT점멸기선택설정</a></li>
+                                    <li><a href="../data2/datalist.html">점멸기운용데이터현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/iotgam.html">IoT감시내역</a></li>
+                                    <li><a href="../list/iotmyeong.html">IoT명령내역</a></li>
+                                    <li><a href="../list/rfgam.html">RF감시내역</a></li>
+                                    <li class="on"><a href="../list/rfmyeong.html">RF명령내역</a></li>
+                                    <li><a href="../list/boanbosu.html">보수일지</a></li>
+                                    <li><a href="../list/junglist.html">중계기현황</a></li>
+                                    <li><a href="../list/jumlist.html">점멸기현황</a></li>
+                                    <li><a href="../list/jumdelete.html">점멸기삭제내역</a></li>
+                                    <li><a href="../list/blue.html">블루투스</a></li>
+                                </ul>                     
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="smsset/message1.html">수신자관리</a></li>
+                                    <li><a href="../sms/messageset.html">메시지관리</a></li>
+                                    <li><a href="../sms/messagecont.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>              
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../state/state1.html">통계자료</a></li>
+                                    <li><a href="../state/onofftime1.html">점소등시간</a></li>
+                                    <li class="on"><a href="../state/local2.html">지역설정</a></li>
+                                    <li><a href="../state/lamp2.html">램프설정</a></li>
+                                </ul>             
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="scroll_wrap long_scroll">
+                    <div class="bugabox">
+                        <div class="box">
+                            <div class="boxtitle">
+                                <span>지역 설정</span>
+                            </div>
+                            <div class="itemwrap">
+                                <div class="item">
+                                    <h3>추가하기</h3>
+                                    <div class="adressbox box1">
+                                        <select name="" id="local_sel">
+                                            <option value="">--'구읍면'선택--</option>
+                                            <option value="수정구">수정구</option>
+                                            <option value="태구">태구</option>
+                                            <option value="테스트구">테스트구</option>
+
+                                        </select>
+                                        <div class="textbox col">
+                                            <label>구,읍,면
+                                                <input type="text" id="local_name">
+                                            </label>
+                                            <div class="btn">
+                                                <label>동,리
+                                                    <input type="text">
+                                                </label>
+                                                <button>등록</button>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+                                    <h3>수정 / 삭제</h3>
+                                    <p>수정 또는 삭제를 하려면 목록에서 먼저 선택 하세요.</p>
+                                    <div class="adressbox box2">
+                                        <select class="listbox" multiple>
+                                            <option value="">수정구 복정동</option>
+                                            <option value="">수정구 신흥동</option>
+                                            <option value="">태구 태동 태리</option>
+                                        </select>
+                                        <div>
+                                            <div class="selbox">   
+                                                <select id="selectvalue">
+                                                    <option value="">--'구읍면'선택--</option>
+                                                    <option value="">--'새로'등록--</option>
+                                                    <option value="">수정구</option>
+                                                </select>
+                                                <span>구</span>
+                                                <input type="text" id="insert">
+                                            </div>
+                                            <div class="btn">
+                                                <label>동,리
+                                                    <input type="text">
+                                                </label>
+                                                <button>수정</button>
+                                                <button>삭제</button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxtitle">
+                                <span>도로명 설정</span>
+                            </div>
+                            <div class="itemwrap">
+                                <div class="item">
+                                    <h3>추가하기</h3>
+                                    <div class="adressbox box1">
+                                        <div class="textbox">
+                                            <input type="text">
+                                            <button>등록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h3>수정 / 삭제</h3>
+                                    <p>수정 또는 삭제를 하려면 목록에서 먼저 선택 하세요.</p>
+                                    <div class="adressbox box2">
+                                        <select class="listbox" multiple id="road">
+                                            <option value="테스트">테스트</option>
+                                            <option value="테스트11">테스트11</option>
+                                            <option value="테스트22">테스트22</option>
+                                        </select>
+                                        <div class="textbox">
+                                            <input type="text" id="road_name">
+                                            <button>수정</button>
+                                            <button>삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="boxtitle">
+                                <span>그룹명 설정</span>
+                            </div>
+                            <div class="itemwrap">
+                                <div class="item">
+                                    <h3>등록하기</h3>
+                                    <div class="adressbox box1">
+                                        <div class="textbox">
+                                            <input type="text">
+                                            <button>등록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h3>수정 / 삭제</h3>
+                                    <p>수정 또는 삭제를 하려면 목록에서 먼저 선택 하세요.</p>
+                                    <div class="adressbox box2">
+                                        <select class="listbox" multiple id="group">
+                                            <option value="그룹1">그룹1</option>
+                                            <option value="그룹2">그룹2</option>
+                                            <option value="심야소등그룹">심야소등그룹</option>
+                                        </select>
+                                        <div class="textbox">
+                                            <input type="text" id="group_name">
+                                            <button>수정</button>
+                                            <button>삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

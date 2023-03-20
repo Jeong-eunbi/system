@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>중계기 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/jung_pop.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/jung.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="jungbox">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>중계기</span>
+                <select name="" id="">
+                    <option value="">신형 중계기 테스트</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="popcon_wrap">
+            <ul class="nav">
+                <li><a href="junggye1.html" class="text">기본정보</a></li>
+                <li><a href="junggye2.html" class="text">운용데이터</a></li>
+                <li><a href="junggye3.html" class="text_active">점멸기 LIST</a></li>
+                <li><a href="junggye4.html" class="text">경로 LIST</a></li>
+                <li><a href="junggye5.html" class="text">개별감시내역</a></li>
+            </ul>
+            <span class="name"> MC 00/0001/CH:2</span>
+            <div class="nav_list">
+                <div class="jung_tab3">
+                    <div class="between">
+                        <div class="table_wrapper xscroll">
+                            <table class="tab3_scroll">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>이름</th>
+                                        <th>현재상태</th>
+                                        <th>No</th>
+                                        <th>이름</th>
+                                        <th>현재상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>2</td>
+                                        <td>마석우리001</td>
+                                        <td class="color">이상점등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>2</td>
+                                        <td>마석우리001</td>
+                                        <td class="red">통신이상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>4</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>6</td>
+                                        <td>마석우리001</td>
+                                        <td class="color">정전</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>8</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>10</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                        <td>12</td>
+                                        <td>마석우리001</td>
+                                        <td>정상소등</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="btn_group">
+                            <div class="right">
+                                <div><a href="">닫기</a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

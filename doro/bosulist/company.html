@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 업체관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/main.js" ></script>
+    <script type="text/javascript" defer src="../../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/doro.js" ></script>
+    <script type="text/javascript" defer src="../../js/print.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+
+        <!-- header 끝 / content시작 -->
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">이용안내<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a">이용안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">민원관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../minwon/complain.html">불편신고</a></li>
+                                    <li class="on"><a href="../minwon/process.html">처리현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수처리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosu/setlist.html">설치현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수내역관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosulist/notice.html">공지관리</a></li>
+                                    <li><a href="../bosulist/bosulist.html">보수내역관리</a></li>
+                                    <li><a href="../bosulist/billing.html">청구내역관리</a></li>
+                                    <li><a href="../bosulist/meterial.html">자재관리</a></li>
+                                    <li><a href="../bosulist/inout1.html">자재입출고관리</a></li>
+                                    <li><a href="../bosulist/tong_data1.html">통계자료</a></li>
+                                    <li class="on"><a href="../bosulist/company.html">업체관리</a></li>
+                                    <li><a href="../bosulist/bosu_setting.html">환경설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap combtn">
+                    <div class="lefttbtn">
+                        <div class="btn_bg"><a href="#a" onclick="companypop()" id="companypop">등록</a></div>
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="roadcount3"></span>건</div>
+                    <div id="tablewrap" class="custom_scroll roadtable3">
+                        <table class="company">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>이름</th>
+                                    <th>아이디</th>
+                                    <th>사용자권한</th>
+                                    <th>사용자설명</th>
+                                    <th>전화번호</th>
+                                    <th>소속</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr onclick="companypop()">
+                                    <td>1</td>
+                                    <td>정은비</td>
+                                    <td>121212</td>
+                                    <td>전체권한 A</td>
+                                    <td></td>
+                                    <td>124</td>
+                                    <td>가보테크</td>
+                                </tr>
+                                <tr onclick="companypop()">
+                                    <td>2</td>
+                                    <td>정은비</td>
+                                    <td>121212</td>
+                                    <td>전체권한 A</td>
+                                    <td></td>
+                                    <td>124</td>
+                                    <td>가보테크</td>
+                                </tr>
+                                <tr onclick="companypop()">
+                                    <td>3</td>
+                                    <td>정은비</td>
+                                    <td>121212</td>
+                                    <td>전체권한 A</td>
+                                    <td></td>
+                                    <td>124</td>
+                                    <td>가보테크</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+ 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>구형분수대 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/bunsu.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab1 oldwrap bunsu_tab1"> 
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between bunsu_height">
+            <div>
+                <ul class="nav">
+                    <li><a href="oldbunsutab1.html" class="text text_active">기본정보</a></li>
+                    <li><a href="oldbunsutab2.html" class="text">상태정보</a></li>
+                    <li><a href="oldbunsutab3.html" class="text">운용데이터</a></li>
+                    <li><a href="oldbunsutab4.html" class="text">이벤트</a></li>
+                </ul>
+                <div class="table_wrapper">
+                    <table class="table1">
+                        <tr>
+                            <td>분수대</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>현재상태</td>
+                            <td>정지</td>
+                        </tr>
+                        <tr>
+                            <td>모뎀타입</td>
+                            <td>
+                                <select name="" id=""></select>
+                            </td>
+                            <td>상/접점 설정</td>
+                            <td>
+                                <div class="twoselect">
+                                    <select name="" id="">
+                                        <option value="">단상</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">4접점</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>모뎀IP</td>
+                            <td><input type="text"></td>
+                            <td>전화번호</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>SIM 번호</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td class="hide"></td>
+                            <td class="hide"></td>
+                        </tr>
+                        <tr>
+                            <td>설치일자</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>문개폐 여부</td>
+                            <td>
+                                닫힘
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>설치위치</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>감시기 상태</td>
+                            <td class="mg">고장</td>
+                        </tr>
+                        <tr>
+                            <td>설치주소</td>
+                            <td><input type="text"></td>
+                            <td>정전상태</td>
+                            <td>정상</td>
+                        </tr>
+                        <tr>
+                            <td class="height">비고</td>
+                            <td colspan="3" class="etc">
+                                <textarea name="" id="" cols="10" rows="10">PLC 구간 (등주감시기4개) 안정기 디밍용아님 안전기용량 식별불가 (메탈,나트륨,LED150W,70W) 섞여있음 부점등3개
+                                </textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="btn_group">
+                <div class="left">
+                    <div class="btn"><a href="#">점검</a></div>
+                    <div class="btn"><a href="#a" onclick="oldbunsu_btn()">제어</a></div>
+                </div>
+                <div class="right">
+                    <div class="btn"><a href="">삭제</a></div>
+                    <div class="btn"><a href="">수정</a></div>
+                    <div class="btn"><a href="">닫기</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <!-- <link rel="stylesheet" href="css/popup.css"> -->
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab5 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분전함</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>그래프</a>
+                    </li>
+                    <li class="lock">
+                        <a href="#" onclick="lockbtn()"><i class="fas fa-lock"></i>도어락 관리</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <ul class="nav" id="nav">
+                <li><a href="bunjeonpopup1.html" class="text">기본정보</a></li>
+                <li><a href="bunjeonpopup2.html" class="text">상태정보</a></li>
+                <li><a href="bunjeonpopup3.html" class="text">운용정보</a></li>
+                <li><a href="bunjeonpopup4.html" class="text">분기정보</a></li>
+                <li><a href="bunjeonpopup5.html" class="text_active">가로등</a></li>
+                <li><a href="bunjeonpopup6.html" class="text">PLC</a></li>
+                <li><a href="bunjeonpopup7.html" class="text">감시내역</a></li>
+                <li><a href="bunjeonpopup8.html" class="text">보수일지</a></li>
+            </ul>
+            <div class="table_wrapper">
+                <div class="garobox">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>등주번호</td>
+                                <td>등주 ID</td>
+                                <td>등주타입</td>
+                                <td>상시/격등</td>
+                                <td>분기</td>
+                                <td>등종류</td>
+                                <td>WATT</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="10320">
+                                    <a href="#" class="text_btn garobtn1">정보<i class="fa-solid fa-circle-info"></i></a>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                    <a href="" class="text_btn garobtn">선택<i class="fa-solid fa-filter"></i></a>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" placeholder="표찰없음">
+                                    <a href="#" class="text_btn garobtn1">정보<i class="fa-solid fa-circle-info"></i></a>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                    <a href="" class="text_btn garobtn">선택<i class="fa-solid fa-filter"></i></a>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text">
+                                    <a href="#a" class="text_btn garobtn1">정보<i class="fa-solid fa-circle-info"></i></a>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                    <a href="" class="text_btn garobtn">선택<i class="fa-solid fa-filter"></i></a>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text">
+                                    <a href="#a" class="text_btn garobtn1">정보<i class="fa-solid fa-circle-info"></i></a>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                    <a href="" class="text_btn garobtn">선택<i class="fa-solid fa-filter"></i></a>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text">
+                                    <a href="#a" class="text_btn garobtn1">정보<i class="fa-solid fa-circle-info"></i></a>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                    <a href="" class="text_btn garobtn">선택<i class="fa-solid fa-filter"></i></a>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text">
+                                    <a href="#a" class="text_btn garobtn1">정보<i class="fa-solid fa-circle-info"></i></a>
+                                </td>
+                                <td>
+                                    <input type="text">
+                                </td>
+                                <td>
+                                    <input type="text">
+                                    <a href="" class="text_btn garobtn">선택<i class="fa-solid fa-filter"></i></a>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                        <option value="">상시등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                        <option value="">5분기</option>
+                                        <option value="">6분기</option>
+                                        <option value="">7분기</option>
+                                        <option value="">8분기</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">COM</option>
+                                        <option value="">LED</option>
+                                        <option value="">LED전구</option>
+                                        <option value="">나트륨</option>
+                                        <option value="">메탈</option>
+                                        <option value="">볼라드LED</option>
+                                        <option value="">삼파장</option>
+                                        <option value="">수목등</option>
+                                        <option value="">안심등</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">100</option>
+                                        <option value="">1000</option>
+                                        <option value="">11</option>
+                                        <option value="">110</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="btn_group">
+                <div class="left changebox">
+                    <div><a href="#a" onclick="bunchange_btn()">분기/상시격등 일괄변경</a></div>
+                    <div><a href="#a" onclick="dengchange_btn()">등/WATT 일괄변경</a></div>
+                </div>
+                <div class="right">
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

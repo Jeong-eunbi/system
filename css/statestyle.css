@@ -1,0 +1,125 @@
+.cont {
+  height: calc(100% - 3rem);
+}
+.cont .state_pop {
+  position: absolute;
+  width: 900px;
+  height: 500px;
+  left: 5%;
+  top: 10%;
+  padding: 0.188rem;
+  background-color: #fff;
+  border: 1px solid #2a3b5e;
+  box-sizing: border-box;
+  box-shadow: 0 24px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  z-index: 99;
+  display: none;
+}
+.cont .state_pop > iframe {
+  height: calc(100% - 43px);
+}
+.cont .contbox {
+  height: calc(100% - 168px);
+}
+.cont .contbox .scroll_wrap {
+  height: calc(100% - 60px - 4rem);
+}
+.cont .contbox .scroll_wrap #tablewrap {
+  height: 100%;
+}
+.cont .contbox .scroll_wrap #tablewrap tr td:not(td:first-child, td:last-child) {
+  cursor: pointer;
+}
+.cont .contbox .scroll_wrap #tablewrap table#dengtype tbody tr td:first-child {
+  width: 10%;
+}
+.cont .contbox .scroll_wrap #tablewrap table#botype tbody tr td:not(td:first-child, td:last-child) {
+  cursor: pointer;
+}
+.cont .contbox .scroll_wrap #tablewrap table.amount .devide2 {
+  width: 11%;
+}
+.cont .contbox .scroll_wrap #tablewrap table.amount thead tr:first-child th.widthfix {
+  width: 10%;
+}
+.cont .contbox .scroll_wrap #tablewrap table.amount thead tr:nth-child(2) th:not(.devide2, .widthfix) {
+  width: 4%;
+}
+.cont .contbox .scroll_wrap #tablewrap table.settype thead tr th {
+  width: 10%;
+}
+.cont .contbox .scroll_wrap #tablewrap table.boanlist thead tr th, .cont .contbox .scroll_wrap #tablewrap table.junglist thead tr th {
+  width: 40%;
+}
+.cont .contbox .scroll_wrap #tablewrap table.boanlist thead tr th:first-child, .cont .contbox .scroll_wrap #tablewrap table.junglist thead tr th:first-child {
+  width: 20%;
+}
+
+.table_poplist {
+  height: 100%;
+}
+.table_poplist h3 {
+  padding-top: 10px;
+}
+.table_poplist h3 span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #001c40;
+}
+.table_poplist h3 span i {
+  font-size: 14px;
+  text-align: center;
+  border-radius: 50px;
+  background-color: #74c0fc;
+  color: #001c40;
+}
+.table_poplist .auto {
+  max-width: 100%;
+  height: calc(100% - 56px);
+  white-space: nowrap;
+  padding: 10px 0;
+  overflow: auto;
+}
+.table_poplist .auto::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.table_poplist .auto::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #000;
+  box-sizing: border-box;
+}
+.table_poplist .auto table {
+  width: 100%;
+  border: 1px solid #cacdd4;
+  border-top: 2px solid #666;
+}
+.table_poplist .auto table th, .table_poplist .auto table td {
+  padding: 0 8px;
+  border-left: 1px solid #cacdd4;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.table_poplist .auto table thead tr {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #efefef;
+}
+.table_poplist .auto table thead tr th {
+  white-space: nowrap;
+  width: 10%;
+  height: 30px;
+  font-weight: bold;
+}
+.table_poplist .auto table tbody tr {
+  border-bottom: 1px solid #cacdd4;
+  font-weight: normal;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감시내역 이벤트 정보팝업창</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_eventinfo.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+    <script defer src="../js/bun.js"></script>
+
+</head>
+<body>
+    <div class="infobox between">
+        <table class="gamsi1">
+            <tbody>
+                <tr>
+                    <td>분전함</td>
+                    <td colspan="3" class="first">(임)30-0474 <span class="smtext">YB 887</span></td>
+                </tr>
+                <tr>
+                    <td>이벤트</td>
+                    <td>정상소등</td>
+                    <td>이벤트일시</td>
+                    <td class="text_width">
+                        <span>20220302 16:03:50</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>정전상태</td>
+                    <td>정상</td>
+                    <td>문개패</td>
+                    <td>닫힘</td>
+                </tr>
+                <tr>
+                    <td>마그네틱 A</td>
+                    <td>정상</td>
+                    <td>마그네틱 B</td>
+                    <td>정상</td>
+                </tr>
+                <tr>
+                    <td>마그네틱 C</td>
+                    <td>정상</td>
+                    <td>마그네틱 D</td>
+                    <td>정상</td>
+                </tr>
+            </tbody>
+            
+        </table>
+        
+        <div class="gamsi2">
+            <div class="row-item custom_scroll">
+                <div class="bg_color line">&nbsp;</div>
+                <div class="sm">1분기</div>
+                <div class="sm">2분기</div>
+                <div class="sm">3분기</div>
+                <div class="sm">4분기</div>
+                <div class="sm">5분기</div>
+                <div class="sm">6분기</div>
+                <div class="sm">7분기</div>
+                <div class="sm">8분기</div>
+                <div class="line width">
+                    누전여부
+                    (누진값)
+                </div>
+                <div>정상 (04.5)</div>
+                <div>정상 (04.5)</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>  
+                <div>-</div>  
+                <div>-</div>
+                <div>-</div> 
+                <div class="line width2">누전차단기</div>   
+                <div>정상</div>
+                <div>정상</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div class="line width2">전력값</div>   
+                <div>00.00</div>
+                <div>00.00</div>
+                <div>00.00</div>
+                <div>00.00</div>
+                <div>00.00</div>
+                <div>00.00</div>
+                <div>00.00</div>
+                <div>00.00</div>
+                <div class="bg_color line">등주감시기</div>
+                <div>정상</div>
+                <div>정상</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+                <div>-</div>
+            </div>
+        </div>
+
+        <!-- <table class="gamsi2">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>1분기</td>
+                    <td>2분기</td>
+                    <td>3분기</td>
+                    <td>4분기</td>
+                    <td>5분기</td>
+                    <td>6분기</td>
+                    <td>7분기</td>
+                    <td>8분기</td>
+                </tr>
+                <tr>
+                    <td>누전여부
+                        (누진값)
+                    </td>
+                    <td>정상(05.8)</td>
+                    <td>정상(04.7)</td>
+                    <td>정상(00.8)</td>
+                    <td>정상(01.8)</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>누전 
+                        차단기
+                    </td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+
+                <tr>
+                    <td>전력값</td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>등주
+                        감시기
+                    </td>
+                    <td>정상</td>
+                    <td>정상</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table> -->
+    </div>
+</body>

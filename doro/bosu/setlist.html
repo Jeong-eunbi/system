@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 설치현황</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.css" ></script>
+    
+
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/main.js" ></script>
+    <script type="text/javascript" defer src="../../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/doro.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <!-- header 끝 / content시작 -->
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">이용안내<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a">이용안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">민원관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../minwon/complain.html">불편신고</a></li>
+                                    <li><a href="../minwon/process.html">처리현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수처리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../bosu/setlist.html">설치현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수내역관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosulist/notice.html">공지관리</a></li>
+                                    <li><a href="../bosulist//bosulist.html">보수내역관리</a></li>
+                                    <li><a href="../bosulist//billing.html">청구내역관리</a></li>
+                                    <li><a href="../bosulist//meterial.html">자재관리</a></li>
+                                    <li><a href="../bosulist//inout1.html">자재입출고관리</a></li>
+                                    <li><a href="../bosulist//tong_data1.html">통계자료</a></li>
+                                    <li><a href="../bosulist//company.html">업체관리</a></li>
+                                    <li><a href="../bosulist/bosu_setting.html">환경설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox dorobox">
+                <ul class="set_tab custom_scroll">
+                    <li class="ontxt"><a href="setlist.html" class="tab_btn">전체 설치현황</a></li>
+                    <li><a href="setlist2.html" class="tab_btn">분전함 설치현황</a></li>
+                    <li><a href="setlist3.html" class="tab_btn">가로등 설치현황</a></li>
+                    <li><a href="setlist4.html" class="tab_btn">중계기 설치현황</a></li>
+                    <li><a href="setlist5.html" class="tab_btn">보안등 설치현황</a></li>
+                </ul>
+                <div class="allset">
+                    <div class="scroll_wrap tabbox">
+                        <div id="tab1" class="tablist custom_scroll">
+                            <div class="tab_status">
+                            <h3><img src="../../img/title.png" alt="">분전함지역별현황</h3>
+                                <table>
+                                    <tr>
+                                        <td>지역명</td>
+                                        <td>설치개소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>강남구</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>북면</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>수정구</td>
+                                        <td>50</td>
+                                    </tr>
+                                    <tr>
+                                        <td>아산시</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>오산시</td>
+                                        <td>29</td>
+                                    </tr>
+                                    <tr>
+                                        <td>은현면</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>인천광역시</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>조치원읍</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>추풍령면</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>팽성읍</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td>평택시</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr>
+                                        <td>기재안됨</td>
+                                        <td>69</td>
+                                    </tr>
+                                    <tr>
+                                        <td>합계</td>
+                                        <td>191</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab_status">
+                                <h3><img src="../../img/title.png" alt="">가로등지역별현황</h3>
+                                <table>
+                                    <tr>
+                                        <td>지역명</td>
+                                        <td>설치개소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>기재안됨</td>
+                                        <td>56</td>
+                                    </tr>
+                                    <tr>
+                                        <td>합계</td>
+                                        <td>56</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab_status wide">
+                                <h3><img src="../../img/title.png" alt="">가로등 등종류별 현황</h3>
+                                <div class="table-type">
+                                    <table>
+                                        <tr>
+                                            <td>등종류명1</td>
+                                            <td>등종류명2</td>
+                                            <td>설치개소</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td></td>
+                                            <td>34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>CDM</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td></td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>LED</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED램프(30W)</td>
+                                            <td>LED램프(30W)</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED램프(50W)</td>
+                                            <td>LED램프(30W)</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>나트륨</td>
+                                            <td></td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>나트륨</td>
+                                            <td>볼라드LED</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">합계</td>
+                                            <td>56</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td>등종류명1(와트수)</td>
+                                            <td>등종류명2(와트수)</td>
+                                            <td>설치개소</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td></td>
+                                            <td>34</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>CDM</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td></td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>LED</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED램프(30W)</td>
+                                            <td>LED램프(30W)</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED램프(50W)</td>
+                                            <td>LED램프(30W)</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>나트륨</td>
+                                            <td></td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>나트륨</td>
+                                            <td>볼라드LED</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">합계</td>
+                                            <td>56</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab_status">
+                                <h3><img src="../../img/title.png" alt="">보안등 지역별 현황</h3>
+                                <table>
+                                    <tr>
+                                        <td>지역명</td>
+                                        <td>설치개소</td>
+                                    </tr>
+                                    <tr>
+                                        <td>갈말읍</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>강남구</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>모현읍</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>미추홀구</td>
+                                        <td>7</td>
+                                    </tr>
+                                    <tr>
+                                        <td>수정구</td>
+                                        <td>31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>신서면</td>
+                                        <td>2</td>
+                                    </tr>
+                                    <tr>
+                                        <td>양평읍</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>용산구</td>
+                                        <td>31</td>
+                                    </tr>
+                                    <tr>
+                                        <td>기재안됨</td>
+                                        <td>111</td>
+                                    </tr>
+                                    <tr>
+                                        <td>합계</td>
+                                        <td>187</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="tab_status wide">
+                                <h3><img src="../../img/title.png" alt="">보안등 등종류별 현황</h3>
+                                <div class="table-type">
+                                    <table>
+                                        <tr>
+                                            <td>등종류명</td>
+                                            <td>설치개소</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>119</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>39</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED*2</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>기재안됨</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <td>합계</td>
+                                            <td>187</td>
+                                        </tr>
+                                    </table>
+                                    <table>
+                                        <tr>
+                                            <td>등종류명</td>
+                                            <td>와트수</td>
+                                            <td>설치개소</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>10</td>
+                                            <td>100</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>50</td>
+                                            <td>15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>65</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>CDM</td>
+                                            <td>100</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>10</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>50</td>
+                                            <td>33</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>100</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED</td>
+                                            <td>150</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>LED*2</td>
+                                            <td>50</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">기재안됨</td>
+                                            <td>28</td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">합계</td>
+                                            <td>187</td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+</html>

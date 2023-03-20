@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 불편신고</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+    <!-- swiper 슬라이드 -->
+    <script type="text/javascript" defer src="../../js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../../swiper/swiper-bundle.min.css">
+
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/main.js" ></script>
+    <script type="text/javascript" defer src="../../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/doro.js" ></script>
+</head>
+<body> 
+    <div class="wrapper custom_scroll">
+
+        <!-- header 끝 / content시작 -->
+        <div class="cont ">
+            <!-- menu -->
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">이용안내<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a">이용안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">민원관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../minwon/complain.html">불편신고</a></li>
+                                    <li><a href="../minwon/process.html">처리현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수처리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosu/setlist.html">설치현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수내역관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosulist/notice.html">공지관리</a></li>
+                                    <li><a href="../bosulist/bosulist.html">보수내역관리</a></li>
+                                    <li><a href="../bosulist/billing.html">청구내역관리</a></li>
+                                    <li><a href="../bosulist/meterial.html">자재관리</a></li>
+                                    <li><a href="../bosulist/inout1.html">자재입출고관리</a></li>
+                                    <li><a href="../bosulist/tong_data1.html">통계자료</a></li>
+                                    <li><a href="../bosulist/company.html">업체관리</a></li>
+                                    <li><a href="../bosulist/bosu_setting.html">환경설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="dorobox">
+                <div class="scroll_wrap">
+                    <div id="tablewrap" class="doro_wrap">
+                        <table>
+                            <tr>
+                                <td>
+                                    <span class="red">*</span>
+                                    신고구분
+                                </td>
+                                <td>
+                                    <ul class="type-select">
+                                        <li><input type="radio" name="type" id="click1" onchange="display()"><label for="click1">불편신고</label></input></li>
+                                        <li><input type="radio" name="type" id="click2" onchange="display()"><label for="click2">신설요청</label></input></li>
+                                        <li><input type="radio" name="type" id="click3" onchange="display()"><label for="click3">철거</label></input></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="red">*</span>
+                                    신고경로
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">온라인</option>
+                                        <option value="">오프라인</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="pag"  id="chk1box">
+                            <div class="doro_cont custom_scroll">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            등구분
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">미입력</option>
+                                                <option value="">가로등</option>
+                                                <option value="">보안등</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            등번호
+                                        </td>
+                                        <td>
+                                            <div class="find_place">
+                                                <input type="text">
+                                                <div class="map_btn"><a href="">위치찾기 ></a></div>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            신고위치
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <select name="" id="">
+                                                    <option value="">구읍면선택</option>
+                                                    <option value="">수정구</option>
+                                                </select>
+                                                <select name="" id="">
+                                                    <option value="">동리선택</option>
+                                                    <option value="">신흥동</option>
+                                                </select>
+                                            </div>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            상태
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">불이안들어와요</option>
+                                                <option value="">깜빡거려요</option>
+                                                <option value="">너무밝아요</option>
+                                                <option value="">파손</option>
+                                                <option value="">기타</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>상태설명</td>
+                                        <td>
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            신고인
+                                        </td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            연락처
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="text">
+                                                <span>ex) 010-1234-5678</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            비밀번호
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <input type="text">
+                                                <span class="pass_note">(비밀번호는 수정, 삭제시에 필요합니다)</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>기타첨부</td>
+                                        <td>
+                                            <div class="filebox">
+                                                <label for="file">파일선택</label>
+                                                <input type="file" id="file">
+                                                <input class="file_name nameinput" value="선택된 파일 없음" placeholder="선택된 파일 없음">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="minwon_btn"><a href=""><img src="../../img/add.png" alt="민원접수등록아이콘">민원접수</a></div>
+                        </div>
+                        <div class="pag"  id="chk2box">
+                            <div class="doro_cont custom_scroll">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            등구분
+                                        </td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">미입력</option>
+                                                <option value="">가로등</option>
+                                                <option value="">보안등</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            설치요청위치
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <select name="" id="">
+                                                    <option value="">구/읍/면 선택</option>
+                                                    <option value="">수정구</option>
+                                                </select>
+                                                <select name="" id="">
+                                                    <option value="">동/리 선택</option>
+                                                </select>
+                                            </div>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            설치요청사유
+                                        </td>
+                                        <td>
+                                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            요청인
+                                        </td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>연락처</td>
+                                        <td>
+                                            <input type="text">
+                                            <span>ex) 010-1234-5678</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="red">*</span>
+                                            비밀번호
+                                        </td>
+                                        <td>
+                                            <input type="text">
+                                            <span class="pass_note">비밀번호는 수정, 삭제시에 필요합니다</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>사진첨부</td>
+                                        <td>
+                                            <div class="filebox">
+                                                <label for="file1">파일선택</label>
+                                                <input type="file" id="file1">
+                                                <input class="file_name1 nameinput" value="선택된 파일 없음" placeholder="선택된 파일 없음">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>문서첨부1</td>
+                                        <td>
+                                            <div class="filebox">
+                                                <label for="file2">파일선택</label>
+                                                <input type="file" id="file2">
+                                                <input class="file_name2 nameinput" value="선택된 파일 없음" placeholder="선택된 파일 없음">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>문서첨부2</td>
+                                        <td>
+                                            <div class="filebox">
+                                                <label for="file3">파일선택</label>
+                                                <input type="file" id="file3">
+                                                <input class="file_name3 nameinput" value="선택된 파일 없음" placeholder="선택된 파일 없음">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>기타첨부</td>
+                                        <td>
+                                            <div class="filebox">
+                                                <label for="file4">파일선택</label>
+                                                <input type="file" id="file4">
+                                                <input class="file_name4 nameinput" value="선택된 파일 없음" placeholder="선택된 파일 없음">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                 
+                            </div>
+                            <div class="minwon_btn"><a href=""><img src="../../img/add.png" alt="민원접수등록아이콘">민원접수</a></div>
+                        </div>
+                       
+                       
+
+                    </div>
+                   
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

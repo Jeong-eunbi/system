@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>통합양방향관제시스템</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bun_control.css">
+    <link rel="stylesheet" href="css/boan_pop.css">
+    <!-- <link rel="stylesheet" href="css/boan.css"> -->
+    <link rel="stylesheet" href="css/bunsu.css">
+    <link rel="stylesheet" href="css/pump.css">
+    <link rel="stylesheet" href="css/subcont.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mapre.css">
+    <link rel="stylesheet" href="css/popupre.css">
+    <link rel="stylesheet" href="css/subre.css">
+    <link rel="stylesheet" href="css/commonre.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->    
+    <script type="text/javascript" defer src="js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+    <!-- swiper 슬라이드 -->
+    <script type="text/javascript" defer src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+
+    <!-- 터치이벤트 -->
+    <script type="text/javascript" defer src="js/hammer.min.js"></script>
+    
+    <script type="text/javascript" defer src="js/tab.js" ></script>
+    <script type="text/javascript" defer src="js/garo.js" ></script>
+    <script type="text/javascript" defer src="js/bun.js" ></script>
+    <script type="text/javascript" defer src="js/index.js" ></script>
+    <script type="text/javascript" defer src="js/menu.js" ></script>
+    <script type="text/javascript" defer src="js/main.js" ></script>
+    <script type="text/javascript" defer src="js/sub.js" ></script>
+    <script type="text/javascript" defer src="js/oldbun.js" ></script>
+    <script type="text/javascript" defer src="js/pump.js" ></script>
+    <script type="text/javascript" defer src="js/jung.js" ></script>
+    <script type="text/javascript" defer src="js/print.js" ></script>
+    <script type="text/javascript" defer src="js/doro.js" ></script>
+    <script type="text/javascript" defer src="js/responsive.js" ></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- header -->
+        <header>
+            <div class="header_box1">
+                <div class="bg">
+                    <a class="buger">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </a>
+                </div>
+                <h1>
+                    <!-- <img src="img/emslogo.png" alt=""> -->
+                    <a href="index.html" class="logo">
+                        <img src="img/logo2.png" alt="관제시스템로고">
+                    </a>
+                </h1>
+            </div>
+            <div class="header_box2">
+                <!-- 시간/기상정보 -->
+                <div class="iconbox">
+                    <div class="col">
+                        <div>
+                            <span><i class="fa-regular fa-clock"></i>가로등</span>
+                            <ul class="time ga">
+                                <li class="icon_border icon-1"><span class="on1"></span>점등 18 : 11</li>
+                                <li class="icon_border icon-2"><span></span>소등 07 : 16</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <span><i class="fa-solid fa-clock"></i>보안등</span>
+                            <ul class="time bo">
+                                <li class="icon_border icon-1"><span class="on1"></span>점등 18 : 11</li>
+                                <li class="icon_border icon-2"><span></span>소등 07 : 16</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="weather_detail">
+                            <li class="icon_border icon-3 swiper">
+                                <ul class="weather_wrap swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <div>
+                                            <span class="iconpot"><img src="img/w6.png" alt=""></span>
+                                            <span class="explain">5℃</span>
+                                        </div>
+                                        <div class="degree">
+                                            <span class="max">최고-7℃</span>
+                                            <span class="min">최저-10℃</span>
+                                        </div>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <ul class="rain">
+                                            <li class="mode">
+                                                <img src="img/rain.png" alt="">
+                                                <span>강수확률: 30%</span></li>
+                                            <li class="amount">
+                                                <span>강수량: 10mm</span>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bottom">
+                    <!-- 구동선택 -->
+                    <div class="select_box">
+                        <select name="" id="">
+                            <option value="">구선택</option>
+                            <option value="">수정구</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">동선택</option>
+                        </select>
+                    </div>
+                    <!-- 로그아웃 -->
+                    <div class="logout">
+                        <a href="">
+                            <i class="fas fa-sign-out-alt"></i> 
+                            <span class="tooltip">로그아웃</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- sidemenu -->
+        <div class="contentbox">
+            <!------------- 가로등 팝업창------------->      
+        
+            <!-- 이미지iframe -->
+            <div class="height_600 minipop" id="imgbox">
+                <div class="mini" onclick="minisel()">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bunpop_img.html" scrolling="No"></iframe>
+            </div>
+
+            <!-- 분전함등록하기 팝업창 -->
+            <div class="height_650 pop" id="bun_addbox">
+                <div class="title" onclick="select()">
+                    <h2>분전함 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="bun_resisterpop.html"></iframe>
+            </div>
+
+            <!-- 가로등등록하기 팝업창 -->
+            <div class="height_650 pop" id="gapop">
+                <div class="title" onclick="select()">
+                    <h2>가로등 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="ga_resisterpop.html"></iframe>
+            </div>
+
+            <!-- 가로등 수신자정보 -->
+            <div class="height_340 pop" id="garosms_info">
+                <div class="title" onclick="select()">
+                    <h2>SMS 수신자 정보</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/garosusin1.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 가로등 수신자추가 -->
+            <div class="height_340 pop" id="garosms_add">
+                <div class="title" onclick="select()">
+                    <h2>SMS 수신자 추가</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/garosusin2.html" scrolling="no"></iframe>
+                
+            </div>
+
+            <!-- 계정관리 사용자정보 팝업 -->
+            <div class="user_info pop height_420" id="user_info">
+                <div class="title" onclick="select()">
+                    <h2>사용자 정보</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="user/userinfo.html" scrolling="no"></iframe>
+
+            </div>
+            <!-- 계정관리 사용자등록 팝업창 -->
+            <div class="user_add pop height_420" id="user_add">
+                <div class="title" onclick="select()">
+                    <h2>사용자 추가</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="user/useradd.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 분전함 전체제어 팝업박스-->
+            <div class="height_230 pop" id="bun_controlbox">
+                <div class="title" onclick="select()">
+                    <h2>분전함 전체제어</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bun_control.html" name="bun_control"></iframe>
+            </div>
+
+            <!-- 내역보기 분전함 삭제내역 클릭시 팝업창 -->
+            <div class="height_670 pop" id="delbox">
+                <div class="title" onclick="select()">
+                    <h2>분전함</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bundeletepop.html"></iframe>
+            </div>
+
+            <!-- 분전함 전체설정 팝업창 -->
+            <div class="height_515 pop" id="bun_setbox">
+                <div class="title" onclick="select()">
+                    <h2>분전함 전체설정</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bun_allset.html"></iframe>
+            </div>
+
+            <!-- 등고장설정 팝업창 -->
+            <div class="pop height_230" id="deng_error">
+                <div class="title" onclick="select()">
+                    <h2>등고장 판단 기준 비율 설정</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/deng_error.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 가로등기본정보창 -->
+            <div class="infopop height_600" id="garo1">
+                <div class="title" onclick="select()">
+                    <h2>가로등 상세보기</h2>
+                    <a href="#" onclick="offbox()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="popcon_wrap">
+                    <iframe src="popuptab/garopopup1.html" name="garoinfotab"></iframe>
+                </div>
+            </div>
+
+            <!-- iframe -->
+            <div class="iframe_box minipop" id="iframe_box">
+                <div class="mini"><a href="#"><i class="far fa-window-close"></i></a></div>
+                <iframe src="minipop/lamp_control.html"></iframe>    
+            </div>
+    
+            <div class="iframebosu_box minipop height_300" id="iframebosu_box">
+                <div class="mini"><a href="#"><i class="far fa-window-close"></i></a></div>
+                <iframe src="minipop/bosuadd.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 도어락iframe -->
+            <div class="doorlock minipop height_256" id="doorlock">
+                <div class="mini" onclick="minisel()">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bundoorlock.html"></iframe>
+            </div>
+            <!-- 제어버튼클릭시 iframe -->
+            <div class="height_420 minipop" id="controlbox">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bun_allcont.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 주소변경창 iframe -->
+            <div class="height_256 minipop" id="addchange">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bunaddress.html"></iframe>
+            </div>
+
+            <!-- 분기/상시격등 일괄변경 ifrmae -->
+            <div class="height_340 minipop" id="dengchange_box">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bun_denginfo.html"></iframe>
+            </div>
+            <!-- 분기/상시격등 일괄변경 ifrmae -->
+            <div class="height_340 minipop" id="dengchange_box2">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bun_denginfo2.html"></iframe>
+            </div>
+
+            <!-- dimm예약중 버튼> 일괄변경 팝업창 -->
+            <div class="height_500 minipop" id="dimchange_box">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bun_dimchange.html"></iframe>
+            </div>
+
+            <!-- 등주예약 팝업창 -->
+            <div class="dengre_box minipop height_420">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bun_dengreserv.html" scrolling="no"></iframe>
+            </div>
+            <!-- 분전함기본정보창 -->
+            <div class="infopop height_670 pop" id="garo2" onclick="select()">
+                <div class="title">
+                    <h2>분전함 상세보기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/bunjeonpopup1.html" scrolling="no" name="iframe"></iframe>
+            </div>
+            
+            <!-- dimm예약 클릭시 디머예약 팝업창 iframe -->
+            <div class="w800 minipop" id="dimm_reservation">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bun_dimm.html"></iframe>
+            </div>
+
+            <!-- 디머예약팝업창 전력값보기 iframe -->
+            <div class="w800 minipop" id="dimm_view">
+                <div class="mini">
+                    <h2>분전함 전력값보기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bun_dimview.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 이벤트 팝업창 -->
+            <div class="height_500 minipop" id="buneventbox">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bun_eventinfo.html"></iframe>
+            </div>
+
+            <!-- 보수일지 추가 팝업창 -->
+            <div class="height_300 minipop" id="iframebosu_box">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bosuadd.html"></iframe>
+            </div>
+
+            <!----- 보안등  팝업창----->
+        
+            <!-- 중계기 상세보기 -->
+            <div id="jung_sang" class="pop height_670">
+                <div class="title" onclick="select()">
+                    <h2>중계기 상세보기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/junggye1.html" scrolling="no"></iframe>
+                
+            </div>
+
+            <!-- 통신시험팝업창 -->
+            <div class="minipop height_320" id="tongsin">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/tongsin.html"></iframe>
+            </div>
+
+            <!-- 중계기 개별감시내역 이벤트 팝업창 -->
+            <div class="minipop height_500" id="jungeventbox">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/jung_event.html"></iframe>
+            </div>
+
+            <!-- 중계기 채널설정 -->
+            <div class="minipop height_230" id="channelbox">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/channel.html"></iframe>
+            </div>
+
+            <!-- 중계기 경로설정 -->
+            <div class="minipop height_230" id="routebox">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/route.html"></iframe>
+            </div>
+
+            <!-- 중계기 등록하기 -->
+            <div class="pop height_650" id="jung_add">
+                <div class="title" onclick="select()">
+                    <h2>중계기 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="jung_resisterpop.html"></iframe>
+            </div>
+
+            <!-- 중계기 전체제어 -->
+            <div class="height_230 pop" id="jung_controlbox">
+                <div class="title" onclick="select()">
+                    <h2>중계기 전체제어</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/jung_conpop.html" name="bun_control"></iframe>
+            </div>
+
+            <!-- 중계기 elb -->
+            <div class="minipop height_230" id="elbbox">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/jung_conpop1.html"></iframe>
+            </div>
+
+            <!-- 중계기 전체설정 -->
+            <div class="height_600 pop" id="jung_setbox">
+                <div class="title" onclick="select()">
+                    <h2>중계기 전체설정</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/jung_allset.html" name="bun_control"></iframe>
+            </div>
+
+            <!-- 점멸기 등록하기 -->
+            <div class="pop height_650" id="jum_add">
+                <div class="title" onclick="select()">
+                    <h2>점멸기 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="jum_resisterpop.html"></iframe>
+            </div>
+
+            <!-- iot 점멸기 등록하기 -->
+            <div class="pop height_650" id="iot_add">
+                <div class="title" onclick="select()">
+                    <h2>점멸기 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="iotjum_resister.html"></iframe>
+            </div>
+
+            <!-- 점멸기 상세보기 -->
+            <div id="jum_sang" class="pop height_670">
+                <div class="title" onclick="select()">
+                    <h2>점멸기 상세보기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/jumtab1.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 점멸기 제어 팝업창 -->
+            <div class="controlbox minipop height_230" id="jum_control">
+                <div class="mini">
+                    <h2>점멸기 개별 제어</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/jum_control.html"></iframe>
+            </div>
+
+            <!-- 점멸기 이벤트 클릭 팝업창 -->
+            <div class="height_600 minipop" id="jum_eventbox">
+                <div class="mini">
+                    <h2>점멸기 이벤트 창</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/jum_event.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 점멸기 삭제내역 보기 팝업창 -->
+            <div class="pop height_670" id="iotdelbox">
+                <div class="title">
+                    <h2>점멸기 상세보기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/iotdeletepop.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 보수일지작성 팝업창 -->
+            <div class="pop height_320" id="bosu-note">
+                <div class="title">
+                    <h2>보수 일지 작성</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bosunote.html" scrolling="no"></iframe>
+            </div>
+            <!-- 보안등 감시내역 이벤트 창 -->
+            <div class="minipop height_600" id="eventgamsi_pop">
+                <div class="mini">
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="boan/list/iotpop.html"></iframe>
+            </div>
+
+            <!-- 반응형 가로등 분전함 상세검색 -->
+            <div class="detailpop" id="seachpop1">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="off_screen()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>분전함선택</span>
+                            <select name="" id="">
+                                <option value="">분전함선택</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>명령선택</span>
+                            <select name="" id="">
+                                <option value="">명령선택</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                    <button>검색</button>
+                </div>
+            </div>
+
+            <!-- 반응형일때 보안등 감시내역 상세검색 두줄검색 -->
+            <div class="detailpop" id="boan_searchpop2">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="off_screen2()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>점멸기선택</span>
+                            <select name="" id="">
+                                <option value="">동/리</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button>검색</button>
+            </div>
+
+            <!-- 3줄 검색 -->
+            <div class="detailpop" id="boan_searchpop3">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="off_screen3()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>점멸기선택</span>
+                            <select name="" id="">
+                                <option value="">동/리</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>명령선택</span>
+                            <select name="" id="">
+                                <option value="">aaaa</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button>검색</button>
+        
+            </div>
+
+            <!-- 분수 -->
+            <div class="detailpop" id="bunsu_searchpop1">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="bunsu_off1()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>분수대선택</span>
+                            <select name="" id="">
+                                <option value="">동/리</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>이벤트선택</span>
+                            <select name="" id="">
+                                <option value="">aaaa</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button>검색</button>
+        
+            </div>
+            <div class="detailpop" id="bunsu_searchpop2">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="bunsu_off2()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>분수대선택</span>
+                            <select name="" id="">
+                                <option value="">동/리</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>이벤트선택</span>
+                            <select name="" id="">
+                                <option value="">aaaa</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button>검색</button>
+        
+            </div>
+
+            <!-- 상세검색 보수내역입력창 -->
+            <div class="detailpop" id="bosu_searchpop2">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="offbtn()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>점멸기선택</span>
+                            <select name="" id="">
+                                <option value="">동/리</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>보수내용</span>
+                            <input type="text">
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button>검색</button>
+        
+            </div>
+
+            <div class="detailpop" id="blue_searchpop">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="offbtn3()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>블루투스 점멸기</span>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색일자</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <button>검색</button>
+        
+            </div>
+
+            <!-- sms상세검색 -->
+            <div class="detailpop" id="smspop1">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="sms_off()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>수신자</span>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>발신여부</span>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>검색기간</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                    <button>검색</button>
+                </div>
+            </div>
+
+            <!-- user 상세검색 -->
+            <div class="detailpop" id="userpop">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="user_off()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>아이디</span>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>접속날짜</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                    </ul>
+                    <button>검색</button>
+                </div>
+            </div>
+
+            <!-- 도로조명 자재입출고 상세검색 -->
+            <div class="detailpop" id="dorosearch_pop">
+                <div class="poptitle">
+                    <h3>상세검색</h3>
+                    <a href="#a" onclick="doro_off1()"><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="border">
+                    <span>검색</span>
+                    <ul>
+                        <li>
+                            <span>자재별검색</span>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>업체별검색</span>
+                            <select name="" id="">
+                                <option value="">업체선택</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>자재별검색</span>
+                            <div>
+                                <input type="date">
+                                <span>~</span>
+                                <input type="date">
+                            </div>
+                        </li>
+                        
+                    </ul>
+                    <button>검색</button>
+                </div>
+            </div>
+            
+            <!------------- 분수대 -------------->
+            <!-- 분수대상세보기 -->
+            <div id="bunsu" class="pop height_670">
+                <div class="title">
+                    <h2>분수대 상세보기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/bunsu1.html" scrolling="no"></iframe>
+            
+            </div>
+
+            <!-- 분수대 이벤트클릭 팝업창-->
+            <div class="w800 minipop" id="bunsu_eventpop">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bunsu_view.html" scrolling="No"></iframe>
+            </div>
+
+            <!-- 경관조명상세보기 -->
+            <div id="bunsulamp" class="pop height_670"> 
+                <div class="title" onclick="select()">
+                    <h2>경관조명 상세보기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/bunsulamp1.html" scrolling="no"></iframe>
+            
+            </div>
+
+            <!-- 분수대등록하기 팝업창 -->
+            <div class="bunsu pop height_650" id="bunsuaddpop">
+                <div class="title" onclick="select()">
+                    <h2>분수대 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="bunsu_resiter.html"></iframe>
+            </div>
+
+            <!-- 경관조명 등록하기 팝업창 -->
+            <div class="bunlamp_add pop height_650" id="bunlamp_add">
+                <div class="title" onclick="select()">
+                    <h2>경관조명 등록하기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="bunsulamp_resister.html"></iframe>
+            </div>
+
+            <!-- 경관조명연결 -->
+            <div class="height_230 minipop" id="lamp_linkpop">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/bunsulamp_link.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 분수대 전체제어 시작 -->
+            <div class="height_230 pop" id="bunsuall">
+                <div class="title" onclick="select()">
+                    <h2>분수대 전체제어</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bunsucont.html"></iframe>
+            </div>
+
+            <!-- 분수대 제어버튼 클릭시 제어팝업창 -->
+            <div class="height_230 minipop" id="bunsu_contpop">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="../minipop/bunsucont2.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 구형분수대 -->
+            <div class="pop height_170" id="oldbunsu">
+                <div class="title" onclick="select()">
+                    <h2>분수대 전체제어</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/oldbun_all.html"></iframe>
+            </div>
+
+            <!-- 구형분수대 기본정보 -->
+            <div id="oldbun_info" class="pop height_670">
+                <div class="title" onclick="select()">
+                    <h2>분수대 상세보기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/oldbunsutab1.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 구형분수대 등록 -->
+            <div class="pop height_420" id="old_resister">
+                <div class="title" onclick="select()">
+                    <h2>분수대 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/oldbun_add.html"></iframe>
+            </div>
+
+            <!-- 구형분수대 제어팝업창 -->
+            <div class="height_230 minipop" id="oldbunsu_contpop">
+                <div class="mini">
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/oldbunsu_cont.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 펌프장 등록 팝업창 -->
+            <div class="pop height_515" id="pump_resister">
+                <div class="title" onclick="select()">
+                    <h2>펌프장 등록하기</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/pump_add.html"></iframe>
+            </div>
+
+            <!-- 펌프장 기본정보 -->
+            <div id="pump_info" class="pop height_670">
+                <div class="title" onclick="select()">
+                    <h2>펌프장 기본정보</h2>
+                    <a href="#"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="popuptab/pumptab1.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 수신자정보 -->
+            <div class="height_270 pop" id="sms1">
+                <div class="title" onclick="select()">
+                    <h2>SMS 수신자 정보</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>    
+                <iframe src="minipop/susin_pop1.html" scrolling="no"></iframe>
+                
+            </div>
+
+            <!-- 수신자추가 -->
+            <div class="height_270 pop" id="sms2">
+                <div class="title" onclick="select()">
+                    <h2>SMS 수신자 추가</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/susinadd.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 도로조명 업체관리 -->
+            <div class="height_420 pop" id="companyset">
+                <div class="title">
+                    <h2>업체관리</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/road-company.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 도로조명 분전함 상세보기  -->
+            <div id="doro_bun" class="pop height_670">
+                <div class="title">
+                    <h2>분전함 상세보기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/doro_bunjeon.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 도로조명 중계기 -->
+            <div id="doro_jung" class="pop height_670">
+                <div class="title">
+                    <h2>중계기 상세보기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/dorojung.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 도로조명 점멸기 -->
+            <div id="doro_jum" class="pop height_670">
+                <div class="title">
+                    <h2>점멸기 상세보기</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>
+                <iframe src="minipop/dorojum.html" scrolling="no"></iframe>
+            </div>
+
+            <!-- 모바일 하단메뉴바 -->
+            <div class="tab_nav">
+                <ul class="bottom_menu" role="tablist">
+                    <li id="bottom_1" class="tab" role="tab" aria-controls="mobiletab_1">
+                        <a href="#"><i class="fas fa-temperature-high"></i>점소등시간</a>
+                    </li>
+                    <li id="bottom_2" class="tab" role="tab" aria-controls="mobiletab_2">
+                        <a href="#"><i class="fas fa-search"></i>검색</a>
+                    </li>
+                
+                    <li id="bottom_3" class="tab" role="tab" aria-controls="mobiletab_3">
+                        <a href="#"><em class="alert"></em><i class="fas fa-list-alt"></i>점검내역</a>
+                    </li>
+                    <li id="bottom_4" class="tab" role="tab" aria-controls="mobiletab_4">
+                        <a href="#"><i class="fas fa-table"></i>지자체선택</a>
+                    </li>
+                    <li class="map-hotlist">
+                        <a href=""><i class="fa-solid fa-location-dot"></i></a>
+                    </li>
+                </ul>
+
+                <!-- 모바일 기상정보 -->
+                <div class="tabcont" id="mobiletab_1" role="tabpanel" aria-labelledby="bottom_1">
+                    <div class="weather">
+                        <span id="current"></span>
+                        <div class="weatherbox">
+                            <div class="weather_icon">
+                                <div class="iconpot"></div>
+                                <ul>
+                                    <li>
+                                        <span class="main">맑음</span>
+                                        <span class="CurrTemp">5℃</span>
+                                    </li>
+                                    <li>
+                                        <span class="max">최고-7℃</span>
+                                        <span class="min">최저-10℃</span>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="rain">
+                                <div class="water"></div>
+                                <ul>
+                                    <li class="mode">강수확률: 20%</li>
+                                    <li class="amount">강수량: 10mm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 모바일 점소등시간 -->
+                    <ul class="time">
+                        <li>
+                            <span><i class="fa-regular fa-clock"></i>가로등</span>
+                            <ul class="onoff_time ga">
+                                <li class="icon_border icon-1"><span class="on1"></span>점등 18 : 11</li>
+                                <li class="icon_border icon-2"><span></span>소등 07 : 16</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span><i class="fa-solid fa-clock"></i>보안등</span>
+                            <ul class="onoff_time bo">
+                                <li class="icon_border icon-1"><span class="on1"></span>점등 18 : 11</li>
+                                <li class="icon_border icon-2"><span></span>소등 07 : 16</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 검색 -->
+                <div class="tabcont" id="mobiletab_2" role="tabpanel" aria-labelledby="bottom_2">
+                    <div class="search_Bar">
+                        <!-- 반응형시 구/동선택 -->
+                        <div class="select_box rebtn">
+                            <select name="" id="">
+                                <option value="">구선택</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">동선택</option>
+                            </select>
+                        </div>
+                        <div class="searchbox">   
+                            <select name="search" id="search" class="search">
+                                <option value="">점멸기이름</option>
+                                <option value="">지번/도로명</option>
+                                <option value="">모뎀IP</option>
+                                <option value="">SIM번호</option>
+                            </select>
+                            <div class="search_space">
+                                <input type="text">
+                                <div><i class="fas fa-search"></i></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- 검색결과 -->
+
+                    <!-- 검색결과 있을때 -->
+                    <div class="list_result1">
+                        <div class="result-text">
+                            <span id="history">최근 검색 기록</span>
+                            <span class="del"><a href="#">전체 삭제</a></span>
+                        </div>
+                        <ul>
+                            <li>수원시 권선구 권선동</li>
+                            <li>수원시 권선구 권선동</li>
+                            <li>수원시 권선구 권선동</li>
+                        </ul>
+
+                    </div>
+
+                    <!-- 검색결과 없을때 -->
+                    <div class="list_result2">
+                        <img src="img/nohistory.png" alt="최근검색내역없을시 아이콘">
+                        <span>최근 검색기록이 없습니다</span>
+                    </div>
+                </div>
+                <!-- 모바일 일일점검내역 -->
+                <div class="tabcont" id="mobiletab_3" role="tabpanel" aria-labelledby="bottom_3">
+                    <div class="check_list">
+                        <h3 class="text3">점검내역 결과</h3>
+                        <p><i class="fas fa-chevron-circle-right"></i>총 <span class="color count"></span>건이 검색되었습니다</p>
+                        <div class="filiterbox">
+                            <ul class="filter">
+                                <li><a class="category_btn">전체</a></li>
+                                <li><a class="category_btn">고장</a></li>
+                                <li><a class="category_btn">정전</a></li>
+                                <li><a class="category_btn">이상점등</a></li>
+                                <li><a class="category_btn">누전</a></li>
+                                <li><a class="category_btn">통신이상</a></li>
+                            </ul>
+                            <div class="reset"><a href="#"><i class="fa-solid fa-rotate-left fa-flip-horizontal"></i>초기화</a></div>
+                        </div>
+                        
+                        <ul class="check_box" id="checkcont">
+                            <li>
+                                <dl>
+                                    <dt>이름</dt>
+                                    <dd>
+                                        <div class="check_detail">
+                                            <a>대림01 (OS)</a>
+                                            <span>분전함</span>
+                                        </div>
+                                        <a class="circle"><i class="fas fa-info"></i></a>
+                                    </dd>    
+                                </dl>
+                                <dl>
+                                    <dt>현재상태</dt>
+                                    <dd>
+                                        <a href="" class="red">램프고장</a>
+                                        <a class="circle"><i class="fas fa-location-arrow"></i></a>
+                                    </dd>    
+                                </dl>
+                                <dl>
+                                    <dt>주소</dt>
+                                    <dd>
+                                        <a href="">영등포구 대림동 741-3</a>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>이름</dt>
+                                    <dd>
+                                        <div class="check_detail">
+                                            <a>03 (OS)</a>
+                                            <span>가로등</span>
+                                        </div>
+                                        <a class="circle"><i class="fas fa-info"></i></a>
+                                    </dd>    
+                                </dl>
+                                <dl>
+                                    <dt>현재상태</dt>
+                                    <dd>
+                                        <a href="" class="red">안정기고장</a>
+                                        <a class="circle"><i class="fas fa-location-arrow"></i></a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>주소</dt>
+                                    <dd>
+                                        <a href="">구로구 구로동 435</a>
+                                    </dd>
+                                </dl>
+
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt>이름</dt>
+                                    <dd>
+                                        <div class="check_detail">
+                                            <a>(임)평내대명루첸 LP-03</a>
+                                            <span>분전함</span>
+                                        </div>
+                                        <a class="circle"><i class="fas fa-info"></i></a>
+                                    </dd>    
+                                </dl>
+                                <dl>
+                                    <dt>현재상태</dt>
+                                    <dd>
+                                        <a href="" class="red">통신이상</a>
+                                        <a class="circle"><i class="fas fa-location-arrow"></i></a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>주소</dt>
+                                    <dd>
+                                        <a href="">남양주시 평내동 213-1</a>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>비고</dt>
+                                    <dd>
+                                        <a href="">일패리야구장고가위</a>
+                                    </dd>
+                                </dl>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 지자체선택 -->
+                <div class="tabcont" id="mobiletab_4" role="tabpanel" aria-labelledby="bottom_4">
+                    <ul>
+                        <li><a href="">지자체선택</a></li>
+                        <li><a href="">가보테크</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 내용 -->
+            <div class="content">
+                <!-- map -->
+                <div class="mapbox">
+                    <iframe src="map.html"></iframe>
+                </div>
+                
+                <!-- 서브페이지 눌렀을때 나오는 공간 -->
+                <div class="anylayer">
+                    <iframe id="frame" src=""></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

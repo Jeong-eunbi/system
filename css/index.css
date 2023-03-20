@@ -1,0 +1,37 @@
+h3 {
+  margin: 10px 0;
+}
+
+.contentbox {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100 - 86px);
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.contentbox .tab_nav {
+  display: none;
+}
+.contentbox .content {
+  width: 100%;
+  position: relative;
+}
+.contentbox .content .mapbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contentbox .content .anylayer {
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.contentbox .content .select_box {
+  display: none;
+}

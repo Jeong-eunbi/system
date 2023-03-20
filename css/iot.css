@@ -1,0 +1,16 @@
+.cont .scroll_wrap #tablewrap table.iot_tong tbody tr td {
+  width: 4%;
+}
+.cont .scroll_wrap #tablewrap table.iot_tong tbody tr td:first-child {
+  background-color: #f2f8f6;
+  width: 5%;
+}
+.cont .scroll_wrap #tablewrap table.set_type thead tr th {
+  padding: 18px 10px;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.cont .scroll_wrap #tablewrap table.set_type tbody tr td {
+  word-break: keep-all;
+  padding: 18px 10px;
+}

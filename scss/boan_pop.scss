@@ -1,0 +1,829 @@
+@import "./var";
+
+
+
+// 중계기 상세보기창
+.pop{
+    // width: 530px;
+    // max-width: 530px;
+    padding: 0.188rem;
+    background-color: $white;
+    position: absolute !important;
+    border: 1px solid $pop_head;
+    left: 10%;
+    top: 10%;
+    box-sizing: border-box;
+    box-shadow: $shadow24;
+    z-index: 1;
+    border-radius: .5rem;
+    display: none;
+    input, select{
+        border: 1px solid $in_select_border;
+    }
+    tr{
+        padding: 3px;
+        box-sizing: border-box;
+        border-bottom: $table_border;
+    }
+
+    div[class^=jung]{
+        width: 100%;
+        height: 100%;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        display: none;
+    }
+    .popcon_wrap{
+        height: calc(100% - 86px);
+        .nav_list{
+            height: calc(100% - 40px - 34px);
+            .table_wrapper{
+                overflow-x: hidden;
+                overflow-y: auto;
+                .table1{
+                    tr{
+                        td{
+                            font-weight: normal;
+                            color: #222;
+                            height: 30px;
+                            line-height: 30px;
+                            box-sizing: border-box;
+                            &:nth-child(odd){
+                                width: 25%;
+                                background-color: $td_color;
+                                text-align: center;
+                            }
+                            &:nth-child(even){
+                                width: 25%;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+                            }
+                            input,select{
+                                width: 90%;
+                                height: 30px;
+                            }
+                            &.address{
+                                width: 70%;
+                                height: auto;
+                                line-height: initial;
+                                .input_group{
+                                    width: 100%;
+                                    @include flex;
+                                    input{
+                                        width: 100%;
+                                        margin-right: 2px;
+                                    }
+                                }
+                                .address_text{
+                                    width: 100%;
+                                    padding: 0;
+                                    @include flex;
+                                    flex-direction: column;
+                                    p{
+                                        padding: 0;
+                                        margin: 5px 0;
+                                    }
+                                    .text_address{
+                                        i{
+                                            margin-right: .8rem;
+                                            color: red;
+                                            margin-left: 0;
+                                        }
+                                        color: red;
+                                        display: block;
+                                        width: fit-content;
+                                        cursor: pointer;
+                                    }
+
+                                }
+                            }
+                            &.height{
+                                height: 90px;
+                                line-height: 90px;
+                            }
+                            &.etc{
+                                height: 90px;
+                                width: 75%;
+                                height: 90px;
+                            }
+                            &.note{
+                                width: 75%;
+                                height: 90px;
+                                textarea{
+                                    width: 90%;
+                                    border: 1px solid $in_select_border;
+                                    height: 90px;
+                                }
+                            }
+                            &.modem_sch{
+                                @include flex;
+                            }
+                           
+                        }
+                    }
+                    
+              
+                }
+            }
+            .jung_tab1{
+                padding-top: 0;
+                .table1{
+                    tr{
+                        td{
+                         
+                            &.line{
+                                width: 75%;
+                                height: auto;
+                                line-height: initial;
+                                .flexbox{
+                                    width: 90%;
+                                    @include flex;
+                                    @include center-c;
+                                    span.colornone{
+                                        padding: 6px;
+                                        box-sizing: border-box
+                                    }
+                                }
+                                .input_group{
+                                    @include flex;
+                                    input{
+                                        width: calc(90% / 3);
+                                        margin-right: 4px;
+                                    }
+                                }
+                            }
+                            &.flex{
+                                width: 25%;
+                                @include flex;
+                                >div{
+                                    width: 98%;
+                                    @include flex;
+                                    select{
+                                        &:first-child{
+                                            margin-right: 4px;
+                                        }
+                                    }
+                                }
+                                .place{
+                                    @include flex;
+                                    @include center-r;
+                                    @include center-c;
+                                    input[type="checkbox"]{
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                }
+                            }
+                           
+
+                            
+
+                        }
+                        &.location{
+                            td{
+                                >div{
+                                    @include flex;
+                                    justify-content: center;
+                                    @include center-c;
+                                    span{
+                                        padding-top: 1.5px;
+                                    }
+                                    input{
+                                        vertical-align: middle;
+                                        margin-left: 4px;
+                                        width: 16px;
+                                        height: 16px;
+                                    }
+                                }
+                                &.placeno{
+                                    line-height: initial;
+                                }
+                            }
+                            
+                            
+                        }
+                    }
+                  
+                    .btn_group{
+                        flex-wrap: nowrap;
+                        justify-content: center;
+                    }
+                }
+                
+            }
+            .jung_tab2{
+                table{
+                    tr{
+                        td{
+                            vertical-align: middle;
+                            &:first-child{
+                                width: 25%;
+                                background-color: $td_color;
+                                text-align: center;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                            &:last-child{    
+                                width: 75%;
+
+                                padding-left: 8px;
+                                select{
+                                    width: 50%;
+                                    height: 30px;
+                                    margin-right: 4px;
+                                }
+                            }
+                            &.smbox{
+                                display: flex;
+                                align-items: center;
+                                select, input{
+                                    width: 50px;
+                                }
+                                >span{
+                                    margin-right: 4px;
+                                }
+                                div{
+                                    @include flex;
+                                    @include center-c;
+                                    span{
+                                        margin-right: 4px;
+                                    }
+                                }
+                            }
+                          
+                            
+                        }
+                    }
+                }
+            }
+            .jung_tab3{
+                table{
+                    border-top: 2px solid #666;
+                    thead{
+                        tr{
+                            th{
+                                height: 30px;
+                                vertical-align: middle;
+                                background-color: $td_color;
+                                border-right: $table_border;
+                                &:first-child{
+                                    border-left: $table_border;
+                                }
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            td{
+                                border-right: $table_border;
+                                text-align: center;
+                                vertical-align: middle;
+                                padding: 4px 8px;
+                                font-size: 15px;
+                                &:first-child{
+                                    border-left: $table_border;
+                                }
+                            }
+                        }
+            
+                    }
+                }
+        
+            }
+            .jung_tab4{
+                .top-right-btn{
+                    button{
+                        height: 30px;
+                    }
+                }
+                tr{
+                    display: flex;
+                    align-items: center;
+                }
+                input{
+                    height: 30px;
+                    box-sizing: border-box;
+                }
+                .serial{
+                    width: calc(85% / 5);
+                    input{
+                        width: 90%;
+                    }
+                }
+                thead{
+                    tr{
+                        border-top: 2px solid #666;
+                        background-color: $td_color;
+                        height: 30px;
+                        th{
+                            @include flex;
+                            @include center-c;
+                            @include center-r;
+                            padding: 0 4px;
+                            box-sizing: border-box;
+                            &:first-child{
+                                width: 5%;
+                                input{
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                            &:nth-child(2){
+                                width: 10%;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            @include flex;
+                            @include center-c;
+                            @include center-r;
+                            padding: 0 4px;
+                            box-sizing: border-box;
+                            &:first-child{
+                                width: 5%;
+                                @include flex;
+                                @include center-c;
+                                @include center-r;
+                                input{
+                                    width: 16px;
+                                    height: 16px;
+                                }
+                            }
+                            &:nth-child(2){
+                                width: 10%;
+                                input{
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_group{
+                    flex-wrap: wrap;
+                    .left{
+                        margin-bottom: 4px;
+                    }
+                }
+            }
+            .jung_tab5{
+                .between{ 
+                    justify-content: flex-start;
+                    .top-right-btn{
+                        .event2{
+                            @include flex;
+                            justify-content: flex-end;
+                            position: relative;
+                            .event_wrap2{
+                                right: 0;
+                                top: 40px;
+                                .off2{
+                                    order: 2;
+                                }
+                            }
+                        } 
+                    }
+                    .table_wrapper{
+                        height: 100%;
+                        overflow: auto;
+                        table{
+                            width: 100%;
+                            tr{
+                                @include flex;
+                                width: 100%;
+                                border-bottom: $table_border;
+                                &:first-child{
+                                    border-top: 2px solid #666;
+                                    width: 100%;
+                                    background-color: $td_color;
+                                    text-align: center;
+                                    font-weight: bold;
+                                    td{
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        height: 30px;
+                                        font-weight: bold;
+        
+                                        &:last-child{
+                                            justify-content: center;
+                                        }
+                                    }
+                                }
+                                td{
+        
+                                    &:nth-child(1), &:nth-child(2){
+                                        width: 25%;
+                                        justify-content: center;
+                                    }
+                                   
+                                    &:last-child{
+                                        width: 50%;
+                                    }
+                                    color: #666;
+                                    border-right: $table_border;
+                                    @include td_style($height:auto, $line: initial);
+                                    @include flex;
+                                    @include center-c;
+                                    height: 30px;
+                                    i{
+                                        margin-right: 5px;
+                                        padding: 4px;
+                                        font-size: 14px;
+                                        border-radius: 50%;
+                                        background-color: #f2f2f2;
+                                    }
+                                    span.eventpop{
+                                        background-color: #f2f2f2;
+                                        cursor: pointer;
+                                        margin-left: 5px;
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                        padding: 3px;
+                                        border-radius: 4px;
+                                        color: $blue;
+                                        border: 1px solid #ececec;
+                                        word-break: keep-all;
+                                        &:hover{
+                                            background-color: rgba(234, 255, 4, 0.308);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
+}
+
+// 점멸기
+#jum_sang{
+    .nav_list{
+        height: calc(100% - 48px - 8px);
+        table{
+            tr{
+                td{
+                    &.add2{
+                        height: 100px;
+                        line-height: 100px;
+
+                    }
+                    .blackbox{
+                        @include flex;
+                        margin: 4px 0;
+                        box-sizing: border-box;
+                        input{
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 4px;
+                            box-sizing: border-box;
+                        }
+                    }
+
+                }
+            }
+        }
+        .jum_tab3{
+            .between{
+                width: 100%;
+            }
+        } 
+        .jum_tab4{
+            height: 100%;
+            flex-direction: column;
+            .top-right-btn{
+                .work_con{
+                    @include flex;
+                    @include center-c;
+                    span{
+                        margin: 0 4px;
+                    }
+                }
+            }
+            .between{
+                width: 100%;
+                height: calc(100% - 41px - 16px);
+                table{
+                    flex-direction: column;
+                    input{
+                        width: 16px;
+                        height: 16px;
+                    }
+                    thead{
+                        tr{
+                            height: 30px;
+                            border-bottom: none;
+                            border-top: none;
+                            background-color: $td_color;
+                            th{
+                                &:first-child{
+                                    width: 5%;
+                                }
+                                width: calc(95% / 3);
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            background-color: $white;
+                            td{
+                                border-right: $table_border;
+                                background-color: $white;
+                                &:first-child{
+                                    width: 5%;
+                                    @include flex;
+                                    @include center-c;
+                                    @include center-r;
+                                }
+                                width: calc(95% / 3);
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// 중계기 전체설정 팝업창
+.jung_setbox{
+    height: 650px;
+    >iframe{
+        height: calc(100% - 40px);
+    }
+}
+
+// 중계기 등록하기 창
+
+.jung_add{
+    display: none;
+}
+
+//보수일지 작성 팝업창
+.contwrap{
+    table{
+        width: 100%;
+        margin-top: 1rem;
+        border-top: 2px solid #666;
+        tr{
+            @include flex;
+            padding: 3px;
+            border-bottom: $table_border;
+            box-sizing: border-box;
+            td{
+                height: 30px;
+                line-height: 30px;
+                &:nth-child(odd){
+                    width: 25%;
+                    background-color: $td_color;
+                    text-align: center;
+                }
+                &:last-child{
+                    padding-left: 10px;
+                }
+                >div{
+                    @include full;
+                    @include flex;
+                    select{
+                        margin-right: 4px;
+                        width: 100px;
+                    }
+                }
+                input,select{
+                    border: 1px solid $in_select_border;
+                    height: 30px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// 삭제내역 팝업창
+.viewbox{
+    height: calc(100% - 1rem);
+    padding-top: 0 !important;
+    margin-top: 1rem;
+    border-top: 2px solid #666;
+    @include flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    input, select{
+        border: 1px solid $in_select_border;
+        box-sizing: border-box;
+    }
+    .table_wrapper{
+        height: 100%;
+        overflow: auto;
+        table.basic{
+            tr{
+                @include flex;
+                @include center-c;
+                padding: 3px;
+                border-bottom: $table_border;
+                box-sizing: border-box;
+                td{
+                    &:nth-child(odd){
+                        padding: 4px 0;
+                        width: 20%;
+                        text-align: center;
+                        background-color: $td_color;
+                        >div{
+                            input{
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                    &:nth-child(even){
+                        width: 30%;
+                        padding-left: 8px;
+                        box-sizing: border-box;
+                        input{
+                            width: 80%;
+                        }
+                        input,select{
+                            height: 25px;
+                        }
+                        textarea{
+                            width: 80%;
+                            height: 80px;
+                            border: 1px solid $in_select_border;
+                        }
+                        >div{
+                            @include flex;
+                            @include center-c;
+                            input[type="text"], select{
+                                width: 48%;
+                                margin-right: 4px;
+                            }
+                            span{
+                                font-size: 14px
+                            }
+                            >div{
+                                @include flex;
+                                @include center-c;
+                            }
+                        }
+                    }
+                    
+                    &.height{
+                        height: 80px;
+                        line-height: 80px;
+                    }
+                    &.full{
+                        width: 80%;
+                     
+                    }
+                    
+                }
+            }
+        }
+    }
+    .btn_group{
+        padding: 0.5rem;
+        margin-top: 0.9rem;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        background-color: #f5f5f5;
+        .right{
+            @include flex;
+            justify-content: flex-end;
+            div{
+                border: 2px solid #cac3c3;
+                box-sizing: border-box;
+                background-color: #2a3b5e;
+                padding: 0;
+                margin-right: 5px;
+                width: 80px;
+                height: 35px;
+                border-radius: 3px;
+                @include flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                a{
+                    font-size: 14px;
+                    color: #919191;
+                }
+            }
+        }
+    }
+}
+
+//반응형일때 보안등 상세검색 팝업창
+.detailpop{
+    display: none;
+    background-color: $white;
+    position: absolute;
+    border: 1px solid #eee;
+    box-shadow: 0px 3px 1px #ddd;
+    width: 300px;
+    right: 0;
+    top: 0;
+    z-index: 9;
+    box-sizing: border-box;
+    .poptitle{
+        width: 100%;
+        padding: 8px;
+        background-color: #02652f;
+        @include flex;
+        justify-content: space-between;
+        @include center-c;
+        border-radius: 0;
+        box-sizing: border-box;
+        h3{
+            color: #fff;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        a{
+            i{
+                color: #fff;
+            }
+        }
+    }
+    .border{
+        width: 100%;
+        padding: 4px;
+        box-sizing: border-box;
+        select{
+            padding: 6px 1.5rem 6px 4px;
+                margin: 0 2px;
+                color: #555;
+                outline: none;
+                appearance: none;
+                border: 1px solid #aaa;
+                height: 30px;
+                min-width: 100px;
+                background: url(../img/selectborder.png) no-repeat right top/contain #fff;
+        }
+        span{
+            display: block;
+            margin: 8px 0;
+            color: #595959;
+            font-size: 15px;
+        }
+        ul{
+            border-top: 2px solid #265c4e;
+            padding: 0 8px 8px 0;
+            li{
+                border-bottom: 1px solid #dfdfdf;
+                padding: 5px;
+                select{
+                    border-radius: 0;
+                }
+                >div{
+                    @include flex;
+                    @include center-c;
+                    span{
+                        margin: 0 4px;
+                    }
+                }
+                input{
+                    border: none;
+                    height: 30px;
+                    border: 1px solid #aaa;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .group_sel{
+            @include flex;
+        }
+        >div{
+            .search_box{
+                @include flex;
+              
+            }
+        }
+    }
+    button{
+        float: right;
+        padding: 3px 12px;
+        margin: 6px;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        border: 1px solid;
+    }
+}
+
+
+

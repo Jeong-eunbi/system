@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RF감시내역 프린트 페이지</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/tabprint.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+</head>
+<body onload="window.print()">
+    <div class="print_view paper">
+        <div class="content">
+            <h2>RF감시내역</h2>
+            <div class="tablebox">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>중계기</th>
+                            <th>이벤트내용</th>
+                            <th>일시</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>catm1_test</td>
+                            <td>이벤트 <span class="eventcont">이상점등 : 4</span></td>
+                            <td>2022.08.03 | 15:43:03</td>
+                        </tr>
+                        <tr>
+                            <td>신형 GMC 전력값TEST</td>
+                            <td>이벤트</td>
+                            <td>2022.08.03 | 15:32:01</td>
+                        </tr>
+                        <tr>
+                            <td>catm1_test</td>
+                            <td>점소등 상태변경 <span class="eventcont">정상소등</span></td>
+                            <td>2022.08.03 | 05:24:01</td>
+                        </tr>
+                        <tr>
+                            <td>마석우리 중계기02</td>
+                            <td>이벤트 <span class="eventcont">통신이상</span></td>
+                            <td>2022.08.03 | 05:24:01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

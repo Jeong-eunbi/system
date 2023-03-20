@@ -1,0 +1,151 @@
+@import "./var", "./popup";
+
+select{
+    margin: 5px 0;
+    height: 30px;
+    border: 1px solid $in_select_border;
+}
+
+
+p{
+    padding: 0 5px;
+    color: #acacac;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+h2{
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(246, 246, 246);
+}
+
+.center{
+    margin: 1rem 0;
+    @include flex;
+    @include center-c;
+    @include center-r;
+    border-top: 2px solid;
+    border-bottom: $in_select_border;
+    select{
+        width: 65%;
+        margin-left: 1%;
+    }
+}
+
+.change_btn{
+    width: 80px;
+    height: 35px;
+    background-color: $minibtn;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 4px;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    a{
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: $white;
+    }
+}
+.doorbox{
+    padding: 0 5px;
+    box-sizing: border-box;
+    ul.nav{
+        @include flex;
+        @include nav;
+        @include center-c;
+        justify-content: flex-end;
+        padding: 10px 0;
+        box-sizing: border-box;
+        li{
+            :last-child ::before{
+                display: none;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: 15px;
+                background-color: #d7d7d7;
+            }
+            a.text{
+                
+                &:hover{
+                    transition: .3s;
+                    font-weight: 500;
+                    color: #000;
+                }
+                @include navli;
+                padding: 0 5px;
+                &.text_active{
+                    font-weight: 500;
+                    color: #000;
+                }
+            }
+        }
+      
+    }
+    .tab1{
+        // display: none;
+        .state_change{
+            @include flex;
+            margin-top: 1rem;
+            @include center-c;
+            div{
+                @include flex;
+                flex-direction: column;
+                width: 50%;
+                border-top: 2px solid;
+                height: 100%;
+
+            }
+            span.arrow{
+                display: block;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .tab2{
+        display: none;
+        .center{
+            border: none;
+            h2{
+                width: 30%;
+                height: 30px;
+                line-height: 30px;
+                border-top: 2px solid;
+                padding: 0;
+            }
+            select{
+                width: 65%;
+                margin-left: 1%;
+            }
+        }
+    }
+    .tab3{
+        display: none;
+        .center{
+            border: none;
+            h2{
+                border-top: 2px solid;
+            }
+        }
+    }
+}
+
+@media (max-width:786px){
+    .tab3{
+        .center{
+            select{
+                height: 44px;
+                margin: 5px;
+            }
+        }
+    }
+}
+

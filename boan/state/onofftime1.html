@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점소등시간</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/time.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+        
+    <script type="text/javascript" defer src="../../js/weather.js" ></script>
+
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+    <script type="text/javascript" defer src="../../js/time.js" ></script>
+
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="jungpopbtn" onclick="jungpopbtn()">중계기</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="jumpopbtn()">점멸기</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../boan/selectcontrol.html">중계기선택제어</a></li>
+                                    <li><a href="#a" onclick="jung_show()">중계기전체제어</a></li>
+                                    <li><a href="../boan/iotcontrol.html">IoT점멸기선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="data2/jungset.html">중계기선택설정</a></li>
+                                    <li><a href="#a" onclick="j_setbox()">중계기전체설정</a></li>
+                                    <li><a href="../data2/iotselect.html">IoT점멸기선택설정</a></li>
+                                    <li><a href="../data2/datalist.html">점멸기운용데이터현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/iotgam.html">IoT감시내역</a></li>
+                                    <li><a href="../list/iotmyeong.html">IoT명령내역</a></li>
+                                    <li><a href="../list/rfgam.html">RF감시내역</a></li>
+                                    <li class="on"><a href="../list/rfmyeong.html">RF명령내역</a></li>
+                                    <li><a href="../list/boanbosu.html">보수일지</a></li>
+                                    <li><a href="../list/junglist.html">중계기현황</a></li>
+                                    <li><a href="../list/jumlist.html">점멸기현황</a></li>
+                                    <li><a href="../list/jumdelete.html">점멸기삭제내역</a></li>
+                                    <li><a href="../list/blue.html">블루투스</a></li>
+                                </ul>                     
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="smsset/message1.html">수신자관리</a></li>
+                                    <li><a href="../sms/messageset.html">메시지관리</a></li>
+                                    <li><a href="../sms/messagecont.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>              
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../state/state1.html">통계자료</a></li>
+                                    <li class="on"><a href="../state/onofftime1.html">점소등시간</a></li>
+                                    <li><a href="../state/local2.html">지역설정</a></li>
+                                    <li><a href="../state/lamp2.html">램프설정</a></li>
+                                </ul>             
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox col">
+                <div class="month">
+                    <ul>
+                        <li><a href="">1월</a></li>
+                        <li><a href="">2월</a></li>
+                        <li><a href="">3월</a></li>
+                        <li><a href="">4월</a></li>
+                        <li><a href="">5월</a></li>
+                        <li><a href="">6월</a></li>
+                        <li><a href="">7월</a></li>
+                        <li><a href="">8월</a></li>
+                        <li><a href="">9월</a></li>
+                        <li><a href="">10월</a></li>
+                        <li><a href="">11월</a></li>
+                        <li><a href="">12월</a></li>
+                    </ul>
+                </div>
+                <div class="calender">
+                    <div class="cal_nav">
+                        <a href="" class="nav-btn go-prev"><i class="fas fa-chevron-left"></i></a>
+                        <div class="year-month"></div>
+                        <a href="" class="nav-btn go-next"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="cal_wrap">
+                        <table>
+                            <tr>
+                                <td>1일</td>
+                                <td>2일</td>
+                                <td>3일</td>
+                                <td>4일</td>
+                                <td>5일</td>
+                                <td>6일</td>
+                                <td>7일</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>06시 59분</li>
+                                        <li>(796분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 00분</li>
+                                        <li>(797분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 01분</li>
+                                        <li>(800분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 02분</li>
+                                        <li>(801분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 03분</li>
+                                        <li>(802분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 03분</li>
+                                        <li>(803분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8일</td>
+                                <td>9일</td>
+                                <td>10일</td>
+                                <td>11일</td>
+                                <td>12일</td>
+                                <td>13일</td>
+                                <td>14일</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                        <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>15일</td>
+                                <td>16일</td>
+                                <td>17일</td>
+                                <td>18일</td>
+                                <td>19일</td>
+                                <td>20일</td>
+                                <td>21일</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>22일</td>
+                                <td>23일</td>
+                                <td>24일</td>
+                                <td>25일</td>
+                                <td>26일</td>
+                                <td>27일</td>
+                                <td>28일</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>29일</td>
+                                <td>30일</td>
+                                <td>31일</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <ul>
+                                        <li>17시 43분</li>
+                                        <li>07시 04분</li>
+                                        <li>(804분)</li>
+                                    </ul>
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

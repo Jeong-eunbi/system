@@ -1,0 +1,227 @@
+.view {
+  overflow-x: hidden;
+  height: 100vh;
+  overflow-y: auto;
+}
+.view::-webkit-scrollbar {
+  width: 5px;
+}
+.view::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 8px;
+}
+.view .tablebox {
+  padding: 8px;
+  box-sizing: border-box;
+}
+.view .tablebox h2 {
+  margin: 8px 0;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  color: #002f31;
+}
+.view .tablebox .bunsubox {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.view .tablebox > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view .tablebox > div .group {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.view .tablebox > div .group button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7fbf5;
+  border: none;
+  margin-left: 4px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+.view .tablebox > div .group button i {
+  padding: 0.5rem;
+  transform: rotate(90deg);
+}
+.view .tablebox > div .group button img {
+  width: 20px;
+}
+.view .tablebox > div > i {
+  background-color: #f7fbf5;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 0.5rem;
+  transform: rotate(90deg);
+}
+.view .tablebox select {
+  border: none;
+  width: 30%;
+  border: 1px solid #006b54;
+  padding: 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.view .tablebox ul.tong_tab {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.view .tablebox ul.tong_tab li {
+  width: 50%;
+  height: 100%;
+}
+.view .tablebox ul.tong_tab li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  border: 1px solid #b5b7ba;
+  background-color: #fff;
+  color: #484a4b;
+  box-sizing: border-box;
+}
+.view .tablebox ul.tong_tab li a:hover {
+  border: 1px solid #484a4b;
+}
+.view .tablebox ul.tong_tab li a.table_active {
+  background-color: #006b54;
+  color: #fff;
+  border: 4px solid #484a4b;
+  border-bottom: none;
+}
+.view .tablebox table {
+  border-top: 2px solid #006b54;
+  width: 100%;
+}
+.view .tablebox table tr td {
+  text-align: center;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-bottom: 1px dashed #ccc;
+  border-right: 1px solid #dadada;
+}
+.view .tablebox table tr td:nth-child(odd) {
+  background-color: #f7fbf5;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  cursor: pointer;
+}
+.view .tablebox ul.scroll {
+  height: 370px;
+  overflow-y: scroll;
+}
+.view .tablebox ul.scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.view .tablebox ul.scroll::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 8px;
+}
+.view .tablebox ul.scroll li {
+  margin: 3px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.view .tablebox ul.scroll li a {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: bold;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.view .tablebox ul.scroll li a span {
+  font-size: 13px;
+  font-weight: normal;
+}
+.view .tablebox ul.scroll li :hover {
+  text-decoration: underline;
+}
+.view .search_Bar {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+  height: 50px;
+  border: 2px solid #006b54;
+  border-right: none;
+  border-radius: 0 10px 0 0;
+  box-sizing: border-box;
+}
+.view .search_Bar input {
+  border: none;
+  width: 11.938rem;
+}
+.view .search_Bar select {
+  border: none;
+}
+.view .search_Bar div {
+  width: 50px;
+  height: 100%;
+  background-color: #006b54;
+  border-radius: 0 6px 0 8px;
+  text-align: center;
+}
+.view .search_Bar div i {
+  color: #fff;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+@media (max-width: 340px) {
+  .view .search_Bar {
+    height: 2.5rem;
+    margin: 0.5rem 0;
+  }
+  .view .search_Bar select {
+    width: 30%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .view .search_Bar input {
+    width: 55%;
+  }
+  .view .search_Bar div {
+    width: 15%;
+    height: 100%;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

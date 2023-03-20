@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분전함설치현황</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/gam.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/print.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="bunpopbtn" onclick="bunpopbtn()">분전함</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="gapopbtn()">가로등</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="park/p_bunconrol.html">분전함선택제어</a></li>
+                                    <li><a href="#a" id="all_cont" onclick="bunshow()">분전함전체제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="data2/dataselect.html">분전함선택설정</a></li>
+                                    <li><a href="#a" onclick="setshow()">분전함전체설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list2/p_gam.html">감시내역</a></li>
+                                    <li><a href="../list2/p_myeong.html">명령내역</a></li>
+                                    <li><a href="../list2/power.html">전력값보기</a></li>
+                                    <li><a href="../list2/p_bosu.html">가로등보수일지</a></li>
+                                    <li class="on"><a href="../list2/p_bunset.html">분전함설치현황</a></li>
+                                    <li><a href="../list2/p_bundelete.html">분전함삭제내역</a></li>
+                                    <li><a href="../list2/p_daycheck.html">일일점검내역</a></li>
+                                </ul>           
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../p_sms/sms1.html">수신자관리</a></li>
+                                    <li><a href="../p_sms/sms2.html">메시지관리</a></li>
+                                    <li><a href="../p_sms/sms3.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../account/user1.html">사용자관리</a></li>
+                                    <li><a href="../account/user2.html">접속자관리</a></li>
+                                </ul>         
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../addfunction/tong1.html">통계자료</a></li>
+                                    <li><a href="../addfunction/onofftime2.html">점소등시간</a></li>
+                                    <li><a href="../addfunction/local3.html">지역설정</a></li>
+                                    <li><a href="../addfunction/lamp3.html">램프설정</a></li>
+                                    <li><a href="#a" onclick="error_set()">등고장설정</a></li>
+                                </ul>          
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap">
+                    <div class="leftbtn">
+                        <div class="btn_bg"><a href="">엑셀저장</a></div>
+                        <div class="btn_bg print"><a href="#a" onclick="parkbun_print()">프린트</a></div>
+                        <div class="btn_bg"><a href="../list2/p_type.html">등주현황</a></div>
+                    </div> 
+                    <div class="rightbtn select_group">
+                        <select name="" id="">
+                            <option value="">수정구</option>
+                            <option value="">태구</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">태평동</option>
+                            <option value="">복정동</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">도로선택</option>
+                            <option value="">테스트</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="length"></span>건</div>
+                    <div id="tablewrap">
+                        <table class="bunset">
+                            <thead>
+                                <tr>
+                                    <th>분전함</th>
+                                    <th>분전함번호</th>
+                                    <th>전화번호(IP)</th>
+                                    <th>설치일자</th>
+                                    <th>설치주소/위치</th>
+                                    <th>한전고객번호</th>
+                                    <th>계량기번호</th>
+                                    <th>상/격MG</th>
+                                    <th>등주</th>
+                                    <th>등</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="wide cursor" onclick="infopop1()">
+                                        퍙성 평궁리 진입로(294)<span class="smtxt">YB103</span><a href="#a" class="photobtn" onclick="photobtn()"><i class="fa-solid fa-image"></i></a>
+                                    </td>
+                                    <td>00000</td>
+                                    <td class="wide"><span class="mobile">KT</span>012</td>
+                                    <td></td>
+                                    <td class="wide"></td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="wide cursor" onclick="infopop1()">
+                                        1223344<span class="smtxt">YB93</span><a href="#a" class="photobtn" onclick="photobtn()"><i class="fa-solid fa-image"></i></a>
+                                    </td>
+                                    <td>00000</td>
+                                    <td class="wide"><span class="mobile">SK</span>01012345678</td>
+                                    <td>2021.01.28</td>
+                                    <td class="wide">수정구 신흥동</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class="wide cursor" onclick="infopop1()">
+                                        (임)오남천(오남도서관~백소교)산책로<span class="smtxt">YB59</span>
+                                    </td>  
+                                    <td>00000</td>
+                                    <td class="wide"><span class="mobile">SK LTE</span>01231402297</td>
+                                    <td></td>
+                                    <td class="wide">화도읍 녹촌리 71-2 마석고등학교하천길</td>
+                                    <td></td>
+                                    <td>24-19-0116701-1707</td>
+                                    <td>30P2*3 | 30P2*3</td>
+                                    <td>21</td>
+                                    <td>20</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

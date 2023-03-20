@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab1 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>분수대 연결</a>
+                    </li>
+                    <li class="print">
+                        <a href="minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <ul class="nav">
+                <li><a href="bunsulamp1.html" class="text_active">기본정보</a></li>
+                <li><a href="bunsulamp2.html" class="text">상태정보</a></li>
+                <li><a href="bunsulamp3.html" class="text">운용데이터</a></li>
+                <li><a href="bunsulamp4.html" class="text">분기별데이터</a></li>
+                <li><a href="bunsulamp5.html" class="text">개별감시내역</a></li>
+            </ul>
+            <div class="table_wrapper">
+                <table class="table1">
+                    <tr>
+                        <td>분전함</td>
+                        <td colspan="2" class="in_span lamp">
+                            <input type="text">
+                            <span>YB 887</span>
+                            <span class="colornone"><i class="fas fa-user-astronaut"></i>AS신청
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>분수대</td>
+                        <td>
+                            테스트
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>분전함타입</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">양방향</option>
+                            </select>
+                        </td>
+                        <td>현재상태</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>모뎀타입</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">SK Telecom 3G</option>
+                                <option value="">SK Telecom LTE</option>
+                                <option value="">KT Olleh 3G</option>
+                                <option value="">KT Olleh LTE</option>
+                                <option value="">LG U+ LTE</option>
+                            </select>
+                        </td>
+                        <td>점멸기</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>모뎀IP</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>일련번호</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SIM번호</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>MG 상/격</td>
+                        <td class="mg">
+                            <div>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>한전고객번호</td>
+                        <td><input type="text"></td>
+                        <td>주차단기</td>
+                        <td>
+                            <div>
+                                <select name="" id="">
+                                    <option value="">도로선택</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>계량기번호</td>
+                        <td><input type="text"></td>
+                        <td>
+                            <div>
+                                <label for="">위치정보</label>
+                                <input type="checkbox" name="" id="">
+                            </div>
+                        </td>
+                        <td class="placeno">37.719308 127.03100</td>
+                    </tr>
+                    <tr>
+                        <td>계약전력용량</td>
+                        <td><input type="text"></td>
+                        <td>S/W Ver.</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>설치위치</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>설치일자</td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>새주소</td>
+                        <td colspan="3" class="address">
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="height">설치 주소</td>
+                        <td colspan="3" class="address etc">
+                            <div class="input_group">
+                                <input type="text">
+                                <input type="text">
+                                <input type="text">
+                            </div>
+                            <div class="address_text">
+                                <p>진전읍 금곡리 1127-87</p>
+                                <div>
+                                    <span class="text_address text_btn"><i class="fas fa-address-book"></i>주소변경</span>
+                                    <span>#AS신청</span>
+                                </div>
+
+                            </div>
+                        </td>
+                    </tr>
+               
+                    <tr>
+                        <td class="height">비고</td>
+                        <td colspan="3" class="etc">
+                            <textarea name="" id="" cols="10" rows="10">PLC 구간 (등주감시기4개) 안정기 디밍용아님 안전기용량 식별불가 (메탈,나트륨,LED150W,70W) 섞여있음 부점등3개
+                            </textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="btn_group">
+                <div class="left">
+                    <div class="btn"><a href="#">IP송출</a></div>
+                    <div class="btn"><a href="#">점검</a></div>
+                    <div class="btn"><a href="#a" onclick="bun_contbtn()">제어</a></div>
+                </div>
+                <div class="right">
+                    <div class="btn"><a href="">삭제</a></div>
+                    <div class="btn"><a href="">수정</a></div>
+                    <div class="btn"><a href="">닫기</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

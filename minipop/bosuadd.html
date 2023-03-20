@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보수일지 추가 팝업창</title>
+
+    
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script defer src="../js/index.js"></script>
+
+</head>
+<body>
+    <div class="add_pop between custom_scroll">
+        <table>
+            <tbody>
+                <tr>
+                    <td colspan="3">작업 내용 등록</td>
+                </tr>
+                <tr>
+                    <td class="table_title"><i class="fa-solid fa-check"></i>작업일자</td>
+                    <td colspan="3">
+                        <input type="date" name="" id="">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="table_title"><i class="fa-solid fa-check"></i>작업내용</td>
+                    <td>
+                        <div>
+                            <select name="" id="">
+                                <option value="">내용선택</option>
+                                <option value="">글러브교체</option>
+                                <option value="">등기구교체</option>
+                                <option value="">램프교체</option>
+                                <option value="">안정기교체</option>
+                                <option value="">전선휴즈교체</option>
+                                <option value="">점멸기교체</option>
+                                <option value="">케이블교체</option>
+                                <option value="">기타</option>
+                            </select>
+                            <span>기타</span>
+                            <input type="text">
+                        </div>
+                    </td>
+                </tr>
+                <tr class="textbox">
+                    <td class="table_title"><i class="fa-solid fa-check"></i>세부사항</td>
+                    <td>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn_group">
+            <div><a href="">추가</a></div>
+        </div>
+    </div>
+</body>
+</html>

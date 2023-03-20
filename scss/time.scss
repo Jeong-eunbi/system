@@ -1,0 +1,127 @@
+@import "./var";
+
+.wrapper{
+    .cont{
+        height: calc(100vh - 3rem);
+        .col{
+            width: 100%;
+            @include flex;
+            @include center-r;
+            flex-direction: column;
+            height: calc(100% - 48px - 4.5rem);
+            .calender{
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                height: calc(100% - 66px - 1rem);
+                @include flex;
+                flex-direction: column;
+                @include center-c;
+                .cal_nav{
+                    @include flex;
+                    @include center-c;
+                    margin-bottom: 20px;
+                    .year-month{
+                        font-size: 2rem;
+                        font-weight: bold;
+                        margin: 0 1rem
+                    }
+                    >a{
+                        width: 30px;
+                        height: 30px;
+                        @include flex;
+                        @include center-c;
+                        @include center-r;
+                        text-align: center;
+                        border-radius: 50%;
+                        background-color: transparent;
+                        border: none;
+                        border: 1px solid #989898;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        >i{
+                            color: #989898;
+                        }
+                    }
+                }
+                .cal_wrap{
+                    width: 100%;
+                    height: calc(100% - 52px);
+                    overflow: auto;
+                    @include flex;
+                    flex-direction: column;
+                    align-items: center;
+                    border-top: 3px solid #008e45;
+                    border-right: 1px solid #d4d6e2;
+                    table{
+                        width: 100%;
+                        tr{  width: 100%;
+                            display: flex;
+                            &:nth-child(odd){
+                                background-color: #f2f8f6;
+                                td{
+                                    height: 50px;
+                                }
+                            }
+                            td{
+                                height: 100px;
+                                width: calc(100% / 7);
+                                text-align: center;
+                                padding: 15px 10px;
+                                border-bottom: 1px solid #d4d6e2;
+                                border-left: 1px solid #d4d6e2;
+                                box-sizing: border-box;
+                                text-align: right;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-end;
+                                >ul{
+                                    display: flex;
+                                    flex-direction: column;
+                                    white-space: nowrap;
+                                    font-size: 14px;
+                                    li{
+                                        text-align: center;
+                                        color: #666;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+    
+              
+                }
+            }
+            .month{
+                @include flex;
+                justify-content: center;
+                ul{
+                    @include flex;
+                    @include center-r;
+                    padding-bottom: 1rem;
+                    box-sizing: border-box;
+                    li{
+                       
+                        box-sizing: border-box;
+                        border: 1px solid #e1e4eb;
+                        border-right: none;
+                        &:last-child{
+                            border-right: 1px solid #e1e4eb;
+                        }
+                        a{
+                            display: block;
+                            padding: 1rem 2rem;
+                            box-sizing: border-box;
+                        }
+                        .coloractive{
+                            background-color: #008e45;
+                            color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}

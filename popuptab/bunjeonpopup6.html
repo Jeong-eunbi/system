@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <!-- <link rel="stylesheet" href="css/popup.css"> -->
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <!-- <link rel="stylesheet" href="..jquery-ui-1.13.1.custom/jquery-ui.css" > -->
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+   
+</head>
+<body>
+    <div class="bun_tab6 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분전함</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>그래프</a>
+                    </li>
+                    <li class="lock">
+                        <a href="#a" onclick="lockbtn()"><i class="fas fa-lock"></i>도어락 관리</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <div>
+                <ul class="nav" id="nav">
+                    <li><a href="bunjeonpopup1.html" class="text">기본정보</a></li>
+                    <li><a href="bunjeonpopup2.html" class="text">상태정보</a></li>
+                    <li><a href="bunjeonpopup3.html" class="text">운용정보</a></li>
+                    <li><a href="bunjeonpopup4.html" class="text">분기정보</a></li>
+                    <li><a href="bunjeonpopup5.html" class="text">가로등</a></li>
+                    <li><a href="bunjeonpopup6.html" class="text_active">PLC</a></li>
+                    <li><a href="bunjeonpopup7.html" class="text">감시내역</a></li>
+                    <li><a href="bunjeonpopup8.html" class="text">보수일지</a></li>
+                </ul>
+                <div class="top-right-btn">
+                    <span>스케줄모드 운용중</span>
+                    <div class="dimm_btn"><a href="#a" onclick="">Dim예약중</a></div>
+                    <div class="dimm_chbtn"><a href="#a">Dim일괄변경</a></div>
+                    <select name="" id="">
+                        <option value="">1분기</option>
+                        <option value="">2분기</option>
+                    </select>
+                </div>
+                <div class="table_wrapper">                   
+                    <div class="xscroll">
+                        <table class="table1">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                    </td>
+                                    <td>ID</td>
+                                    <td>현재상태</td>
+                                    <td>개별제어</td>
+                                    <td>모션센서설정</td>
+                                    <td>Dimmer</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                    </td>
+                                    <td>011032</td>
+                                    <td>1등: <span class="red">소등(스케줄)</span></td>
+                                    <td class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="">On(1등)</option>
+                                            <option value="">Off(1등)</option>
+                                            <option value="">Off/Off(2등)</option>
+                                            <option value="">On/Off(2등)</option>
+                                            <option value="">Off/On(2등)</option>
+                                            <option value="">On/On(2등)</option>
+                                        </select>
+                                    </td>
+                                    <td class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="">스케줄</option>
+                                            <option value="">센서</option>
+                                            <option value="">스케줄/스케줄</option>
+                                            <option value="">스케줄/센서</option>
+                                            <option value="">센서/스케줄</option>
+                                            <option value="">센서/센서</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">10%</option>
+                                            <option value="">20%</option>
+                                            <option value="">30%</option>
+                                            <option value="">40%</option>
+                                            <option value="">50%</option>
+                                            <option value="">60%</option>
+                                            <option value="">70%</option>
+                                            <option value="">80%</option>
+                                            <option value="">90%</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="" id="">
+                                    </td>
+                                    <td>011032</td>
+                                    <td>1등: <span class="red">점등,램프고장(스케줄)</td>
+                                    <td class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="">On(1등)</option>
+                                            <option value="">Off(1등)</option>
+                                            <option value="">Off/Off(2등)</option>
+                                            <option value="">On/Off(2등)</option>
+                                            <option value="">Off/On(2등)</option>
+                                            <option value="">On/On(2등)</option>
+                                        </select>
+                                    </td>
+                                    <td class="select_wrap">
+                                        <select name="" id="">
+                                            <option value="">스케줄</option>
+                                            <option value="">센서</option>
+                                            <option value="">스케줄/스케줄</option>
+                                            <option value="">스케줄/센서</option>
+                                            <option value="">센서/스케줄</option>
+                                            <option value="">센서/센서</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">10%</option>
+                                            <option value="">20%</option>
+                                            <option value="">30%</option>
+                                            <option value="">40%</option>
+                                            <option value="">50%</option>
+                                            <option value="">60%</option>
+                                            <option value="">70%</option>
+                                            <option value="">80%</option>
+                                            <option value="">90%</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn_group">
+                <div class="left">
+                    <div><a href="">제어설정</a></div>
+                    <div><a href="">제어읽기</a></div>
+                    <div><a href="">Dim설정</a></div>
+                    <div><a href="">Dim읽기</a></div>
+                    <div><a href="">등주점검</a></div>
+                </div>
+                <div class="right">
+                    <div class="dimm_btn"><a href="#a">Dim예약</a></div>
+                    <div class="deng_btn"><a href="#a">등주예약</a></div>
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

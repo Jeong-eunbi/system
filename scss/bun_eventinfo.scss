@@ -1,0 +1,105 @@
+@import "./var", "./popup";
+body{
+    .infobox{
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    div{
+        width: 100%;
+        .gamsi1{
+            @include flex;
+            clear: both;
+            tbody{
+                width: 100%;
+                tr{
+                    @include flex;
+                    padding: 3px;
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    &:first-child{
+                        @include first_tr;
+                        background-color: $white;
+                        width: auto;
+                    }
+                    td{
+                        @include flex;
+                        @include center-r;
+                        @include center-c;
+                        width: 20%;
+                        span{
+                            font-size: 15px;
+                        }
+                        span.smtext{
+                            display: inline-block;
+                            margin-left: 4px;
+                            font-size: 13px;
+                            color: red;
+                        }
+                        
+                        &:nth-child(odd){
+                            background-color: $td_color;
+                            width: 25%;
+                            height: 30px;
+                        }
+                        &:nth-child(even){
+                            padding-left: 10px;
+                            justify-content: flex-start;
+                            font-family: 'GmarketSansLight';
+                            font-weight: bold ;
+                            box-sizing: border-box;
+                        }
+                        &.first{
+                            width: 75%;
+                            text-align: left;
+                            padding-left: 10px;
+                            box-sizing: border-box;
+                        }
+                        &.text_width{
+                            width: 30%;
+                        }
+                    }
+                }
+            }
+        }
+        .gamsi2{
+            margin-bottom: 1rem;
+            border-top: 2px solid #666;
+            box-sizing: border-box;
+            .row-item{
+                display: grid;
+                grid-template-columns: 20% repeat(8, 10%);
+                grid-template-rows: 5fr;
+                font-size: 15px;
+                .line{
+                    white-space: pre-line;
+                    background-color: $td_color;
+                }
+                .bg_color{
+                    background-color: $td_color;
+                }
+                >div{
+                    padding: 12px 3px;
+                    text-align: center;
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    @include flex;
+                    @include center-c;
+                    @include center-r;
+                    border-right: $table_border;
+                    input{
+                        width: 90%;
+                    }
+                }
+                .sm{
+                    font-size: 14px;
+                    background-color: $td_color;
+                }
+    
+            }
+        }
+        
+    }
+}
+
+

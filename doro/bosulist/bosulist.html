@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 보수내역관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/main.js" ></script>
+    <script type="text/javascript" defer src="../../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/print.js" ></script>
+    <script type="text/javascript" defer src="../../js/doro.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+
+        <!-- header 끝 / content시작 -->
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">이용안내<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a">이용안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">민원관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../minwon/complain.html">불편신고</a></li>
+                                    <li class="on"><a href="../minwon/process.html">처리현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수처리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosu/setlist.html">설치현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수내역관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosulist/notice.html">공지관리</a></li>
+                                    <li class="on"><a href="bosulist/bosulist.html">보수내역관리</a></li>
+                                    <li><a href="../bosulist/billing.html">청구내역관리</a></li>
+                                    <li><a href="../bosulist/meterial.html">자재관리</a></li>
+                                    <li><a href="../bosulist/inout1.html">자재입출고관리</a></li>
+                                    <li><a href="../bosulist/tong_data1.html">통계자료</a></li>
+                                    <li><a href="../bosulist/company.html">업체관리</a></li>
+                                    <li><a href="../bosulist/bosu_setting.html">환경설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox minwonb2" id="bosubox">
+                <div class="search_wrap custom_scroll">
+                    <table class="table_search">
+                        <tr>
+                            <td>등별검색</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">전체</option>
+                                </select>
+                            </td>
+                            <td>구분별검색</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">전체</option>
+                                </select>
+                            </td>
+                            <td>처리상태별검색</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>업체별검색</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">전체</option>
+                                </select>
+                            </td>
+                            <td>지역별검색</td>
+                            <td colspan="3">
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">구읍면선택</option>
+                                    </select>
+                                    <select name="" id="">
+                                        <option value="">동리선택</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>기간별검색</td>
+                            <td>
+                                <div>
+                                    <input type="date" name="" id="">
+                                    <input type="date">
+                                </div>
+                            </td>
+
+                            <td>검색</td>
+                            <td colspan="3">
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">신고인</option>
+                                    </select>
+                                    <input type="text">
+                                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                                </div>
+                            </td>
+                            
+                        </tr>
+                    </table>
+                </div>
+                <div class="scroll_wrapper">
+                    <div class="devidebox">
+                        <div class="txt txticonbox non">
+                            <span>총<span class="roadcount"></span>건</span>
+                            <div class="iconbtn">
+                                <button><i class="fa-regular fa-file-excel"></i></button>
+                                <button onclick="bosu_print()"><i class="fa-solid fa-print"></i></button>
+                            </div>
+                        </div>
+                        <div id="tablescroll" class="custom_scroll roadtable">
+                            <table class="bosulist">
+                                <thead>
+                                    <tr>
+                                        <th>접수번호</th>
+                                        <th>신고구분</th>
+                                        <th>신고방법</th>
+                                        <th>신고인</th>
+                                        <th>연락처</th>
+                                        <th>위치/고장상태</th>
+                                        <th>등이름</th>
+                                        <th>작성일</th>
+                                        <th>담당업체</th>
+                                        <th>보수처리일</th>
+                                        <th>처리상태</th>
+                                        <th>처리</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="bosulist_detail.html">22102804</a>
+                                        </td>
+                                        <td>(보)불편신고</td>
+                                        <td>온라인</td>
+                                        <td>담당자</td>
+                                        <td>010-5101-4177</td>
+                                        <td>
+                                            <ul>
+                                                <li>[등번호] : 매교동1002</li>
+                                                <li>[위치]:팔달구/매교동 82</li>
+                                                <li>[상태]:깜빡거려요</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="find"><a href=""><i class="fas fa-map-marker-alt"></i>위치찾기</a></div>
+                                        </td>
+                                        <td>22-10-28</td>
+                                        <td>보안1권역</td>
+                                        <td>20221028</td>
+                                        <td>현장확인중</td>
+                                        <td>
+                                            <div class="table_btn">
+                                                <div class="bosuinput"><a href="bosulist_input.html">보수내역입력</a></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="bosulist_detail.html">22102804</a>
+                                        </td>
+                                        <td>(보)불편신고</td>
+                                        <td>온라인</td>
+                                        <td>담당자</td>
+                                        <td>010-5101-4177</td>
+                                        <td>
+                                            <ul>
+                                                <li>[등번호] : 매교동1002</li>
+                                                <li>[위치]:팔달구/매교동 82</li>
+                                                <li>[상태]:깜빡거려요</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="deng_name">
+                                                <div class="lo_name"><a href=""><i class="fas fa-square"></i>매교통1002</a></div>
+                                                <div class="infobtn"><a href="#a" onclick="jum_info()"><i class="fas fa-info-circle"></i>정보</a></div>
+                                            </div>
+                                            
+                                        </td>
+                                        <td>22-10-28</td>
+                                        <td>보안1권역</td>
+                                        <td>20221028</td>
+                                        <td>작업지시</td>
+                                        <td>
+                                            <div class="table_btn">
+                                                <div class="bosuinput"><a href="bosulist_input.html">보수내역입력</a></div>
+                                                <div><a href="">재작업지시취소</a></div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="bosulist_detail.html">22102804</a>
+                                        </td>
+                                        <td>(보)불편신고</td>
+                                        <td>온라인</td>
+                                        <td>담당자</td>
+                                        <td>010-5101-4177</td>
+                                        <td>
+                                            <ul>
+                                                <li>[등번호] : 매교동1002</li>
+                                                <li>[위치]:팔달구/매교동 82</li>
+                                                <li>[상태]:깜빡거려요</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="deng_name">
+                                                <div class="lo_name"><a href=""><i class="fas fa-square"></i>매교통1002</a></div>
+                                                <div class="infobtn"><a href="#a" onclick="jum_info()"><i class="fas fa-info-circle"></i>정보</a></div>
+                                            </div>
+                                            
+                                        </td>
+                                        <td>22-10-28</td>
+                                        <td>보안1권역</td>
+                                        <td>20221028</td>
+                                        <td>신고완료</td>
+                                        <td>
+                                            <div class="table_btn">
+                                                <div><a href="">작업지시</a></div>
+                                            </div>
+                                            
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="bosulist_detail.html">22102804</a>
+                                        </td>
+                                        <td>(보)불편신고</td>
+                                        <td>온라인</td>
+                                        <td>담당자</td>
+                                        <td>010-5101-4177</td>
+                                        <td>
+                                            <ul>
+                                                <li>[등번호] : 매교동1002</li>
+                                                <li>[위치]:팔달구/매교동 82</li>
+                                                <li>[상태]:깜빡거려요</li>
+                                            </ul>
+                                        </td>
+                                        <td>
+                                            <div class="deng_name">
+                                                <div class="lo_name"><a href=""><i class="fas fa-square"></i>매교통1002</a></div>
+                                                <div class="infobtn"><a href="#a" onclick="jum_info()"><i class="fas fa-info-circle"></i>정보</a></div>
+                                            </div>
+                                        </td>
+                                        <td>22-10-28</td>
+                                        <td>보안1권역</td>
+                                        <td>20221028</td>
+                                        <td>현장확인중</td>
+                                        <td>
+                                            <div class="table_btn">
+                                                <div><a href="">작업지시</a></div>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+ 
+        </div>
+    </div>
+</body>
+</html>

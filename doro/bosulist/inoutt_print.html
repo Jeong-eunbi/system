@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 자재입출고관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/tabprint.css">
+
+</head>
+<body onload="window.print()">
+    <div class="print_view paper">
+        <div class="content">
+            <h2>자재입출고관리 - 입출고현황(보수)</h2>
+            <table class="sign">
+                <tr>
+                    <td rowspan="2" class="gap">결제</td>
+                    <td>담당자</td>
+                    <td>팀장</td>
+                    <td>과장</td>
+                </tr>
+                <tr class="h60">
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="date right">
+                <span>20230101 ~ 20230116</span>
+            </div>
+            <div id="title1" class="tablebox">
+
+                <div class="tab1">                    
+                    <table class="inout_table2">
+                        <tr>
+                            <td>자재코드</td>
+                            <td>자재명</td>
+                            <td>규격</td>
+                            <td>비고</td>
+                        </tr>
+                        <tr>
+                            <td>GG001</td>
+                            <td>램프</td>
+                            <td>100W</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <div class="scroll_area hfix custom_scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>일자</th>
+                                    <th>입고량</th>
+                                    <th>출고량</th>
+                                    <th>잔고량</th>
+                                    <th>업체</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>이전기간</td>
+                                    <td class="bg">121</td>
+                                    <td class="bg">66</td>
+                                    <td class="bg">55</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="6">입출고 내역이 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>계</td>
+                                    <td class="bg">121</td>
+                                    <td class="bg">66</td>
+                                    <td class="bg">55</td>
+                                    <td>0</td>
+                                    <td>55</td>
+                        
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+                </div>
+                
+            </div>
+
+
+        </div>
+    </div>
+</body>
+</html>

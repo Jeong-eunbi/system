@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분전함 제어팝업창</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+
+</head>
+<body>
+    <div class="innerbox between">
+        <span class="mininame"><i class="fas fa-check-circle"></i>점멸기 개별제어</span>
+
+        <table class="buntable">
+            <tbody>
+                <tr>
+                    <td>명령</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택하세요</option>
+                            <option value="">강제소등</option>
+                            <option value="">접접선택점등</option>
+                            <option value="">강제점등</option>
+                            <option value="">정상상태복귀</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>지속시간</td>
+                    <td>
+                        <div class="time_input">
+                            <input type="text">
+                            <span>분</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="minibtn_group">
+            <div class="left">
+                <div><a href="">제어</a></div>
+            </div>
+        </div>
+
+        
+    </div>
+
+</body>
+</html>

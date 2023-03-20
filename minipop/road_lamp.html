@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분전함 제어팝업창</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+
+</head>
+<body>
+    <div class="controlbox roadbox between">
+        <div class="roadwrap">
+            <div>
+                <span class="mininame"><i class="fas fa-check-circle"></i>분전함(임)30-0474 2분기 - 01 제어</span>
+                <table class="table1">
+                    <tbody>
+                        <tr>
+                            <td>점/소등선택</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">OFF/OFF</option>
+                                    <option value="">ON/OFF</option>
+                                    <option value="">OFF/ON</option>
+                                    <option value="">ON/ON</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>강제 지속시간</td>
+                            <td>
+                                <div class="time">
+                                    <input type="text">
+                                    분
+                                    <span>(최댓값 240)</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <span class="mininame"><input type="checkbox">등주감시기제어</span>
+                <table class="table1">
+                    <tbody>
+                        <tr>
+                            <td>분기선택</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">분기전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>등주선택</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">등주전체</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>점소등선택</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">off/off</option>
+                                    <option value="">on/off</option>
+                                    <option value="">off/on</option>
+                                    <option value="">on/on</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="minibtn_group">
+            <div class="left">
+                <div><a href="">제어</a></div>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

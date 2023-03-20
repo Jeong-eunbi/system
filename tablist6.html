@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합양방향관제시스템</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css" >
+    <!-- swiper 슬라이드 -->
+    <script type="text/javascript" defer src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <script type="text/javascript" defer src="js/index.js" ></script>
+    <script type="text/javascript" defer src="js/tab.js" ></script>
+</head>
+<body>
+    <div class="view">
+        <div class="tablebox">
+
+            <h2><i class="fas fa-list-ul"></i>펌프장</h2>
+            <select name="area" id="area">
+                <option value="">펌프장선택</option>
+                    <option value="">동두천지하차도</option>
+            </select>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>총감시기</td>
+                        <td>0</td>
+                        <td>경보</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>통신이상(감)</td>
+                        <td>0</td>
+                        <td>총펌프장</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>펌프가동</td>
+                        <td>0</td>
+                        <td>통신이상</td>
+                        <td>0/0</td>
+                    </tr>
+                    <tr>
+                        <td>정전</td>
+                        <td>0/0</td>
+                        <td>위험수위</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>고우쉬알람</td>
+                        <td>0</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <div class="search_Bar">
+            <select name="search" id="search" class="search">
+                <option value="">점멸기이름</option>
+                <option value="">지번/도로명</option>
+                <option value="">모뎀IP</option>
+                <option value="">SIM번호</option>
+            </select>
+            <input type="text">
+            <div><i class="fas fa-search"></i></div>
+        </div>
+
+        <div class="tablebox">
+            <div>
+                <h2><i class="fas fa-list-ul"></i>총점멸기목록</h2>
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <ul class="scroll">
+                <li><a href="">04-04-26 (NS)<span>279-21/</span><span>1234456</span><span>789456</span></a></li>
+                <li><a href="">036 (LS)<span>279-21/</span><span>12345678</span><span></span></a></li>
+                <li><a href="">자료가 없습니다<span></span><span></span><span></span></a></li>
+                <li><a href="">038 (LS)<span>124-19/</span><span></span><span></span></a></li>
+                <li><a href="">045 (LS)<span>354/</span><span></span><span></span></a></li>
+                <li><a href="">0846 (LS)<span>353-21/</span><span></span><span></span></a></li>
+                <li><a href="">0847 (LS)<span>800-6/</span><span></span><span></span></a></li>
+                <li><a href="">0848 (LS)<span>800-6/</span><span></span><span></span></a></li>
+                <li><a href="">1053 (LS)<span>126-4/</span><span></span><span></span></a></li>
+                <li><a href="">1054 (LS)<span>126-4/</span><span></span><span></span></a></li>
+                <li><a href="">1055 (LS)<span>101-13/</span><span></span><span></span></a></li>
+                <li><a href="">1056 (LS)<span> 99-1/</span><span></span><span></span></a></li>
+                <li><a href="">1058 (LS)<span>695/</span><span></span><span></span></a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

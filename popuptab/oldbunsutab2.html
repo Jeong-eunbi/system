@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>구형분수대 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/bunsu.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab2 oldwrap bunsu_tab2">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between bunsu_height">
+            <div>
+                <ul class="nav">
+                    <li><a href="oldbunsutab1.html" class="text">기본정보</a></li>
+                    <li><a href="oldbunsutab2.html" class="text_active">상태정보</a></li>
+                    <li><a href="oldbunsutab3.html" class="text">운용데이터</a></li>
+                    <li><a href="oldbunsutab4.html" class="text">이벤트</a></li>
+                </ul>
+                <div class="table_wrapper">
+                    <table class="state_info">
+                        <tr>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>차단</span></td>
+                            <td><span>차단</span></td>
+                            <td><span></span></td>
+                            <td><span>정지(00.00KW)</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select>
+                                    <option value="">A접점</option>
+                                    <option value="">B접점</option>
+                                    <option value="">C접점</option>
+                                    <option value="">D접점</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>차단</span></td>
+                            <td><span>차단</span></td>
+                            <td><span></span></td>
+                            <td><span>정지(00.00KW)</span></td>
+                        </tr>
+                    
+                    </table>
+                </div>
+            </div>
+            
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>

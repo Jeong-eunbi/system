@@ -1,0 +1,2877 @@
+@import "./var";
+
+@media (max-width:1200px){
+    // 팝업창 menu
+    ul.nav{
+        max-width: 100%;
+        white-space: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -ms-overflow-style: none; 
+        white-space: nowrap;
+        li{
+            a{
+                margin: 0 8px;
+            }
+        }
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    // 가로등
+    #garo1{
+        .iframe_box, .iframebosu_box{
+            width: 100%;
+            left: 0;            
+        }
+        
+        .popcon_wrap{
+
+            .lamp_tab1{
+                // height: 335px;
+                .table_wrapper{
+                    .table1{
+                        tr{
+                            td{
+                                &:nth-child(odd){
+                                    font-size: 14px;
+                                }
+                            }
+                        }            
+                    }
+                    .table2{
+                        tbody{
+                            tr{
+                                &:first-child{
+                                    font-size: 14px;
+                                }
+                                td{
+                                    &:first-child{
+                                        width: 15%;
+                                    }
+                                    width: calc(85% / 4);
+                                    select{
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .lamp_tab2{
+                .table_wrapper{
+                    // height: calc(100% - 41.59px);
+                    .tablebox{
+                        table{
+                            tbody{
+                                tr{
+                                    width: 100%;
+                                    white-space: nowrap;
+                                    td{
+                                        width: 40%;
+                                        &:first-child{
+                                            width: 20%;
+                                        }
+                                    }
+                                }
+                            }
+    
+                        }
+                    }
+                }
+                
+            }
+            .lamp_tab3{
+                .between{
+                    .tab3_top{
+                        justify-content: flex-end;
+                        .tab3_search{
+                            margin-top: 3px;
+                            margin-right: 3px;
+                        }
+                    }
+                    .table_wrapper {
+                        // height: calc(100% - 74.59px - 31px);
+                        table.tab3_scroll {
+                            tbody {
+                                tr{
+                                    td{
+                                        line-height: initial;
+                                        // height: 100%;
+                                        height: 30px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        justify-content: center;
+                                        text-align: center;
+                                        &:nth-child(2){
+                                            border-left: 1px solid #dbdee1;
+                                            border-right: 1px solid #dbdee1;
+                                        }
+                                    }
+                                }
+                            }   
+                        }
+                    }
+                }
+            }
+            .lamp_tab4{
+                
+                .top-right-btn{
+                    .work{
+                        margin-top: 4px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    // 분전함
+    #garo2{
+        .between{
+            // height: 523px;
+            // @include flex;
+            // flex-direction: column;
+            // @include between;
+            // position: relative;
+            // top: 0;
+            // left: 0;
+            // width: 100%;
+        }
+        height: 670px;
+        .nav_list{
+            .top-right-btn{
+                padding: .3rem;
+            }
+            .bun_tab1{
+                .table_wrapper{
+                    // height: calc(670px - 14.5rem);
+                    table{
+                        tr{
+                            td{
+                                &:nth-child(odd){
+                                    width: 22vw;
+                                }
+                                &:nth-child(even){
+                                    width: 26vw;
+                                }
+                                &.in_span{
+                                    width: 80%;
+                                }
+                                &.etc, &.address{
+                                    width: 70%;
+                                }
+                            }
+
+                        }
+                        
+                    }
+                }
+
+                .addchange{
+                    width: 90%;
+                    left: 5%;
+                }
+                // 제어
+                .controlbox {
+                    width: 90%;
+                    left: 5%;
+                }
+
+            }
+            .bun_tab2{
+                .top-right-btn{
+                    padding-top: 0;
+                }
+                
+            }
+            .bun_tab3{
+                // .table_wrapper{
+                //     height: calc(670px - 12.1rem);
+                // }
+            }
+            .bun_tab4{
+                // .table_wrapper{
+                //     height: calc(670px - 12.1rem);
+                // }
+
+            }
+            .bun_tab5{
+                .dengchange_box, .dengchange_box2{
+                    width: 90%;
+                    left: 5%;
+                }
+                .table_wrapper{
+                    // height: calc(670px - 14.5rem);
+                    .garobox{
+                        table{
+                            tbody{
+                                tr{
+                                    td{
+                                        text-align: center;
+                                        select,input{
+                                            width: 60px;
+                                        }
+                                        .garobtn, .garobtn1{
+                                            display: block;
+                                            width: 60px;
+                                            margin: 0 auto;
+                                            padding: 0;
+                                            height: 30px;
+                                            line-height: 30px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+    
+                    }
+                }
+            }
+            .bun_tab6{
+                .dimchange_box,.dengre_box{
+                    width: 90%;
+                    left: 5%;
+                    height: 50%;
+                }
+                .btn_group{
+                    .left{
+                        margin-bottom: 0;
+                        flex-wrap: wrap;
+                        justify-content: flex-end;
+                    }
+                }
+                .table_wrapper{
+                    // height: calc(670px - 23.3rem);
+                    .xscroll{
+                        table{
+                            tr{
+                                td:not(:first-child){
+                                    width: 100px;
+                                    white-space: pre-wrap;
+                                    word-break: keep-all;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .bun_tab7{
+                .eventbox{
+                    width: 90%;
+                    left: 5%;
+                }
+                .xscroll{
+                   
+                    table{
+                        
+                        tr{
+                            td{
+                                &:nth-child(1){
+                                    width: 120px;
+                                }
+                                &:nth-child(2){
+                                    width: 120px;
+                                    border-right: 1px solid #cacdd4;
+                                    border-left: 1px solid #cacdd4;
+                                }
+                            }
+                        }
+                        tbody{
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .bun_tab8{
+                .iframebosu_box{
+                    width: 90%;
+                    left: 5%;
+                }
+                // .table_wrapper{
+                //     height: calc(670px - 18.3rem);
+                // }
+        
+            }
+
+        }
+    }
+    // 버튼그룹
+    .btn_group{
+        flex-wrap: wrap;
+        .left{
+            border-top: none;
+        }
+    }
+
+    // 가로등 제어클릭시 팝업창
+    .bun_controlbox{
+        table.buntable{
+            tbody{
+                tr{
+                    td{
+                        div{
+                            ul{
+                                margin-top: 0;
+                                justify-content: flex-start;
+                                flex-wrap: wrap;
+                                li{
+                                    margin-right: 5px;
+                                }
+                            }
+                        }
+                        .time_input{
+                            span.small_text{
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+
+    // plc 일괄변경창
+    .dimgrid_box{
+        table{
+            tbody{
+                tr{
+                    td{
+                        padding: 8px 0;
+                        i{
+                            margin-right: 3px;
+                        }
+                        &:not(.center){
+                            padding-left: 5px;
+                        }
+                    }
+                    .center{
+                        text-align: center;
+                    }
+        
+                }
+            }
+        }
+    }
+
+    // plc등주변경
+    .deng_box{
+        .re_date{
+            tr{
+                td{
+                    span{
+                        margin: 0 2px;
+                    }
+                }
+            }
+        }
+        .re_date2{
+            tr{
+                td{
+                    &:not(:last-child){
+                        width: 18%;
+                    }
+                    &:last-child{
+                        width: 64%;
+                    }
+                    div{
+                        select{
+                            margin-left: 3px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+
+    // plc dimm예약
+    .dimm_reservation{
+        width: 100%;
+        left: 0;
+    }
+    .dimm_view{
+        width: 100%;
+        left: 0;
+    }
+    .dimmer_container{
+        // .row-item{
+        //     grid-template-columns: 15px 280px 130px 80px repeat(9, 50px);
+        // }
+        .btn_group{
+            margin-top: 1rem;
+        }
+    }
+    
+}
+@media (max-width:1000px){
+    @media (orientation: landscape){
+        .pumptab .between .wrap .table_wrapper{
+            overflow: initial;
+        }
+    }
+}
+@media (max-width:768px){
+    @media (orientation: portrait){
+        // 팝업창 menu
+        ul.nav{
+            max-width: 100%;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -ms-overflow-style: none; 
+            white-space: nowrap;
+            li{
+                a{
+                    margin: 0 8px;
+                }
+            }
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+        // 가로등
+        #garo1{
+            .iframe_box, .iframebosu_box{
+                width: 100%;
+                left: 0;            
+            }
+            .popcon_wrap{
+                .lamp_tab1{
+                    // height: 335px;
+                    .table_wrapper{
+                        overflow: auto;
+                        .table1{
+                            tr{
+                                td{
+                                    &:nth-child(odd){
+                                        font-size: 14px;
+                                        font-weight: bold;
+                                    }
+                                }
+                            }            
+                        }
+                        .table2{
+                            tbody{
+                                tr{
+                                    &:first-child{
+                                        font-size: 14px;
+                                    }
+                                    td{
+                                        &:first-child{
+                                            width: 15%;
+                                        }
+                                        width: calc(85% / 4);
+                                        select{
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .lamp_tab2{
+                    // height: 335px;
+                    .table_wrapper{
+                        overflow: auto;
+                        // height: calc(100% - 41.59px);
+                        .tablebox{
+                            width: 100%;
+                            overflow: auto;
+                            table{
+                                tbody{
+                                    tr{
+                                        width: 100%;
+                                        white-space: nowrap;
+                                        td{
+                                            width: 40%;
+                                            &:first-child{
+                                                width: 20%;
+                                            }
+                                        }
+                                    }
+                                }
+        
+                            }
+                        }
+                    }
+                    
+                }
+                .lamp_tab3{
+                    // height: 335px;
+                    .between{
+                        .tab3_top{
+                            justify-content: flex-end;
+                            .tab3_search{
+                                margin-top: 3px;
+                                margin-right: 3px;
+                            }
+                        }
+                        .table_wrapper {
+                            // height: calc(100% - 74.59px - 31px);
+                            overflow: auto;
+                            table.tab3_scroll {
+                                tbody {
+                                    tr{
+                                        td{
+                                            line-height: initial;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: center;
+                                            text-align: center;
+                                        }
+                                    }
+                                }   
+                            }
+                        }
+                    }
+                }
+                .lamp_tab4{
+                    // height: 335px;
+                    .table_wrapper{
+                        // height: calc(100% - 77.59px - 46.59px);
+                        overflow: auto;
+                    }
+                    .top-right-btn{
+                        .work{
+                            margin-top: 4px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+        // 분전함
+        #garo2{
+            .between{
+                // height: 523px;
+                // @include flex;
+                // flex-direction: column;
+                // @include between;
+                position: relative;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+            .nav_list{
+                .top-right-btn{
+                    padding: .3rem;
+                }
+                .bun_tab1{
+                    .table_wrapper{
+                        // height: calc(670px - 14.5rem);
+                        table{
+                            tr{
+                                td{
+                                    &:nth-child(odd){
+                                        width: 22vw;
+                                    }
+                                    &:nth-child(even){
+                                        width: 26vw;
+                                    }
+                                    &.in_span{
+                                        width: 80%;
+                                    }
+                                    &.etc, &.address{
+                                        width: 70%;
+                                    }
+                                }
+
+                            }
+                            
+                        }
+                    }
+
+                    .addchange{
+                        width: 90%;
+                        left: 5%;
+                    }
+                    // 제어
+                    .controlbox {
+                        width: 90%;
+                        left: 5%;
+                    }
+
+                }
+                .bun_tab2{
+                    .top-right-btn{
+                        padding-top: 0;
+                    }
+                    
+                }
+                .bun_tab5{
+                    .dengchange_box, .dengchange_box2{
+                        width: 90%;
+                        left: 5%;
+                    }
+                    .table_wrapper{
+                        // height: calc(670px - 14.5rem);
+                        .garobox{
+                            table{
+                                tbody{
+                                    tr{
+                                        td{
+                                            text-align: center;
+                                            select,input{
+                                                width: 60px;
+                                            }
+                                            .garobtn, .garobtn1{
+                                                display: block;
+                                                width: 60px;
+                                                margin: 0 auto;
+                                                padding: 0;
+                                                height: 30px;
+                                                line-height: 30px;
+                                                box-sizing: border-box;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+        
+                        }
+                    }
+                }
+                .bun_tab6{
+                    .dimchange_box,.dengre_box{
+                        width: 90%;
+                        left: 5%;
+                        height: 50%;
+                    }
+                    .between{
+                        .btn_group{
+                            .left{
+                                margin-bottom: 0;
+                                flex-wrap: wrap;
+                                justify-content: flex-end;
+                            }
+                        }
+                        .table_wrapper{
+                            // height: calc(670px - 23.3rem);
+                            .xscroll{
+                                table{
+                                    tr{
+                                        td:not(:first-child){
+                                            width: 100px;
+                                            white-space: pre-wrap;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+                .bun_tab7{
+                    .eventbox{
+                        width: 90%;
+                        left: 5%;
+                    }
+                    .xscroll{
+                        table{
+                            tr{
+                                td{
+                                    &:nth-child(1){
+                                        width: 120px;
+                                    }
+                                    &:nth-child(2){
+                                        width: 120px;
+                                        border-right: 1px solid #cacdd4;
+                                        border-left: 1px solid #cacdd4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .bun_tab8{
+                    .iframebosu_box{
+                        width: 90%;
+                        left: 5%;
+                    }
+                }
+
+            }
+        }
+
+        // 가로등 제어클릭시 팝업창
+        .bun_controlbox{
+            table.buntable{
+                tbody{
+                    tr{
+                        td{
+                            div{
+                                ul{
+                                    margin-top: 0;
+                                    justify-content: flex-start;
+                                    flex-wrap: wrap;
+                                    li{
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                            .time_input{
+                                span.small_text{
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        // plc 일괄변경창
+        .dimgrid_box{
+            table{
+                tbody{
+                    tr{
+                        td{
+                            padding: 8px 0;
+                            i{
+                                margin-right: 3px;
+                            }
+                            &:not(.center){
+                                padding-left: 5px;
+                            }
+                        }
+                        .center{
+                            text-align: center;
+                        }
+            
+                    }
+                }
+            }
+        }
+
+        // plc등주변경
+        .deng_box{
+            .re_date{
+                tr{
+                    td{
+                        span{
+                            margin: 0 2px;
+                        }
+                    }
+                }
+            }
+            .re_date2{
+                tr{
+                    td{
+                        &:not(:last-child){
+                            width: 18%;
+                        }
+                        &:last-child{
+                            width: 64%;
+                        }
+                        div{
+                            select{
+                                margin-left: 3px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+
+        // plc dimm예약
+        .dimm_reservation{
+            width: 100%;
+            left: 0;
+        }
+        .dimm_view{
+            width: 100%;
+            left: 0;
+        }
+        .viewcontainer{
+            height: 100%;
+            .viewbox{
+                .scroll_box{
+                    height: calc(100% - 132px);
+                    .scroll-table{
+                        overflow-x: auto;
+                        table{
+                            tbody{
+                                tr{
+                                    td{
+                                        height: initial;
+                                        line-height: initial;
+                                        padding: 4px;
+            
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .w800{
+            width: 100%;
+            max-width: 100%;
+            left: 0;
+        }
+        
+        .pumptab{
+            overflow: auto;
+        }
+        .jumbox .popcon_wrap .nav_list {
+            height: calc(100% - 90px);
+        }
+    }
+    
+
+    @media (orientation: landscape) {
+        body{
+            div{
+                // 감시내역 > 정상소등클릭시 팝업창
+                div.gamsi2{
+                    margin-top: .5rem;
+                    .row-item{
+                        grid-template-columns: 25% repeat(8, 15%);
+                        overflow-x: auto;
+                        .line{
+                            position: sticky;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        #garo1{
+            z-index: 10;
+        }
+        .jungbox, .jumbox{
+            overflow: auto;
+            .popcon_wrap .nav_list{
+                height: initial;
+                .between .table_wrapper{
+                    overflow: hidden;
+                }
+            }
+        }
+        .jum_tab4 .popcon_wrap .nav_list{
+            height: calc(100% - 90px);
+        }
+        .dimgrid_box .minibtn_group{
+            margin: 4px 0;
+        }
+        .viewcontainer .scroll_box .scroll-table{
+            height: 100%;
+        }
+        .innerbox{
+            overflow: auto;
+        }
+        .minipop{
+            top: -10%;
+            max-height: 300px;
+        }
+        .pop{
+            z-index: 9 !important;
+        }
+        
+        .bunsuevent{
+            overflow: auto;
+        }
+        
+        #jungeventbox{
+            max-height: 250px;
+        }
+        
+        // 펌프장기본정보
+        .pumptab{
+            overflow: auto;
+        }
+        .pump_tab2 .between{
+            height: 100%;
+        }
+        //분수대기본정보
+        .oldwrap{
+            overflow: auto;
+            .bunsu_height{
+                >div:first-child{
+                    height: initial;
+                }
+                div{
+                    .table_wrapper{
+                        height: initial;
+                    }
+                }
+            }
+            .between{
+                // height: initial;
+                .table_wrapper{
+                    overflow: hidden;
+                    height: initial;
+                }
+                
+            }
+        }
+        .bun{
+            overflow-y: auto;
+            overflow-x: hidden;
+            .between{
+                height: initial;
+                .table_wrapper{
+                    overflow: initial;
+                    height: 100%;
+                }
+            } 
+        } 
+        .bunsu_tab4{
+            .bunsu_height .between{
+                .table_wrapper{
+                    height: 100%;
+                    overflow: inherit;
+                }
+            }
+        }
+        
+        .w800{
+            max-width: 800px;
+            left: 0;
+        }
+
+        
+
+    }
+}
+
+@media (max-width:510px){
+    @media (orientation: portrait) {
+        body{
+            div{
+                // 감시내역 > 정상소등클릭시 팝업창
+                div.gamsi2{
+                    .row-item{
+                        grid-template-columns: 25% repeat(8, 15%);
+                        overflow-x: auto;
+                        .line{
+                            position: sticky;
+                            left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        // 팝업창 menu
+        ul.nav{
+            max-width: 100%;
+            min-height: 30px;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+            -ms-overflow-style: none; 
+            white-space: nowrap;
+            li{
+                a{
+                    margin: 0 8px;
+                }
+            }
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+        #bunsu{
+            max-width: 400px;
+        }
+        // 가로등
+        #garo1{
+            max-width: 400px;
+            .iframe_box, .iframebosu_box{
+                width: 100%;
+                left: 0;            
+            }
+            .popcon_wrap{
+                .lamp_tab1{
+                    .table1{
+                        tr{
+                            td{
+                                &:nth-child(odd){
+                                    font-size: 14px;
+                                }
+                            }
+                        }            
+                    }
+                    .table2{
+                        tbody{
+                            tr{
+                                &:first-child{
+                                    font-size: 14px;
+                                }
+                                td{
+                                    &:first-child{
+                                        width: 15%;
+                                    }
+                                    width: calc(85% / 4);
+                                    select{
+                                        width: 70%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .lamp_tab2{
+                    .tablebox{
+                        width: 100%;
+                        overflow: auto;
+                        table{
+                            tbody{
+                                tr{
+                                    width: 100%;
+                                    white-space: nowrap;
+                                    td{
+                                        width: 40%;
+                                        &:first-child{
+                                            width: 20%;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+                .lamp_tab3{
+                    .tab3_top{
+                        justify-content: flex-end;
+                        .tab3_search{
+                            margin-top: 3px;
+                            margin-right: 3px;
+                        }
+                    }
+                
+                }
+            }
+        }
+        // 분전함
+        #garo2{
+            max-width: 530px;
+            // 이미지
+            .imgbox{
+                width: 100%;
+                height: 80%;
+                left: 0;
+            }
+            .doorlock{
+                width: 100%;
+                left: 0;
+            }
+
+            .nav_list{
+                .between{
+                    height: 100%;
+                }
+                
+
+            }
+        }
+        .bunjeon{
+            .table_wrapper{
+                table{
+                    tbody{
+                        tr{
+                            td{
+                                &:nth-child(odd){
+                                    width: 40%;
+                                }
+                                &:nth-child(even){
+                                    width: 60% !important;
+                                }
+                            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bun_tab2{
+            height: 330px;
+            .table_wrapper{
+                // height: calc(670px - 14.5rem);
+                .statebox{
+                    border-top: 2px solid #666;
+                    margin-bottom: 5px;
+                    .row-item{
+                        overflow-x: auto;
+                        grid-template-columns: 15% 20% repeat(8, 15%);
+                        border-top: none;
+                        &::-webkit-scrollbar {
+                            height: 3px; 
+                            background-color: rgba(0,0,0,0.15);
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            background-color: #000;
+                        }
+                        .bg_color{
+                            position: sticky;
+                            left: 0;
+                        }
+                        .nsbp, .line{
+                            position: sticky;
+                            left: 15%;
+                        }
+                        
+                    }
+                    
+                }
+            }
+            
+        }
+        .bun_tab3{
+            height: 330px;
+            .table_wrapper{
+                overflow-x: auto;
+                height: calc(100% - 46.59px);
+                table{
+                    tbody{
+                        tr{
+                            display: flex;
+                            flex-wrap: wrap;
+                            td{
+                                line-height: initial;
+                                &:nth-child(odd){
+                                    width: 40%;
+                                    vertical-align: middle;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                                &:nth-child(even){
+                                    width: 60%;
+                                    height: inherit;
+                                    margin-bottom: 3px;
+                                    box-sizing: border-box;
+                                    .td_full{
+                                        flex-wrap: wrap;
+                                        div{
+                                            &:first-child{
+                                                margin-bottom: 3px;
+                                                box-sizing: border-box;
+                                            }
+                                        }
+                                        >select{
+                                            margin-top: 3px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                    ul.deng{
+                                        flex-wrap: wrap;
+                                        li{
+                                            width: auto;
+                                        }
+                                    }
+                                }
+                            }
+                            .left_align{
+                                .small_text{
+                                    width: auto;
+                                }
+                            }
+                            .h60{
+                                height: 90px;
+                                line-height: 90px;
+                            }
+                            .dengfull{
+                                height: 60px;
+                                line-height: 60px;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .bun_tab4{
+            // height: 330px;
+            .table_wrapper{
+                // height: calc(100% - 46.59px);
+                .termbox{
+                    width: 100%;
+                    overflow-x: auto;
+                    &::-webkit-scrollbar {
+                        height: 3px; 
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    table.term{
+                        tbody{
+                            tr{
+                                td{
+                                    
+                                    &:first-child{
+                                        width: 10%;
+                                        position: sticky;
+                                        left: 0;
+                                    }
+                                    &:not(:first-child){
+                                        width: 100px;
+                                        select, input{
+                                            width: 80%;
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+                table.plc{
+                    tbody{
+                        tr{
+ 
+                            td{
+                                &:nth-child(odd){
+                                    width: 50%;
+                                    font-size: .9rem;
+                                }
+                                &:nth-child(even){
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+        .bun_tab5{
+            // height: 330px;
+            .dengchange_box, .dengchange_box2{
+                width: 100%;
+                left: 0;
+            }
+            .table_wrapper{                
+                .garobox{
+                    width: 100%;
+                    overflow-x: auto;
+                    &::-webkit-scrollbar {
+                        height: 3px; 
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    table{
+                        tbody{
+                            tr{
+                                td{
+                                    @include flex;
+                                    flex-direction: column;
+                                    @include between;
+                                    width: auto;
+                                    padding: 0 2px;
+                                    input{
+                                        margin-bottom: 0;
+                                    }
+                                    select,input{
+                                        width: 60px;
+                                    }
+                                    .garobtn, .garobtn1{
+                                        height: 30px;
+                                        line-height: 30px;
+                                        text-align: center;
+                                        padding: 0;
+                                        box-sizing: border-box;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+
+                }
+            }
+        }
+        .bun_tab6{
+            // height: 330px;
+            .dimchange_box, .dengre_box{
+                width: 100%;
+                left: 0;
+            }
+            .dimchange_box{
+                height: 80%;
+            }
+            .dengre_box{
+                height: 71%;
+            }
+            .between{
+                .top-right-btn{
+                    .dimm_btn1{
+                        margin-bottom: 3px;
+                        box-sizing: border-box;
+                    }
+                    .dimm_chbtn{
+                        margin-left: 0;
+                    }
+                }
+                .btn_group{
+                    
+                    .left{
+                        justify-content: flex-end;
+                        div{
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                .table_wrapper{
+
+                    .xscroll{
+                        width: 100%;
+                        border-top: 2px solid #666;
+                        overflow-x: scroll;
+                        table{
+                            border-top: none;
+                            width: 100%;
+                            display: block;
+                            tr{
+                                &:first-child{
+                                    td{
+                                        &:not(:first-child){
+                                            text-align: center;
+                                        }
+                                    }
+                                }
+                                td:not(:first-child){
+                                    width: 100px;
+                                    white-space: pre-wrap;
+                                    word-break: keep-all;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+           
+
+        }
+        .bun_tab7{
+            // height: 330px;
+            .top-right-btn{
+                .datebox{
+                    margin-bottom: 5px;
+                }
+            }
+            .eventbox{
+                width: 100%;
+                left: 0;
+                height: 80%;
+            }
+            .table_wrapper{
+        
+                // height: calc(100% - 92.59px);
+                .xscroll{
+                    width: 100%;
+                    overflow-x: auto;
+                    table{
+                        display: block;
+                        border-top: none;
+                        tr{
+                        
+                            td:nth-child(1){
+                                width: 30%;
+                                min-width: 87px;
+                                max-width: 94px;
+                                flex: initial;
+                            }
+                            td:nth-child(2){
+                                width: 30%;
+                            }
+                            td:nth-child(3){
+                                flex-wrap: wrap;
+                                height: auto;
+                                width: 40%;
+                                min-width: 170px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bun_tab8{
+            // height: 330px;
+            .iframebosu_box{
+                width: 100%;
+                left: 0;
+            }
+            .top-right-btn{
+                padding-right: 3px;
+                .datebox{
+                    margin-bottom: 3px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        // 이미지등록 팝업창
+        .img_view{
+            h2{
+                font-size: 16px;
+            }
+            .filewrap{
+                ul{
+                    li{
+                        padding: .4rem;
+                        label.file_name{
+                            i{
+                                margin: 0 .7rem;
+                            }
+                            .file_text{
+                                label{
+                                    font-size: 13px;
+                                    padding: .5rem;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+        }
+        // 가로등 제어클릭시 팝업창
+        .bun_controlbox{
+            table.buntable{
+                tbody{
+                    tr{
+                        td{
+                            div{
+                                ul{
+                                    margin-top: 0;
+                                    justify-content: flex-start;
+                                    flex-wrap: wrap;
+                                    li{
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                            .time_input{
+                                span.small_text{
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // plc 일괄변경창
+        .dimgrid_box{
+            table{
+                tbody{
+                    tr{
+                        td{
+                            padding: 8px 0;
+                            i{
+                                margin-right: 3px;
+                            }
+                            &:not(.center){
+                                padding-left: 5px;
+                            }
+                        }
+                        .center{
+                            text-align: center;
+                        }
+            
+                    }
+                }
+            }
+        }
+
+        // plc등주변경
+        .deng_box{
+            .re_date{
+                tr{
+                    td{
+                        span{
+                            margin: 0 2px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .re_date2{
+                tr{
+                    td{
+                        &:not(:last-child){
+                            width: 18%;
+                        }
+                        &:last-child{
+                            width: 64%;
+                        }
+                        div{
+                            select{
+                                margin-left: 3px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }   
+            }
+        }
+        // plc dimm예약
+        .dimm_reservation{
+            width: 100%;
+            left: 0;
+        }
+        .viewcontainer{
+            height: 100%;
+            .viewbox{
+                .scroll_box{
+                    height: calc(100% - 132px - 1rem);
+                    .scroll-table{
+                        height: 100%;
+                        overflow-x: auto;
+                        table{
+                            tbody{
+                                tr{
+                                    td{
+                                        height: initial;
+                                        line-height: initial;
+                                        padding: 4px;
+            
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+
+        // 점멸기 상세보기
+        .jumbox .popcon_wrap .nav_list{
+            height: calc(100% - 74px);
+            .jum_tab4 .between{
+                height: calc(100% - 71px - 16px);
+            }
+        }
+        ul.nav{
+            margin-bottom: 0;
+        }
+        .pop{
+            top: 0;
+            left: 0;
+        }
+        .w800{
+            left: 0;
+            top: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+        .height_515{
+            width: 100%;
+            max-width: 450px;
+        }
+        .right{
+            margin-top: 3px;
+        }
+        // 도로조명 분전함상세보기
+        .doro_info .between .table_wrapper .table1 tbody tr td{
+            &.address_text2{
+                height: 60px;
+                line-height: 60px;
+            }
+            &.address_text{
+                flex-wrap: wrap;
+                height: auto;
+                input{
+                    width: 50px;
+                }
+                .addressbox{
+                    span{
+                        line-height: initial;
+                    }
+                }
+            }
+        
+        }
+        .wrapper .cont .detail_tab{
+            justify-content: flex-start;
+        }
+        //구형분수대
+
+        .oldwrap{
+            .bunsu_height >div{
+                .table_wrapper{
+                    .table1{
+                        tbody{
+                            tr{
+                                flex-wrap: wrap;
+                                td{
+                                    &:nth-child(odd){
+                                        width: 30%;
+                                        height: auto;
+                                    }
+                                    &:nth-child(even){
+                                        width: 70%;
+                                        height: auto;
+                                    }
+                                    &.full{
+                                        .flex{
+                                            flex-wrap: wrap;
+                                        }
+                                    }
+                                    &.h60{
+                                        height: 60px;
+                                        line-height: 60px;
+                                    }
+                                    &.etc{
+                                        width: 70%;
+                                        @include flex;
+                                        @include center-c;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .day-time{
+                        overflow: auto;
+                        flex-wrap: wrap;
+                        &::-webkit-scrollbar {
+                            width: 3px; 
+                            height: 3px;
+                            background-color: rgba(0,0,0,0.15);
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            border-radius: 10px;
+                            background-color: #000;
+                        }
+                        table{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        table.time{
+                            width: 100%;
+    
+                            thead{
+                                tr{
+                                    display: flex;
+                                    th{
+                                        width: 30%;
+                                        &:first-child{
+                                            width: 20%;
+                                        }
+                                        &:nth-child(3){
+                                            width: 20%;
+                                        }
+                                        
+                                    }
+                                   
+                                    
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    display: flex;
+                                    width: 100%;
+                                    td{
+                                        display: table-cell;
+                                        &:first-child{
+                                            width: 20%;
+                                            line-height: 30px;
+                                        }
+                                        &:nth-child(2){
+                                            width: 80%;
+                                            margin: 0;
+                                            padding: 0 0 0 6px;
+                                            .timeselect{
+                                                justify-content: space-evenly;
+                                                >div{
+                                                    justify-content: center;
+                                                    width: 40%;
+                                                    >select{
+                                                        width: auto;
+                                                    }
+                                                    >span{
+                                                        width: 20%;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                        table.day{
+                            caption{
+                                margin: 5px 0;
+                            }
+                            thead{
+                                tr{
+                                    display: flex;
+                                    th{
+                                        width: calc(100% / 8);
+                                    }
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    display: flex;
+                                    align-items: center;
+                                    td{
+                                        min-width: calc(100% / 8);
+                                        &:nth-child(even){
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .oldwrap .bunsu_height{
+            .table_wrapper table tbody tr td{
+                &.hide{
+                    display: none;
+                }
+                span{
+                    line-height: initial;
+                    text-align: center;
+                }
+            }
+            >div .table_wrapper .day-time .timebox{
+                width: 100%;
+                table{
+                    width: 100%;
+                   
+                }
+            }
+            
+        }
+        .bunsu_tab1 .bunsu_height{
+            height: calc(100% - 120px);
+        }
+        
+    }
+}
+@media (max-width:404px){
+
+    // 분전함
+    #garo2, #garo1{
+        width: 100%;
+        max-width: 100%;
+    }
+    .height_230{
+        max-height: 230px;
+    }
+    .height_1700{
+        max-height: 170px;
+    }
+    .height_270{
+        max-height: 270px;
+    }
+    .height_420{
+        max-height: 420px;
+    }
+    .height_340{
+        max-height: 340px;
+    }
+    .height_515{
+        max-width: 100%;
+        width: 100%;
+    }
+    .viewcontainer{
+        .viewbox{
+            .group_box{
+                flex-wrap: wrap;
+                .graph{
+                    margin: 0;
+                    margin-right: 4px;
+                }
+                .search_wrap{
+                    margin: 4px 0;
+                    flex-wrap: wrap;
+                    .search_date{
+                        font-size: 14px;
+                        width: 40px;
+                    }
+                }
+                
+            }
+        }
+    }
+    ul.nav{
+        margin-bottom: 0;
+    }
+    
+    .pop, .w800, #oldbunsu, #bunsu, #oldbun_info, #old_resister, #pupmp_resister, #jung_add, #jung_sang, #jum_add{
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #gapop, #bunsuaddpop{
+        width: 100%;
+    }
+    .new{
+        table{
+            tr{
+                td{
+                    &:first-child{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    //중계기 상세보기
+    .jungbox{
+        .popcon_wrap{
+            .nav_list{
+                height: calc(100% - 76px);
+                table{
+                    tr{
+                        td{
+                            &.address{
+                                .input_group{
+                                    input{
+                                        margin-bottom: 2px;
+                                    }
+                                }
+                                .address_text{
+                                    p{
+                                        line-height: initial;
+                                    }
+                                }
+                            }
+                          
+                        }
+                    }
+                }
+                .jung_tab1 .btn_group .left{
+                    margin-bottom: 2px;
+                }
+                .jung_tab2{
+                    .between .table_wrapper .tablebox{
+                        table{
+                            tbody{
+                                tr{
+                                    align-items: initial;
+                                    padding: 3px 0;
+                                    td{
+                                        @include flex;
+                                        word-break: keep-all;
+                                        &:first-child{
+                                            width: 35%;
+                                            @include center-c;
+                                            @include center-r;
+                                            height: auto;
+                                            line-height: initial;
+                                        }
+                                        &:last-child{
+                                            width: 65%;
+                                            padding: 3px 0 3px 8px;
+                                            flex-wrap: wrap;
+                                            align-items: center;
+                                            select{
+                                                width: auto;
+                                            }
+                                        }
+                                        &.smbox{
+                                            flex-wrap: wrap;
+                                            >div{
+                                                &:first-child{
+                                                    margin-bottom: 3px;
+                                                }
+                                            }
+                                        }
+                                      
+                                    }
+                                    
+                                   
+                                }
+                            }
+                       
+                        }
+
+                    }
+                    .btn_group .left{
+                        margin-bottom: 2px;
+                    }
+                }
+                .jung_tab3{
+                    .table_wrapper{
+                        overflow: auto;
+                        table{
+                            tr{
+                                display: revert;
+                                th:first-child, td:first-child{
+                                    width: 10%;
+                                }
+                                th, td{
+                                    width: calc(80% / 4);
+                                    font-size: 15px;
+                                    font-weight: normal;
+                                    word-break: keep-all;
+                                  
+                                }
+                            }
+                        }
+                    }
+                }
+                .jung_tab4{
+                    .table_wrapper{
+                        overflow: auto;
+                
+                    }
+                    .btn_group{
+                        .left{
+                            justify-content: flex-end;
+                            div{
+                                margin-bottom: 2px;
+                            }
+                        }
+                        .right{
+                            div{
+                                &:first-child{
+                                    margin-bottom: 3px;
+                                }
+                            }
+                        }
+                       
+                    }
+                    
+                }
+                .jung_tab5{
+                    .between{
+                        height: 100%;
+                        .table_wrapper{
+                            height: calc(100% - 75px - 1rem);
+                           
+                            table{
+                                tr{
+                                    td{
+                                        &:nth-child(1), &:nth-child(2){
+                                            min-width: 100px;
+                                        }
+                                     
+                                        &:nth-child(3){
+                                            min-width: 220px;
+                                        }
+                                    }
+                                }
+                            }
+                        } 
+                    } 
+                      
+                   
+                }
+                
+                
+            }
+        }
+    }
+    // 분전함전체설정팝업창
+    .all_list{
+        table{
+            tr{
+                display: flex;
+                flex-wrap: wrap;
+                td{
+                    &:nth-child(odd){
+                        width: 40%;
+                        @include flex;
+                        @include center-c;
+                        @include center-r;
+                    }
+                    &:nth-child(even){
+                        width: 60%;
+                        padding: 0;
+                        padding-left: 4px;
+                        >div{
+                            flex-wrap: wrap;
+                            >div{margin-bottom: 2px;}
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    // 분전함보기 팝업창
+    .bunjeon{
+        .table_wrapper{
+            table{
+                tbody{
+                    tr{
+                        td{
+                            &:nth-child(odd){
+                                width: 40%;
+                            }
+                            &:nth-child(even){
+                                width: 60% !important;
+                            }
+                        
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bun_tab2{
+        .table_wrapper{
+            .table1{
+                tbody{
+                    tr{
+                        td{
+                            &:nth-child(odd){
+                                width: 30%;
+                            }
+                            &:nth-child(even){
+                                width: 20%;
+                            }
+                           
+                        }
+                    }
+                }
+            }
+            .statebox{
+                .row-item{
+                    grid-template-columns: 20% 15% repeat(8, 15%);
+                    overflow: auto;
+                    &::-webkit-scrollbar {
+                        height: 3px; 
+                        width: 3px;
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    >div{
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+
+    .bun_tab4{
+        .between{
+            .table_wrapper{
+                .termbox{
+                    overflow-x: auto;
+                    &::-webkit-scrollbar {
+                        height: 3px; 
+                        width: 3px;
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    table.term{
+                        tbody{
+                            tr{
+                                td{
+                                    &:first-child{
+                                        white-space: nowrap;
+                                    }
+                                    select{
+                                        width: 50px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .plcbox{
+                    overflow-x: auto;
+                    &::-webkit-scrollbar {
+                        height: 3px; 
+                        width: 3px;
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    table.plc{
+                        display: table;
+                        tbody{
+                            tr{
+                                td{
+                                    &:nth-child(odd){
+                                        white-space: nowrap;
+                                        min-width: 180px;
+                                    }
+                                    &:nth-child(even){
+                                        min-width: 100px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+        }
+    }
+    .bun_tab5{
+        .table_wrapper{
+            .garobox{
+                overflow-x: auto;
+                &::-webkit-scrollbar {
+                    height: 3px; 
+                    width: 3px;
+                    background-color: rgba(0,0,0,0.15);
+                }
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 10px;
+                    background-color: #000;
+                }
+                table{
+                    tr{
+                        &:first-child{
+                            td{
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                        td{
+                            padding: 0 4px;
+                            min-width: 80px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .btn_group{
+            .left{
+                div{
+                    max-width: 110px;
+                    width: auto;
+                }
+            }
+        }
+    }
+    .bun_tab6{
+        .between{
+            .top-right-btn{
+                .dimm_btn{
+                    margin-bottom: 2px;
+                }
+            }
+            .table_wrapper{
+                .xscroll{
+                    overflow: auto;
+                    border-top: 2px solid #666;
+                    table{
+                        display: table-row;
+                        border: none;
+                        tr{
+                            &:first-child{
+                                td{
+                                    white-space: nowrap;
+                                }
+                            }
+                            td{
+                                width: auto;
+                                padding: 0 8px;
+                                &:not(:first-child){
+                                    width: 90px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btn_group{
+                .left{
+                    justify-content: flex-end;
+                    div{
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+     
+        }
+
+    }
+    .bun_tab7{
+        .between{
+            height: calc(100% - 49px - 1rem);
+            >div{
+                height: 100%;
+                .datebox{
+                    margin-bottom: 3px;
+                }
+                .table_wrapper{
+                    border-top: 2px solid #666;
+                    height: calc(100% - 75px - 1rem - 50px);
+                    table{
+                        border-top: none;
+                        display: table;
+                    }
+                }
+                
+            }
+            
+        }
+        
+    }
+    .bun_tab8{
+        .datebox{
+            input{
+                margin-bottom: 2px;
+            }
+        }
+    }
+
+    //구형분수대
+    #bun_controlbox{
+        height: initial;
+    }
+    .oldwrap .bunsu_height{
+        .table_wrapper table tbody tr td{
+            &.hide{
+                display: none;
+            }
+            span{
+                line-height: initial;
+                text-align: center;
+            }
+        }
+        >div .table_wrapper{
+            height: calc(100% - 35px);
+            .day-time .timebox{
+                width: 100%;
+                table{
+                    width: 100%;
+                }
+            }
+        } 
+    }
+    .deletepop {
+        .table_wrapper{
+            table{
+                tbody tr {
+                    td:nth-child(odd){
+                        font-size: 15px;
+                        width: 27%;
+                    }
+                    td:nth-child(even){
+                        width: 73%;
+                    }
+                    td.etc, td.address{
+                        width: 73% !important;
+                    }
+                }
+            }
+        }
+    }
+    .oldwrap .scroll3{
+        .table_wrapper{
+            .day-time{
+                .timebox{
+                    table.time{
+                        &:nth-child(odd){
+                            margin-right: 0;
+                        }
+                        width: 100%;
+                        tbody{
+                            tr{
+                                td{
+                                    .timeselect{
+                                        align-items: center;
+                                        justify-content: space-evenly;
+                                        div{
+                                            align-items: center;
+                                            
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+    .bunsu_tab4{
+        .bunsu_height{
+            height: calc(100% - 49px);
+            .between{
+                height: calc(100% - 50px);
+                .datebox{
+                    margin-bottom: 4px;
+                }
+                .table_wrapper{
+                    height: calc(100% - 76px);
+                    .gambox{
+                        height: 100%;
+                        table.bunsugam_list{
+                            tbody{
+                                tr{
+                                    td{
+                                        text-align: center;
+                                        span.comment{
+                                            display: inline-block;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+       
+    }
+
+    //분수대 상세보기
+    .bunsu1{
+        .between .table_wrapper{
+            table tbody tr{
+                td{
+                    &:nth-child(odd){
+                        width: 40%;
+                    }
+                    &:nth-child(even){
+                        width: 60%;
+
+                    }
+                }
+            }
+        }
+    }
+    .bunsu2{
+        .bunsu_height .group{
+            height: calc(100% - 49px);
+            .table_wrapper{
+                height: calc(100% - 35px);
+                .xscroll{
+                    overflow-x: auto;
+                    table.state_info{
+                        tbody tr{
+                            td{
+                                min-width: 100px;
+                                box-sizing: content-box;
+                                &:last-child{
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+         
+        }
+       
+        
+    }
+    .bunsu3{
+        .between{
+            .table_wrapper{
+                .table1{
+                    tbody{
+                        tr{
+                            flex-wrap: wrap;
+                            td{
+                                &:nth-child(odd){
+                                    width: 30%;
+                                    height: auto;
+                                }
+                                &:nth-child(even){
+                                    width: 70%;
+                                    height: auto;
+                                }
+                                &.full{
+                                    .flex{
+                                        flex-wrap: wrap;
+                                    }
+                                }
+                                &.h60{
+                                    height: 60px;
+                                    line-height: 60px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .day-time{
+                    overflow: auto;
+                    flex-wrap: wrap;
+                    &::-webkit-scrollbar {
+                        width: 3px; 
+                        height: 3px;
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    table{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    table.time{
+                        width: 100%;
+
+                        thead{
+                            tr{
+                                display: flex;
+                                th{
+                                    &:last-child{
+                                        width: calc(100% - 40px);
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                display: flex;
+                                width: 100%;
+                                td{
+                                    display: table-cell;
+                                    &:first-child{
+                                        width: 20%;
+                                        line-height: 30px;
+                                    }
+                                    &:nth-child(2){
+                                        width: 80%;
+                                        margin: 0;
+                                        padding: 0 0 0 6px;
+                                        .timeselect{
+                                            >div{
+                                                >select{
+                                                    width: auto;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        
+                    }
+                    table.day{
+                        caption{
+                            margin: 5px 0;
+                        }
+                        thead{
+                            tr{
+                                display: flex;
+                                th{
+                                    width: calc(100% / 8);
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                display: flex;
+                                align-items: center;
+                                td{
+                                    min-width: calc(100% / 8);
+                                    &:nth-child(even){
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+    .bunsu4{
+        .between{
+            .top-right-btn{
+                .datebox{
+                    margin-bottom: 3px;
+                }
+            }
+            .table_wrapper{
+                .gambox{
+                    overflow: auto;
+                    &::-webkit-scrollbar {
+                        width: 3px; 
+                        height: 3px;
+                        background-color: rgba(0,0,0,0.15);
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        border-radius: 10px;
+                        background-color: #000;
+                    }
+                    table.bunsugam_list{
+                        thead{
+                            tr{
+                                th{
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                td{
+                                    padding: 0 4px;
+                                    box-sizing: border-box;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .innerbox{
+        .mininame{
+            margin-bottom: 0;
+        }
+        table.buntable{
+            margin-top: 0;
+            tr{
+                td{
+                    &:first-child{
+                        width: 40%;
+                    }
+                    &:last-child{
+                        width: 60%;
+                    }
+                }
+            }
+        }
+    }
+
+    //펌프장기본정보
+    .pump_tab1{
+        .between{
+            >div{
+                .table_wrapper{
+                    height: 100%;
+                    tr{
+                        td{
+                            &:nth-child(odd){
+                                width: 40%;
+                            }
+                            &:nth-child(even){
+                                width: 60%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pump_tab2{
+        .between .wrap .table_wrapper{
+            height: 100%;
+            table.pump_state{
+                display: table;
+                tbody{
+                    tr{
+                        display: table-row;
+                        td{
+                            height: auto;
+                            line-height: initial;
+                            &:nth-child(odd){
+                                vertical-align: middle;
+                            }
+                            &:nth-child(even){
+                                padding: 4px 0 4px 3%;
+                                display: table-cell;
+                                >div{
+                                    flex-direction: column;
+                                    input,select{
+                                        margin-right: 0;
+                                        width: 90%;
+                                        margin-bottom: 3px;
+                                    }
+                                }
+                                .statebox{
+                                    >div{
+                                        margin-bottom: 3px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .pump_tab3{
+        .between{
+            .wrap{
+                .table_wrapper{
+                    table.pump_state3{
+                        tbody{
+                            tr{
+                                td{
+                                    &:nth-child(even){
+                                        height: auto;
+                                    }
+                                    &.p_namebox{
+                                        height: auto;
+                                        ul{
+                                            flex-wrap: wrap;
+                                            li{
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    &.noncolor{
+                                        height: auto;
+                                        .sg{
+                                            flex-wrap: wrap;
+                                            >div{
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                    &.pump_h{
+                                        height: 90px;
+                                        line-height: 90px;
+                                    }
+                        
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pump_tab4{
+        .between{
+            .wrap{
+                .datebox{
+                    margin-bottom: 3px;
+                }
+                .pumpwrap{
+                    // height: calc(100% - 72px - 50px - 1rem);
+                    .table_wrapper{
+                        height: calc(100% - 21px - 1rem);
+                        overflow-x: auto;
+                        table.bunsugam_list{
+                            tr th{
+                                white-space: nowrap;
+                            }
+                            th, td{
+                                padding: 6px;
+                                word-break: keep-all;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    // 가로등보기 팝업창
+    .lamp_tab1{
+        .table_wrapper{
+            overflow-x: hidden;
+            table{
+                tbody{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .xscroll{
+                width: 100%;
+                overflow: auto;
+                .table2{
+                    display: table;
+                    tbody{
+                        tr{
+                            td{
+                                min-width: 80px;
+                                select{
+                                    width: 70%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+         
+        }
+        
+    }
+    // 등고장 판단 기준 비율설정 팝업창
+    .deng_error{
+        left: 0;
+        top: 5%;
+        width: 100%;
+    }
+    #jum_sang{
+        height: 650px;
+        max-height: 650px;
+    }
+
+    //점멸기
+    .jumbox{
+        .popcon_wrap .nav_list .between .table_wrapper .table1 tbody tr{
+            padding: 3px 0;
+            td{
+                &.etc{
+                    height: 120px;
+                    line-height: 120px;
+                }
+                &.address{
+                    height: 120px;
+                    .address_text{
+                        .blbox{
+                            @include flex;
+                            flex-wrap: wrap;
+                        }
+                    }
+                    textarea{
+                        height: 120px;
+                    }
+                }
+            }
+            
+            
+        }
+        .popcon_wrap{
+            ul.nav{
+                margin-bottom: 0;
+            }
+            .jum_tab3{
+            
+                .between{
+                    >div{
+                        height: auto;
+                    }
+                }
+                .table_wrapper{
+                    border-top: 2px solid #666;
+                    overflow-x: auto;
+                }
+            }
+            .jum_tab4{
+                .datebox{
+                    margin-bottom: 3px;
+                }
+                .between{
+                    height: calc(100% - 75px - 16px);
+                }
+            }
+        }
+       
+        
+    }
+
+    .popcon_wrap{
+        .nav_list{
+            .between{
+                .table_wrapper{
+                    .table1{
+                        tbody{
+                            tr{
+                                flex-wrap: wrap;
+                                td{
+                                    &:nth-child(odd){
+                                        width: 30%;
+                                    }
+                                    &:nth-child(even){
+                                        width: 70%;
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .left,.right{
+        flex-wrap: wrap;
+    }
+    .right{
+        margin-top: 3px;
+    }
+    .changebox{
+        flex-wrap: nowrap;
+        .change_btn{
+            margin: 0;
+            margin-right: 3px;
+            box-sizing: border-box;
+        }
+    }
+
+    // 작은 팝업창
+    .minipop{
+        width: 100%;
+        left: 0;
+    }
+    #jum_control{
+        height: 230px;
+    }
+    //분전함제어
+    .innerbox table.buntable tbody tr td ul{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    //  도어락
+    .img_view .filewrap ul li label.file_name .file_text input[type=text]{
+        width: 60%;
+    }
+    // 도로조명 분전함상세보기
+    .doro_info .between .table_wrapper .table1 tbody tr td{
+        &.address_text2{
+            height: 60px;
+            line-height: 60px;
+        }
+        &.address_text{
+            flex-wrap: wrap;
+            height: auto;
+            input{
+                width: 50px;
+            }
+            .addressbox{
+                span{
+                    line-height: initial;
+                }
+            }
+        }
+       
+    }
+
+    
+
+}
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보안등 타입별현황 페이지</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/statestyle.css">
+    <link rel="stylesheet" href="../../css/boan.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/print.js" ></script>
+    <script type="text/javascript" defer src="../../js/buga.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="iotpopbtn" onclick="iotpopbtn()">점멸기</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../iot/control.html">IoT점멸기선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../data3/iotjumselect.html">IoT점멸기선택설정</a></li>
+                                    <li><a href="../data3/jumdatalist.html">점멸기운용데이터현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../history/gamsi.html">IoT감시내역</a></li>
+                                    <li><a href="../history/order.html">IoT명령내역</a></li>
+                                    <li><a href="../history/iotbosu.html">보수일지</a></li>
+                                    <li><a href="../history/iotjum.html">점멸기현황</a></li>
+                                    <li><a href="../history/delete.html">점멸기삭제내역</a></li>
+                                </ul>             
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../message/message1.html">수신자관리</a></li>
+                                    <li><a href="../message/message2.html">메시지관리</a></li>
+                                    <li><a href="../message/message3.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>          
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../buga/bugalist1.html">통계자료</a></li>
+                                    <li><a href="../buga/onoff.html">점소등시간</a></li>
+                                    <li><a href="../buga/local.html">지역설정</a></li>
+                                    <li><a href="../buga/lamp.html">램프설정</a></li>
+                                </ul>          
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <!-- 보안등 지역별 등종류 용량현황 팝업창 -->
+            <div id="state_pop3" class="state_pop">
+                <div class="title">
+                    <h2>보안등 지역별 등종류, 용량 현황</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>  
+                <iframe src="../../minipop/statelist_pop3.html" scrolling="no"></iframe>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap bugabtn">
+                    <div class="leftbtn">
+                        <div class="btn_bg"><a href="">엑셀저장</a></div>
+                        <div class="btn_bg print"><a href="#a" onclick="buga3()">프린트</a></div>
+                        <div class="btn_bg"><a href="">그래프</a></div>
+                    </div>
+                    <div class="tongselect">
+                        <div class="bun_sel">
+                            <span>통계자료선택</span>
+                            <select onchange="window.open(value,'_self');">
+                                <option value="bugalist1.html">보안등 타입별 현황</option>
+                                <option value="bugalist2.html">보안등 등종류, 용량 현황</option>
+                                <option value="bugalist3.html" selected>보안등 지역별 등종류, 용량 현황</option>
+                                <option value="bugalist4.html">보안등 설치형태별 현황</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div id="tablewrap">
+                        <table class="iot_tong" id="iot3">
+                            <thead>
+                                <tr>
+                                    <th rowspan="2" class="widthfix"></th>
+                                    <th colspan="2">기재안됨</th>
+                                    <th colspan="5">CDM</th>
+                                    <th colspan="4">LED</th>
+                                    <th rowspan="2" colspan="2">LED*2</th>
+                                    <th rowspan="2" class="widthfix">합계</th>
+                                </tr>
+                                <tr>
+                                    <th>계</th>
+                                    <th>5</th>
+                                    <th>50</th>
+                                    <th>70</th>
+                                    <th>100</th>
+                                    <th>120</th>
+                                    <th>계</th>
+                                    <th>100</th>
+                                    <th>350</th>
+                                    <th>계</th>
+                                    <th>100</th>
+                                
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>광진구 광장동</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>8</td>
+                                    <td></td>
+                                    <td>123</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                             
+                                </tr>
+                                <tr>
+                                    <td>광진구 구의2동</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>8</td>
+                                    <td></td>
+                                    <td>123</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                                </tr>
+                                <tr>
+                                    <td>광진구 구의3동</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>8</td>
+                                    <td></td>
+                                    <td>123</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+         
+                                </tr>
+                                <tr>
+                                    <td>광진구 구의동</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                    <td>1</td>
+                                    <td>8</td>
+                                    <td></td>
+                                    <td>123</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+        
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

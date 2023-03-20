@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합양방향관제시스템</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css" >
+    <!-- swiper 슬라이드 -->
+    <script type="text/javascript" defer src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <script type="text/javascript" src="js/index.js" ></script>
+</head>
+<body>
+    <div class="view">
+        <div class="tablebox">               
+            <h2><i class="fas fa-list-ul"></i>보안등현황</h2>
+            <select name="area" id="area">
+                <option value="">동선택</option>
+                    <option value="">철산동</option>
+            </select>
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td>IOT점멸기</td>
+                        <td>7222</td>
+                        <td>IOT점검중</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>점등</td>
+                        <td>10</td>
+                        <td>소등</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>강제점등</td>
+                        <td>0</td>
+                        <td>강제소등</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>램프고장</td>
+                        <td>2</td>
+                        <td>안정기고장</td>
+                        <td>2223</td>
+                    </tr>
+                    <tr>
+                        <td>깜빡거림</td>
+                        <td>0</td>
+                        <td>정전</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>이상점등</td>
+                        <td>1</td>
+                        <td>누전</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>통신이상</td>
+                        <td>12</td>
+                        <td>IOT미접속</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>Dimmng</td>
+                        <td>5</td>
+                        <td>Dimm설정</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>블랙박스</td>
+                        <td>2</td>
+                        <td>심야설정</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>비콘점멸기</td>
+                        <td>6</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="search_Bar">
+            <select name="search" id="search" class="search">
+                <option value="">점멸기이름</option>
+                <option value="">지번/도로명</option>
+                <option value="">모뎀IP</option>
+                <option value="">SIM번호</option>
+            </select>
+            <input type="text">
+            <div><i class="fas fa-search"></i></div>
+        </div>
+
+        <div class="tablebox">
+            <div>
+                <h2><i class="fas fa-list-ul"></i>IoT점멸기목록</h2>
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+            <ul class="scroll">
+                <li><a href="">04-04-26 (NS)<span>279-21/</span><span>1234456</span><span>789456</span></a></li>
+                <li><a href="">036 (LS)<span>279-21/</span><span>12345678</span><span></span></a></li>
+                <li><a href="">자료가 없습니다<span></span><span></span><span></span></a></li>
+                <li><a href="">038 (LS)<span>124-19/</span><span></span><span></span></a></li>
+                <li><a href="">045 (LS)<span>354/</span><span></span><span></span></a></li>
+                <li><a href="">0846 (LS)<span>353-21/</span><span></span><span></span></a></li>
+                <li><a href="">0847 (LS)<span>800-6/</span><span></span><span></span></a></li>
+                <li><a href="">0848 (LS)<span>800-6/</span><span></span><span></span></a></li>
+                <li><a href="">1053 (LS)<span>126-4/</span><span></span><span></span></a></li>
+                <li><a href="">1054 (LS)<span>126-4/</span><span></span><span></span></a></li>
+                <li><a href="">1055 (LS)<span>101-13/</span><span></span><span></span></a></li>
+                <li><a href="">1056 (LS)<span> 99-1/</span><span></span><span></span></a></li>
+                <li><a href="">1058 (LS)<span>695/</span><span></span><span></span></a></li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

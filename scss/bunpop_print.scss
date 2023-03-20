@@ -1,0 +1,70 @@
+@import "./var";
+
+.print_screen{
+    width: 800px;
+    box-sizing: border-box;
+    border: 1px solid;
+    padding: 8px;
+    .btn_group{
+        @include flex;
+        button{
+            @include flex;
+            @include center-c;
+            @include center-r;
+            background-color: $minibtn;
+            border: none;
+            width: 80px;
+            height: 30px;
+            margin-right: 5px;
+            color: $white;
+        }
+    }
+    h2{
+        text-align: center;
+        font-size: 25px;
+    }
+    span{
+        float: right;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+    .print_wrap{
+        width: 100%;
+        clear: both;
+        table{
+            border: 2px solid;
+            width: 100%;
+            tbody{
+                tr{
+                    &:first-child{
+                        text-align: center;
+                        font-weight: 400;
+                    }
+                    td{
+                        border: 1px solid;
+                        padding: 4px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        font-family: 'GmarketSansLight';
+                        font-weight: bold;
+                        color: #2f2f2f;
+                        img{
+                            height: 180px;
+                        }
+                    }
+                    td.weight{
+                        font-family: 'GmarketSansMedium';
+                    }
+                }
+                .img_line{
+                    .iframebox{
+                        background-image: url(../img/map.png);
+                    }
+                }
+
+            }
+        }
+    }
+}
+

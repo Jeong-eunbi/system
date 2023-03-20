@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분전함삭제내역</title>
+
+    
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/gam.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="bunpopbtn" onclick="bunpopbtn()">분전함</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="gapopbtn()">가로등</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="park/p_bunconrol.html">분전함선택제어</a></li>
+                                    <li><a href="#a" id="all_cont" onclick="bunshow()">분전함전체제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="data2/dataselect.html">분전함선택설정</a></li>
+                                    <li><a href="#a" onclick="setshow()">분전함전체설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list2/p_gam.html">감시내역</a></li>
+                                    <li><a href="../list2/p_myeong.html">명령내역</a></li>
+                                    <li><a href="../list2/power.html">전력값보기</a></li>
+                                    <li><a href="../list2/p_bosu.html">가로등보수일지</a></li>
+                                    <li><a href="../list2/p_bunset.html">분전함설치현황</a></li>
+                                    <li class="on"><a href="../list2/p_bundelete.html">분전함삭제내역</a></li>
+                                    <li><a href="../list2/p_daycheck.html">일일점검내역</a></li>
+                                </ul>           
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../p_sms/sms1.html">수신자관리</a></li>
+                                    <li><a href="../p_sms/sms2.html">메시지관리</a></li>
+                                    <li><a href="../p_sms/sms3.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../account/user1.html">사용자관리</a></li>
+                                    <li><a href="../account/user2.html">접속자관리</a></li>
+                                </ul>         
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../addfunction/tong1.html">통계자료</a></li>
+                                    <li><a href="../addfunction/onofftime2.html">점소등시간</a></li>
+                                    <li><a href="../addfunction/local3.html">지역설정</a></li>
+                                    <li><a href="../addfunction/lamp3.html">램프설정</a></li>
+                                    <li><a href="#a" onclick="error_set()">등고장설정</a></li>
+                                </ul>          
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap">
+                    <div class="rightbtn finder">
+                        <div class="block flex">
+                            <span>검색일자</span>
+                            <div class="flex">
+                                <input type="date" name="" id="">
+                                <span class="date-gap">~</span>
+                                <input type="date" name="" id="">
+                                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="length"></span>건</div>
+                    <div id="tablewrap">
+                        <table class="deletetable">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>분전함이름</th>
+                                    <th>등록/삭제일자</th>
+                                    <th>구읍면/동리</th>
+                                    <th>설치주소</th>
+                                    <th>새주소</th>
+                                    <th>설치위치</th>
+                                    <th>등주개수</th>
+                                    <th>상세정보</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="erase">삭제</span></td>
+                                    <td class="cursor" onclick="infopop1()">cat1<span class="smtxt">YB77</span></td>
+                                    <td>20220803 17:33:45</td>
+                                    <td>수정구 복정동</td>
+                                    <td>694-1</td>
+                                    <td>복정로 33</td>
+                                    <td></td>
+                                    <td>0개</td>
+                                    <td>
+                                        <button class="viewpop" onclick="infopop1()">보기</button>
+                                        <button class="restorebtn">복구</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="restore">복구</span></td>
+                                    <td class="cursor" onclick="infopop1()">cat1<span class="smtxt">YB77</span></td>
+                                    <td>20220803 17:33:45</td>
+                                    <td>수정구 복정동</td>
+                                    <td>694-1</td>
+                                    <td>복정로 33</td>
+                                    <td></td>
+                                    <td>0개</td>
+                                    <td>
+                                        <button class="viewpop" onclick="infopop1()">보기</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="erase">삭제</span></td>
+                                    <td class="cursor" onclick="infopop1()">cat1<span class="smtxt">YB77</span></td>
+                                    <td>20220803 17:33:45</td>
+                                    <td>수정구 복정동</td>
+                                    <td>694-1</td>
+                                    <td>복정로 33</td>
+                                    <td></td>
+                                    <td>7개</td>
+                                    <td>
+                                        <button class="viewpop" onclick="infopop1()">보기</button>
+                                        <button class="restorebtn">복구</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="restore">복구</span></td>
+                                    <td class="cursor" onclick="infopop1()">cat1<span class="smtxt">YB77</span></td>
+                                    <td>20220803 17:33:45</td>
+                                    <td>수정구 복정동</td>
+                                    <td>694-1</td>
+                                    <td>복정로 33</td>
+                                    <td></td>
+                                    <td>0개</td>
+                                    <td>
+                                        <button class="viewpop" onclick="infopop1()">보기</button>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

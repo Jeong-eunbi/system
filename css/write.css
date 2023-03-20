@@ -1,0 +1,82 @@
+.wrapper .cont .contbox .scroll_wrap {
+  height: auto;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox h3 {
+  padding-top: 5px;
+  font-size: 40px;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul {
+  width: 100%;
+  margin-top: 1rem;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li {
+  padding-top: 20px;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li p {
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li input, .wrapper .cont .contbox .scroll_wrap .writebox ul li select, .wrapper .cont .contbox .scroll_wrap .writebox ul li textarea {
+  width: 100%;
+  background-color: #f8f9fa;
+  font-size: 16px;
+  border: none;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li input, .wrapper .cont .contbox .scroll_wrap .writebox ul li select {
+  height: 45px;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li select {
+  background-image: url(../img/select_down.png);
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li.write_select {
+  width: 100%;
+  display: flex;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li.write_select div {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li.write_select div p {
+  width: 20%;
+  margin-bottom: 0;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li.write_select div p.accept {
+  margin-left: 4px;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox ul li.write_select div select {
+  width: 80%;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox .writebtn {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox .writebtn button {
+  background-color: #adb5bd;
+  height: 60px;
+  border: none;
+  width: calc(50% - 5px);
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  color: #fff;
+}
+.wrapper .cont .contbox .scroll_wrap .writebox .writebtn button.onwrite {
+  background-color: #006940;
+}

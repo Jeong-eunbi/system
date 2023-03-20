@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>분전함이미지 팝업창</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bunpop_img.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    <script defer src="../js/bun.js"></script>
+</head>
+<body>
+    <div class="img_view between">
+        <h2>(임)30-0474</h2>
+        <ul class="img_group">
+            <li>
+                <img src="../img/view_img1.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/view_img1.jpg" alt="">
+            </li>
+            <li>
+                <img src="../img/view_img1.jpg" alt="">
+            </li>
+        </ul>
+        <!-- <span class="notice">*사진을 등록하거나 수정할 수 있습니다</span> -->
+        <div class="filewrap">
+            <ul>
+                <li>
+                    <label for="photo1" class="file_name">
+                        <input type="checkbox" name="" id="photo1">
+                        <i class="far fa-file-image"></i>
+                        <div class="upload_box">
+                            <div class="file_text">
+                                <input type="text" class="file_cont1">
+                                <label for="upload1">파일선택</label>
+                                <input type="file" id="upload1" class="hidden">
+                            </div>
+                            <p><span>"dddddddd"</span>이 등록되었습니다</p>
+                        </div>
+                        <a href="">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+
+                    </label>
+                </li>
+                <li>
+                    <label for="photo2" class="file_name">
+                        <input type="checkbox" name="" id="photo2">
+                        <i class="far fa-file-image"></i>
+                        <div class="upload_box">
+                            <div class="file_text">
+                                <input type="text" class="file_cont2">
+                                <label for="upload2">파일선택</label>
+                                <input type="file" id="upload2" class="hidden">
+                            </div>
+                            <p><span>"dddddddd"</span>이 등록되었습니다</p>
+                        </div>
+                        <a href="">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>
+                    </label>
+                </li>
+                <li>
+                    <label for="photo3" class="file_name">
+                        <input type="checkbox" name="" id="photo3">
+                        <i class="far fa-file-image"></i>        
+                        <div class="upload_box">
+                            <div class="file_text">
+                                <input type="text" class="file_cont3">
+                                <label for="upload3">파일선택</label>
+                                <input type="file" id="upload3" class="hidden">
+                            </div>
+                            <p><span>"dddddddd"</span>이 등록되었습니다</p>
+                        </div>      
+                        <a href="">
+                            <i class="fa-solid fa-trash"></i>
+                        </a>      
+                    </label>
+                </li>
+            </ul>
+            <span class="delete">※ 삭제할 사진을 선택하세요</span>
+            <div class="minibtn_group">
+                <div class="left">
+                    <div><a href="">수정</a></div>
+                </div>
+                <div class="right">
+                    <div class="clear"><a href="">삭제</a></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

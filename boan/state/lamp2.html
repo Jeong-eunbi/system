@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>램프설정</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/bun_control.css">
+    <link rel="stylesheet" href="../../css/buga.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/buga.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+
+
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="jungpopbtn" onclick="jungpopbtn()">중계기</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="jumpopbtn()">점멸기</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../boan/selectcontrol.html">중계기선택제어</a></li>
+                                    <li><a href="#a" onclick="jung_show()">중계기전체제어</a></li>
+                                    <li><a href="../boan/iotcontrol.html">IoT점멸기선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="data2/jungset.html">중계기선택설정</a></li>
+                                    <li><a href="#a" onclick="j_setbox()">중계기전체설정</a></li>
+                                    <li><a href="../data2/iotselect.html">IoT점멸기선택설정</a></li>
+                                    <li><a href="../data2/datalist.html">점멸기운용데이터현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/iotgam.html">IoT감시내역</a></li>
+                                    <li><a href="../list/iotmyeong.html">IoT명령내역</a></li>
+                                    <li><a href="../list/rfgam.html">RF감시내역</a></li>
+                                    <li class="on"><a href="../list/rfmyeong.html">RF명령내역</a></li>
+                                    <li><a href="../list/boanbosu.html">보수일지</a></li>
+                                    <li><a href="../list/junglist.html">중계기현황</a></li>
+                                    <li><a href="../list/jumlist.html">점멸기현황</a></li>
+                                    <li><a href="../list/jumdelete.html">점멸기삭제내역</a></li>
+                                    <li><a href="../list/blue.html">블루투스</a></li>
+                                </ul>                     
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="smsset/message1.html">수신자관리</a></li>
+                                    <li><a href="../sms/messageset.html">메시지관리</a></li>
+                                    <li><a href="../sms/messagecont.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>              
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../state/state1.html">통계자료</a></li>
+                                    <li><a href="../state/onofftime1.html">점소등시간</a></li>
+                                    <li><a href="../state/local2.html">지역설정</a></li>
+                                    <li class="on"><a href="../state/lamp2.html">램프설정</a></li>
+                                </ul>             
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="scroll_wrap long_scroll">
+                    <div class="bugabox">
+                        <div class="box lamp">
+                            <div class="boxtitle">
+                                <span>등종류 설정</span>
+                            </div>
+                            <div class="itemwrap">
+                                <div class="item">
+                                    <h3>추가하기</h3>
+                                    <div class="adressbox box1">
+                                        <div class="btn">
+                                            <input type="text">
+                                            <button>등록</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="item">
+                                    <h3>수정 / 삭제</h3>
+                                    <p>수정 또는 삭제를 하려면 목록에서 먼저 선택 하세요.</p>
+                                    <div class="adressbox box2">
+                                        <select name="denggroup" class="listbox" id="deng" multiple>
+                                            <option value="CDM">CDM</option>
+                                            <option value="LED">LED</option>
+                                            <option value="LED바">LED바</option>
+                                        </select>
+                                        <div class="btn">
+                                            <input type="text" id="insert">
+                                            <button>수정</button>
+                                            <button>삭제</button>
+                                        </div>
+
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box lamp">
+                            <div class="boxtitle">
+                                <span>WATT 설정</span>
+                            </div>
+                            <div class="itemwrap">
+                                <div class="item">
+                                    <h3>추가하기</h3>
+                                    <div class="adressbox box1 watt">
+                                        <div class="textbox">
+                                            <input type="text">
+                                            <button>등록</button>
+                                        </div>
+                                        <span>※숫자만 입력하세요 !</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h3>수정 / 삭제</h3>
+                                    <p>수정 또는 삭제를 하려면 목록에서 먼저 선택 하세요.</p>
+                                    <div class="adressbox box2">
+                                        <select class="listbox" multiple id="num">
+                                            <option value="10">10</option>
+                                            <option value="100">100</option>
+                                            <option value="12">12</option>
+                                        </select>
+                                        <div class="textbox">
+                                            <input type="text" id="insert2">
+                                            <button>수정</button>
+                                            <button>삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box lamp">
+                            <div class="boxtitle">
+                                <span>설치형태 설정</span>
+                            </div>
+                            <div class="itemwrap">
+                                <div class="item">
+                                    <h3>추가하기</h3>
+                                    <div class="adressbox box1 watt">
+                                        <div class="textbox">
+                                            <input type="text">
+                                            <button>등록</button>
+                                        </div>
+                                        <span>※숫자만 입력하세요 !</span>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <h3>수정 / 삭제</h3>
+                                    <p>수정 또는 삭제를 하려면 목록에서 먼저 선택 하세요.</p>
+                                    <div class="adressbox box2">
+                                        <select class="listbox" multiple id="num">
+                                            <option value="cctv주">cctv주</option>
+                                            <option value="간판지주">간판지주</option>
+                                            <option value="강관주">강관주</option>
+                                            <option value="건물옥상">건물옥상</option>
+                                            <option value="건물외벽">건물외벽</option>
+                                        </select>
+                                        <div class="textbox">
+                                            <input type="text" id="insert2">
+                                            <button>수정</button>
+                                            <button>삭제</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 등고장설정팝업창 -->
+            <div class="errorbox">
+                <div class="title">
+                    <h2>등고장 판단 기준 비율 설정</h2>
+                    <a href=""><i class="far fa-window-close"></i></a>
+                </div>
+                <div class="all_list">
+                    <div class="tablebox">
+                        <h3>기준 전력값 비율</h3>
+                        <div>
+                            <select name="" id="">
+                                <option value="">100</option>
+                                <option value="">90</option>
+                                <option value="">80</option>
+                                <option value="">70</option>
+                                <option value="">60</option>
+                                <option value="">50</option>
+                                <option value="">40</option>
+                                <option value="">30</option>
+                                <option value="">20</option>
+                                <option value="">10</option>
+                            </select>
+                            <span>%</span>
+                        </div>
+                    </div>
+                    <p>EX) 기준전력값이 1kW이고 기준비율 70% 이면,
+                        현재전력값이 0.7kW 미만일 경우만 등고장에 포함
+                    </p>
+                    <div class="btn_group">
+                        <div class="right">
+                            <div><a href="">설정</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

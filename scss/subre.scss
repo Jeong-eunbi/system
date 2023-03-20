@@ -1,0 +1,2974 @@
+
+
+@media all and (min-width: 1201px){
+    .wrapper .cont  .contbox .scroll_wrap .bugabox{
+        .box{
+            .itemwrap .item{
+                .box1{
+                    min-height: 5rem;
+                    height: auto;
+                    padding-bottom: .5rem;
+                }
+            }
+        }
+    }
+}
+@media all and (max-width:1200px){
+    @media (orientation: portrait){
+
+        //도로조명 보수내역 > 환경설정페이지
+        .wrapper{
+            .cont{
+                .contbox{
+                    .bosusetbox{
+                        .setbox .box{
+                            width: 49%;
+                            margin: 0 4px 4px 0;
+                        }
+                    }
+                }
+            }
+        }
+        //도로조명 청구내역
+        .wrapper .cont{
+            .rowbox{
+                >div{
+                    display: flex;
+                    align-items: center;
+                }
+               
+            }
+            .bill1{
+                .boxwrap{
+                    flex-wrap: wrap;
+                }
+            }
+            .small_tab ul{
+                flex-wrap: wrap;
+                li{
+                    span{
+                        white-space: nowrap;
+                    }
+                }
+            } 
+        }
+        // 통계자료
+        .wrapper .cont .contbox .btnwrap .rightbtn{
+            select.tongselect{
+                display: block;
+                margin: 0;
+            }
+        }
+        // 도로조명 공지 
+        .wrapper .cont .doropage1 .writebox .rightbtn .bun_sel{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        // 지역설정 페이지
+        .wrapper .cont .contbox .scroll_wrap .bugabox{
+            flex-wrap: wrap;
+            .box{
+                width: 49%;
+                margin: 3px;
+                box-sizing: border-box;
+                .itemwrap .item{
+                    .box1{
+                        min-height: 5rem;
+                        height: auto;
+                        padding-bottom: .5rem;
+                        .col{
+                            >div{
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+                    .box2 .btn{
+                        flex-wrap: wrap;
+                    }
+                    .adressbox select.listbox{
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+        //구형분수대페이지
+        .wrapper .cont .contbox {
+            .bunsubtn{
+                margin-top: .5rem;
+                div input{
+                    max-width: 130px;
+                    width: 110px;
+                }
+            } 
+            .iconlist ul.bunsu_icon li{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+            .bunsu_list{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width: 3px;
+                    height: 3px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: rgb(189, 189, 189);
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track{
+                    background-color: rgb(245, 245, 245);
+                }
+                table{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .bunsu_sel{
+                #tablewrap{
+                    height: auto;
+                }
+            }
+        }
+        //도로조명 설치현황
+        .wrapper .cont .allset .tabbox .tablist .tab_status{
+            h3{
+                white-space: nowrap;
+            }
+            width: auto;
+            margin-left: 0;
+            margin-right: 3px;
+        }
+    }
+    
+    @media (orientation: landscape){
+        .wrapper .cont .contbox .scroll_wrap .bugabox{
+            flex-wrap: wrap;
+            .box{
+                width: 49%;
+                margin: 3px;
+                box-sizing: border-box;
+                .itemwrap .item{
+                    .box1{
+                        min-height: 5rem;
+                        height: auto;
+                        padding-bottom: .5rem;
+                        .col{
+                            >div{
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+                    .box2 .btn{
+                        flex-wrap: wrap;
+                    }
+                    .adressbox select.listbox{
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+        }
+        //sms
+        .wrapper{
+            overflow: auto;
+            .cont{
+                align-items: flex-start;
+                height: 100%;
+                .contbox{
+                    height: 100%;
+                    width: 75%;
+
+                    //sms 메세지 관리
+                    .sms_scroll{
+                        height: auto;
+                        .messagebox{
+                            flex-wrap: wrap;
+                            .susin, .messagesort{
+                                width: 100%;
+                            }
+                            .susin{
+                                margin: 8px 0;
+                            }
+                        }
+                    }
+                    .btnwrap{
+                        margin: 1rem 0;
+                    }
+                    .scroll_wrap{
+                        height: 100%;
+                        overflow: visible;
+                        margin: 0;
+                    }
+                }
+                .col{
+                    height: 100%;
+                }
+            }
+        } 
+        //구형분수대페이지
+        .wrapper .cont .contbox {
+            .bunsubtn div input{
+                max-width: 130px;
+                width: 110px;
+            }
+            .iconlist ul.bunsu_icon li{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+            .bunsu_list{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width: 3px;
+                    height: 3px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: rgb(189, 189, 189);
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track{
+                    background-color: rgb(245, 245, 245);
+                }
+                table{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .bunsu_sel{
+                #tablewrap{
+                    height: auto;
+                }
+            }
+        }
+
+        //펌프장, 구형분수대 제어페이지 >  상단 탭바
+        .wrapper .cont .contbox {
+            .bunsubtn{
+                flex-wrap: wrap;
+                margin-top: .5rem;
+                >ul{
+                    justify-content: flex-start;
+                    overflow: auto;
+                    margin-bottom: 6px;
+                    li{
+                        white-space: nowrap;
+                    }
+                }
+
+                .in_selbox{
+                    input{
+                        max-width: 130px;
+                    }
+                }
+            }
+
+
+            .scroll_wrap .messagebox .messagesort .bunsu_mbox{
+                flex-direction: column;
+            }
+        }
+        .wrapper .cont .contbox .bunsubtn{
+            flex-wrap: wrap;
+            >ul{
+                justify-content: flex-start;
+                overflow: auto;
+                margin-bottom: 6px;
+            }
+        }
+        //부가기능시간
+        .wrapper .cont .col .month ul{
+            padding-bottom: 0;
+            max-width: 100%;
+            margin-bottom: 8px;
+            justify-content: flex-start;
+            white-space: nowrap;
+            overflow: auto;
+            &::-webkit-scrollbar {
+                height: 3px;
+            }
+            &::-webkit-scrollbar-thumb {
+                height: 4px;
+                background-color: rgb(189, 189, 189);
+                border-radius: px;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: rgb(245, 245, 245);
+                height: 8px;
+            }
+        }
+    
+        //보안등 부가기능 램프 페이지
+        .wrapper .cont .contbox .scroll_wrap .bugabox .lamp{
+            width: 100%;
+            margin-right: 8px;
+        }
+        .wrapper{
+            overflow: auto;
+            .cont{
+                height: 100%;
+                align-items: flex-start;
+                padding-top: .5rem;
+                box-sizing: border-box;
+    
+                .col{
+                    justify-content: flex-start;
+                    .month{
+                        ul{
+                            padding-bottom: 0;
+                            max-width: 100%;
+                            justify-content: flex-start;
+                            white-space: nowrap;
+                            overflow: auto;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                        }
+                    }
+                    .calender{
+                        max-width: 100%;
+                        padding-top: 1rem;
+                        height: 100%;
+                        .cal_wrap{
+                            width: 100%;
+                            align-items: flex-start;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                            table{
+                                tr{
+                                    td{
+                                        min-width: 80px;
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+    
+                .contbox{
+                    .btnwrap{
+                        .rightbtn{
+                            flex-wrap: wrap;
+                            >select{
+                                margin: 2px;
+                            }
+                            .btn_bg{
+                                margin-left: 0;
+                            }
+                            .detail_btn, .detail_btn2{
+                                display: flex;
+                            }
+                            .search{
+                                display: flex;
+                                align-items: center;
+                                .flex{
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        .rightbtn .bun_sel, .rightbtn .search_box, .leftbtn .bun_sel{
+                            display: none;
+                        }
+                        
+                    }
+                    .paging{
+                        display: none;
+                    }
+                }
+                 //부가기능 지역설정
+                .contbox .scroll_wrap{
+                    overflow: visible;
+                    #tablewrap{
+                        height: 100%;
+                    }
+                    .bugabox{
+                        .box{
+                            width: 100%;
+                        }
+                    } 
+                }    
+            }           
+        }
+        //보안등 보수내역테이블
+        .wrapper .cont .contbox .scroll_wrap .h100{
+            height: 100% !important;
+        }
+        //도로조명 청구내역관리
+        .wrapper .cont .bill_scroll #table_wrap{
+            .detail{
+                max-height: 250px;
+                height: auto;
+            }
+        } 
+        
+        //구형분수대페이지
+        .wrapper .cont .contbox {
+            .bunsubtn div input{
+                max-width: 130px;
+                width: 110px;
+            }
+            .iconlist ul.bunsu_icon li{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+            .bunsu_list{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width: 3px;
+                    height: 3px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: rgb(189, 189, 189);
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track{
+                    background-color: rgb(245, 245, 245);
+                }
+                table{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .bunsu_sel{
+                #tablewrap{
+                    height: auto;
+                }
+            }
+        }
+    
+        //펌프장, 구형분수대 제어페이지 >  상단 탭바
+        .wrapper .cont .contbox {
+            .bunsubtn{
+                flex-wrap: wrap;
+                margin-top: .5rem;
+                >ul{
+                    justify-content: flex-start;
+                    overflow: auto;
+                    margin-bottom: 6px;
+                    li{
+                        white-space: nowrap;
+                    }
+                }
+    
+                .in_selbox{
+                    input{
+                        max-width: 130px;
+                    }
+                }
+            }
+    
+    
+            .scroll_wrap .messagebox .messagesort .bunsu_mbox{
+                flex-direction: column;
+            }
+        }
+        // 도로조명 민원관리 > 불편신고 테이블
+        .wrapper .cont {
+            .dorobox .scroll_wrap{
+                overflow: initial;
+                height: initial;
+                .doro_wrap{
+                    table{
+                        tr{
+                            td{
+                                padding: 7px;
+                                box-sizing: border-box;
+                                &:first-child{
+                                    white-space: nowrap;
+                                }
+                                &:last-child{
+                                    flex-wrap: wrap;
+                                }
+                                
+                            }
+                        }
+                    }
+                    .pag{
+                        .doro_cont{
+                            overflow: auto;
+                            table{
+                                tr{
+                                    td{
+                                        >div{
+                                            flex-wrap: wrap;
+                                            select{
+                                                margin: 0 2px 2px 0;
+                                            }
+                                        }
+                                        span.pass_note{
+                                            margin-left: 0;
+                                            text-align: left;
+                                        }
+                                        .find_place{
+                                            input{
+                                                width: 60%;
+                                            }
+                                            .map_btn{
+                                                margin-left: 0;
+                                                padding: 0 6px;
+                                                a{
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+                .filebox{
+                    label{
+                        width: 80px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-left: 0;
+                    }
+                    input.nameinput{
+                        width: 60%;
+                        margin-left: 0;
+                    }
+                }
+            }
+            
+            //민원관리 > 처리현황 테이블
+            .minwon2{
+                .scroll_wrap{
+                    .search_wrap{
+                        overflow-x: auto;
+                        table{
+                            margin-bottom: 0;
+                            tr td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .txticonbox{
+                        .iconbtn{
+                            width: auto;
+                        }
+                    }
+                }   
+            }
+    
+            //보수처리 > 설치현황
+            .dorobox{
+                ul.set_tab{
+                    li{
+                        min-width: 80px;
+                        text-align: center;
+                        a{
+                            word-break: keep-all;
+                        }
+                    }
+                }
+                .allset{
+                    .tabbox{
+                        .tablist{
+                            .tab_status{
+                                width: 100%;
+                                .table-type{
+                                    flex-wrap: wrap;
+                                    table{
+                                        width: 100%;
+                                        &:first-child{
+                                            margin-bottom: 4px;
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            //분전함설치현황
+                            .table_style{
+                                table{
+                                    tr{
+                                        td,th{
+                                            min-width: 100px;
+                                            padding: 12px 8px;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    
+            //보수내역관리 > 공지관리
+            .doropage1 .writebox .rightbtn{
+                .bun_sel{
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    select{
+                        display: block;
+                    }
+                    >input{
+                        margin: 4px 0;
+                    }
+                }
+    
+            }
+            .contbox .writewrap{
+                overflow: initial;
+                .writebox{
+                    justify-content: flex-start;
+                    >ul{
+                        li.write_select{
+                            flex-wrap: wrap;
+                            div{
+                                width: 100%;
+                                &:first-child{
+                                    select{
+                                        margin-bottom: 4px;
+                                    }
+                                }
+                                p{
+                                    margin-left: 0;
+                                    width: 30%;
+                                }
+                                select{
+                                    width: 70%;
+                                
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            
+            }
+            #bosubox{
+                .search_wrap{
+                    overflow-x: auto;
+                    table.table_search{
+                        margin-bottom: 0;
+                        tr{
+                            td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .iconbtn{
+                    width: initial;
+                }
+                .scroll_wrapper{
+                    #tablescroll{
+                        table.bosulist{
+                            tr{
+                                th{
+                                    padding: 10px 8px;
+                                    box-sizing: border-box;
+                                    white-space: nowrap;
+                                }
+                                td{
+                                    padding: 10px 8px;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+            }
+    
+        }
+        //도로조명 보수내역관리
+        .wrapper .cont .input_list{
+            height: 100%;
+        }
+        .wrapper .cont{
+            .rowbox{
+                >div{
+                    display: flex;
+                    align-items: center;
+                }
+               
+            }
+            .bill1{
+                .boxwrap{
+                    flex-wrap: wrap;
+                }
+            }
+            .small_tab ul{
+                flex-wrap: wrap;
+                li{
+                    span{
+                        white-space: nowrap;
+                    }
+                }
+            } 
+        }
+        // 통계자료
+        .wrapper .cont .contbox .btnwrap .rightbtn{
+            select.tongselect{
+                display: block;
+                margin: 0;
+            }
+        }
+
+    }
+  
+}
+
+
+@media all and (max-width:768px){
+    @media (orientation: landscape){
+        .wrapper{
+            overflow: auto;
+            .cont{
+                height: 100%;
+                align-items: flex-start;
+                padding-top: .5rem;
+                box-sizing: border-box;
+
+                .col{
+                    justify-content: flex-start;
+                    .month{
+                        ul{
+                            padding-bottom: 0;
+                            max-width: 100%;
+                            justify-content: flex-start;
+                            white-space: nowrap;
+                            overflow: auto;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                        }
+                    }
+                    .calender{
+                        max-width: 100%;
+                        padding-top: 1rem;
+                        height: 100%;
+                        .cal_wrap{
+                            width: 100%;
+                            align-items: flex-start;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                            table{
+                                tr{
+                                    td{
+                                        min-width: 80px;
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+
+                .contbox{
+                    .btnwrap{
+                        .rightbtn{
+                            flex-wrap: wrap;
+                            >select{
+                                margin: 2px;
+                            }
+                            .tongselect{
+                                display: block;
+                            }
+                            .btn_bg{
+                                margin-left: 0;
+                            }
+                            .detail_btn, .detail_btn2{
+                                display: flex;
+                            }
+                            .search{
+                                display: flex;
+                                align-items: center;
+                                .flex{
+                                    display: flex;
+                                    align-items: center;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                        .rightbtn .bun_sel, .rightbtn .search_box, .leftbtn .bun_sel{
+                            display: none;
+                        }
+                        
+                    }
+                    .paging{
+                        display: none;
+                    }
+                }
+                 //부가기능 지역설정
+                .contbox .scroll_wrap{
+                    overflow: visible;
+                    #tablewrap{
+                        height: 100%;
+                    }
+                    .bugabox{
+                        .box{
+                            width: 100%;
+                        }
+                    } 
+                }    
+            }           
+        }
+        //보안등 보수내역테이블
+        .wrapper .cont .contbox .scroll_wrap .h100{
+            height: 100% !important;
+        }
+        //도로조명 청구내역관리
+        .wrapper .cont .bill_scroll #table_wrap{
+            .detail{
+                max-height: 250px;
+                height: auto;
+            }
+        } 
+
+        .wrapper .cont .input_list{
+            height: initial;
+        }
+        
+        
+        //구형분수대페이지
+        .wrapper .cont .contbox {
+            .bunsubtn div input{
+                max-width: 130px;
+                width: 110px;
+            }
+            .iconlist ul.bunsu_icon li{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+            .bunsu_list{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width: 3px;
+                    height: 3px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: rgb(189, 189, 189);
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track{
+                    background-color: rgb(245, 245, 245);
+                }
+                table{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .bunsu_sel{
+                #tablewrap{
+                    height: auto;
+                }
+            }
+        }
+
+        //펌프장, 구형분수대 제어페이지 >  상단 탭바
+        .wrapper .cont .contbox {
+            .bunsubtn{
+                flex-wrap: wrap;
+                margin-top: .5rem;
+                >ul{
+                    justify-content: flex-start;
+                    overflow: auto;
+                    margin-bottom: 6px;
+                    li{
+                        white-space: nowrap;
+                    }
+                }
+
+                .in_selbox{
+                    input{
+                        max-width: 130px;
+                    }
+                }
+            }
+
+
+            .scroll_wrap .messagebox .messagesort .bunsu_mbox{
+                flex-direction: column;
+            }
+        }
+        // 도로조명 민원관리 > 불편신고 테이블
+        .wrapper .cont {
+            .dorobox .scroll_wrap{
+                overflow: initial;
+                height: initial;
+                .doro_wrap{
+                    table{
+                        tr{
+                            td{
+                                padding: 7px;
+                                box-sizing: border-box;
+                                &:first-child{
+                                    white-space: nowrap;
+                                }
+                                &:last-child{
+                                    flex-wrap: wrap;
+                                }
+                                
+                            }
+                        }
+                    }
+                    .pag{
+                        .doro_cont{
+                            overflow: auto;
+                            table{
+                                tr{
+                                    td{
+                                        >div{
+                                            flex-wrap: wrap;
+                                            select{
+                                                margin: 0 2px 2px 0;
+                                            }
+                                        }
+                                        span.pass_note{
+                                            margin-left: 0;
+                                            text-align: left;
+                                        }
+                                        .find_place{
+                                            input{
+                                                width: 60%;
+                                            }
+                                            .map_btn{
+                                                margin-left: 0;
+                                                padding: 0 6px;
+                                                a{
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+                .filebox{
+                    label{
+                        width: 80px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-left: 0;
+                    }
+                    input.nameinput{
+                        width: 60%;
+                        margin-left: 0;
+                    }
+                }
+            }
+            
+            //민원관리 > 처리현황 테이블
+            .minwon2{
+                .scroll_wrap{
+                    .search_wrap{
+                        overflow-x: auto;
+                        table{
+                            margin-bottom: 0;
+                            tr td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .txticonbox{
+                        .iconbtn{
+                            width: auto;
+                        }
+                    }
+                }   
+            }
+
+            //보수처리 > 설치현황
+            .dorobox{
+                ul.set_tab{
+                    justify-content: flex-start;
+                    overflow-x: auto;
+                    padding-bottom: 0;
+                    li{
+                        min-width: 80px;
+                        text-align: center;
+                        a{
+                            word-break: keep-all;
+                        }
+                    }
+                }
+                .allset{
+                    .tabbox{
+                        .tablist{
+                            .tab_status{
+                                width: 100%;
+                                .table-type{
+                                    flex-wrap: wrap;
+                                    table{
+                                        width: 100%;
+                                        &:first-child{
+                                            margin-bottom: 4px;
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            //분전함설치현황
+                            .table_style{
+                                table{
+                                    tr{
+                                        td,th{
+                                            min-width: 100px;
+                                            padding: 12px 8px;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //보수내역관리 > 공지관리
+            .doropage1 .writebox .rightbtn{
+                .bun_sel{
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    select{
+                        display: block;
+                    }
+                    >input{
+                        margin: 4px 0;
+                    }
+                }
+
+            }
+            .contbox .writewrap{
+                overflow: initial;
+                .writebox{
+                    justify-content: flex-start;
+                    >ul{
+                        li.write_select{
+                            flex-wrap: wrap;
+                            div{
+                                width: 100%;
+                                &:first-child{
+                                    select{
+                                        margin-bottom: 4px;
+                                    }
+                                }
+                                p{
+                                    margin-left: 0;
+                                    width: 30%;
+                                }
+                                select{
+                                    width: 70%;
+                                
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            
+            }
+            #bosubox{
+                .search_wrap{
+                    overflow-x: auto;
+                    table.table_search{
+                        margin-bottom: 0;
+                        tr{
+                            td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .iconbtn{
+                    width: initial;
+                }
+                .scroll_wrapper{
+                    #tablescroll{
+                        table.bosulist{
+                            tr{
+                                th{
+                                    padding: 10px 8px;
+                                    box-sizing: border-box;
+                                    white-space: nowrap;
+                                }
+                                td{
+                                    padding: 10px 8px;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        
+        
+    }
+    @media (orientation: portrait) {
+         // 가로등페이지 
+        .wrapper{
+            .cont{
+                .contbox{
+                    // 가로등페이지 > 부가기능 > 버튼그룹 
+                    .bugabtn{
+                        margin-bottom: 10px;
+                    }
+                    .scroll_wrap{
+                        //가로등 > 내역보기 > 분전함 삭제내역 페이지 보기복구버튼
+                        #tablewrap{
+                            table.deletetable{
+                                tbody{
+                                    tr{
+                                        td{
+                                            button.viewpop{
+                                                margin-bottom: 2px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }   
+
+                    }
+                    //sms 메세지 관리
+                    .sms_scroll{
+                        height: auto;
+                        .messagebox{
+                            flex-wrap: wrap;
+                            .susin, .messagesort{
+                                width: 100%;
+                            }
+                            .susin{
+                                margin: 8px 0;
+                            }
+                        }
+                    }
+
+                    //가로등페이지 >부가기능 > 지역설정
+                    .long_scroll{
+                        overflow: initial;
+                        .bugabox{
+                            display: flex;
+                            flex-wrap: wrap;
+                            .box{
+                                margin: 8px 0;
+                                width: 100%;
+                                .itemwrap{
+                                    .item{
+                                        .adressbox{
+                                            height: auto;
+                                            flex-wrap: wrap;
+                                            padding-bottom: 10px;
+                                            .col{
+                                                div{
+                                                    margin-top: 4px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    label{
+                                                        padding-top: 4px;
+                                                        margin-right: 4px;
+                                                        font-size: 15px;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                        .textbox{
+                                            margin-top: 4px;
+                                        }
+                                    }
+                                    button{
+                                        padding: 0 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+                //가로등페이지 부가기능 > 점소등시간페이지
+                .col{
+                    .month{
+                        ul{
+                            padding-bottom: 0;
+                            max-width: 100%;
+                            justify-content: flex-start;
+                            white-space: nowrap;
+                            overflow: auto;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                        }
+                    }
+                    .calender{
+                        max-width: 100%;
+                        padding-top: 1rem;
+                        .cal_wrap{
+                            width: 100%;
+                            align-items: flex-start;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                            table{
+                                tr{
+                                    td{
+                                        min-width: 80px;
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            
+            }
+        }
+
+        //보안등 중계기 선택제어페이지
+        .wrapper .cont .contbox .btnwrap{
+            .select_group{
+                select{
+                    margin-left: 0;
+                    display: block !important;
+                    &:first-child{
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+            .leftbtn{
+                .print{
+                    display: none;
+                }
+            }
+        }
+
+        // iot 제어 페이지 버튼
+        .wrapper .cont .contbox .btnwrap{
+            .sel_w{
+                select{
+                    min-width: 95px;
+                }
+                .groupbtn{
+                    margin-left: 0;
+                }
+            }
+
+        }
+        
+        //공원등 페이지 >명령내역 > 버튼 정렬
+        .wrapper .cont .contbox .start{
+            .twogroup{
+                width: auto;
+                
+            }
+        }
+
+        //분수대 > 부가기능 > 램프설정 버튼정렬
+        .wrapper .cont .contbox .long_scroll .bugabox .box .itemwrap .item .box1{
+            .btn{
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+        //구형분수대페이지
+        .wrapper .cont .contbox {
+            .bunsubtn div input{
+                max-width: 130px;
+                width: 110px;
+            }
+            .iconlist ul.bunsu_icon li{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+            .bunsu_list{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width: 3px;
+                    height: 3px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: rgb(189, 189, 189);
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track{
+                    background-color: rgb(245, 245, 245);
+                }
+                table{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+
+        //펌프장, 구형분수대 제어페이지 >  상단 탭바
+        .wrapper .cont .contbox {
+            .bunsubtn{
+                flex-wrap: wrap;
+                >ul{
+                    justify-content: flex-start;
+                    overflow: auto;
+                    margin-bottom: 6px;
+                    li{
+                        white-space: nowrap;
+                    }
+                }
+
+                .in_selbox{
+                    input{
+                        max-width: 130px;
+                    }
+                }
+            }
+
+
+            .scroll_wrap .messagebox .messagesort .bunsu_mbox{
+                flex-direction: column;
+            }
+        }
+
+        // 도로조명 민원관리 > 불편신고 테이블
+        .wrapper .cont {
+            .dorobox .scroll_wrap{
+                overflow: initial;
+                height: initial;
+                .doro_wrap{
+                    table{
+                        tr{
+                            td{
+                                &:last-child{
+                                    flex-wrap: wrap;
+                                }
+                                
+                            }
+                        }
+                    }
+                    .pag{
+                        .doro_cont{
+                            overflow: hidden;
+                            table{
+                                tr{
+                                    td{
+                                        >div{
+                                            flex-wrap: wrap;
+                                            select{
+                                                margin: 0 2px 2px 0;
+                                            }
+                                        }
+                                        span.pass_note{
+                                            margin-left: 0;
+                                            text-align: left;
+                                        }
+                                        .find_place{
+                                            input{
+                                                width: 60%;
+                                            }
+                                            .map_btn{
+                                                margin-left: 0;
+                                                padding: 0 6px;
+                                                a{
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+                .filebox{
+                    label{
+                        width: 80px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-left: 0;
+                    }
+                    input.nameinput{
+                        width: 60%;
+                        margin-left: 0;
+                    }
+                }
+            }
+            
+            //민원관리 > 처리현황 테이블
+            .minwon2{
+                .scroll_wrap{
+                    .search_wrap{
+                        overflow-x: auto;
+                        table{
+                            margin-bottom: 0;
+                            tr td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .txticonbox{
+                        .iconbtn{
+                            width: auto;
+                        }
+                    }
+                }   
+            }
+
+            //보수처리 > 설치현황
+            .dorobox{
+                ul.set_tab{
+                    justify-content: flex-start;
+                    overflow-x: auto;
+                    padding-bottom: 0;
+                    li{
+                        min-width: 80px;
+                        text-align: center;
+                        a{
+                            word-break: keep-all;
+                        }
+                    }
+                }
+                .allset{
+                    .tabbox{
+                        .tablist{
+                            .tab_status{
+                                width: 100%;
+                                .table-type{
+                                    flex-wrap: wrap;
+                                    table{
+                                        width: 100%;
+                                        &:first-child{
+                                            margin-bottom: 4px;
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            //분전함설치현황
+                            .table_style{
+                                table{
+                                    tr{
+                                        td,th{
+                                            min-width: 100px;
+                                            padding: 12px 8px;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //보수내역관리 > 공지관리
+            .doropage1 .writebox .rightbtn{
+                .bun_sel{
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-wrap: wrap;
+                    select{
+                        display: block;
+                    }
+                    >input{
+                        margin: 4px 0;
+                    }
+                }
+
+            }
+            .contbox .writewrap{
+                overflow: initial;
+                .writebox{
+                    justify-content: flex-start;
+                    >ul{
+                        li.write_select{
+                            flex-wrap: wrap;
+                            div{
+                                width: 100%;
+                                &:first-child{
+                                    select{
+                                        margin-bottom: 4px;
+                                    }
+                                }
+                                p{
+                                    margin-left: 0;
+                                    width: 30%;
+                                }
+                                select{
+                                    width: 70%;
+                                
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            
+            }
+            #bosubox{
+                .search_wrap{
+                    overflow-x: auto;
+                    table.table_search{
+                        margin-bottom: 0;
+                        tr{
+                            td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .iconbtn{
+                    width: initial;
+                }
+                .scroll_wrapper{
+                    #tablescroll{
+                        table.bosulist{
+                            tr{
+                                th{
+                                    padding: 10px 8px;
+                                    box-sizing: border-box;
+                                    white-space: nowrap;
+                                }
+                                td{
+                                    padding: 10px 8px;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+            //청구내역관리
+            .bill_scroll #table_wrap .detail{
+                height: 100%;
+            }
+
+        }
+
+        // 청구내역관리
+        .wrapper .cont {
+            .small_tab{
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                .boxwrap{
+                    flex-wrap: wrap;
+                    ul{
+                        flex-wrap: wrap;
+                        li{
+                            flex-wrap: wrap;
+                            .rowbox{
+                                >div{
+                                    display: flex;
+                                    align-items: center;
+                                    input{
+                                        max-width: 100px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                ul.inout_search{
+                    flex-wrap: wrap;
+                    li{
+                        &:last-child{
+                            margin: 10px 0;
+                        }
+                    }
+                }
+                .iconbtn{
+                    margin: 0;
+                }
+            }
+            .bill_scroll #table_wrap .detail table tbody tr{
+                thead{
+                    tr{
+                        th{
+                            padding: 12px 6px;
+                        }
+                        
+                    }
+                }
+                td{
+                    padding: 12px 6px;
+                    white-space: nowrap;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        //자재입출고
+        .wrapper .cont{
+            ul.detail_tab{
+
+                li{
+                    margin-left: 0;
+                    a{
+                        padding: 0 4px;
+                        span{
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+            .tab1 {
+                overflow: auto;
+                .small_tab{
+                    ul{
+                        li{
+                            margin-bottom: 2px;
+                            &:last-child{
+                                flex-wrap: wrap;
+                            }
+                            .rowbox{
+                                >div{
+                                    display: flex;
+                                    input{
+                                        max-width: 100px;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    ul.hideli{
+                        li{
+                            display: none;
+                            &.mobile_debtn{
+                                display: block;
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                .btn_between{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .scroll_area{
+                    overflow: auto;
+                    height: auto;
+                    table{
+                        thead tr, tbody tr{
+                            th, td{
+                                white-space: nowrap;
+                                padding: 10px 8px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+                .button3{
+                    .rightbox{
+                        flex-wrap: wrap;
+                    }
+                }
+            
+        
+            }
+            
+            
+        } 
+        
+        // 통계자료
+        .wrapper .cont .contbox .btnwrap .rightbtn{
+            select.tongselect{
+                display: block;
+                margin: 0;
+            }
+        }
+        // 도로조명 환경설정
+        .wrapper .cont .contbox {
+            .bosusetbox .setbox .box{
+                width: 100%;
+            }
+            .scroll_wrap .bugabox .box .itemwrap .item{
+                p{
+                    word-break: keep-all;
+                    white-space: pre-wrap;
+                }
+                .adressbox{
+                    flex-wrap: wrap;
+                    .local{
+                        flex-wrap: wrap;
+                        .btn{
+                            margin-top: 2px;
+                            label{
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                    .textbox{
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px){
+    @media (orientation: portrait){
+        // 가로등페이지 
+        .wrapper{
+            .cont{
+                .contbox{
+                    // 가로등페이지 > 부가기능 > 버튼그룹 
+                    .bugabtn{
+                        margin-bottom: 10px;
+                    }
+                    .scroll_wrap{
+                        //가로등 > 내역보기 > 분전함 삭제내역 페이지 보기복구버튼
+                        #tablewrap{
+                            table.deletetable{
+                                tbody{
+                                    tr{
+                                        td{
+                                            button.viewpop{
+                                                margin-bottom: 2px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }   
+
+                    }
+                    //sms 메세지 관리
+                    .sms_scroll{
+                        height: auto;
+                        .messagebox{
+                            flex-wrap: wrap;
+                            .susin, .messagesort{
+                                width: 100%;
+                            }
+                            .susin{
+                                margin: 8px 0;
+                            }
+                        }
+                    }
+
+                    //가로등페이지 >부가기능 > 지역설정
+                    .long_scroll{
+                        overflow: initial;
+                        .bugabox{
+                            display: flex;
+                            flex-wrap: wrap;
+                            .box{
+                                margin: 8px 0;
+                                width: 100%;
+                                .itemwrap{
+                                    .item{
+                                        .adressbox{
+                                            height: auto;
+                                            flex-wrap: wrap;
+                                            padding-bottom: 10px;
+                                            .col{
+                                                div{
+                                                    margin-top: 4px;
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    align-items: center;
+                                                    label{
+                                                        padding-top: 4px;
+                                                        margin-right: 4px;
+                                                        font-size: 15px;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                        .textbox{
+                                            margin-top: 4px;
+                                        }
+                                    }
+                                    button{
+                                        padding: 0 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+                //가로등페이지 부가기능 > 점소등시간페이지
+                .col{
+                    .month{
+                        ul{
+                            padding-bottom: 0;
+                            max-width: 100%;
+                            justify-content: flex-start;
+                            white-space: nowrap;
+                            overflow: auto;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                        }
+                    }
+                    .calender{
+                        max-width: 100%;
+                        padding-top: 1rem;
+                        .cal_wrap{
+                            width: 100%;
+                            align-items: flex-start;
+                            &::-webkit-scrollbar{
+                                height: 3px;
+                            }
+                            &::-webkit-scrollbar-thumb{
+                                height: 4px;
+                                background-color: rgb(189, 189, 189);
+                                border-radius: px;
+                                
+                            }
+                            &::-webkit-scrollbar-track{
+                                background-color: rgb(245, 245, 245);
+                                height: 8px;
+                            }
+                            table{
+                                tr{
+                                    td{
+                                        min-width: 80px;
+                                        
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            
+            }
+        }
+
+        //보안등 중계기 선택제어페이지
+        .wrapper .cont .contbox .btnwrap{
+            .select_group{
+                select{
+                    margin-left: 0;
+                    display: block !important;
+                    &:first-child{
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+            .leftbtn{
+                .print{
+                    display: none;
+                }
+            }
+        }
+
+        // iot 제어 페이지 버튼
+        .wrapper .cont .contbox .btnwrap{
+            .sel_w{
+                select{
+                    min-width: 95px;
+                }
+                .groupbtn{
+                    margin-left: 0;
+                }
+            }
+
+        }
+        
+        //공원등 페이지 >명령내역 > 버튼 정렬
+        .wrapper .cont .contbox .start{
+            .twogroup{
+                width: auto;
+                
+            }
+        }
+
+        //분수대 > 부가기능 > 램프설정 버튼정렬
+        .wrapper .cont .contbox .long_scroll .bugabox .box .itemwrap .item .box1{
+            .btn{
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+        //구형분수대페이지
+        .wrapper .cont .contbox {
+            .bunsubtn div input{
+                max-width: 130px;
+                width: 110px;
+            }
+            .iconlist ul.bunsu_icon li{
+                flex-wrap: wrap;
+                margin-right: 0;
+                margin-bottom: 4px;
+            }
+            .bunsu_list{
+                display: flex;
+                flex-wrap: wrap;
+                overflow: auto;
+                &::-webkit-scrollbar{
+                    width: 3px;
+                    height: 3px;
+                }
+                &::-webkit-scrollbar-thumb{
+                    background-color: rgb(189, 189, 189);
+                    border-radius: 8px;
+                }
+                &::-webkit-scrollbar-track{
+                    background-color: rgb(245, 245, 245);
+                }
+                table{
+                    tr{
+                        td{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+            .bunsu_sel{
+                #tablewrap{
+                    height: auto;
+                }
+            }
+        }
+
+        //펌프장, 구형분수대 제어페이지 >  상단 탭바
+        .wrapper .cont .contbox {
+            .bunsubtn{
+                flex-wrap: wrap;
+                margin-top: .5rem;
+                >ul{
+                    justify-content: flex-start;
+                    overflow: auto;
+                    margin-bottom: 6px;
+                    li{
+                        white-space: nowrap;
+                    }
+                }
+
+                .in_selbox{
+                    input{
+                        max-width: 130px;
+                    }
+                }
+            }
+
+
+            .scroll_wrap .messagebox .messagesort .bunsu_mbox{
+                flex-direction: column;
+            }
+        }
+
+        // 도로조명 민원관리 > 불편신고 테이블
+        .wrapper .cont {
+            .dorobox .scroll_wrap{
+                overflow: initial;
+                height: initial;
+                .doro_wrap{
+                    table{
+                        tr{
+                            td{
+                                padding: 7px;
+                                box-sizing: border-box;
+                                &:first-child{
+                                    white-space: nowrap;
+                                }
+                                &:last-child{
+                                    flex-wrap: wrap;
+                                }
+                                
+                            }
+                        }
+                    }
+                    .pag{
+                        .doro_cont{
+                            overflow: auto;
+                            table{
+                                tr{
+                                    td{
+                                        >div{
+                                            flex-wrap: wrap;
+                                            select{
+                                                margin: 0 2px 2px 0;
+                                            }
+                                        }
+                                        span.pass_note{
+                                            margin-left: 0;
+                                            text-align: left;
+                                        }
+                                        .find_place{
+                                            input{
+                                                width: 60%;
+                                            }
+                                            .map_btn{
+                                                margin-left: 0;
+                                                padding: 0 6px;
+                                                a{
+                                                    font-size: 14px;
+                                                }
+                                            }
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }   
+                .filebox{
+                    label{
+                        width: 80px;
+                        height: 30px;
+                        line-height: 30px;
+                        margin-left: 0;
+                    }
+                    input.nameinput{
+                        width: 60%;
+                        margin-left: 0;
+                    }
+                }
+            }
+            
+            //민원관리 > 처리현황 테이블
+            .minwon2{
+                .scroll_wrap{
+                    .search_wrap{
+                        overflow-x: auto;
+                        table{
+                            margin-bottom: 0;
+                            tr td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    .txticonbox{
+                        .iconbtn{
+                            width: auto;
+                        }
+                    }
+                }   
+            }
+
+            //보수처리 > 설치현황
+            .dorobox{
+                ul.set_tab{
+                    justify-content: flex-start;
+                    overflow-x: auto;
+                    padding-bottom: 0;
+                    li{
+                        min-width: 80px;
+                        text-align: center;
+                        a{
+                            word-break: keep-all;
+                        }
+                    }
+                }
+                .allset{
+                    .tabbox{
+                        .tablist{
+                            .tab_status{
+                                width: 100%;
+                                .table-type{
+                                    flex-wrap: wrap;
+                                    table{
+                                        width: 100%;
+                                        &:first-child{
+                                            margin-bottom: 4px;
+                                        }
+                                        
+                                    }
+                                }
+                            }
+                            //분전함설치현황
+                            .table_style{
+                                table{
+                                    tr{
+                                        td,th{
+                                            min-width: 100px;
+                                            padding: 12px 8px;
+                                            word-break: keep-all;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            //보수내역관리 > 공지관리
+            .doropage1 .writebox .rightbtn{
+                .bun_sel{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    select{
+                        display: block;
+                    }
+                    >input{
+                        margin: 4px 0;
+                    }
+                }
+
+            }
+            .contbox .writewrap{
+                overflow: initial;
+                .writebox{
+                    justify-content: flex-start;
+                    >ul{
+                        li.write_select{
+                            flex-wrap: wrap;
+                            div{
+                                width: 100%;
+                                &:first-child{
+                                    select{
+                                        margin-bottom: 4px;
+                                    }
+                                }
+                                p{
+                                    margin-left: 0;
+                                    width: 30%;
+                                }
+                                select{
+                                    width: 70%;
+                                
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            
+            }
+            #bosubox{
+                .search_wrap{
+                    overflow-x: auto;
+                    table.table_search{
+                        margin-bottom: 0;
+                        tr{
+                            td{
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                .iconbtn{
+                    width: initial;
+                }
+                .scroll_wrapper{
+                    #tablescroll{
+                        table.bosulist{
+                            tr{
+                                th{
+                                    padding: 10px 8px;
+                                    box-sizing: border-box;
+                                    white-space: nowrap;
+                                }
+                                td{
+                                    padding: 10px 8px;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+        //보수내역관리
+        .wrapper .cont .input_list #tablescroll table.bosu_detail tr td{
+            >div{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            ul{
+                flex-wrap: wrap;
+                li{
+                    border-right: none;
+                    padding-left: 0;
+                }
+            }
+        } 
+        // 청구내역관리
+        .wrapper .cont {
+            .small_tab{
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                .boxwrap{
+                    flex-wrap: wrap;
+                    ul{
+                        flex-wrap: wrap;
+                        li{
+                            flex-wrap: wrap;
+                            .rowbox{
+                                >div{
+                                    display: flex;
+                                    align-items: center;
+                                    input{
+                                        max-width: 100px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                ul.inout_search{
+                    flex-wrap: wrap;
+                    li{
+                        &:last-child{
+                            margin: 10px 0;
+                        }
+                    }
+                }
+                .iconbtn{
+                    margin: 0;
+                }
+            }
+            .bill_scroll #table_wrap .detail table tbody tr{
+                thead{
+                    tr{
+                        th{
+                            padding: 12px 6px;
+                        }
+                        
+                    }
+                }
+                td{
+                    padding: 12px 6px;
+                    white-space: nowrap;
+                    box-sizing: border-box;
+                }
+            }
+            
+            .detail_tab{
+                justify-content: flex-start;
+            }
+       
+        }
+
+        //자재입출고
+        .wrapper .cont{
+            ul.detail_tab{
+                li{
+                    margin-left: 0;
+                    a{
+                        padding: 0 4px;
+                        span{
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+            .tab1 {
+                overflow: auto;
+                .small_tab{
+                    ul{
+                        li{
+                            margin-bottom: 2px;
+                            &:last-child{
+                                flex-wrap: wrap;
+                            }
+                            .rowbox{
+                                >div{
+                                    display: flex;
+                                    input{
+                                        max-width: 100px;
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                    ul.hideli{
+                        li{
+                            display: none;
+                            &.mobile_debtn{
+                                display: block;
+                            }
+                        }
+                        
+                    }
+                    
+                }
+                .btn_between{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .scroll_area{
+                    overflow: auto;
+                    table{
+                        thead tr, tbody tr{
+                            th, td{
+                                white-space: nowrap;
+                                padding: 10px 8px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+                .button3{
+                    .rightbox{
+                        flex-wrap: wrap;
+                    }
+                }
+            
+        
+            }
+            
+            
+        } 
+        //자재관리
+        .wrapper .cont .contbox{
+            margin-top: 0;
+            ul.bill_tab li{
+                white-space: nowrap;
+            }
+        } 
+        .topmargin{
+            margin-top: 4px;
+        }
+        
+        // 통계자료
+        .wrapper .cont .contbox .btnwrap .rightbtn{
+            select.tongselect{
+                display: block;
+                margin: 0;
+            }
+        }
+        // 도로조명 환경설정
+        .wrapper .cont .contbox {
+            .bosusetbox .setbox .box{
+                width: 100%;
+            }
+            .scroll_wrap .bugabox .box .itemwrap .item{
+                p{
+                    word-break: keep-all;
+                    white-space: pre-wrap;
+                }
+                .adressbox{
+                    flex-wrap: wrap;
+                    .local{
+                        flex-wrap: wrap;
+                        .btn{
+                            margin-top: 2px;
+                            label{
+                                padding-top: 0;
+                            }
+                        }
+                    }
+                    .textbox{
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+        //도로조명 보수입력 - bosulist_detail
+        .wrapper .cont .input_list{
+            height: calc(100% - 66px - 1rem);
+            .completebtn button:last-child{
+                margin-top: 2px;
+            }
+        } 
+        //도로조명 보수내역입력관리
+        .wrapper .cont .input_list #tablescroll{
+            height: 100%;
+            table.bosu_detail{
+                tbody tr{
+                    td{
+                        &:first-child{
+                            word-break: keep-all;
+                        }
+                        .filebox{
+                            flex-wrap: nowrap;
+                            label{
+                                margin-left: 0;
+                                word-break: keep-all;
+                                white-space: nowrap;
+                            }
+                            .nameinput{
+                                width: 60%;
+                                min-width: 120px;
+                                margin-right: 2px;
+                                margin-left: 0;
+                            }
+                        } 
+                    }  
+                }
+            }
+        }
+    }
+    
+
+}
+
+
+// @media (min-width:767px){
+//     // 펌프상단탭
+//     .wrapper .cont .contbox .bunsubtn{
+//         flex-wrap: wrap;
+//         >ul{
+//             justify-content: flex-start;
+//             overflow: auto;
+//             margin-bottom: 6px;
+//         }
+//     }
+//     .wrapper .cont .col .month ul{
+//         padding-bottom: 0;
+//         max-width: 100%;
+//         margin-bottom: 8px;
+//         justify-content: flex-start;
+//         white-space: nowrap;
+//         overflow: auto;
+//         &::-webkit-scrollbar {
+//             height: 3px;
+//         }
+//         &::-webkit-scrollbar-thumb {
+//             height: 4px;
+//             background-color: rgb(189, 189, 189);
+//             border-radius: px;
+//         }
+//         &::-webkit-scrollbar-track {
+//             background-color: rgb(245, 245, 245);
+//             height: 8px;
+//         }
+//     }
+
+//     //보안등 부가기능 램프 페이지
+//     .wrapper .cont .contbox .scroll_wrap .bugabox .lamp{
+//         width: 100%;
+//         margin-right: 8px;
+//     }
+
+//     //보안등 보수내역테이블
+//     .wrapper .cont .contbox .scroll_wrap .h100{
+//         height: 100% !important;
+//     }
+//     //도로조명 청구내역관리
+//     .wrapper .cont .bill_scroll #table_wrap{
+//         .detail{
+//             max-height: 250px;
+//             height: auto;
+//         }
+//     } 
+    
+//     //구형분수대페이지
+//     .wrapper .cont .contbox {
+//         .bunsubtn div input{
+//             max-width: 130px;
+//             width: 110px;
+//         }
+//         .iconlist ul.bunsu_icon li{
+//             flex-wrap: wrap;
+//             margin-right: 0;
+//             margin-bottom: 4px;
+//         }
+//         .bunsu_list{
+//             display: flex;
+//             flex-wrap: wrap;
+//             overflow: auto;
+//             &::-webkit-scrollbar{
+//                 width: 3px;
+//                 height: 3px;
+//             }
+//             &::-webkit-scrollbar-thumb{
+//                 background-color: rgb(189, 189, 189);
+//                 border-radius: 8px;
+//             }
+//             &::-webkit-scrollbar-track{
+//                 background-color: rgb(245, 245, 245);
+//             }
+//             table{
+//                 tr{
+//                     td{
+//                         white-space: nowrap;
+//                     }
+//                 }
+//             }
+//         }
+//         .bunsu_sel{
+//             #tablewrap{
+//                 height: auto;
+//             }
+//         }
+//     }
+
+//     //펌프장, 구형분수대 제어페이지 >  상단 탭바
+//     .wrapper .cont .contbox {
+//         .bunsubtn{
+//             flex-wrap: wrap;
+//             margin-top: .5rem;
+//             >ul{
+//                 justify-content: flex-start;
+//                 overflow: auto;
+//                 margin-bottom: 6px;
+//                 li{
+//                     white-space: nowrap;
+//                 }
+//             }
+
+//             .in_selbox{
+//                 input{
+//                     max-width: 130px;
+//                 }
+//             }
+//         }
+
+
+//         .scroll_wrap .messagebox .messagesort .bunsu_mbox{
+//             flex-direction: column;
+//         }
+//     }
+//     // 도로조명 민원관리 > 불편신고 테이블
+//     .wrapper .cont {
+//         .dorobox .scroll_wrap{
+//             overflow: initial;
+//             height: initial;
+//             .doro_wrap{
+//                 table{
+//                     tr{
+//                         td{
+//                             padding: 7px;
+//                             box-sizing: border-box;
+//                             &:first-child{
+//                                 white-space: nowrap;
+//                             }
+//                             &:last-child{
+//                                 flex-wrap: wrap;
+//                             }
+                            
+//                         }
+//                     }
+//                 }
+//                 .pag{
+//                     .doro_cont{
+//                         overflow: auto;
+//                         table{
+//                             tr{
+//                                 td{
+//                                     >div{
+//                                         flex-wrap: wrap;
+//                                         select{
+//                                             margin: 0 2px 2px 0;
+//                                         }
+//                                     }
+//                                     span.pass_note{
+//                                         margin-left: 0;
+//                                         text-align: left;
+//                                     }
+//                                     .find_place{
+//                                         input{
+//                                             width: 60%;
+//                                         }
+//                                         .map_btn{
+//                                             margin-left: 0;
+//                                             padding: 0 6px;
+//                                             a{
+//                                                 font-size: 14px;
+//                                             }
+//                                         }
+//                                     }
+                                    
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }   
+//             .filebox{
+//                 label{
+//                     width: 80px;
+//                     height: 30px;
+//                     line-height: 30px;
+//                     margin-left: 0;
+//                 }
+//                 input.nameinput{
+//                     width: 60%;
+//                     margin-left: 0;
+//                 }
+//             }
+//         }
+        
+//         //민원관리 > 처리현황 테이블
+//         .minwon2{
+//             .scroll_wrap{
+//                 .search_wrap{
+//                     overflow-x: auto;
+//                     table{
+//                         margin-bottom: 0;
+//                         tr td{
+//                             white-space: nowrap;
+//                         }
+//                     }
+//                 }
+//                 .txticonbox{
+//                     .iconbtn{
+//                         width: auto;
+//                     }
+//                 }
+//             }   
+//         }
+
+//         //보수처리 > 설치현황
+//         .dorobox{
+//             ul.set_tab{
+//                 justify-content: flex-start;
+//                 overflow-x: auto;
+//                 padding-bottom: 0;
+//                 li{
+//                     min-width: 80px;
+//                     text-align: center;
+//                     a{
+//                         word-break: keep-all;
+//                     }
+//                 }
+//             }
+//             .allset{
+//                 .tabbox{
+//                     .tablist{
+//                         .tab_status{
+//                             width: 100%;
+//                             .table-type{
+//                                 flex-wrap: wrap;
+//                                 table{
+//                                     width: 100%;
+//                                     &:first-child{
+//                                         margin-bottom: 4px;
+//                                     }
+                                    
+//                                 }
+//                             }
+//                         }
+//                         //분전함설치현황
+//                         .table_style{
+//                             table{
+//                                 tr{
+//                                     td,th{
+//                                         min-width: 100px;
+//                                         padding: 12px 8px;
+//                                         word-break: keep-all;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+
+//         //보수내역관리 > 공지관리
+//         .doropage1 .writebox .rightbtn{
+//             .bun_sel{
+//                 display: flex;
+//                 justify-content: flex-end;
+//                 flex-wrap: wrap;
+//                 select{
+//                     display: block;
+//                 }
+//                 >input{
+//                     margin: 4px 0;
+//                 }
+//             }
+
+//         }
+//         .contbox .writewrap{
+//             overflow: initial;
+//             .writebox{
+//                 justify-content: flex-start;
+//                 >ul{
+//                     li.write_select{
+//                         flex-wrap: wrap;
+//                         div{
+//                             width: 100%;
+//                             &:first-child{
+//                                 select{
+//                                     margin-bottom: 4px;
+//                                 }
+//                             }
+//                             p{
+//                                 margin-left: 0;
+//                                 width: 30%;
+//                             }
+//                             select{
+//                                 width: 70%;
+                            
+//                             }
+//                         }
+                        
+//                     }
+//                 }
+//             }
+        
+//         }
+//         #bosubox{
+//             .search_wrap{
+//                 overflow-x: auto;
+//                 table.table_search{
+//                     margin-bottom: 0;
+//                     tr{
+//                         td{
+//                             white-space: nowrap;
+//                         }
+//                     }
+//                 }
+//             }
+//             .iconbtn{
+//                 width: initial;
+//             }
+//             .scroll_wrapper{
+//                 #tablescroll{
+//                     table.bosulist{
+//                         tr{
+//                             th{
+//                                 padding: 10px 8px;
+//                                 box-sizing: border-box;
+//                                 white-space: nowrap;
+//                             }
+//                             td{
+//                                 padding: 10px 8px;
+//                                 white-space: nowrap;
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+
+//         }
+
+//     }
+//     @media (orientation: landscape){
+//         .wrapper .cont .dorobox{
+//             ul.set_tab{
+//                 justify-content: center;
+//                 padding-bottom: 20px;
+//             }
+//             .allset .tabbox .tablist{
+//                 justify-content: center;
+//                 .tab_status{
+//                     width: 20%;
+//                 }
+//             }
+//         } 
+//         // .wrapper{
+//         //     overflow: auto;
+//         //     .cont{
+//         //         height: 100%;
+//         //         align-items: flex-start;
+//         //         padding-top: .5rem;
+//         //         box-sizing: border-box;
+    
+//         //         .col{
+//         //             justify-content: flex-start;
+//         //             .month{
+//         //                 ul{
+//         //                     padding-bottom: 0;
+//         //                     max-width: 100%;
+//         //                     justify-content: flex-start;
+//         //                     white-space: nowrap;
+//         //                     overflow: auto;
+//         //                     &::-webkit-scrollbar{
+//         //                         height: 3px;
+//         //                     }
+//         //                     &::-webkit-scrollbar-thumb{
+//         //                         height: 4px;
+//         //                         background-color: rgb(189, 189, 189);
+//         //                         border-radius: px;
+                                
+//         //                     }
+//         //                     &::-webkit-scrollbar-track{
+//         //                         background-color: rgb(245, 245, 245);
+//         //                         height: 8px;
+//         //                     }
+//         //                 }
+//         //             }
+//         //             .calender{
+//         //                 max-width: 100%;
+//         //                 padding-top: 1rem;
+//         //                 height: 100%;
+//         //                 .cal_wrap{
+//         //                     width: 100%;
+//         //                     align-items: flex-start;
+//         //                     &::-webkit-scrollbar{
+//         //                         height: 3px;
+//         //                     }
+//         //                     &::-webkit-scrollbar-thumb{
+//         //                         height: 4px;
+//         //                         background-color: rgb(189, 189, 189);
+//         //                         border-radius: px;
+                                
+//         //                     }
+//         //                     &::-webkit-scrollbar-track{
+//         //                         background-color: rgb(245, 245, 245);
+//         //                         height: 8px;
+//         //                     }
+//         //                     table{
+//         //                         tr{
+//         //                             td{
+//         //                                 min-width: 80px;
+                                        
+//         //                             }
+//         //                         }
+//         //                     }
+                            
+//         //                 }
+//         //             }
+//         //         }
+    
+//         //         .contbox{
+//         //             .btnwrap{
+//         //                 .rightbtn{
+//         //                     flex-wrap: wrap;
+//         //                     >select{
+//         //                         margin: 2px;
+//         //                     }
+//         //                     .btn_bg{
+//         //                         margin-left: 0;
+//         //                     }
+//         //                     .detail_btn, .detail_btn2{
+//         //                         display: flex;
+//         //                     }
+//         //                     .search{
+//         //                         display: flex;
+//         //                         align-items: center;
+//         //                         .flex{
+//         //                             display: flex;
+//         //                             align-items: center;
+//         //                             font-size: 15px;
+//         //                         }
+//         //                     }
+//         //                 }
+//         //                 .rightbtn .bun_sel, .rightbtn .search_box, .leftbtn .bun_sel{
+//         //                     display: none;
+//         //                 }
+                        
+//         //             }
+//         //             .paging{
+//         //                 display: none;
+//         //             }
+//         //         }
+//         //          //부가기능 지역설정
+//         //         .contbox .scroll_wrap{
+//         //             overflow: visible;
+//         //             #tablewrap{
+//         //                 height: 100%;
+//         //             }
+//         //             .bugabox{
+//         //                 .box{
+//         //                     width: 100%;
+//         //                 }
+//         //             } 
+//         //         }    
+//         //     }           
+//         // }
+//     }
+// }

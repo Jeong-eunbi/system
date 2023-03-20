@@ -1,0 +1,452 @@
+@import "./var";
+
+
+ //아이폰 가로모드 글자 커지는 것 방지
+*{
+    -webkit-text-size-adjust:none
+}
+
+
+*{-webkit-text-size-adjust:none}
+
+
+@media (pointer:coarse) {
+    @media(orientation: landscape){
+        // html {
+        //     transform: rotate(90deg);
+        //     transform-origin: top left;
+        //     position: absolute;
+        //     top: 100%;
+        //     left: 0;
+        //     width: 100vh;
+        //     height: 100vw;
+        //     overflow: hidden;
+        //     .wrapper{
+        //         .contentbox{
+        //             height: 100%;
+        //             top: 40px;
+        //             .open_btn{
+        //                 width: 90%;
+        //             }
+        //             ul.map_icon{
+        //                 li{
+        //                     width: calc(100% / 4);
+        //                     &:last-child{
+        //                         display: none;
+        //                     }
+        //                 }
+        //             }
+        //             .tab_bar{
+        //                 #mobiletab_1, #mobiletab_2, #mobiletab_3, #mobiletab_4{
+        //                     bottom: 9.5rem;
+        //                 }
+        //             }
+        //             #garo1, #garo2{
+        //                 height: 80%;
+        //                 .nav{
+        //                     overflow-y: auto;
+        //                 }
+        //             }
+        //             #garo2{
+        //                 .minipop{
+        //                     width: 100%;
+        //                     left: 0;
+        //                 }
+        //                 .nav_list{
+        //                     .between{
+        //                         height: 100%;
+        //                     }
+        //                     .bun_tab1{
+        //                         .table_wrapper{
+        //                             table{
+        //                                 width: 100%;
+        //                                 tbody{
+        //                                     width: 100%;
+        //                                     tr{
+        //                                         flex-wrap: wrap;
+        //                                         td{
+        //                                             &:nth-child(odd){
+        //                                                 width: 40%;
+        //                                             }
+        //                                             &:nth-child(even){
+        //                                                 width: 60%;
+        //                                             }
+        //                                             &.h60{
+        //                                                 height: 60px;
+        //                                                 line-height: 60px;
+        //                                             }
+        //                                             &.in_span{
+        //                                                 height: 60px;
+        //                                                 span.colornone{
+        //                                                     margin-left: 0;
+        //                                                     height: 30px;
+        //                                                     line-height: 30px;
+        //                                                     display: block;
+        //                                                     width: fit-content;
+        //                                                     padding: 0 6px;
+        //                                                 }
+        //                                             }
+                    
+        //                                         }
+        //                                         &.etc{
+        //                                             width: 65%;
+        //                                         }
+        //                                     }
+        //                                 }
+        //                             }
+        //                         }
+                
+        //                         .addchange, .controlbox{
+        //                             width: 100%;
+        //                             left: 0;
+        //                         }
+                
+        //                     }
+        //                     .bun_tab2{
+        //                         // height: 330px;
+        //                         .table_wrapper{
+        //                             // height: calc(670px - 14.5rem);
+        //                             .statebox{
+        //                                 border-top: 2px solid #666;
+        //                                 margin-bottom: 5px;
+        //                                 .row-item{
+        //                                     overflow-x: auto;
+        //                                     grid-template-columns: 15% 20% repeat(8, 15%);
+        //                                     border-top: none;
+        //                                     &::-webkit-scrollbar {
+        //                                         height: 3px; 
+        //                                         background-color: rgba(0,0,0,0.15);
+        //                                     }
+        //                                     &::-webkit-scrollbar-thumb {
+        //                                         border-radius: 10px;
+        //                                         background-color: #000;
+        //                                     }
+        //                                     .bg_color{
+        //                                         position: sticky;
+        //                                         left: 0;
+        //                                     }
+        //                                     .nsbp, .line{
+        //                                         position: sticky;
+        //                                         left: 15%;
+        //                                     }
+                                            
+        //                                 }
+                                        
+        //                             }
+        //                         }
+                                
+        //                     }
+        //                     .bun_tab3{
+        //                         // height: 330px;
+        //                         .table_wrapper{
+        //                             // height: calc(100% - 46.59px);
+        //                             table{
+        //                                 tbody{
+        //                                     tr{
+        //                                         flex-wrap: wrap;
+        //                                         td{
+        //                                             &:nth-child(odd){
+        //                                                 width: 40%;
+        //                                             }
+        //                                             &:nth-child(even){
+        //                                                 width: 60%;
+        //                                                 height: inherit;
+        //                                                 margin-bottom: 3px;
+        //                                                 box-sizing: border-box;
+        //                                                 .td_full{
+        //                                                     flex-wrap: wrap;
+        //                                                     div{
+        //                                                         &:first-child{
+        //                                                             margin-bottom: 3px;
+        //                                                             box-sizing: border-box;
+        //                                                         }
+        //                                                     }
+        //                                                     >select{
+        //                                                         margin-top: 3px;
+        //                                                         box-sizing: border-box;
+        //                                                     }
+        //                                                 }
+        //                                                 ul.deng{
+        //                                                     flex-wrap: wrap;
+        //                                                     li{
+        //                                                         width: auto;
+        //                                                     }
+        //                                                 }
+        //                                             }
+        //                                         }
+        //                                         .left_align{
+        //                                             .small_text{
+        //                                                 width: auto;
+        //                                             }
+        //                                         }
+        //                                         .h60{
+        //                                             height: 90px;
+        //                                             line-height: 90px;
+        //                                         }
+        //                                     }
+        //                                 }
+                
+        //                             }
+        //                         }
+        //                     }
+        //                     .bun_tab4{
+        //                         // height: 330px;
+        //                         .table_wrapper{
+        //                             // height: calc(100% - 46.59px);
+        //                             .termbox{
+        //                                 width: 100%;
+        //                                 overflow-x: auto;
+        //                                 &::-webkit-scrollbar {
+        //                                     height: 3px; 
+        //                                     background-color: rgba(0,0,0,0.15);
+        //                                 }
+        //                                 &::-webkit-scrollbar-thumb {
+        //                                     border-radius: 10px;
+        //                                     background-color: #000;
+        //                                 }
+        //                                 table.term{
+        //                                     tbody{
+        //                                         tr{
+        //                                             td{
+                                                        
+        //                                                 &:first-child{
+        //                                                     width: 10%;
+        //                                                     position: sticky;
+        //                                                     left: 0;
+        //                                                 }
+        //                                                 &:not(:first-child){
+        //                                                     width: 100px;
+        //                                                     select, input{
+        //                                                         width: 80%;
+        //                                                     }
+        //                                                 }
+                                                        
+        //                                             }
+        //                                         }
+        //                                     }
+        //                                 }
+        //                             }
+        //                             table.plc{
+        //                                 tbody{
+        //                                     tr{
+        //                                         flex-wrap: wrap;
+        //                                         td{
+        //                                             &:nth-child(odd){
+        //                                                 width: 50%;
+        //                                             }
+        //                                             &:nth-child(even){
+        //                                                 width: 50%;
+        //                                             }
+        //                                         }
+        //                                     }
+        //                                 }
+        //                             }
+        //                         }
+                
+        //                     }
+        //                     .bun_tab5{
+        //                         // height: 330px;
+        //                         .dengchange_box, .dengchange_box2{
+        //                             width: 100%;
+        //                             left: 0;
+        //                         }
+        //                         .table_wrapper{                
+        //                             .garobox{
+        //                                 width: 100%;
+        //                                 overflow-x: auto;
+        //                                 &::-webkit-scrollbar {
+        //                                     height: 3px; 
+        //                                     background-color: rgba(0,0,0,0.15);
+        //                                 }
+        //                                 &::-webkit-scrollbar-thumb {
+        //                                     border-radius: 10px;
+        //                                     background-color: #000;
+        //                                 }
+        //                                 table{
+        //                                     tbody{
+        //                                         tr{
+        //                                             td{
+        //                                                 @include flex;
+        //                                                 flex-direction: column;
+        //                                                 @include between;
+        //                                                 width: auto;
+        //                                                 padding: 0 2px;
+        //                                                 input{
+        //                                                     margin-bottom: 0;
+        //                                                 }
+        //                                                 select,input{
+        //                                                     width: 60px;
+        //                                                 }
+        //                                                 .garobtn, .garobtn1{
+        //                                                     height: 30px;
+        //                                                     line-height: 30px;
+        //                                                     text-align: center;
+        //                                                     padding: 0;
+        //                                                     box-sizing: border-box;
+        //                                                 }
+        //                                             }
+        //                                         }
+        //                                     }
+        //                                 }
+                                        
+                    
+        //                             }
+        //                         }
+        //                     }
+        //                     .bun_tab6{
+        //                         // height: 330px;
+        //                         .dimchange_box, .dengre_box{
+        //                             width: 100%;
+        //                             left: 0;
+        //                         }
+        //                         .dimchange_box{
+        //                             height: 80%;
+        //                         }
+        //                         .dengre_box{
+        //                             height: 71%;
+        //                         }
+        //                         .between{
+        //                             .top-right-btn{
+        //                                 .dimm_btn1{
+        //                                     margin-bottom: 3px;
+        //                                     box-sizing: border-box;
+        //                                 }
+        //                                 .dimm_chbtn{
+        //                                     margin-left: 0;
+        //                                 }
+        //                             }
+        //                             .btn_group{
+        //                                 .left{
+        //                                     div{
+        //                                         margin-bottom: 5px;
+        //                                     }
+        //                                 }
+        //                             }
+        //                             .table_wrapper{
+                
+        //                                 .xscroll{
+        //                                     width: 100%;
+        //                                     border-top: 2px solid #666;
+        //                                     overflow-x: scroll;
+        //                                     table{
+        //                                         border-top: none;
+        //                                         width: 100%;
+        //                                         display: block;
+        //                                         tr{
+        //                                             &:first-child{
+        //                                                 td{
+        //                                                     &:not(:first-child){
+        //                                                         text-align: center;
+        //                                                     }
+        //                                                 }
+        //                                             }
+        //                                             td:not(:first-child){
+        //                                                 width: 100px;
+        //                                                 white-space: pre-wrap;
+        //                                                 word-break: keep-all;
+        //                                             }
+        //                                         }
+        //                                     }
+        //                                 }
+        //                             }
+        //                         }
+                
+        //                     }
+        //                     .bun_tab7{
+        //                         // height: 330px;
+        //                         .top-right-btn{
+        //                             .datebox{
+        //                                 margin-bottom: 5px;
+        //                             }
+        //                         }
+        //                         .eventbox{
+        //                             width: 100%;
+        //                             left: 0;
+        //                             height: 80%;
+        //                         }
+        //                         .table_wrapper{
+        //                             // height: calc(100% - 92.59px);
+        //                             .xscroll{
+        //                                 width: 100%;
+        //                                 overflow-x: auto;
+        //                                 border-top: 2px solid #666;
+        //                                 table{
+        //                                     display: block;
+        //                                     border-top: none;
+        //                                     tr{
+                                            
+        //                                         td:nth-child(1){
+        //                                             width: 30%;
+        //                                             min-width: 87px;
+        //                                             max-width: 94px;
+        //                                             flex: initial;
+        //                                         }
+        //                                         td:nth-child(2){
+        //                                             width: 30%;
+        //                                         }
+        //                                         td:nth-child(3){
+        //                                             flex-wrap: wrap;
+        //                                             height: auto;
+        //                                             width: 40%;
+        //                                             min-width: 170px;
+        //                                         }
+        //                                     }
+        //                                 }
+        //                             }
+        //                         }
+        //                     }
+        //                     .bun_tab8{
+        //                         // height: 330px;
+        //                         .iframebosu_box{
+        //                             width: 100%;
+        //                             left: 0;
+        //                         }
+        //                         .top-right-btn{
+        //                             padding-right: 3px;
+        //                             .datebox{
+        //                                 margin-bottom: 3px;
+        //                                 box-sizing: border-box;
+        //                             }
+        //                         }
+        //                     }
+                
+        //                 }
+
+                        
+        //             }
+        //             .side_bar{
+        //                 max-width: 90%;
+        //                 top: 86px;
+        //                 height: calc(100vh - -141px);
+        //                 .framewrap> iframe > html{
+        //                     transform: rotate(0);
+        //                     transform-origin: top left;
+        //                     position: absolute;
+        //                     top: 0;
+        //                     left: 0;
+        //                     width: 100vh;
+        //                     height: 100vw;
+        //                 }
+        //             }
+                    
+        //             .move{
+        //                 height: calc(100vh - -141px);
+        //             }
+        //             aside{
+        //                 ul.tab_bar{
+        //                     overflow-y: auto;
+        //                 }
+        //             }
+        //         }
+
+                
+        //     }
+            
+        // }
+        // .framebox{
+        //     html{
+        //         transform: rotate(90deg);
+        //     }
+        // }
+    }
+}

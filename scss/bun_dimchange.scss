@@ -1,0 +1,150 @@
+@import "./var", "./popup";
+
+.dimgrid_box{
+    overflow: auto;
+    padding: 8px;
+    @include full;
+    box-sizing: border-box;
+    span{
+        display: block;
+        margin-bottom: 10px;
+    }
+    table{
+        width: 100%;
+        clear: both;
+        tbody{
+            tr{
+                &:first-child{
+                    border-top: 2px solid #000;
+                    td:first-child{
+                        background-color: $td_color;
+                        width: 30%;
+                        vertical-align: middle;
+                    }
+                }
+                border-bottom: 1px solid $border;
+                td{
+                    &:last-child{
+                        width: 45%;
+                    }
+                    padding: 4px 8px;
+                    i{
+                        margin-right: 8px;
+                    }
+                    select{
+                        border: 1px solid $in_select_border;
+                        background-color: $white;
+                        width: 80%;
+                        height: 25px;
+                    }
+                    
+              
+                }
+            }
+        }
+    }
+    .minibtn_group{
+        background-color: $white;
+        margin-top: 0;
+        padding: 0;
+    }
+    p{
+        color: #c1c1c1;
+        font-size: 15px;
+        font-weight: normal;
+        clear: both;
+    }
+}
+
+.deng_box{
+    height: 100%;
+    overflow: auto;
+    table{
+        width: 100%;
+        td{
+            text-align: center;
+        }
+        select{
+            border: 1px solid $in_select_border;
+            background-color: #fff;
+            height: 30px;
+        }
+    }
+    .re_date{
+        tr{
+            border-bottom: $table_border;
+            padding: 3px;
+            box-sizing: border-box;
+            td{
+                height: auto;
+                &:nth-child(odd){
+                    width: 25%;
+                    background-color: #efefef;
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                &:nth-child(even){
+                    @include flex;
+                    flex-wrap: wrap;
+                    @include center-c;
+                    width: 75%;
+                    padding-left: 5px;
+                    div{
+                        @include flex;
+                        align-items: center;
+                        margin-bottom: 2px;
+                        span{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .re_date2{
+        margin-top: 1rem;
+        tr{
+            border-bottom: $table_border;
+            padding: 3px;
+            box-sizing: border-box;
+            &:first-child{
+                background-color: #efefef;
+                text-align: center;
+                font-weight: bold;
+            }
+            td{
+                font-size: 15px;
+                line-height: 30px;
+                height: 30px;
+                &:not(:last-child){
+                    width: 20%;
+                }
+                &:last-child{
+                    width: 60%;
+                }
+                div{
+                    @include flex;
+                    @include center-r;
+                    select{
+                        max-width: 80px;
+                        margin-left: 3px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    .btn_group{
+        margin-top: 1rem;
+        div{
+            @include buttons;
+            background-color: $minibtn;
+            a{
+                color: #fff;
+            }
+        }
+    }
+}

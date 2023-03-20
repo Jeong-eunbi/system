@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 설치현황</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.css" ></script>
+    
+
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/main.js" ></script>
+    <script type="text/javascript" defer src="../../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/doro.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+
+        <!-- header 끝 / content시작 -->
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">이용안내<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a">이용안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">민원관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../minwon/complain.html">불편신고</a></li>
+                                    <li><a href="../minwon/process.html">처리현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수처리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../bosu/setlist.html">설치현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수내역관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosulist/notice.html">공지관리</a></li>
+                                    <li><a href="../bosulist//bosulist.html">보수내역관리</a></li>
+                                    <li><a href="../bosulist//billing.html">청구내역관리</a></li>
+                                    <li><a href="../bosulist//meterial.html">자재관리</a></li>
+                                    <li><a href="../bosulist//inout1.html">자재입출고관리</a></li>
+                                    <li><a href="../bosulist//tong_data1.html">통계자료</a></li>
+                                    <li><a href="../bosulist//company.html">업체관리</a></li>
+                                    <li><a href="../bosulist/bosu_setting.html">환경설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox dorobox">
+                <ul class="set_tab custom_scroll">
+                    <li><a href="setlist.html" class="tab_btn">전체 설치현황</a></li>
+                    <li class="ontxt"><a href="setlist2.html" class="tab_btn">분전함 설치현황</a></li>
+                    <li><a href="setlist3.html" class="tab_btn">가로등 설치현황</a></li>
+                    <li><a href="setlist4.html" class="tab_btn">중계기 설치현황</a></li>
+                    <li><a href="setlist5.html" class="tab_btn">보안등 설치현황</a></li>
+                </ul>
+                <div class="allset">
+                    <div class="scroll_wrap">
+                        <div class="tabbox">
+
+                            <div id="tab2" class="tablist">
+                                <div class="btnwrap ">
+                                    <div class="leftbtn">
+                                        <div class="btn_bg print"><a href="#a" onclick="doroset2_print()">프린트</a></div>
+                                        <div class="btn_bg"><a href="">엑셀저장</a></div>
+                                        <div class="btn_bg"><a href="">등록/수정</a></div>
+                                    </div>
+                                    <div class="rightbtn select_group">
+                                        <select name="" id="">
+                                            <option value="">구읍면</option>
+                                        </select>
+                                        <select name="" id="">
+                                            <option value="">동리</option>
+                                        </select><select name="" id="">
+                                            <option value="">도로선택</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="table_style custom_scroll">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>분전함</th>
+                                                <th>모뎀IP</th>
+                                                <th>설치일자</th>
+                                                <th>설치주소/위치</th>
+                                                <th>계량기번호</th>
+                                                <th>상/격MG</th>
+                                                <th>등주개수</th>
+                                                <th>등개수</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="cursor" onclick="doro_info()">
+                                                    <span>
+                                                        퍙성 평궁리 진입로(294)
+                                                        <a href="#a" class="photobtn" onclick="photobtn()">
+                                                            <i class="fa-solid fa-image"></i>
+                                                        </a>
+                                                    </span>
+                                                </td>
+                                                <td>012</td>
+                                                <td></td>
+                                                <td>367-6</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+            
+                                        </tbody>
+                                    </table>
+                                </div>
+
+        
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</body>
+</html>

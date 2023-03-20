@@ -1,0 +1,42 @@
+@import "./var";
+
+h3{
+    margin: 10px 0;
+}
+
+.contentbox{
+    width: 100%;
+    height: calc(var(--vh, 1vh) * 100 - 86px);
+    @include flex;
+    // 사이드 메뉴바
+
+    .tab_nav{
+        display: none;
+    }
+    .content{
+        width: 100%;
+        position: relative;
+        .mapbox{
+            position: absolute;
+            @include full;
+            display: flex;
+            justify-content: center;
+        }
+        .anylayer{
+            display: block;
+            position: absolute;
+            left: 0;
+            height: 0;
+            @include full;
+            display: none;
+            
+    
+        }
+        .select_box{
+            display: none;
+        }
+        
+
+    
+    }
+}

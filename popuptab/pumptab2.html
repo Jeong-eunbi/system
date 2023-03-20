@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>펌프장 상세보기- 첫번째탭</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/pump.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="pumptab pump_tab2">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>펌프장</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <div class="wrap">
+                <ul class="nav">
+                    <li><a href="pumptab1.html" class="text">기본정보</a></li>
+                    <li><a href="pumptab2.html" class="text_active">상태정보</a></li>
+                    <li><a href="pumptab3.html" class="text">운용데이터</a></li>
+                    <li><a href="pumptab4.html" class="text">이벤트</a></li>
+                </ul>
+                <h3>고수위 알람: <span class="alarm">안전</span></h3>
+                <div class="table_wrapper">
+                    <table class="table1 pump_state">
+                        <tr>
+                            <td>펌프이름</td>
+                            <td>
+                                <div class="namebox">
+                                    <input type="text">
+                                    <input type="text">
+                                    <input type="text">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>분기 설정</td>
+                            <td>
+                                <div class="bungibox">
+                                    <select>
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                    </select>
+                                    <select>
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                    </select>
+                                    <select>
+                                        <option value="">1분기</option>
+                                        <option value="">2분기</option>
+                                        <option value="">3분기</option>
+                                        <option value="">4분기</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="p_state">펌프상태</td>
+                            <td>
+                                <div class="statebox">
+                                    <div>
+                                        <span>정지</span>
+                                        <span>00.00kW</span>
+                                    </div>
+                                    <div>
+                                        <span>정지</span>
+                                        <span>00.00kW</span>
+                                    </div>
+                                    <div>
+                                        <span>정지</span>
+                                        <span>00.00kW</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>

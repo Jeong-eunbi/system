@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab2 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>분수대 연결</a>
+                    </li>
+                    <li class="print">
+                        <a href="minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <ul class="nav">
+                <li><a href="bunsulamp1.html" class="text">기본정보</a></li>
+                <li><a href="bunsulamp2.html" class="text_active">상태정보</a></li>
+                <li><a href="bunsulamp3.html" class="text">운용데이터</a></li>
+                <li><a href="bunsulamp4.html" class="text">분기별데이터</a></li>
+                <li><a href="bunsulamp5.html" class="text">개별감시내역</a></li>
+            </ul>
+            <div class="top-right-btn">
+                <a href="">기준 전력값 변경<i class="fa-solid fa-arrows-rotate"></i></a>
+            </div>
+            <div class="table_wrapper">
+                <table class="state_table table1">
+                    <tbody>
+                        <tr>
+                            <td>정전상태</td>
+                            <td>정상</td>
+                            <td>문개패</td>
+                            <td>닫힘</td>
+                        </tr>
+                        <tr>
+                            <td>상시마그네틱</td>
+                            <td>정상</td>
+                            <td>격등마그네틱</td>
+                            <td>정상</td>
+                        </tr>
+                        <tr>
+                            <td>마그네틱 C</td>
+                            <td>정상</td>
+                            <td>마그네틱 D</td>
+                            <td>정상</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="statebox">
+                    <div class="row-item">
+                        <div class="bg_color maxwidth">누전 상태</div>
+                        <div class="bg_color nsbp">&nbsp;</div>
+                        <div class="sm">1분기</div>
+                        <div class="sm">2분기</div>
+                        <div class="sm">3분기</div>
+                        <div class="sm">4분기</div>
+                        <div class="sm">5분기</div>
+                        <div class="sm">6분기</div>
+                        <div class="sm">7분기</div>
+                        <div class="sm">8분기</div>
+                        <div class="line width">
+                            누전여부
+                            (누진값)
+                        </div>
+                        <div>정상</div>
+                        <div>정상</div>
+                        <div>정상</div>
+                        <div>정상</div>
+                        <div>정상</div>  
+                        <div>정상</div>  
+                        <div>정상</div>
+                        <div>정상</div>    
+                        <div>05.8</div>
+                        <div>04.7</div>
+                        <div>00.8</div>
+                        <div>01.8</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div class="line width2">
+                            누전 
+                            차단기
+                        </div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div class="bg_color maxwidth2">
+                            등
+                            고장 
+                            상태
+                        </div>
+                        <div class="line width3">
+                            기준
+                            전력값
+                        </div>
+                        <div>
+                            <input type="text" placeholder="3.94">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="2.24">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.75">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="1.45">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="0.0">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="0.0">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="0.0">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="0.0">
+                        </div>
+                        <div class="line width4">
+                            현재 
+                            전력값
+                        </div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div>00.00</div>
+                        <div class="line">
+                            최종 
+                            전력값
+                        </div>
+                        <div>03.18</div>
+                        <div>02.16</div>
+                        <div>01.90</div>
+                        <div>01.40</div>
+                        <div>0.0</div>
+                        <div>0.0</div>
+                        <div>0.0</div>
+                        <div>0.0</div>
+                        <div class="line">
+                            예상 
+                            등고장수
+                        </div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div>0</div>
+                        <div class="bg_color maxwidth3">등주감시기 상태</div>
+                        <div>정상</div>
+                        <div>정상</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                        <div>-</div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">점검</a></div>
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

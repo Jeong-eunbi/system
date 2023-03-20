@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>중계기 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <link rel="stylesheet" href="../css/doro.css">
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab1 doro_info">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>점멸기이름:</span>
+                <span> 자양2동690</span>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <div class="table_wrapper">
+                <h3>점멸기 이력</h3>
+                <ul class="imgbox">
+                    <li><a href=""><img src="../img/view_img1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="../img/view_img1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="../img/view_img1.jpg" alt=""></a></li>
+                </ul>
+                <table class="table1">
+                    <tbody>
+                        <tr>
+                            <td>점멸기 BS</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>Serial No.</td>
+                            <td><input type="text"></td>
+                        </tr>
+    
+                        <tr>
+                            <td>설치형태</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">한전주</option>
+                                </select>
+                            </td>
+                            <td>점멸기타입</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value=""></option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>점멸기종류</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>등정보</td>
+                            <td>
+                                <div>
+                                    <select name="" id="">LED</select>
+                                    <select name="" id="">50</select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>전주번호</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                            <td>변대주번호</td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>설치일자</td>
+                            <td><input type="text"></td>
+                            <td>설치위치</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>한전고객번호</td>
+                            <td colspan="3" class="vol"><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td>설치주소</td>
+                            <td class="address_text">
+                                <div>
+                                    <p>광진구 자양동 690</p>
+                                    <span class="text_address text_btn" onclick="addressbtn()"><i class="fas fa-address-book"></i>주소변경</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                </table>
+                <div class="bosulist">
+                    <h3>보수이력</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>접수번호</th>
+                                <th>완료일자</th>
+                                <th>작업내역</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btn_group">
+                <div class="right">
+                    <div class="btn"><a href="">수정</a></div>
+                    <div class="btn"><a href="">닫기</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

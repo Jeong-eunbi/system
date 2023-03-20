@@ -1,0 +1,38 @@
+.gampop{
+    .gamwrap{
+        background-color: #fff;
+        .table1, .table2{
+            margin-top: 1rem;
+            tr{
+                padding: 3px;
+                border-bottom: 1px solid #cacdd4;
+                box-sizing: border-box;
+                justify-content: flex-start;
+                td{
+                    height: 30px;
+                    line-height: 30px;
+                    &:nth-child(odd){
+                        width: 30%;
+                        text-align: center;
+                        background-color: #efefef;
+                    }
+                    &:nth-child(even){
+                        padding-left: 10px;
+                        box-sizing: border-box;
+                        width: 70%;
+                    }
+                }
+            }
+        }
+        .table2{
+    
+            tr{
+                td{
+                    width: 25% !important;
+                }
+            }
+        }
+    }
+
+
+}

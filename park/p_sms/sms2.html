@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메세지관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/sms.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+    <script type="text/javascript" defer src="../../js/chk.js" ></script>
+    
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="bunpopbtn" onclick="bunpopbtn()">분전함</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="gapopbtn()">가로등</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="park/p_bunconrol.html">분전함선택제어</a></li>
+                                    <li><a href="#a" id="all_cont" onclick="bunshow()">분전함전체제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="data2/dataselect.html">분전함선택설정</a></li>
+                                    <li><a href="#a" onclick="setshow()">분전함전체설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list2/p_gam.html">감시내역</a></li>
+                                    <li><a href="../list2/p_myeong.html">명령내역</a></li>
+                                    <li><a href="../list2/power.html">전력값보기</a></li>
+                                    <li><a href="../list2/p_bosu.html">가로등보수일지</a></li>
+                                    <li><a href="../list2/p_bunset.html">분전함설치현황</a></li>
+                                    <li><a href="../list2/p_bundelete.html">분전함삭제내역</a></li>
+                                    <li><a href="../list2/daycheck_print.html">일일점검내역</a></li>
+                                </ul>           
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../p_sms/sms1.html">수신자관리</a></li>
+                                    <li class="on"><a href="../p_sms/sms2.html">메시지관리</a></li>
+                                    <li><a href="../p_sms/sms3.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../account/user1.html">사용자관리</a></li>
+                                    <li><a href="../account/user2.html">접속자관리</a></li>
+                                </ul>         
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../addfunction/tong1.html">통계자료</a></li>
+                                    <li><a href="../addfunction/onofftime2.html">점소등시간</a></li>
+                                    <li><a href="../addfunction/local3.html">지역설정</a></li>
+                                    <li><a href="../addfunction/lamp3.html">램프설정</a></li>
+                                    <li><a href="#a" onclick="error_set()">등고장설정</a></li>
+                                </ul>          
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap">
+                    <div class="leftbtn">
+                        <div class="btn_bg"><a href="">설정</a></div>
+                    </div>
+                </div>
+                <div class="scroll_wrap sms_scroll">
+                    <div class="messagebox">
+                        <div class="susin">
+                            <div class="boxtitle">
+                                <span>수신자</span>
+                                <input type="text">
+                            </div>
+                            <ul class="namelist">
+                                <li><a href="">은비네</a></li>
+                                <li><a href="">까봄이네</a></li>
+                            </ul>
+                        </div>
+                        <div class="messagesort">
+                            <div class="boxtitle">
+                                <span>메시지종류 - 내용</span>
+                            </div>
+                            <div class="setlist">
+                                <ul>
+                                    <li><label for="selectall"><input type="checkbox" name="selectall" id="selectall" onclick="selectAll(this)"/>전체선택</label></li>
+                                    <li><label for="select1"><input type="checkbox" name="selectlist" id="select1" onclick="checkSelectAll()">정상점등<span>총점멸기:N개, 점등:J개, 소등;S개, 통신이상(중):T개</span></label></li>
+                                    <li><label for="select2"><input type="checkbox" name="selectlist" id="select2" onclick="checkSelectAll()">정상소등<span>총점멸기:N개, 점등:J개, 소등;S개, 통신이상(중):T개</span></label></li>
+                                    <li><label for="select3"><input type="checkbox" name="selectlist" id="select3" onclick="checkSelectAll()">강제점등<span>강제점등 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select4"><input type="checkbox" name="selectlist" id="select4" onclick="checkSelectAll()">강제소등<span>강제소등 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select5"><input type="checkbox" name="selectlist" id="select5" onclick="checkSelectAll()">정상상태복귀<span>정상상태복귀 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select6"><input type="checkbox" name="selectlist" id="select6" onclick="checkSelectAll()">점멸기통신이상<span>점멸기통신이상 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select7"><input type="checkbox" name="selectlist" id="select7" onclick="checkSelectAll()">램프고장<span>램프고장 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select8"><input type="checkbox" name="selectlist" id="select8" onclick="checkSelectAll()">누전발생<span>누전발생 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select9"><input type="checkbox" name="selectlist" id="select9" onclick="checkSelectAll()">이상점등<span>이상점등 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select10"><input type="checkbox" name="selectlist" id="select10" onclick="checkSelectAll()">안전기고장<span>안정기고장 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select11"><input type="checkbox" name="selectlist" id="select11" onclick="checkSelectAll()">깜빡거림(램프)<span>깜빡거림(램프) 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select12"><input type="checkbox" name="selectlist" id="select12" onclick="checkSelectAll()">깜빡거림(안정기)<span>깜빡거림(안정기) 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select13"><input type="checkbox" name="selectlist" id="select13" onclick="checkSelectAll()">깜빡거림(램프/안정기)<span>깜빡거림(램프/안정기) 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select14"><input type="checkbox" name="selectlist" id="select14" onclick="checkSelectAll()">점멸기정전<span>점멸기정전 이름:X, 주소:Y, 전주:Z</span></li></label>
+                                    <li><label for="select15"><input type="checkbox" name="selectlist" id="select15" onclick="checkSelectAll()">점멸기정전복귀<span>점멸기정전복귀 이름:X, 주소:Y, 전주:Z</span></li></label>
+                                    <li><label for="select16"><input type="checkbox" name="selectlist" id="select16" onclick="checkSelectAll()">중계기정전<span>중계기정전 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                    <li><label for="select17"><input type="checkbox" name="selectlist" id="select17" onclick="checkSelectAll()">중계기통신이상<span>중계기통신이상 이름:X, 주소:Y, 전주:Z</span></label></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

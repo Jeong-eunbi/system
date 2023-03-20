@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <!-- <link rel="stylesheet" href="css/popup.css"> -->
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+  
+    <script type="text/javascript" defer src="../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/main.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/oldbun.js" ></script>
+    <script type="text/javascript" defer src="../js/pump.js" ></script>
+    <script type="text/javascript" defer src="../js/doro.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab4 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분전함</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>그래프</a>
+                    </li>
+                    <li class="lock">
+                        <a href="#a" onclick="lockbtn()"><i class="fas fa-lock"></i>도어락 관리</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <ul class="nav" id="nav">
+                <li><a href="bunjeonpopup1.html" class="text" target="iframe">기본정보</a></li>
+                <li><a href="bunjeonpopup2.html" class="text" target="iframe">상태정보</a></li>
+                <li><a href="bunjeonpopup3.html" class="text" target="iframe">운용정보</a></li>
+                <li><a href="bunjeonpopup4.html" class="text_active" target="iframe">분기정보</a></li>
+                <li><a href="bunjeonpopup5.html" class="text" target="iframe">가로등</a></li>
+                <li><a href="bunjeonpopup6.html" class="text" target="iframe">PLC</a></li>
+                <li><a href="bunjeonpopup7.html" class="text" target="iframe">감시내역</a></li>
+                <li><a href="bunjeonpopup8.html" class="text" target="iframe">보수일지</a></li>
+            </ul>
+            <div class="table_wrapper">
+                <div class="termbox">
+                    <table class="term">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>1분기</td>
+                                <td>2분기</td>
+                                <td>3분기</td>
+                                <td>4분기</td>
+                                <td>5분기</td>
+                                <td>6분기</td>
+                                <td>7분기</td>
+                                <td>8분기</td>
+                            </tr>
+                            <tr>
+                                <td>접점설정</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">AR</option>
+                                        <option value="">BR</option>
+                                        <option value="">CR</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>등주개수</td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>등개수</td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>등감기</td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                                <td>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                            
+                <ul class="check_wrap">
+                    <li>
+                        <input type="checkbox" name="" id="term1"><label for="term1">점소등변화</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="term2"><label for="term2">램프 고장 변화</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="term3"><label for="term3">이상점등 변화</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="term4"><label for="term4">누전상태 변화</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="term5"><label for="term5">디머여부 변화</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="term6"><label for="term6">통신이상 변화</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="term7"><label for="term7">누전릴레이변화</label>
+                    </li>
+                </ul>
+                <div class="plcbox">
+                    <table class="plc table2">
+                        <tbody>
+                            <tr>
+                                <td>PLC 운용모드</td>
+                                <td>
+                                    <select name="" id="" class="txtselect">
+                                        <option value="">스케줄</option>
+                                        <option value="">모션센서</option>
+                                    </select>
+                                </td>
+                                <td>모션센서개수</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">0</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                    </select>
+                                    <span>개</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1등용 Dimm On 조도</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                    <span>%</span>
+                                </td>
+                                <td>2등용 Dimm On 조도</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                    <span>%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1등용 Dimm Off 조도</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                    <span>%</span>
+                                </td>
+                                <td>2등용 Dimm Off 조도</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                        <option value="">50</option>
+                                    </select>
+                                    <span>%</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1등용 Dimm 복귀시간</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">00</option>
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
+                                    </select>
+                                    <span>분</span>
+                                </td>
+                                <td>2등용 Dimm 복귀시간</td>
+                                <td>
+                                    <select name="" id="">
+                                        <option value="">00</option>
+                                        <option value="">01</option>
+                                        <option value="">02</option>
+                                        <option value="">03</option>
+                                        <option value="">04</option>
+                                    </select>
+                                    <span>분</span>
+                                </td>
+                                </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">등주계산</a></div>
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

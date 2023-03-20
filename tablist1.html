@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합양방향관제시스템</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tab.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="fontawesomeicon/fontawesome/css/all.min.css">
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css" >
+    <!-- swiper 슬라이드 -->
+    <script type="text/javascript" defer src="js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
+    <script type="text/javascript" defer src="js/index.js" ></script>
+    <script type="text/javascript" defer src="js/tab.js" ></script>
+    <script type="text/javascript" defer src="js/main.js" ></script>
+    <script type="text/javascript" defer src="js/print.js" ></script>
+</head>
+<body>
+    <!-- 가로등 -->
+    <div class="view">
+        <div class="tablebox">      
+            <h2><i class="fas fa-list-ul"></i>가로등현황</h2>
+            <select name="area" id="area">
+                <option value="">구읍면</option>
+                    <option value="">수정구</option>
+            </select>
+            <select name="area" id="area">
+                <option value="">동리</option>
+                    <option value="">복정동</option>
+            </select>
+            <select name="area" id="area">
+                <option value="">도로선택</option>
+                    <option value="">복정동</option>
+            </select>
+            <ul class="tong_tab">
+                <li class="tonglist" id="bun_tab"><a href="tablist1.html" class="table_active" target="tabcon1">분전함</a></li>
+                <li class="tonglist" id="deng_tab"><a href="tablist1-1.html" target="tabcon1">등주감시기</a></li>
+            </ul>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>총점멸기</td>
+                        <td>7222</td>
+                        <td>IOT점멸기</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>RF중계기</td>
+                        <td>10</td>
+                        <td>RF점멸기</td>
+                        <td>43</td>
+                    </tr>
+                    <tr>
+                        <td>점등</td>
+                        <td>0</td>
+                        <td>소등</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>강제점등</td>
+                        <td>0</td>
+                        <td>강제소등</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>IoT점검중</td>
+                        <td>2</td>
+                        <td>IoT미접속</td>
+                        <td>2223</td>
+                    </tr>
+                    <tr>
+                        <td>램프고장</td>
+                        <td>0</td>
+                        <td>안정기고장</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>이상점등</td>
+                        <td>1</td>
+                        <td>누전</td>
+                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>깜빡거림</td>
+                        <td>12</td>
+                        <td>주간점등</td>
+                        <td>48</td>
+                    </tr>
+                    <tr>
+                        <td>정전(중)</td>
+                        <td>5</td>
+                        <td>정전(점)</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>통신이상(중)</td>
+                        <td>2</td>
+                        <td>통신이상(점)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Dimming</td>
+                        <td>6</td>
+                        <td>Dimming설정</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>연접보안등</td>
+                        <td>6</td>
+                        <td>자동타이머</td>
+                        <td>136</td>
+                    </tr>
+                    <tr>
+                        <td>심야설정</td>
+                        <td>6</td>
+                        <td>블루투스</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>채널미설정</td>
+                        <td>6</td>
+                        <td>블랙박스</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>비콘점멸기</td>
+                        <td>6</td>
+                        <td>비콘점검</td>
+                        <td>1</td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="search_Bar">
+            <select name="search" id="search" class="search">
+                <option value="">점멸기이름</option>
+                <option value="">지번/도로명</option>
+                <option value="">모뎀IP</option>
+                <option value="">SIM번호</option>
+            </select>
+            <input type="text">
+            <div><i class="fas fa-search"></i></div>
+        </div>
+
+        <div class="tablebox">
+            <div>
+                <h2><i class="fas fa-list-ul"></i>총분전함목록</h2>
+                <div class="group">
+                    <button title="오름차순 및 내림차순으로 정렬하기"><i class="fas fa-exchange-alt"></i></button>
+                    <button title="총분전함목록 새창으로 프린트페이지열기, 엑셀저장" onclick="view()"><img src="img/print.png" alt="프린트아이콘이미지"></button>
+                </div>
+                
+            </div>
+            <ul class="scroll">
+                <li><a href="">04-04-26 (NS)<span>279-21/</span><span>1234456</span><span>789456</span></a></li>
+                <li><a href="">036 (LS)<span>279-21/</span><span>12345678</span><span></span></a></li>
+                <li><a href="">자료가 없습니다<span></span><span></span><span></span></a></li>
+                <li><a href="">038 (LS)<span>124-19/</span><span></span><span></span></a></li>
+                <li><a href="">045 (LS)<span>354/</span><span></span><span></span></a></li>
+                <li><a href="">0846 (LS)<span>353-21/</span><span></span><span></span></a></li>
+                <li><a href="">0847 (LS)<span>800-6/</span><span></span><span></span></a></li>
+                <li><a href="">0848 (LS)<span>800-6/</span><span></span><span></span></a></li>
+                <li><a href="">1053 (LS)<span>126-4/</span><span></span><span></span></a></li>
+                <li><a href="">1054 (LS)<span>126-4/</span><span></span><span></span></a></li>
+                <li><a href="">1055 (LS)<span>101-13/</span><span></span><span></span></a></li>
+                <li><a href="">1056 (LS)<span> 99-1/</span><span></span><span></span></a></li>
+                <li><a href="">1058 (LS)<span>695/</span><span></span><span></span></a></li>
+            </ul>
+        </div>
+       
+    </div>
+
+</body>
+</html>

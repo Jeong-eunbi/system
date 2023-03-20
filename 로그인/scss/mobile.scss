@@ -1,0 +1,11 @@
+
+@import "./variable";
+@import "./variable";
+
+@media (pointer:coarse) {
+    @media (orientation: landscape){
+        html{
+            @include rotate;
+        }
+    }
+}   

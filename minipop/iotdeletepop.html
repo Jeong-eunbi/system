@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점멸기 설치현황</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/boan_pop.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/subre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+
+    <script type="text/javascript" defer src="../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/gam.js" ></script>
+</head>
+<body>
+    
+    <div class="viewbox bun_tab1">
+        <div class="table_wrapper">
+            <table class="basic">
+                <tr>
+                    <td>점멸기 LS</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>Serial No.</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>설치형태</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">강과주</option>
+                            <option value="">건물옥상</option>
+                        </select>
+                    </td>
+                    <td>점멸기타입</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">양방향 WS</option>
+                            <option value="">타이머 TS</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>점멸기종류</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>등정보</td>
+                    <td class="inputwrap">
+                        <div>
+                            <select name="" id="">
+                                <option value="">CDM</option>
+                                <option value="">LED</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">10</option>
+                                <option value="">100</option>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>전주번호</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>변대주번호</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>설치일자</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>설치위치</td>
+                    <td>
+                        <input type="text">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <span>위치정보</span>
+                            <input type="checkbox" name="" id="">
+                        </div>
+                    </td>
+                    <td class="inputwrap">
+                        <div>
+                            <input type="text">
+                            <input type="text">
+                        </div>
+                    </td>
+                    <td>한전고객번호</td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>새주소</td>
+                    <td class="full" colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td>설치주소</td>
+                    <td class="full" colspan="3"><input type="text"></td>
+                </tr>
+                <tr>
+                    <td class="height">비고</td>
+                    <td class="height full" colspan="3">
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>점등 편차</td>
+                    <td class="selectwrap">
+                        <div>
+                            <select name="" id="">
+                                <option value="">-</option>
+                                <option value="">+</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">15</option>
+                            </select>
+                            <span>분</span>
+                        </div>
+                    </td>
+                    <td>소등편차</td>
+                    <td class="selectwrap">
+                        <div>
+                            <select name="" id="">
+                                <option value="">-</option>
+                                <option value="">+</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">15</option>
+                            </select>
+                            <span>분</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>심야소등기간</td>
+                    <td>
+                        <div>
+                            <select name="" id="">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </td>
+                    <td>강제지속시간</td>
+                    <td>
+                        <div>
+                            <select name="" id="">
+                                <option value="">10</option>
+                            </select>
+                            <span>분</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="night-time">
+                    <td>심야소등시간</td>
+                    <td colspan="3" class="full">
+                        <div class="datewrap">
+                            <div>
+                                <select name="" id="">
+                                    <option value="">XX</option>
+                                </select>
+                                <span>시</span>
+                                <select name="" id="">
+                                    <option value="">00</option>
+                                </select>
+                                <span>분</span>
+                            </div>
+                            <span>~</span>
+                            <div>
+                                <select name="" id="">
+                                    <option value="">XX</option>
+                                </select>
+                                <span>시</span>
+                                <select name="" id="">
+                                    <option value="">00</option>
+                                </select>
+                                <span>분</span>
+                            </div>
+                        </div>
+                
+                    </td>
+                </tr>
+                
+            </table>
+
+        </div>
+        <div class="btn_group">
+            <div class="right">
+                <div class="btn"><a href="">닫기</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+

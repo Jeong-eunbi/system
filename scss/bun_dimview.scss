@@ -1,0 +1,101 @@
+@import "./var", "./popup";
+.viewcontainer{
+    height: 100%;
+    .viewbox{
+        .bun_select{
+            justify-content: flex-end;
+            margin: 0 4px;
+            select{
+                height: 25px;
+            }
+        }
+        .group_box{
+            @include flex;
+            @include center-c;
+            justify-content: flex-end;
+            margin-top: .5rem;
+            .graph{
+                border: 1px solid #2a3b5e;
+                padding: 4px 8px;
+                box-sizing: border-box;
+                border-radius: 4px;
+            }
+            >div{
+                margin: 0 4px;
+                @include flex;
+                @include center-c;
+                select,input{
+                    border: 1px solid $in_select_border;
+                    height: 25px;
+                }
+                .search_btn{
+                    width: auto;
+                    width: 25px;
+                    height: 25px;
+                    a{
+                        @include flex;
+                        @include full;
+                        @include center-c;
+                        @include center-r;
+                    }
+                }
+            }
+            .search_wrap{
+                >div{
+                    @include flex;
+                    @include center-c;
+                }
+            }
+            
+        }
+    }
+    .scroll_box{
+        width: 100%;
+        height: calc(100% - 93px);
+        .scroll-table{
+            width: 100%;
+            height: calc(100% - 25px - 1rem);
+            padding-bottom: .5rem;
+            overflow: auto;
+            border-top: 2px solid #666;
+            box-sizing: border-box;
+            table{
+                width: 100%;
+                thead{
+                    @include fix;
+                    tr{
+                        width: 100%;
+                        border: none;
+                        background-color: $td_color;
+                        th{
+                            @include td_style;
+                            line-height: initial;
+                            white-space: nowrap;
+                            border-right: 1px solid #cacdd4;
+                            vertical-align: middle;
+                            padding: 4px 8px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        border-bottom: 1px solid #cacdd4;
+                        td{
+                            border-right: 1px solid #cacdd4;
+                            @include td_style;
+                            font-size: 14px;
+                            line-height: initial;
+                            vertical-align: middle;
+                            word-break: keep-all;
+                            padding: 4px 8px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+     
+}

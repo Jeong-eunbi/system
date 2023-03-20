@@ -1,0 +1,11 @@
+.viewer{
+    table{
+        tr{
+            td{
+                &:nth-child(odd){
+                    background-color: #efefef;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,2169 @@
+@import "./var";
+
+
+// 공통
+
+.red{
+    color: red;
+}
+
+.minipop{
+    @include mini_iframebox;
+    display: none;
+    >iframe{
+        height: calc(100% - 35px);
+    }
+}
+//스크롤
+.xscroll{
+    &::-webkit-scrollbar {
+        height: 3px; 
+        width: 3px;
+        background-color: rgba(0,0,0,0.15);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #000;
+    }
+}
+
+// --------팝업창-------- //
+
+
+//팝업창 상단
+.title{
+    @include flex;
+    @include between;
+    @include pop_title;
+    height: 2.5rem;
+    h2{
+        font-size: 20px;
+        font-weight: 400;
+    }
+    a{
+        i{
+            font-size: 20px;
+            color: $white;
+        }
+    }
+}
+
+// 테이블
+.between{
+    width: 100%;
+    @include height_full;
+}
+.table1, .table2{
+    @include first_tr;
+    tr{
+        @include flex;
+        @include center-c;
+        width: 100%;
+    }
+}
+
+tbody{
+    width: 100%;
+}
+
+//테이블 스크롤
+.table_wrapper{
+    overflow: auto;
+    @include ios;
+    &::-webkit-scrollbar {
+        width: 3px; 
+        height: 3px;
+        background-color: rgba(0,0,0,0.15);
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #000;
+    }
+    table{
+        width: 100%;
+    }
+}
+//체크박스 스타일
+ul.check_wrap{
+    margin: 1rem 0;
+    @include flex;
+    flex-wrap: wrap;
+    padding: 3px;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    box-sizing: border-box;
+    li{
+        line-height: 1.5;
+        input{
+            display: none;
+        }
+        label{
+            font-size: 15px;
+        }
+        input+label{
+            cursor: pointer;
+            &::before{
+                content: "";
+                display: inline-block;
+                width: 14px;
+                height: 14px;
+                line-height: 14px;
+                border: $table_border;
+                vertical-align: middle;
+                margin: 0 5px;
+            }
+        }
+        input:checked + label::before{
+            content:"\f00c";
+            font-family:"Font Awesome 5 free"; 
+            font-weight:900;
+            color: #004287;
+            background-color: #f4f8fc;
+            border-color:#a1b5c9;
+            font-size:13px;
+            text-align:center;
+        }
+    }
+}
+
+//상단 분전함선택, 플로팅버튼
+
+.bun_select{
+    @include flex;
+    @include center-c;
+    span{
+        @include flex;
+        @include center-c;
+        color: $name;
+        font-weight: bold;
+        font-size: 15px;
+        i{
+            color: $blue;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+    }
+    select{
+        @include select_style;
+        width: 150px;
+        margin-left: 5px;
+        padding: 0 .5rem;
+        background-image: url('../img/select_down.png');
+        background-position:  95% 50%;
+        background-repeat: no-repeat;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 4px;
+        &:focus{
+            outline: none;
+            box-shadow: 2px 3px 4px #ebebeb;
+            outline: 1px solid #1567f549;
+        }
+
+    }
+}
+select::-ms-expand {
+    display: none;
+}
+.top_fix{
+    @include flex;
+    padding: .5rem 0;
+    @include center-c;
+    justify-content: flex-end;
+    .floating_menu{
+        position: relative;
+        margin: 0 .5rem 0 .5rem;
+        @include flex;
+        @include center-c;
+        border: 3px solid $in_select_border;
+        border-radius: 4px;
+        &:hover{
+            border-color: $menu_active;
+        }
+        &:hover i{
+            color: $menu_active;
+        }
+        a{
+            padding: 4px 8px;
+            box-sizing: border-box;
+            i{
+                color: $name;
+            }
+        }
+        ul.floating_icon{
+            position: absolute;
+            background-color: #f2f5f9;
+            right: -2px;
+            top: 35px;
+            width: 60px;
+            padding: 5px;
+            box-shadow: 2px 5px 10px rgba(0,0,0, .3);
+            z-index: 6;
+            display: none;
+            li{
+                padding: 0;
+                margin-bottom: 8px;
+                &:hover a{
+                    border-radius: 8px;
+                    background-color: #f8f7f7;
+                    color: $blue2;
+                    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 1),
+                    inset 3px 3px 5px rgba(0, 0, 0, 0.1);
+                }
+                &:hover i{
+                    color: $blue2;
+                }
+                a{
+                    $icon: #607395;
+                    font-size: 14px;
+                    @include flex;
+                    @include column;
+                    text-align: center;
+                    border-radius: 10px;
+                    padding: 3px;
+                    width: 60px;
+                    height: 60px;
+                    @include center-r;
+                    box-sizing: border-box;
+                    transition: .5s;
+                    border: 1px solid #eee;
+                    background-color: $white;
+                    color: $icon;
+                    box-shadow: -2px -2px 5px #fff, 3px 3px 5px rgba(0,0,0,.1);
+                    i{
+                        color: $icon;
+                        font-size: 23px;
+                        margin-bottom: 3px;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+//날짜 박스
+.datebox{
+    input{
+        width: 120px;
+        height: 30px;
+        box-sizing: border-box;
+        border: 1px solid $in_select_border;
+    }
+}
+
+//이벤트 선택버튼 스타일
+a.eventbtn{
+    display: block;
+    height: 30px;
+    padding: 4px 8px;
+    border: 1px solid $button;
+    margin: 0 4px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: $button;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    i{
+        margin-left: 1.3rem;
+    }
+}
+.eventpopup{
+    position: absolute;
+    width: 300px;
+    display: none;
+    .event_select{
+        width: 100%;
+        display: flex;
+        position: absolute;
+        background-color: $white;
+        right: 10px;
+        top: 0;
+        padding: 8px;
+        box-sizing: border-box;
+        z-index: 2;
+        box-shadow: 1px 3px 10px rgba(0,0,0,.6);
+        transform: translate3d(0,0,0);
+        ul{
+            width: 100%;
+            @include flex;
+            @include center-c;
+            flex-wrap: wrap;
+            li{
+                font-size: 14px;
+                line-height: 1.8;
+                input{
+                    display: none;
+                }
+                input+label{
+                    cursor: pointer;
+                    &::before{
+                        content: "";
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        line-height: 14px;
+                        border: $table_border;
+                        vertical-align: middle;
+                        margin: 0 5px;
+                    }
+                }
+                input:checked + label::before{
+                    content:"\f00c";
+                    font-family:"Font Awesome 5 free"; 
+                    font-weight:900;
+                    color: #004287;
+                    background-color: #f4f8fc;
+                    border-color:#a1b5c9;
+                    font-size:13px;
+                    text-align:center;
+
+                }
+            }
+        }
+        .off, .off2{
+            order: 2;
+            i{
+                font-size: 18px;
+                color: #666; 
+            }
+        }
+    }
+}
+
+// 버튼
+
+.minibtn_group, .btn_group{
+    padding: .5rem;
+    margin-top: .9rem;
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    background-color: $btn_bg;
+    >div{
+        @include flex;
+        @include center-c;
+        flex-wrap: wrap;
+        a{
+            @include btn_text;
+        }
+    }
+}
+.minibtn_group{
+    .left{
+        div{
+            border-radius: 4px;
+            background-color: $minibtn;
+            @include center-r;
+            width: 80px;
+            height: 30px;
+            a{
+                @include btn_text;
+            }
+        }
+        
+    }
+    
+}
+
+.left{
+    float: left;
+    div{
+        @include buttons;
+        a{
+            line-height: 30px
+        }
+    }
+}
+
+.right{
+    @include flex;
+    justify-content: flex-end;
+    div{
+        a{
+            line-height: 30px;
+            color: #919191;
+        }
+        border: 2px solid $btn_border;
+        box-sizing: border-box;
+        @include buttons;
+        background-color: $white;
+    }
+}
+
+.top-right-btn{
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    @include center-c; 
+    background-color: #fafbfc;
+    padding: .3rem;
+    border: 1px solid #dce5ee;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    select,input{
+        color: #a3aab1;
+        border: 1px solid $in_select_border;
+        height: 30px;
+    }
+    span{
+        color: $top_text;
+    }
+    .event2{
+        margin-left: 4px;
+    }
+}
+
+//검색버튼
+.search_btn{
+    background-color: $button;
+    border-radius: 3px;
+    @include flex;
+    width: 30px;
+    height: 30px;
+    @include center-c;
+    @include center-r;
+    box-sizing: border-box;
+    color: $white;
+    a{
+        color: $white;
+    }
+}
+
+// 팝업창 탭
+ul.nav{
+    @include flex;
+    @include nav;
+    @include center-c;
+    padding: .625rem 5px;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    box-shadow: $shadow8;
+
+    li{
+        @include navli;
+        a.text{
+            position: relative;
+            color: #999;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                left: 0;
+                bottom: -10px;
+                background-color: $menu_active;
+                opacity: 0;
+            }
+            &:hover{
+                transition: .3s;
+                font-weight: 500;
+                color: $menu_active;
+            }
+            &:hover::before{
+                opacity: 1;
+            }
+            
+        }
+        a.text_active{
+            font-weight: 500;
+            color: $menu_active;
+            &::before{
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+//최대값 등 작은텍스트 스타일
+.small_text{
+    font-size: 14px;
+    color: red;
+    display: block;
+    width: 45px;
+    line-height: initial;
+}
+
+// 팝업창속의 팝업창 타이틀
+.mini{
+    @include pop_title;
+    @include flex;
+    justify-content: flex-end;
+    background-color: $white;
+
+    i{
+        font-size: 20px;
+        color: #999;
+    }
+}
+
+
+div[class^="lamp"]{
+    @include table_top;
+    @include flex;
+    @include column;
+    @include between;
+    height: 100%;
+    table{
+        border-top: 2px solid #666;
+        tr{
+            padding: 3px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+.shape{
+    @include shape;
+    &::after{
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        border: 10px solid transparent;
+        border-top-width: 0;
+        border-bottom-color: #d7deed;
+        transform: rotate(90deg);
+        right: 0;
+        top: 0;
+    }
+}
+
+
+//텍스트버튼
+.text_btn{
+    background-color: #f2f2f2;
+    padding: 3px 8px;
+    border-radius: 25px;
+    cursor: pointer;
+    i{
+        font-size: 13px;
+        margin-left: 10px;
+        color: #666;
+    }
+}
+.garobtn, .garobtn1{
+    background-color: $white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 3px;
+    border-radius: 4px;
+    color: #184da1;
+    border: 1px solid $menu_active;
+    i{
+        color: #184da1;
+    }
+    &:hover{
+        background-color: #184da1;
+        color: $white;
+        i{
+            color: $white;
+        }
+    }
+
+}
+
+iframe{
+    @include full;
+
+}
+
+
+// 상세보기 팝업창
+.height_670{
+    max-height: 670px;
+    max-width: 530px;
+    width: 530px;
+    height: 670px;
+}
+
+//등록하기창
+.height_650{
+    max-width: 400px;
+    max-height: 650px;
+    width: 400px;
+    height: 650px;
+}
+
+
+//전체제어박스, 채널설정팝업
+.height_230{
+    max-width: 400px;
+    width: 400px;
+    height: 230px;
+    max-height: 230px;
+}
+.height_170{
+    max-width: 400px;
+    width: 400px;
+    height: 170px;
+    max-height: 170px;
+}
+
+//주소변경, 도어락
+.height_256{
+    height: 256px;
+    max-height: 256px;
+}
+
+.height_270{
+    max-width: 400px;
+    width: 400px;
+    height: 270px;
+    max-height: 270px;
+}
+.height_300{
+    height: 300px;
+    max-height: 300px;
+}
+.height_320{
+    max-width: 400px;
+    width: 400px;
+    height: 320px;
+    max-height: 320px;
+}
+// 상시격등일괄정보변경, 수신장정보, 추가
+.height_340{
+    max-width: 400px;
+    width: 400px;
+    height: 340px;
+    max-height: 340px;
+}
+
+
+// 등주예약, 사용자정보,추가 /제어버튼클릭시 제어박스
+.height_420{
+    max-width: 400px;
+    width: 400px;
+    height: 420px;
+    max-height: 420px;
+}
+
+.height_500{
+    height: 500px;
+    max-height: 500px;
+}
+
+.height_515{
+    max-width: 450px;
+    width: 450px;
+    height: 515px;
+    max-height: 515px;
+}
+.height_600{
+    max-width: 450px;
+    width: 450px;
+    height: 600px;
+    max-height: 600px;
+}
+
+// dimm예약
+.w800{
+    width: 800px;
+    height: 400px;
+    max-height: 400px;
+}
+
+
+.new{
+    width: 100%;
+    padding-top: 10px;
+    box-sizing: border-box;
+    table{
+        width: 100%;
+        border-top: 2px solid #666;
+        tr{
+            width: 100%;
+            @include flex;
+            @include center-c;
+            padding: 3px;
+            border-bottom: $table_border;
+            box-sizing: border-box;
+            td{
+                >*{
+                    font-size: 15px;
+                }
+                &:first-child{
+                    width: 30%;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    background-color: $td_color;
+                    color: #222;
+                    
+                }
+                &:last-child{
+                    width: 70%;
+                    padding-left: 10px;
+                }
+                select, input{
+                    border: 1px solid $in_select_border;
+                    height: 25px
+                   
+                }
+                ul{
+                    li{
+                        margin-bottom: 4px;
+                        box-sizing: border-box;
+                    }
+                }
+                select{
+                    width: 100px;
+                    &:first-child{
+                        margin-right: 4px;
+                    }
+                }
+                &.h80{
+                    height: 85px;
+                    line-height: 85px;
+                }
+                div{
+                    @include flex;
+                    align-items: center;
+                    input{
+                        width: 45%;
+                        margin-right: 4px;
+                    }
+                    &.type{
+                        a{
+                            @include flex;
+                            align-items: center;
+                            padding: 4px;
+                            border: 1px solid #d6d6d6;
+                            box-sizing: border-box;
+                            i{
+                                color: #3952fb;
+                            }
+                        }
+                    }
+
+                }
+                .blbox{
+                    input{
+                        width: 16px;
+                        height: 16px;
+                    }
+                    span{
+                        font-size: 14px;
+                        padding-top: 3px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    .btn_group{
+        .left{
+            margin-bottom: 0;
+        }
+        .right{
+            margin-top: 0;
+        }
+    }
+}
+
+// 팝업창속의 팝업창(보수)
+
+.iframebosu_box{
+    @include mini_iframebox;
+    height: 300px;
+    display: none;
+}
+
+// 가로등팝업
+#garo1{
+    width: 450px;
+    max-width: 450px;
+    padding: 3px;
+    background-color: $white;
+    position: absolute;
+    border: 1px solid $pop_head;
+    left: 50%;
+    top: 10%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: $shadow24;
+    z-index: 9;
+    height: 600px;
+    display: none;
+    
+    //iframe
+    .popcon_wrap{
+        height: 100%;
+        iframe{
+            height: calc(100% - 40px);
+        }
+    }
+    
+    .iframe_box{
+        @include mini_iframebox;
+        height: 220px;
+        display: none;
+    }
+
+
+}
+
+
+
+.lamp_tab1{
+    $height: 30px;
+    .table1{
+        tbody{
+            tr{ 
+                align-items: center;
+                border-bottom: $table_border;
+                td{
+                    @include flex;
+                    @include td_style;
+                    a{
+                        @include flex;
+                        height: $height;
+                        @include center-c;
+                        margin: 0 3px;
+                        padding: 4px;
+                        border: 1px solid #d6d6d6;
+                        box-sizing: border-box;
+                        i{
+                            color: $blue;
+                        }
+                    }
+                    &:nth-child(odd){
+                        width: 20%;
+                        justify-content: center;
+                        background-color: $td_color;
+                    }   
+                    &:nth-child(even){
+                        width: 30%;
+                        text-align: left;
+                        font-size: 14px;
+                        padding-left: 5px;
+                        input{
+                            width:95%;
+                            border: none;
+                        }
+                        input, textarea{
+                            height: $height;
+                            background-color: $white;
+                            @include pop_border;
+                        }
+                        textarea{
+                            width: 90%;
+                        }
+                    }
+                }
+                td.place{
+                    width: 80%;
+                }
+            }
+        }
+    }
+    // 두번째테이블 -상시격등, 분기, 등종류, 등
+    .table2{
+        width: 100%;
+        margin-top: 10px;
+        tbody{
+            tr{
+                border-bottom: $table_border;
+                line-height: $height;
+                &:first-child{
+                    background-color: $td_color;
+                }
+                td{
+                    &:first-child{
+                        background-color: $td_color;
+                    }
+                    font-weight: bold;
+                    width: 20%;
+                    height: $height;
+                    text-align: center;
+                    border-left: $table_border;
+                    box-sizing: border-box;
+                    select{
+                        width: 60%;
+                        height: $height;
+                        @include pop_border;
+                    }
+                }
+                .lamp_name{
+                    @include flex;
+                    @include center-c;
+                    @include center-r;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+.lamp_tab2{
+    $height: 30px;
+    overflow: hidden;
+    >div{
+        height: 100%;
+    }
+    .tab2_top{
+        flex-direction: row;
+        span{
+            display: block;
+            height: $height;
+            line-height: $height;
+            margin-right: 10px;
+        }
+        select{
+            @include select_style;
+            &:focus{
+                outline: none;
+                // border: 1px solid rgba(30, 101, 253, 0.349);
+                box-shadow: 1px 1px 4px 1px rgba(2, 79, 245, 0.233);
+            }
+        }
+    }
+    .tablebox{
+        table{
+            @include full;
+            tbody{
+                tr{
+                    &:first-child{
+                        background-color: $td_color;
+                    }
+                    @include flex;
+                    @include center-c;
+                    border-bottom: $table_border;
+                    text-align: center;
+                    td{
+                        @include td_style;
+                        line-height: initial;
+                        @include flex;
+                        @include center-c;
+                        @include center-r;
+                        border-left: $table_border;
+                        &:first-child{
+                            width: 20%;
+                            border-left: none;
+                        }
+                        &:nth-child(2){
+                            width: 20%;
+                        }
+                        &:last-child{
+                            width: 60%;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+.lamp_tab3{
+    .tab3_top{
+        width: 100%;
+        @include flex;
+        justify-content: flex-start;
+        .choice{    
+            @include flex;
+            @include center-c;
+            select{
+                @include select_style;
+                width: 28px;
+                height: 30px;
+                margin: 0 3px;
+            }
+            span{
+                font-size: 14px;
+            }
+        }
+        .tab3_search{
+            // width: 100%;
+            @include flex;
+            .date{
+                input{
+                    width: 98px;
+                    border: none;
+                    border: 1px solid $in_select_border;
+                    height: 30px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+    .event{
+        width: 100%;
+        @include flex;
+        justify-content: flex-end;
+        margin-bottom: 1rem;
+        position: relative;
+        .event_wrap{
+            right: 0;
+            top: 35px;
+        
+        }
+    }
+    .table_wrapper{
+
+        table.tab3_scroll{
+            @include full;
+            border-top: none;
+            thead{
+                @include fix;
+                >tr{
+                    @include first_tr;
+                    background-color: $td_color;
+                    th{
+                        @include td_style;
+                        border-right: 1px solid $in_select_border;
+                        width: calc(100% / 3);
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    width: 100%;
+                    @include flex;
+                    border-bottom: 1px solid $in_select_border;
+                    @include center-c;
+                    td{
+                        @include flex;
+                        @include center-c;
+                        height: 30px;
+                        width: calc(100% / 3);
+                        font-weight: normal;
+                        color: #222;
+                        font-size: 15px;
+                        border-right: 1px solid $in_select_border;
+                    }
+                }
+            }
+        }
+    }
+}
+.lamp_tab4{
+    .top-right-btn{
+        .date_pick{
+            @include flex;
+            @include center-c;
+            span{
+                margin: 0 3px;
+            }
+        }
+        .work{
+            @include flex;
+            @include center-c;
+            span{
+                margin: 0 6px;
+            }
+            select{
+                @include select_style;
+                height: 30px;
+            }
+        }
+
+    }
+    .table_wrapper{
+        // height: 350px;
+        table{
+            width: 100%;
+            border-top: none;
+            thead{
+                @include fix;
+                tr{
+                    @include flex;
+                    @include first_tr;
+                    @include center-c;
+                    background-color: $td_color;
+                    th{
+                        height: 30px;
+                        line-height: 30px;
+                        font-weight: normal;
+                        &:nth-child(1){
+                            width: 10%;
+                        }
+                        &:nth-child(2){
+                            width: 20%;
+                        }
+                        &:nth-child(3){
+                            width: 20%;
+                        }
+                        &:nth-child(4){
+                            width: 50%;
+                        }
+                        input{
+                            vertical-align: middle;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            &:nth-child(1){
+                                width: 10%;
+                            }
+                            &:nth-child(2){
+                                width: 20%;
+                            }
+                            &:nth-child(3){
+                                width: 20%;
+                            }
+                            &:nth-child(4){
+                                width: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        p{
+            text-align: center;
+            padding: 5px 0;
+        }
+    }
+    
+
+}
+
+
+//가로등 팝업창 이름
+.name{
+    @include flex;
+    width: 100%;
+    font-size: 15px;
+    justify-content: center;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: $name;
+    height: 40px;
+    align-items: center;
+    i{
+        color: $blue;
+        font-size: 24px;
+        margin-right: 5px;
+    }
+}
+
+// 분전함상세보기iframe
+// iframe common
+.mininame{
+    color: $mininame;
+    margin-bottom: .5rem;
+    @include flex;
+    @include center-c;
+    height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    i{
+        color: $mininame;
+        font-size: 17px;
+        margin-right: 5px;
+    }
+}
+span.colornone{
+    i{
+        margin-right: 5px;
+    }
+    cursor: pointer;
+    color: red;
+    padding: 6px;
+    border: 1px solid red;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+// 분전함상세보기 , 분수
+
+#garo2, #bunsu{
+    padding: 0.188rem;
+    background-color: $white;
+    position: absolute;
+    border: 1px solid $pop_head;
+    left: 10%;
+    top: 10%;
+    box-sizing: border-box;
+    box-shadow: $shadow24;
+    z-index: 9;
+    border-radius: .5rem;
+    display: none;
+
+    // iframe
+    
+    .doorlock{
+        height: 280px;
+        display: none;
+
+    }
+
+
+    .nav{
+        @include nav;
+        box-shadow: $shadow8;
+        clear: both;
+    }
+    .nav_list{
+        width: 100%;
+        height: calc(100% - 40px - 48px);
+        box-sizing: border-box;
+    }
+
+
+}    
+
+div[class^="bun_tab"],div[class^="jung_tab"]{
+    height: 100%;
+}
+
+div[class^="bun_tab"]{
+    .table_wrapper{
+        overflow-x: hidden;
+        overflow-y: auto;
+        table{
+            tbody{
+                tr{
+                    td{
+                        &.address{
+                            width: 75%;
+        
+                            .input_group{
+                                @include flex;
+                                input{
+                                    margin-right: 4px;
+                                }
+                            }
+                        }
+                        &.height{
+                            height: 80px;
+                            line-height: 80px;
+                        }
+                        &.etc{
+                            width: 75%;
+                            height: 80px;
+                            textarea{
+                                width: 90%;
+                                height: 80px;
+                                border: 1px solid $in_select_border;
+                            }
+                        }
+                    }
+                }
+            }
+ 
+        }
+        
+    }
+}
+
+.bunsu_height{
+    height: calc(100% - 49px);
+}
+.bun_tab2{
+
+    clear: both;
+    .top-right-btn{
+        margin-bottom: 0;
+        background-color: $white;
+        border: none;
+        a{
+            @include topbtn;
+            background-color: #fafbfc;
+            i{
+                margin-left: 1rem;
+            }
+        }
+    }
+ 
+    .table_wrapper{
+        .table1{
+            tbody{
+                tr{
+                    width: 100%;
+                    @include flex;
+                    box-sizing: border-box;
+                    :nth-child(odd){
+                        text-align: center;
+                    }
+                    td{
+                        @include td_style;
+                        width: calc(100% / 4);
+                        border-bottom: $table_border;
+                        font-size: 15px;
+                        &:nth-child(odd){
+                            background-color: $td_color;
+                        }
+                        &:nth-child(even){
+                            padding-left: 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .statebox{
+            margin-top: 1rem;
+            box-sizing: border-box;
+            .row-item{
+                border-top: 2px solid #666;
+                display: grid;
+                grid-template-columns: 10% 15% repeat(8, 9.375%);
+                grid-template-rows: 9fr;
+                font-size: 15px;
+                .maxwidth{
+                    grid-column: 1 / span 1;
+                    grid-row: 1 / span 4;
+                }
+                .maxwidth2{
+                    grid-row: 5 / span 4;
+                    white-space: pre-line;
+                }
+                .maxwidth3{
+                    grid-column: 1 / span 2;
+                }
+                .line{
+                    white-space: pre-line;
+                    background-color: $td_color;
+                    
+                }
+                .bg_color{
+                    background-color: $td_color;
+                }
+                >div{
+                    padding: 12px 3px;
+                    text-align: center;
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    @include flex;
+                    @include center-c;
+                    @include center-r;
+                    border-right: $table_border;
+                    input{
+                        width: 90%;
+                    }
+                }
+                .width{
+                    grid-column: 2 / span 1;
+                    grid-row: 2 / span 2;
+                }
+                .sm{
+                    font-size: 14px;
+                    background-color: $td_color;
+                }
+
+            }
+        }
+
+        
+    }
+    
+}
+.bun_tab3{
+    clear: both;
+    .table_wrapper{
+        table{
+            display: table;
+            tbody{
+                tr{
+                    display: table-row;
+                    display: flex;
+                    padding: 3px;
+                    box-sizing: border-box;
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    &:first-child{
+                        // td{
+                        //     @include td_style;
+                        //     select{
+                        //         width: auto;
+                        //     }
+                        //     input[type="text"]{
+                        //         width: 90%;
+                        //     }
+                        // }
+                        td{
+                            input[type="text"],select{
+                                width: 90%;
+                            }
+                        }
+                    }
+                    td{
+                        font-size: 15px;
+                        height: 30px;
+                        line-height: 30px;
+                        box-sizing: border-box;
+                        vertical-align: middle;
+                        width: 25%;
+                        input[type="text"]{
+                            width: 30px;
+                        }
+                        select{
+                            width: 50px;
+                        }
+                        input,select{
+                            border: 1px solid $in_select_border;
+                            height: 30px;
+                            box-sizing: border-box;
+                        }
+                        &:nth-child(odd){
+                            background-color: $td_color;
+                            
+                            white-space: nowrap;
+                            font-size: 16px;
+                            text-align: center;
+                        }
+                        &.w_full{
+                            width: 75%;
+                        }
+                       
+                        
+                        &.left_align{
+                            // width: 25%;
+                            // @include flex;
+                            // @include center-c;
+                            padding-left: 5px;
+                            >div{
+                                @include flex;
+                                @include center-c;
+                            }
+                            select{
+                                margin-right: 3px;
+                            }
+                        }
+                    }
+                    .td_full{
+                        width: 100%;
+                        @include flex;
+                        padding-left: 5px;
+                        align-items: center;
+                        div{
+                            @include flex;
+                            align-items: center;
+                        }
+                        span{
+                            margin: 0 5px;
+                        }
+                    }
+                    .deng_sel{
+                        width: 75%;
+                        ul.deng{
+                            width: 100%;
+                            @include flex;
+                            justify-content: flex-start;
+                            padding-left: 5px;
+                            li{
+                                width: calc(100% / 4);
+                                text-align: left;
+                                @include flex;
+                                @include center-c;
+                                label{
+                                    margin-left: 3px;
+                                    margin-right: 5px;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.bun_tab4{
+    clear: both;
+    height: 100%;
+    .between{
+
+        table.term{
+            width: 100%;
+            tbody{
+                tr{
+                    width: 100%;
+                    @include flex;
+                    @include center-c;
+                    border-bottom: $table_border;
+                    padding: 3px;
+                    &:first-child{
+                        @include first_tr;
+                        text-align: center;
+                        background-color: $td_color;
+                        height: 30px;
+                        line-height: 30px;
+                        td{
+                            @include first_td;
+                        }
+                    }
+                    td{
+                        width: calc(100% / 9);
+                        @include flex;
+                        @include center-r;
+                        &:first-child{
+                            width: 12%;
+                            @include first_td;
+                            background-color: $td_color;
+                            box-sizing: border-box;
+                            height: 30px;
+                            line-height: 30px;
+                        }
+                        
+                        input, select{
+                            width: 80%;
+                            height: 30px;
+                            box-sizing: border-box;
+                            border: 1px solid $in_select_border;
+                        }
+                    }
+    
+                }
+            } 
+        }
+
+        table.plc{
+            width: 100%;
+            margin-bottom: 1rem;
+            tbody{
+                tr{
+                    @include flex;
+                    width: 100%;
+                    padding: 3px;
+                    border-bottom: $table_border;
+                    td{
+                        @include td_style;
+                        &:nth-child(odd){
+                            background-color: $td_color;
+                            width: 34%;
+                            text-align: center;
+                        }
+                        &:nth-child(even){
+                            width: 16%;
+                            text-align: left;
+                            font-size: 14px;
+                            padding-left: 5px;
+                            input,select{
+                                height: 25px;
+                                border: 1px solid $in_select_border;
+                                box-sizing: border-box;
+                                background-color: $white;
+                                width: 50%;
+                            }
+                            .txtselect{
+                                width: 80%;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+.bun_tab5{
+    clear: both;
+    // 분기/상시격등 일괄변경 iframe
+    .dengchange_box, .dengchange_box2{
+        height: 350px;
+        display: none;
+    }
+    .dengchange_box2{
+        height: 322px;
+    }
+    table{
+        width: 100%;
+        tbody{
+            tr{
+                width: 100%;
+                @include flex;
+                @include between;
+                border-bottom: $table_border;
+                padding: 3px 0;
+                &:first-child{
+                    @include first_tr;
+                    @include center-c;
+                    background-color: $td_color;
+                    height: 30px;
+                    td{
+                        color: #666;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                }
+                td{
+                    width: calc(100% / 6);
+                    text-align: center;
+                    border-right: $table_border;
+                    @include td_style($height: auto, $line: auto);
+                    input,select{
+                        width: 60px;
+                        height: 30px;
+                        border: 1px solid $in_select_border;
+                        box-sizing: border-box;
+                    }
+                    
+                    select:nth-child(1), input{
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+        }
+    }
+    .btn_group{
+        .left{
+            div{
+                word-break: keep-all;
+                width: auto;
+                padding: 0 8px;
+                a{
+                    font-size: .8rem;
+                    line-height: initial;
+                }
+            }
+
+        }
+    }
+
+}
+.bun_tab6{
+    clear: both;
+    height: 100%;
+        // iframe
+    .dimchange_box{
+        height: 420px;
+        display: none;
+    }
+    .dengre_box{
+        height: 420px;
+        display: none;
+    }
+    .between{
+        .top-right-btn{
+            span{
+                font-size: 14px;
+            }
+            div{
+                @include topbtn;
+                @include flex;
+                @include center-c;
+                a{
+                    line-height: 30px;
+                    color: #2a3b5e;
+                }
+                
+            }
+        }
+        .table_wrapper{
+            .xscroll{
+                table{
+                    width: 100%;
+                    tr{
+                        @include flex;
+                        align-items: center;
+                        width: 100%;
+                        padding: 3px;
+                        border-bottom: $table_border;
+                        box-sizing: border-box;
+                        &:first-child{
+                            background-color: $td_color;
+                            height: 30px;
+                            td{
+                                color: #666;
+                                
+                            }
+                        }
+                        td{
+                            @include flex;
+                            flex-wrap: wrap;
+                            @include center-c;
+                            @include center-r;
+                            height: 100%;
+                            .red{
+                                color: red;
+                                font-size: 14px;
+                                text-align: left;
+                            }
+                            &:first-child{
+                                text-align: left;
+                                width: 5%;
+                            }
+                            &:not(:first-child){
+                                width: calc(95% / 5);
+                            }
+
+                            input{
+                                vertical-align: middle;
+                            }
+                            select{
+                                border: 1px solid $in_select_border;
+                                height: 25px;
+                            }
+                            &.select_wrap{
+                                select{
+                                    width: 80%;
+                                    height: 30px;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .btn_group{
+            margin-top: .6rem;
+            flex-wrap: wrap;
+            .left{
+                margin-bottom: 5px;
+            }
+        }
+    }
+
+}
+.bun_tab7{
+    // 이벤트 팝업창
+    .eventbox{
+        width: 95%;
+        height: 400px;
+        left: 2.5%;
+        display: none;
+    }
+    
+    .between{ 
+        .top-right-btn{
+            .event2{
+                @include flex;
+                justify-content: flex-end;
+                position: relative;
+                .event_wrap2{
+                    right: 0;
+                    top: 40px;
+                    .off2{
+                        order: 2;
+                    }
+                }
+            } 
+        }
+        .table_wrapper{
+            height: 100%;
+            overflow: auto;
+            table{
+                display: table;
+                width: 100%;
+                thead{
+                    @include fix;
+                    tr{
+                        display: table-row;
+                        width: 100%;
+                        background-color: $td_color;
+                        text-align: center;
+                        font-weight: bold;
+                        th{
+                            border-right: 1px solid #cacdd4;
+                            height: 30px;
+                            font-weight: bold;
+                            vertical-align: middle;
+                            text-align: center;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        width: 100%;
+                        border-bottom: $table_border;
+                        display: table-row;
+                        td{
+                            color: #666;
+                            border-right: $table_border;
+                            @include td_style($height:auto, $line: initial);
+                            width: calc(100% / 3);
+                            height: 30px;
+                            padding: 5px;
+                            box-sizing: border-box;
+                            vertical-align: middle;
+                            i{
+                                margin-right: 5px;
+                                padding: 4px;
+                                font-size: 14px;
+                                border-radius: 50%;
+                                background-color: #f2f2f2;
+                            }
+                            span.eventpop{
+                                background-color: #f2f2f2;
+                                cursor: pointer;
+                                margin-left: 5px;
+                                font-size: 14px;
+                                font-weight: bold;
+                                padding: 0 3px;
+                                border-radius: 4px;
+                                color: $blue;
+                                border: 1px solid #ececec;
+                                box-sizing: border-box;
+                                white-space: nowrap;
+                                &:hover{
+                                    background-color: rgba(234, 255, 4, 0.308);
+                                }
+                            }
+                        }
+                    }
+                }
+            
+            }
+        }
+    }
+
+}
+.bun_tab8{
+    height: 100%;
+
+    .table_wrapper{
+        height: 100%;
+    }
+    .top-right-btn{
+        .work_con{
+            @include flex;
+            @include center-c;
+            span{
+                margin: 0 5px;
+            }
+            select{
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                @include pop_border;
+            }
+        }
+    }
+    .table_wrapper{
+        table{
+            tr{
+                @include flex;
+                @include center-c;
+                border-bottom: $table_border;
+                &:first-child{
+                    background-color: $td_color;
+                    td{
+                        @include first_td;
+                    }
+                }
+                td{
+                    text-align: center;
+                    @include td_style;
+                    width: calc(100% /3);
+                    font-weight: normal;
+                }
+                .empty{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// 점멸기 상세보기 팝업
+.jum_tab3{
+    .table_wrapper{
+        border-top: 2px solid #666;
+        table{
+            thead{
+                tr{
+                    th{
+                        height: 30px;
+                        font-weight: bold;
+                        vertical-align: middle;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 보수일지 - 작업내용등록
+.add_pop{
+    background-color: $white;
+    height: 100%;
+    overflow: auto;
+    padding: 0 5px;
+    box-sizing: border-box;
+    table{
+        width: 100%;
+        tbody{
+            tr{
+                width: 100%;
+                @include flex;
+                padding: 3px;
+                box-sizing: border-box;     
+                @include center-c;
+                border-bottom: $table_border;
+                &:first-child{
+                    width: 100%;
+                    @include first_tr;
+                    @include center-r;
+                    box-sizing: border-box;
+                    td{
+                        width: 100%;
+                        background-color: $td_color;
+                        @include flex;
+                        @include center-r;
+                    }
+                }
+                td{
+                    height: 30px;
+                    line-height: 30px;
+                    justify-content: flex-start;
+                    @include flex;
+                    width: 70%;
+                    input,select{
+                        border: 1px solid $in_select_border;
+                        height: 25px;
+                    }
+                    &.table_title{
+                        background-color: $td_color;
+                        width: 30%;
+                        @include flex;
+                        @include center-r;
+                        @include center-c;
+                        color: #222;
+                        i{
+                            margin-right: 3px;
+                        }
+                    }
+                    &:nth-child(2){
+                        padding-left: 5px;
+                    }
+                    textarea{
+                        width: 100%;
+                        height: auto;
+                        border: 1px solid $in_select_border;
+                    }
+                    div{
+                        width: 100%;
+                        @include flex;
+                        @include center-c;
+                        @include between;
+                        input,select{
+                            width: 40%;
+                        }
+                        
+                    }
+                   
+
+                }
+                &.textbox td{
+                    height: 80px;
+                    line-height: 80px;
+                }
+            }
+        }
+    }
+    .btn_group{
+        margin-top: .5rem;
+        div{
+            @include buttons;
+            background-color: $minibtn;
+            a{
+                @include btn_text;
+
+            }
+        }
+    }
+}
+
+// 감시내역 날짜 클릭시 나오는 팝업창
+
+.watchpop{
+    position: absolute;
+    width: 500px;
+    height: 590px;
+    left: 20%;
+    top: 20%;
+    z-index: 9;
+    padding: 3px;
+    background-color: $white;
+    border: 1px solid $pop_head;
+    box-sizing: border-box;
+    box-shadow: $shadow16;
+    display: none;
+    .title{
+        justify-content: flex-end;
+    }
+    span.name{
+        margin-top: 1rem;
+        span{
+            font-size: 12px;
+            color: $red;
+        }
+    }
+    table{
+        margin-top: 1rem;
+    }
+    .state3{
+        @include flex;
+        tr{
+            @include flex;
+            @include center-r;
+            &:first-child{
+                @include first_tr;
+                background-color: $white;
+            }
+            td{
+                @include td_style;
+                &:nth-child(odd){
+                    background-color: $td_color;
+                }
+            }
+        }
+    }
+    .state4{
+        @include flex;
+        @include center-r;
+        @include center-c;
+        flex-direction: column;
+        tr{
+            @include flex;
+            @include center-c;
+            @include between;
+            width: 100%;
+            &:first-child{
+                @include first_tr;
+                td{
+                    @include td_style;
+                    padding: 0;
+                }
+            }
+            td{
+                @include td_style;
+                height: auto;
+                padding: 5px 0;
+                line-height: inherit;
+                &:first-child{
+                    background-color: $td_color;
+                    width: 16%;
+                }
+                &:not(first-child){
+                    width: 10%;
+                }
+            }
+        }
+    }
+}
+
+// 감시내역 이벤트내용 클릭시팝업창
+.eventgamsi_pop{
+    position: absolute;
+    width: 500px;
+    height: 590px;
+    left: 20%;
+    top: 20%;
+    z-index: 9;
+    padding: 3px;
+    background-color: $white;
+    border: 1px solid $pop_head;
+    box-sizing: border-box;
+    box-shadow: $shadow16;
+    display: none;
+    >iframe{
+        height: calc(100% - 35px);
+    }
+}
+
+// 등주디머예약
+#dimm{
+    width: 800px;
+    min-height: 500px;
+    padding: 3px;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid $pop_head;
+    box-sizing: border-box;
+    box-shadow: 6px 5px 10px rgba(0,0,0,.1);
+    z-index: 9;
+    overflow: hidden;
+    display: none;
+    table{
+        margin-top: 10px;
+        tr{
+            @include flex;
+            @include between;
+            &:first-child{
+                @include first_tr;
+            }
+        }
+        td{
+            @include td_style;
+            .td_btn{
+                border: 1px solid $border;
+                
+            }
+            &.number{
+                width: 60px;
+            }
+        }
+    }
+}
+
+//가로등상세보기 제어팝업창
+.controlbox{
+    background-color: $white;
+    overflow: hidden;
+    table{
+        width: 100%;
+        tr{
+            width: 100%;
+            @include flex;
+            padding: 3px;
+            box-sizing: border-box;
+            justify-content: flex-start;
+            border-bottom: $table_border;
+            td{
+                @include flex;
+                @include td_style($height: 30px, $line: initial);
+                @include center-c;
+                &:first-child{
+                    background-color: $td_color;
+                    width: 30%;
+                    margin-right: 10px;
+                    text-align: center;
+                    justify-content: center;
+                }
+
+                select,input{
+                    height: 30px;
+                    border: 1px solid $in_select_border;
+                }
+                .time{
+                    input{
+                        width: 100px;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//경관조명 제어팝업창
+
+
+//분수대 상세보기 - 이벤트보기 팝업창
+.bunsu_eventpop{
+    width: 670px;
+    height: 350px;
+    display: none;
+    padding: 3px;
+    background-color: #fff;
+    position: absolute;
+    border: 1px solid $pop_head;
+    box-sizing: border-box;
+    box-shadow: 6px 5px 10px rgba(0,0,0,.1);
+    z-index: 9;
+}
+
+
+#pupmp_resister{
+    max-height: 465px;
+    height: 465px;
+}

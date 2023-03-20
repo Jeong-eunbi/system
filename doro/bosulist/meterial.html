@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도로조명 자재관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/doro.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/main.js" ></script>
+    <script type="text/javascript" defer src="../../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/doro.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+
+        <!-- header 끝 / content시작 -->
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">이용안내<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a">이용안내</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">민원관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../minwon/complain.html">불편신고</a></li>
+                                    <li class="on"><a href="../minwon/process.html">처리현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수처리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosu/setlist.html">설치현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">보수내역관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bosulist/notice.html">공지관리</a></li>
+                                    <li><a href="../bosulist/bosulist.html">보수내역관리</a></li>
+                                    <li><a href="../bosulist/billing.html">청구내역관리</a></li>
+                                    <li class="on"><a href="../bosulist/meterial.html">자재관리</a></li>
+                                    <li><a href="../bosulist/inout1.html">자재입출고관리</a></li>
+                                    <li><a href="../bosulist/tong_data1.html">통계자료</a></li>
+                                    <li><a href="../bosulist/company.html">업체관리</a></li>
+                                    <li><a href="../bosulist/bosu_setting.html">환경설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <ul class="bill_tab">
+                    <li class="ontxt"><a href="meterial.html">공종관리</a></li>
+                    <li><a href="meterial2.html">관급자재관리</a></li>
+                    <li><a href="meterial3.html">사급자재관리</a></li>
+                </ul>
+
+                <div class="bill_scroll">
+                    <div class="btnwrap combtn">
+                        <div class="leftbtn">
+                            <div class="btn_bg"><a href="meterial_add.html">등록</a></div>
+                        </div>
+                    </div>
+                    <div id="table_wrap">
+                        <div class="detail custom_scroll">
+                            <table class="meterial1">
+                                <thead>
+                                    <tr>
+                                        <th>자재코드</th>
+                                        <th>자재명</th>
+                                        <th>규격</th>
+                                        <th>금액</th>
+                                        <th>비고</th>
+                                        <th>수정/삭제</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>GJ001</td>
+                                        <td class="bg">램프교체</td>
+                                        <td class="bg">100W</td>
+                                        <td class="bg">20,000원</td>
+                                        <td></td>
+                                        <td>
+                                            <div class="table_btn">
+                                                <div><a href="meterial_modi.html">수정</a></div>
+                                                <div><a href="">삭제</a></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+ 
+        </div>
+    </div>
+</body>
+</html>

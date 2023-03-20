@@ -1,0 +1,318 @@
+@import "./_var", "./_popup";
+ // 펌프
+
+.btnwrap{
+    .rightbtn{
+        @include flex;
+        >div{
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .bun_sel{
+            select{
+                padding: 6px 2.5rem 6px 4px;
+            }
+        }
+        input{
+            border: 1px solid #aaa;
+            height: 30px;
+            border-radius: 4px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        button{
+            background-color: #3d3d3d;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            height: 30px;
+            padding: 0 8px;
+        }
+    }
+    
+}
+
+
+
+.wrapper{
+    .cont{
+        .contbox{
+            .pumplist{
+                margin-bottom: 10px;
+                flex-wrap: wrap;
+                ul{
+                    li{
+                        line-height: initial;
+                        a{
+                            padding: 0 10px;
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+                table{
+                    tr:nth-child(5n+5){
+                        border-bottom: none;
+                    }
+                }
+                tr:nth-child(6n+6){
+                    border-bottom: 2px double #cacdd4;
+                    border-width: 3px;
+                }
+                
+            }
+            .btnwrap{
+                .pumpbox{
+                    .bun_sel{
+                        select{
+                            padding: 6px 2.5rem 6px 4px;
+                        }       
+                    }
+                    .search_box{
+                        @include flex;
+                        justify-content: flex-end;
+                        @include center-c;
+                        span{
+                            padding-top: 3px;
+                            margin: 0 4px;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+            .pumptop_table{
+                table{
+                    tr{
+                        &:nth-child(5n+5){
+                            border-bottom: 0;
+                        }
+                        &:nth-child(6n+6){
+                            border-bottom: 2px double #cacdd4;
+                            border-width: 3px;
+                            box-sizing: border-box;
+                        }
+                        
+                        td{
+                            &.pump_name{
+                                cursor: pointer;
+                            }
+                            &.width, .pump_name{
+                                width: 30%;
+                            }
+                            &.number{
+                                width: 10%;
+                            }
+                            &.half{
+                                width: 15%;
+                            }
+                        }
+                    }
+                }
+            }
+            .scroll_wrap{
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+
+
+//펌프장 기본정보
+.pumptab{
+    height: 100%;
+    .between{
+        height: calc(100% - 49px);
+        .wrap{
+            height: 100%;
+            .table_wrapper{
+                height: calc(100% - 74px);
+                table.pump_state{
+                    tbody{
+                        tr{
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: $table_border;
+                            padding: 3px;
+                            box-sizing:border-box;
+                            td{
+                                color: #222;
+                                font-weight: normal;
+                                box-sizing: border-box;
+                                height: 30px;
+                                line-height: 30px;
+                                &:nth-child(odd){
+                                    width: 35%;
+                                    background-color: $td_color;
+                                    text-align: center;
+                                }
+                                &:nth-child(even){
+                                    width: 60%;
+                                    font-size: 14px;
+                                    display: flex;
+                                    padding-left: 2%;
+                                    align-items: center;
+                                }
+                                >div{
+                                    width: 100%;
+                                    display: flex;
+                                    input,select{
+                                        width: calc(100% / 3);
+                                        height: 25px;
+                                        margin-right: 1%;
+                                        border: 1px solid #dbdee1;
+                                        box-sizing: border-box;
+                                    }
+                                    
+                                }
+                                .statebox{
+                                    width: 100%;
+                                    >div{
+                                        width: calc(100% / 3);
+                                        display: flex;
+                                        flex-direction: column;
+                                        span{
+                                            height: auto;
+                                            line-height: initial;
+                                        }
+                                    }
+                                }
+                               
+                               
+                            }
+                        }
+                    }
+                }
+                table.pump_state3{
+                    tbody tr{
+                        &:last-child{
+                            td{
+                                &:last-child{
+                                    width: 75%;
+                                }
+                            }
+                        }
+                        td{
+                            .timebox{
+                                @include flex;
+                                select{
+                                    width: 80%;
+                                }
+                            }
+                            select{
+                                height: 25px;
+                                border: 1px solid #dbdee1;
+                                box-sizing: border-box;
+                                background-color: $white;
+                            }
+                            .sg{
+                                width: 100%;
+                                display: flex;
+                                >div{
+                                    width: calc(100% / 3);
+                                }
+                            }
+                        }
+                        .noncolor{
+                            background-color: $white;
+                            font-size: 14px;
+                            text-align: left;
+                        }
+                        .p_namebox{
+                            width: 75%;
+                            ul{
+                                width: 100%;
+                                display: flex;
+                                li{
+                                    width: calc(100% / 3);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        
+        }
+        
+    }
+    h3{
+        padding-top: 4px;
+        span.alarm{
+            color: blue;
+        }
+    }
+
+}
+//펌프장 기본정보팝업창
+.pump_tab1{
+    .btn_group{
+        .left{
+            margin-bottom: 2px;
+        }
+    }
+}
+            
+.bun_tab4{
+    .between{
+        justify-content: flex-start;
+        .pumpwrap{
+            ul.pumpicon{
+                @include flex;
+                justify-content: flex-end;
+                margin-bottom: 1rem;
+                box-sizing: border-box;
+                li{
+                    @include flex;
+                    @include center-c;
+                    img{
+                        width: 18px;
+                        height: 18px;
+                        margin: 0 2px 0 6px;
+                    }
+                    span{
+                        padding-top: 2px;
+                    }
+                }
+            }
+        }
+        table{
+            thead{
+                border-top: 2px solid #666;
+                tr{
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: $td_color;
+                    font-weight: bold;
+                    @include fix;
+                    th{
+                        border-right: $table_border;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    font-weight: normal;
+                    font-size: 15px;
+                    td{
+                        vertical-align: middle;
+                        padding: 5px 0;
+                        text-align: center;
+                        border-right: $table_border;
+                        width: calc(55% / 5);
+                        &.when{
+                            width: 15%;
+                        }
+                        &:first-child{
+                            border-left: $table_border;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

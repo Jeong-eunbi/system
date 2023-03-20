@@ -1,0 +1,515 @@
+@import "./var";
+
+
+span.rec{
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+    &.red2{
+        background-color: #ff6666;
+    }
+    &.yellow{
+        background-color: #ffcc66;
+    }
+    &.blue{
+        background-color: #5f82de;
+    }
+    &.grey{
+        background-color: #d7d7d7;
+    }
+}
+span.state_text{
+    padding-top: 4px;
+}
+ul.bunsu_color{
+    @include flex;
+    li{
+        @include flex;
+        @include center-c;
+        margin-right: 8px;
+        
+    }
+}
+table.bunsu_gamsi{
+    .day{
+        width: 20%;
+    }
+    .state_icon{
+        width: 10%;
+        >div{
+            img{
+                margin-right: 4px;
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+.bunsu_lamp{
+    tr{
+        td{
+            width: 25%;
+        }
+    }
+}
+.bunsu_jeon{
+    tr{
+        td{
+            width: calc(70% / 8);
+        }
+        td:solidnth-child(1), td:nth-child(2){
+            width: 15%;
+        }
+    }
+}
+
+// 분수대 상세보기팝업창
+
+table.state_info{
+    margin-top: .5rem;
+    width: 100%;
+    border-top: 2px solid #666;
+    tbody{
+        width: 100%;
+        tr{
+            background-color: $td_color;
+            padding: 0;
+            width: 100%;
+            @include flex;
+            border-bottom: 1px dashed #bbb;
+            &:nth-child(3n){
+                border-bottom: 2px solid #cacdd4;
+            }
+            td{
+                @include flex;
+                @include center-c;
+                @include center-r;
+                border-right: 2px solid #cacdd4;
+                padding: 3px 0;
+                box-sizing: border-box;
+                width: calc(100% / 4);
+                height: 30px;
+                line-height: 30px;
+                &:last-child{
+                    border-right: none;
+                }
+                input,select{
+                    width: 80%;
+                    height: 28px;
+                    border: 1px solid $in_select_border;
+                    box-sizing: border-box;
+                }
+                
+                span{
+                    font-size: 14px;
+                    color: #333;
+                    line-height: initial;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.bun_tab3{
+    .between{
+        .table_wrapper{
+            .table1{
+                tr{
+                    display: flex;
+                    padding: 3px;
+                    td{
+                        @include td_style;
+                        text-align: center;
+                        background-color: $td_color;
+                        width: 25%;
+                        &:nth-child(even){
+                            text-align: left;
+                            background-color: $white;
+                            padding-left: 10px;
+                            box-sizing: border-box;
+                        }
+                        &.full{
+                            width: 75%;
+                            .flex{
+                                @include flex;
+                                align-items: center;
+                                div{
+                                    @include flex;
+                                    align-items: center;
+                                    span{
+                                        margin: 0 3px;
+                                    }
+                                }
+                                span{
+                                    margin: 0 3px;
+                                }
+                            }
+                        }
+                        select{
+                            height: 25px;
+                            vertical-align: middle;
+                            width: 50px !important;
+                        }
+                        
+                    }
+                    
+                }
+            }
+            .day-time{
+                @include flex;
+                margin-top: 1rem;
+                box-sizing: border-box;
+                //하위테이블공통
+                >table{
+                    width: 49.5%;
+                    caption{
+                        color: #2B4703;
+                        margin-bottom: 10px;
+                        img{
+                            width: 20px;
+                            height: 20px;
+                            vertical-align: middle;
+                            margin-right: 2px;
+                        }
+                    }
+                    thead{
+                        background-color: #5f5f5f;
+                        tr{
+                            height: 35px;
+                            line-height: 35px;
+                            th{
+                                font-weight: normal;
+                                font-size: 15px;
+                                color: $white;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            display: table-row;
+                            padding: 3px;
+                            box-sizing: border-box;
+                            td{
+                                vertical-align: middle;
+                                input, select{
+                                    height: 28px;
+                                }
+                                &:first-child{
+                                    color: #333;
+                                }
+                            }
+                            &:nth-child(9n){
+                                border-bottom: 2px solid #cacdd4;
+                            }
+                        }
+                    }
+
+                }
+                table.time{
+                    tbody{
+                        tr{
+                            td{
+                                &:first-child{
+                                    width: 15%;
+                                    text-align: center;
+                                    background-color: $td_color;
+                                }
+                                &:nth-child(2){
+                                    padding: 3px 0 3px 10px;
+                                    width: 85%;
+                                    .timeselect{
+                                        width: 100%;
+                                        @include flex;
+                                        align-items: center;
+                                        box-sizing: border-box;
+                                        >div{
+                                            @include flex;
+                                            align-items: center;
+                                            >select{
+                                                width: 40px;
+                                            }
+                                        }
+                                        span{
+                                            margin: 0 2px;
+                                        }
+                                        >span{ 
+                                            margin: 0 5px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                table.day{
+                    tbody{
+                        tr{
+                            td{
+                                &:first-child{
+                                    background-color: $td_color;
+                                }
+                                background-color: $white;
+                                width: calc(100% / 8);
+                                text-align: center;
+                                input{
+                                    vertical-align: middle;
+                                    width: 16px;
+                                    height: 16px;
+                                    cursor: pointer;
+                                    border: 0px solid $in_select_border;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.bunsu3{
+    .between{
+        height: calc(100% - 49px);
+        .table_wrapper{
+            .day-time > table thead tr{
+                th{
+                    &:first-child{
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.bunsu_tab4{
+    .between{
+        justify-content: flex-start;
+        table.bunsugam_list{
+            border-bottom: 1px solid #666;
+            .when{
+                width: 15%;
+            }
+            .state_cont{
+                width: 10%;
+            }
+            td,th{
+                &:not(.when, .state_cont){
+                    width: 25%;
+                }
+            }
+            thead{
+                width: 100%;
+                border-top: 2px solid #666;
+                tr{
+                    background-color: $td_color;
+                    height: 30px;
+                    line-height: 30px;
+                    @include fix;
+                    z-index: 5;
+                    th{
+                        border-right: $table_border;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    height: 30px;
+                    padding: 3px;
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    td{
+                        border-left: $table_border;
+                        font-size: 15px;
+                        vertical-align: middle;
+                        text-align: center;
+                        &:last-child{
+                            border-right: $table_border;
+                            
+                            text-align: left;
+                        }
+                        span.state{
+                            position: relative;
+                            display: inline-block;
+                            color: #004287;
+                
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 10px;
+                                background-color: #cddefd;
+                                z-index: -1;
+                                border-radius: 10px;
+                            }
+                            
+                        }
+                        span.comment{
+                            color: #ea0909;
+                            cursor: pointer;
+                            position: relative;
+                            &::before{
+                                content: "";
+                                width: 100%;
+                                height: 10px;
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                background-color: #ffc1c8;
+                                border-radius: 10px;
+                                z-index: -1;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+// 구형분수대 기본정보
+
+
+.oldwrap{
+    padding: 0;
+    .bunsu_height{
+        >div{
+            &:first-child{
+                height: 100%;
+            }
+
+            .table_wrapper{
+                height: calc(100% - 56px);
+                .table1{
+                    tbody{
+                        tr{
+                            td{
+                                .twoselect{
+                                    @include flex;
+                                    select{
+                                        &:first-child{
+                                            margin-right: 4px;
+                                        }
+                                    }
+                                }
+                                &.height{
+                                    height: 80px;
+                                    line-height: 80px;
+                                }
+                                &.etc{
+                                    width: 75%;
+                                    height: 80px;
+                                    textarea{
+                                        width: 90%;
+                                        height: 80px;
+                                        border: 1px solid $in_select_border;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .day-time{
+                    display: initial;
+                    .caption{
+                        @include flex;
+                        @include center-c;
+                        @include center-r;
+                        margin: 10px 0;
+                        img{
+                            vertical-align: middle;
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 2px;
+                        }
+                        span{
+                            color: #2B4703;
+                            padding-top: 2px;
+                        }
+                    }
+                    
+                    .timebox{
+                        @include flex;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        table{
+                            width: 49.5%;
+                            border: 1px solid #c4cbd2;
+                            box-sizing: border-box;
+                            thead{
+                                background-color: #5f5f5f;
+                                tr{
+                                    height: 35px;
+                                    line-height: 35px;
+                                    display: flex;
+                                    justify-content: space-around;
+                                    th{
+                                        font-weight: normal;
+                                        font-size: 15px;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                            tbody{
+                                tr{
+                                    padding: 3px;
+                                    box-sizing: border-box;
+                                    td{
+                                        vertical-align: middle;
+                                        input, select{
+                                            height: 28px;
+                                        }
+                                        &:first-child{
+                                            color: #333;
+                                            text-align: center;
+                                        }
+                                    }
+                                    &:nth-child(9n){
+                                        border-bottom: 2px solid #cacdd4;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    .scroll3{
+        height: calc(100% - 100px);
+    }   
+}
+
+
+
+#pump_info{
+    .bun_tab2{
+        .between{
+            .table_wrapper{
+                span.alarm{
+                    color: #0000ff;
+                }
+                table.pump_state{
+                    tr{
+                        td{
+                            &:first-child{
+                                background-color: $td_color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

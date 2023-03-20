@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.paper {
+  width: 100%;
+  min-height: 297mm;
+  padding: 20mm;
+  border-radius: 5px;
+  background: #fff;
+}
+.paper .content {
+  width: 100%;
+  padding: 0;
+  height: 257mm;
+}
+.paper .content h2 {
+  font-size: 26px;
+  text-align: center;
+}
+.paper .content .font {
+  font-size: 18px;
+}
+.paper .content ul.event {
+  margin-top: 1rem;
+}
+.paper .content ul.event li {
+  vertical-align: baseline;
+  font-family: GmarketSansLight;
+  font-weight: bold;
+  color: #464646;
+  font-size: 14px;
+  line-height: 1.2;
+}
+.paper .content ul.event li b {
+  font-family: GmarketSansMedium;
+  font-size: 15px;
+}
+.paper .content .btngroup {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dedede;
+}
+.paper .content .btngroup button {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  margin-left: 8px;
+  padding: 3px 6px;
+  box-sizing: border-box;
+}
+.paper .content .btngroup button img {
+  height: 20px;
+}
+.paper .content .btngroup button img.hover {
+  display: none;
+}
+.paper .content .btngroup button:hover {
+  border: 1px solid #222;
+  box-shadow: 1px 3px 20px 4px rgba(185, 185, 185, 0.5);
+  transition: all 0.25s ease-in-out;
+}
+.paper .content .btngroup button:hover img {
+  display: none;
+}
+.paper .content .btngroup button:hover img.hover {
+  display: block;
+}
+.paper .content .tablebox {
+  width: 100%;
+  margin-top: 1rem;
+}
+.paper .content .tablebox .smtxt {
+  font-size: 14px;
+  color: #525252;
+}
+.paper .content .tablebox span.eventcont {
+  color: #02652f;
+}
+.paper .content .tablebox table {
+  border-top: 1px solid;
+  width: 100%;
+}
+.paper .content .tablebox table > * {
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.paper .content .tablebox table thead {
+  background-color: #efefef;
+}
+.paper .content .tablebox table thead th {
+  height: 35px;
+  line-height: 35px;
+  padding: 3px 6px;
+  vertical-align: middle;
+  border: 1px solid #dbdbdb;
+  border-top: none;
+}
+.paper .content .tablebox table tbody {
+  word-break: keep-all;
+}
+.paper .content .tablebox table tbody tr {
+  border-bottom: 1px solid #dbdbdb;
+}
+.paper .content .tablebox table tbody tr td {
+  border-left: 1px solid #dbdbdb;
+  font-family: GmarketSansLight;
+  font-weight: 600;
+  text-align: center;
+  word-break: keep-all;
+  white-space: pre-line;
+  vertical-align: middle;
+  padding: 8px 8px 4px 8px;
+  box-sizing: border-box;
+}
+.paper .content .tablebox table tbody tr td:last-child {
+  border-right: 1px solid #dbdbdb;
+}
+.paper .content .tablebox table tbody tr td .table_btn {
+  display: flex;
+  justify-content: center;
+}
+.paper .content .tablebox table tbody tr td .table_btn > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid #d5d5d5;
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 28px;
+}
+.paper .content .tablebox table tbody tr td .table_btn > div:first-child {
+  border: 1px solid #006b54;
+  margin-right: 8px;
+}
+.paper .content .tablebox table tbody tr td .table_btn > div:first-child a {
+  color: #006b54;
+}
+.paper .content .tablebox table tbody tr td .table_btn > div a {
+  color: #555;
+  font-size: 15px;
+  padding-top: 2px;
+}
+.paper .content .tablebox table tbody tr .bg {
+  background-color: #efefef;
+}
+.paper .content .tablebox table.bunlist tbody tr td:nth-child(2) {
+  text-align: left;
+}
+.paper .content .tablebox .listpage {
+  padding: 0;
+}
+.paper .content .tablebox table.g_data thead th {
+  line-height: initial;
+  vertical-align: middle;
+  white-space: pre-line;
+  word-break: keep-all;
+}
+.paper .content .tablebox table.tong4 thead tr {
+  width: 100%;
+}
+.paper .content .tablebox table.tong4 thead tr th {
+  width: 15%;
+}
+.paper .content .tablebox table.tong4 thead tr .w30 {
+  width: 10%;
+}
+.paper .content .tablebox table.tong6 thead tr th {
+  line-height: initial;
+  white-space: nowrap;
+}
+.paper .content table.sign {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.paper .content table.sign tr td {
+  border: 1px solid #dbdbdb;
+  border-top: none;
+  padding: 4px 6px;
+  width: 100px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.paper .content table.sign tr td.gap {
+  width: 30px;
+  vertical-align: middle;
+  writing-mode: vertical-lr;
+  text-align: center;
+  letter-spacing: 4px;
+}
+.paper .content table.sign tr:first-child {
+  background-color: #efefef;
+  border-top: 1px solid;
+}
+.paper .content table.sign tr.h60 {
+  height: 60px;
+  box-sizing: border-box;
+}
+.paper .content table.inout_table2 {
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+.paper .content .date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "GmarketSansLight";
+  font-weight: 600;
+}
+.paper .content .right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.print_view {
+  width: 98%;
+  margin: 0 auto;
+  padding: 20mm 0.5rem;
+  box-sizing: border-box;
+}
+.print_view td {
+  font-size: 15px;
+}
+.print_view .iconbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  .btngroup button {
+    display: none;
+  }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보기 팝업창</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/popview.scss">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+</head>
+<body>
+    <div class="viewer">
+        <div class="title">
+            <a href=""><i class="far fa-window-close"></i></a>
+        </div>
+        <div class="infowrap">
+            <div class="info">
+                <h3>기본정보</h3>
+                <table>
+                    <tr>
+                        <td>점멸기LS</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>
+                            Serial No.
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>설치형태</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">건물옥상</option>
+                                <option value="">건물외벽</option>
+                            </select>
+                        </td>
+                        <td>점멸기 타입</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">양방향WS</option>
+                                <option value="">타이머TS</option>
+                                <option value="">연접YS</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>점멸기종류</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>등정보</td>
+                        <td>
+                            <div class="tw_select">
+                                <select name="" id="">
+                                    <option value="">LED</option>
+                                </select>
+                                <select name="" id="">
+                                    <option value="">100</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>전주번호</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>변대주번호</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>설치일자</td>
+                        <td><input type="text"></td>
+                        <td>설치 위치</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>위치정보</td>
+                        <td>
+                            <div class="tw_input">
+                                <input type="text">
+                                <input type="text">
+                            </div>
+                        </td>
+                        <td>한전고객번호</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>새주소</td>
+                        <td>
+                            <input type="text">
+                        </td>
+                        <td>설치주소</td>
+                        <td>신서면  도신리  285-158</td>
+                    </tr>
+                    <tr>
+                        <td>비고</td>
+                        <td rowspan="3"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="datainfo">
+                <h3>운용 데이터 정보</h3>
+                <table>
+                    <tr>
+                        <td>점등편차</td>
+                        <td>
+                            <div class="tw_select">
+                                <select name="" id="">
+                                    <option value="">-</option>
+                                </select><select name="" id="">
+                                    <option value="">15</option>
+                                </select>
+                            </div>
+                            <span>분</span>
+                        </td>
+                        <td>
+                            소등편차
+                        </td>
+                        <td>
+                            <div class="tw_select">
+                                <select name="" id="">
+                                    <option value="">+</option>
+                                </select><select name="" id="">
+                                    <option value="">15</option>
+                                </select>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>심야소등기간</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">건물옥상</option>
+                                <option value="">건물외벽</option>
+                            </select>
+                        </td>
+                        <td>강제지속시간</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">양방향WS</option>
+                                <option value="">타이머TS</option>
+                                <option value="">연접YS</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>심야소등시간</td>
+                        <td rowspan="3">
+                            <div>
+                                <select name="" id="">
+                                    <option value="">XX</option>
+                                </select>
+                                <span>시</span>
+                                <select name="" id="">
+                                    <option value="">00</option>
+                                </select>
+                                <span>분</span>
+                            </div>
+                            <span>~</span>
+                            <div>
+                                <select name="" id="">
+                                    <option value="">XX</option>
+                                </select>
+                                <span>시</span>
+                                <select name="" id="">
+                                    <option value="">00</option>
+                                </select>
+                                <span>분</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

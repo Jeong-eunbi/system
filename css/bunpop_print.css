@@ -1,0 +1,64 @@
+.print_screen {
+  width: 800px;
+  box-sizing: border-box;
+  border: 1px solid;
+  padding: 8px;
+}
+.print_screen .btn_group {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.print_screen .btn_group button {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3464ab;
+  border: none;
+  width: 80px;
+  height: 30px;
+  margin-right: 5px;
+  color: #fff;
+}
+.print_screen h2 {
+  text-align: center;
+  font-size: 25px;
+}
+.print_screen span {
+  float: right;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+.print_screen .print_wrap {
+  width: 100%;
+  clear: both;
+}
+.print_screen .print_wrap table {
+  border: 2px solid;
+  width: 100%;
+}
+.print_screen .print_wrap table tbody tr:first-child {
+  text-align: center;
+  font-weight: 400;
+}
+.print_screen .print_wrap table tbody tr td {
+  border: 1px solid;
+  padding: 4px;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: "GmarketSansLight";
+  font-weight: bold;
+  color: #2f2f2f;
+}
+.print_screen .print_wrap table tbody tr td img {
+  height: 180px;
+}
+.print_screen .print_wrap table tbody tr td.weight {
+  font-family: "GmarketSansMedium";
+}
+.print_screen .print_wrap table tbody .img_line .iframebox {
+  background-image: url(../img/map.png);
+}

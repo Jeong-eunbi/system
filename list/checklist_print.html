@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일일점검내역내역 프린트</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tabprint.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script type="text/javascript" defer src="js/index.js" ></script>
+    <script type="text/javascript" defer src="js/print.js" ></script>
+    <script type="text/javascript" defer src="js/tab.js" ></script>
+</head>
+<body onload="window.print()">
+    <div class="paper">
+        <div class="content">
+            <h2>분전함 일일 점검내역</h2>
+            <div class="tablebox">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>분전함</th>
+                            <th>현재상태</th>
+                            <th>일자</th>
+                            <th>설치주소</th>
+                            <th>설치위치</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div>
+                                    (임)북-신규04<span class="smtxt">YB123</span>
+                                </div>
+                            </td>
+                            <td>통신이상</td>
+                            <td>20220804</td>
+                            <td>북면 용대리 1788</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>
+                                    1223344<span class="smtxt">YB93</span><a href="#" class="photobtn"><i class="fa-solid fa-image"></i></a>
+                                </div>
+                            </td>
+                            <td>통신이상</td>
+                            <td>20220804</td>
+                            <td>수정구 신흥동</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div>1223344<span class="smtxt">YB93</span><a href="#" class="photobtn"><i class="fa-solid fa-image"></i></a></div>
+                            </td>
+                            <td>통신이상</td>
+                            <td>20220804</td>
+                            <td>수정구 신흥동</td>
+                            <td></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+
+</body>

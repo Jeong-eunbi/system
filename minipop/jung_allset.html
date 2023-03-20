@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>분전함 전체설정</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/bun_control.css">
+        <link rel="stylesheet" href="../css/jung_pop.css">
+        <link rel="stylesheet" href="../css/popupre.css">
+    
+        <!-- fontawesome -->
+        <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+    
+        <!-- 제이쿼리-->
+        <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+        <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+        <!-- 제이쿼리ui -->
+        <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+        <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+        <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    </head>
+<body>
+    <!-- 중계기 전체설정 팝업박스-->
+    <div class="jung_set">
+        <table class="jungsetting">
+            <tbody>
+                <tr>
+                    <td>접속간격</td>
+                    <td>
+                        <select name="">
+                            <option value="">선택하세요</option>
+                            <option value="">강제소등</option>
+                        </select>
+                        <span>분</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>점검간격</td>
+                    <td>
+                        <select name="">
+                            <option value="">선택하세요</option>
+                            <option value="">강제소등</option>
+                        </select>
+                        <span>분</span>
+                 
+                    </td>
+                </tr>
+                <tr>
+                    <td>점등편차</td>
+                    <td>
+                        <div class="term">
+                            <select name="" class="wordselect">
+                                <option value="">선택</option>
+                                <option value="">+</option>
+                                <option value="">-</option>
+                            </select>
+                            <select name="" class="wordselect">
+                                <option value="">선택</option>
+                                <option value="">00</option>
+                                <option value="">01</option>
+                            </select>
+                            <span>분</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>소등편차</td>
+                    <td>
+                        <div class="term">
+                            <select name="" id="">
+                                <option value="">선택</option>
+                            </select>
+                            <select name="" id="">
+                                <option value="">선택</option>
+                            </select>
+                            <span>분</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>통신체크횟수</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+                        <span>번</span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>강제지속시간</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+                        <span>번</span>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>운용모드</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>지역</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">선택</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>심야소등기간</td>
+                    <td>
+                        <div class="term">
+                            <div>
+                                <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                </select>
+                                <span>월</span>
+                            </div>
+                            <span class="margin">~</span>
+                            <div>
+                                <select name="" id="">
+                                    <option value="">선택</option>
+                                    <option value="">01</option>
+                                </select>
+                                <span>월</span>
+                            </div>
+                        </div>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>심야소등시간</td>
+                    <td>
+                        <div>
+                            <input type="text">
+                            <span>분</span>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="gsdata">
+            <div class="index">#GS 데이터 처리 설정</div>
+            <ul class="check_wrap">
+                <li>
+                    <input type="checkbox" name="" id="gs1"><label for="gs1">점소등상태</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="gs2"><label for="gs2">강제제어여부</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="gs3"><label for="gs3">등고장여부</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="gs4"><label for="gs4">누전상태변화</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="gs5"><label for="gs5">이상점등여부</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="gs6"><label for="gs6">정전여부</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="" id="gs7"><label for="gs7">통신이상여부</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="btn_group">
+            <div class="left">
+                <div><a href="">설정</a></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

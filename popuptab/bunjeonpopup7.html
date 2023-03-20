@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+  
+    <script type="text/javascript" defer src="../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/main.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/oldbun.js" ></script>
+    <script type="text/javascript" defer src="../js/pump.js" ></script>
+    <script type="text/javascript" defer src="../js/doro.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab7 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분전함</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>그래프</a>
+                    </li>
+                    <li class="lock">
+                        <a href="#"><i class="fas fa-lock"></i>도어락 관리</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <div>
+                <ul class="nav" id="nav">
+                    <li><a href="bunjeonpopup1.html" class="text">기본정보</a></li>
+                    <li><a href="bunjeonpopup2.html" class="text">상태정보</a></li>
+                    <li><a href="bunjeonpopup3.html" class="text">운용정보</a></li>
+                    <li><a href="bunjeonpopup4.html" class="text">분기정보</a></li>
+                    <li><a href="bunjeonpopup5.html" class="text">가로등</a></li>
+                    <li><a href="bunjeonpopup6.html" class="text">PLC</a></li>
+                    <li><a href="bunjeonpopup7.html" class="text_active">감시내역</a></li>
+                    <li><a href="bunjeonpopup8.html" class="text">보수일지</a></li>
+                </ul>
+                <div class="top-right-btn">
+                    <div class="datebox">
+                        <input type="date" name="" id="">
+                        <span>~</span>
+                        <input type="date" name="" id="">
+                    </div>
+                    <div class="event2">
+                        <a href="javascript:eventclick();" class="event_text2 eventbtn">이벤트선택<i class="fas fa-mouse-pointer"></i></a>
+                        <div class="event_wrap2 eventpopup">
+                            <div class="event_select">
+                                <div class="off2"><a href="#"><i class="far fa-times-circle"></i></a></div>
+                                <ul>
+                                    <li><input type="checkbox" name="" id="event1"><label for="event1">이벤트 전체</label></li>
+                                    <li><input type="checkbox" name="" id="event2"><label for="event2">램프고장</label></li>
+                                    <li><input type="checkbox" name="" id="event3"><label for="event3">안정기 고장</label></li>
+                                    <li><input type="checkbox" name="" id="event4"><label for="event4">누전발생</label></li>
+                                    <li><input type="checkbox" name="" id="event5"><label for="event5">강제</label></li>
+                                    <li><input type="checkbox" name="" id="event6"><label for="event6">깜빡거림</label></li>
+                                    <li><input type="checkbox" name="" id="event7"><label for="event7">이상점등</label></li>
+                                    <li><input type="checkbox" name="" id="event8"><label for="event8">통신이상</label></li>
+                                    <li><input type="checkbox" name="" id="event9"><label for="event9">Dimmer</label></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+                <div class="table_wrapper">
+                    <table class="table1">
+                        <thead>
+                            <tr>
+                                <th>날짜</th>
+                                <th>시간</th>
+                                <th>내용</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:48</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트<span class="eventpop" onclick="bun_event()">정상소등</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:45</td>
+                                <td>Dimmer 설정</td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:48</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트:<span class="eventpop" onclick="bun_event()">정상소등</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.04.04</td>
+                                <td>07:15:47</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트:<span class="eventpop" onclick="bun_event()">정상소등</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:48</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트:<span class="eventpop" onclick="bun_event()">정상소등</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>07:15:47</td>
+                                <td><i class="fa-solid fa-database"></i>점소등 상태변경:<span class="eventpop" onclick="bun_event()">정상소등</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:48</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트:<span class="eventpop" onclick="bun_event()">정상 ON:AB OFF:CD</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:48</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트:<span class="eventpop" onclick="bun_event()">정상 ON:AB OFF:CD</span></td>
+                            </tr>
+                            <tr>
+                                <td>2022.02.11</td>
+                                <td>10:28:48</td>
+                                <td><i class="fa-solid fa-database"></i>이벤트:<span class="eventpop" onclick="bun_event()">정상 ON:AB OFF:CD</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+              
+    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

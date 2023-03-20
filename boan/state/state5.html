@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보안등 타입별현황 페이지</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/statestyle.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/print.js" ></script>
+    <script type="text/javascript" defer src="../../js/buga.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="jungpopbtn" onclick="jungpopbtn()">중계기</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="jumpopbtn()">점멸기</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../boan/selectcontrol.html">중계기선택제어</a></li>
+                                    <li><a href="#a" onclick="jung_show()">중계기전체제어</a></li>
+                                    <li><a href="../boan/iotcontrol.html">IoT점멸기선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="data2/jungset.html">중계기선택설정</a></li>
+                                    <li><a href="#a" onclick="j_setbox()">중계기전체설정</a></li>
+                                    <li><a href="../data2/iotselect.html">IoT점멸기선택설정</a></li>
+                                    <li><a href="../data2/datalist.html">점멸기운용데이터현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/iotgam.html">IoT감시내역</a></li>
+                                    <li><a href="../list/iotmyeong.html">IoT명령내역</a></li>
+                                    <li><a href="../list/rfgam.html">RF감시내역</a></li>
+                                    <li class="on"><a href="../list/rfmyeong.html">RF명령내역</a></li>
+                                    <li><a href="../list/boanbosu.html">보수일지</a></li>
+                                    <li><a href="../list/junglist.html">중계기현황</a></li>
+                                    <li><a href="../list/jumlist.html">점멸기현황</a></li>
+                                    <li><a href="../list/jumdelete.html">점멸기삭제내역</a></li>
+                                    <li><a href="../list/blue.html">블루투스</a></li>
+                                </ul>                     
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="smsset/message1.html">수신자관리</a></li>
+                                    <li><a href="../sms/messageset.html">메시지관리</a></li>
+                                    <li><a href="../sms/messagecont.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>              
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="state/state1.html">통계자료</a></li>
+                                    <li><a href="state/onofftime1.html">점소등시간</a></li>
+                                    <li><a href="state/local2.html">지역설정</a></li>
+                                    <li><a href="state/lamp2.html">램프설정</a></li>
+                                </ul>             
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <!-- 중계기 보안등 현황 팝업창 -->
+            <div id="state_pop5" class="state_pop">
+                <div class="title">
+                    <h2>중계기별 보안등 현황</h2>
+                    <a href="#a"><i class="far fa-window-close"></i></a>
+                </div>  
+                <iframe src="../../minipop/statelist_pop5.html" scrolling="no"></iframe>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap">
+                    <div class="leftbtn">
+                        <div class="btn_bg"><a href="">엑셀저장</a></div>
+                        <div class="btn_bg print"><a href="#a" onclick="state5()">프린트</a></div>
+                        <div class="btn_bg"><a href="">그래프</a></div>
+                    </div>
+                    <div class="rightbtn select_group">
+                        <span>통계자료선택</span>
+                        <select onchange="window.open(value,'_self');">
+                            <option value="state1.html">보안등 타입별 현황</option>
+                            <option value="state2.html">보안등 등종류, 용량 현황</option>
+                            <option value="state3.html">보안등 등종류, 지역별 현황</option>
+                            <option value="state4.html">보안등 설치형태별 현황</option>
+                            <option value="state5.html" selected>중계기별 보안등 현황</option>
+                            <option value="state6.html">중계기 지역별 현황</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div id="tablewrap">
+                        <table class="boanlist">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>지역</th>
+                                    <th>양방향 보안등 수</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="thbg">454</td>
+                                    <td>110</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td class="thbg">WM211 모뎀</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="thbg">신형 중계기 테스트</td>
+                                    <td>3</td>
+                                    <td>1</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="thbg">합계</td>
+                                    <td>3</td>
+                                    <td>1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

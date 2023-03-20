@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/bunsu.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+
+
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+
+    <div class="bun_tab3 bun bunsu3">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#a" onclick="linkbtn()"><i class="fas fa-lightbulb"></i>경관조명 연결</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="between">
+            <ul class="nav">
+                <li><a href="../popuptab/bunsu1.html" class="text">기본정보</a></li>
+                <li><a href="../popuptab/bunsu2.html" class="text">상태정보</a></li>
+                <li><a href="../popuptab/bunsu3.html" class="text_active">운용데이터</a></li>
+                <li><a href="../popuptab/bunsu4.html" class="text">개별감시내역</a></li>
+            </ul>
+            <div class="table_wrapper">
+                <table class="table1">
+                    <tbody>
+                        <tr>
+                            <td>접속간격</td>
+                            <td>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">60</option>
+                                    </select>
+                                    <span>분</span>
+                                </div>
+                            </td>
+                            <td>수동유지</td>
+                            <td>
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">무한</option>
+                                        <option value="">00</option>
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                    </select>
+                                    <span>분</span>
+                                </div>
+                            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>측정시간</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">00</option>
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                </select>
+                                <span>분</span>
+                            </td>
+                            <td>운영모드</td>
+                            <td>
+                                <select name="" id="">
+                                    <option value="">단독</option>
+                                    <option value="">접점</option>
+                                    <option value="">통신</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">운영기간</td>
+                            <td class="full">
+                                <div class="flex">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">01</option>
+                                        </select>
+                                        <span>월</span>
+                                        <select name="" id="">
+                                            <option value="">01</option>
+                                        </select>
+                                        <span>일</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">12</option>
+                                        </select>
+                                        <span>월</span>
+                                        <select name="" id="">
+                                            <option value="">31</option>
+                                        </select>
+                                        <span>일</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="day-time">
+                    <table class="time">
+                        <caption><img src="../img/time.png" alt="시간아이콘">시간</caption>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>시 분 : 시 분</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td >
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>A1</td>
+                                <td>
+                                    <div class="timeselect">
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                        <span>~</span>
+                                        <div>
+                                            <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">11</option>
+                                            </select>
+                                            <span>:</span>
+                                            <select name="" id="">
+                                                <option value="">00</option>
+                                                <option value="">01</option>
+                                                <option value="">02</option>
+                                                <option value="">03</option>
+                                                <option value="">04</option>
+                                                <option value="">05</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                        </tbody>
+                    </table>
+                    <table class="day">
+                        <caption><img src="../img/day.png" alt="요일아이콘">요일</caption>
+                        <thead>
+                            <tr>
+                                <th>전체</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                                <th>일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal1"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal1"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" class="chktotal"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                                <td><input type="checkbox" class="day"></td>
+                            </tr>
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>
+                
+            </div>
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>   
+        </div>
+
+    </div>
+
+</body>

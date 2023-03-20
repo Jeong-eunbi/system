@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펌프장 메시지관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/bun_control.css">
+    <link rel="stylesheet" href="../../css/sms.css">
+    <link rel="stylesheet" href="../../css/oldbunsu.css">
+    <link rel="stylesheet" href="../../css/pump.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" onclick="pump_pop()">펌프장</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../pcontrol/pumpsel.html">펌프장선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../plist/pgamsi_list.html">감시내역보기</a></li>
+                                    <li><a href="../plist/pmyeong.html">명령내역보기</a></li>
+                                </ul>               
+                            </li>
+                            <li class="subbar">
+                                <a href="#a">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../psmsset/psusinset.html">수신자관리</a></li>
+                                    <li class="on"><a href="../psmsset/psms_set.html">메시지관리</a></li>
+                                    <li><a href="../psmsset/psms_content.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#a">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../accountset/account1.html">사용자관리</a></li>
+                                    <li><a href="../accountset/account2.html">접속자관리</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="bunsubtn pumplist">
+                    <div class="search_bg">
+                        <h3>펌프장</h3>
+                        <select name="" id="">
+                            <option value="">펌프장선택</option>
+                            <option value="">112233</option>
+                        </select>                        
+                    </div>
+                    <ul class="custom_scroll">
+                        <li><a href="" class="active">총감시기<span>(2건)</span></a></li>
+                        <li><a href="">경보<span>(0건)</span></a></li>
+                        <li><a href="">통신이상(감)<span>(0건)</span></a></li>
+                        <li><a href="">총펌프장<span>(0건)</span></a></li>
+                        <li><a href="">펌프가동<span>(1건)</span></a></li>
+                        <li><a href="">통신이상<span>(0건)</span></a></li>
+                        <li><a href="">정전<span>(0건)</span></a></li>
+                        <li><a href="">위험수위<span>(0건)</span></a></li>
+                        <li><a href="">고수위알람<span>(0건)</span></a></li>
+                    </ul>
+                    <div class="in_selbox">
+                        <select name="" id="">
+                            <option value="">분류선택</option>
+                            <option value="">이름</option>
+                            <option value="">설치위치</option>
+                        </select>
+                        <input type="text">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                    </div>
+                </div>
+                <div class="scroll_wrap sms_scroll">
+                    <div class="messagebox">
+                        <div class="susin">
+                            <div class="boxtitle">
+                                <span>수신자</span>
+                                <input type="text">
+                            </div>
+                            <ul class="namelist">
+                                <li><a href="">동두천시</a></li>
+                                <li><a href="">펌프</a></li>
+                            </ul>
+                        </div>
+                        <div class="messagesort">
+                            <div class="boxtitle">
+                                <span>메시지종류 - 내용</span>
+                            </div>
+                            <div class="setlist bunsu_mbox">
+                                <div>
+                                    <ul>
+                                        <li><label for="selectall"><input type="checkbox" name="selectall" id="selectall" onclick="selectAll(this)"/>전체선택</label></li>
+                                        <li><label for="select1"><input type="checkbox" name="selectlist" id="select1" onclick="checkSelectAll()">펌프가동<span>이름:X, Y펌프가동, 주소:A, 설치위치:Z<br>(분기별 전력값 이용)</span></label></li>
+                                        <li><label for="select2"><input type="checkbox" name="selectlist" id="select2" onclick="checkSelectAll()">펌프정지<span>이름:X, Y펌프정지, 주소:A, 설치위치:Z<br>(분기별 전력값 이용)</span></label></li>
+                                        <li><label for="select1"><input type="checkbox" name="selectlist" id="select1" onclick="checkSelectAll()">정전<span>정전 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                        <li><label for="select8"><input type="checkbox" name="selectlist" id="select8" onclick="checkSelectAll()">정전복귀<span>정전복귀 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                        <li><label for="select9"><input type="checkbox" name="selectlist" id="select9" onclick="checkSelectAll()">차단<span>Y분기차단 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                        <li><label for="select10"><input type="checkbox" name="selectlist" id="select10" onclick="checkSelectAll()">이상운전<span>이상운전 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                    </ul>
+                                    <div>
+                                        <span class="message_sort pump_sms">
+                                            <펌프감시기가 4접점일 경우 적용가능한 메시지>
+                                        </span>
+                                        <ul>
+                                            <li><label for="select1"><input type="checkbox" name="selectlist" id="select1" onclick="checkSelectAll()">고수위경보<span>고수위경보 이름:X, Y펌프가동, 주소:A, 설치위치:Z</span></label></li>
+                                            <li><label for="select2"><input type="checkbox" name="selectlist" id="select2" onclick="checkSelectAll()">고수위해제<span>고수위해제 이름:X, Y펌프정지, 주소:A, 설치위치:Z</span></label></li>
+                                            <li><label for="select1"><input type="checkbox" name="selectlist" id="select1" onclick="checkSelectAll()">펌프가동<span>이름:X, Y펌프가동, 주소:A, 설치위치:Z<br>(접정상태 이용)</span></label></li>
+                                            <li><label for="select8"><input type="checkbox" name="selectlist" id="select8" onclick="checkSelectAll()">펌프정지<span>정전복귀 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                            <li><label for="select9"><input type="checkbox" name="selectlist" id="select9" onclick="checkSelectAll()">차단<span>이름:X, Y펌프가동, 주소:A, 설치위치:Z<br>(접정상태 이용)</span></label></li>
+                                        </ul>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <span class="message_sort pump_sms">
+                                        <수위감시기가 설치되어 있을 경우 적용가능한 메시지>
+                                    </span>
+                                    <ul>
+                                        <li><label for="select7"><input type="checkbox" name="selectlist" id="select7" onclick="checkSelectAll()">75%수위<span>75%수위 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                        <li><label for="select8"><input type="checkbox" name="selectlist" id="select8" onclick="checkSelectAll()">75%수위<span>75%수위해제 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                        <li><label for="select9"><input type="checkbox" name="selectlist" id="select9" onclick="checkSelectAll()">90%수위<span>90%수위 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                        <li><label for="select10"><input type="checkbox" name="selectlist" id="select10" onclick="checkSelectAll()">90%수위해제<span>90%수위해제 이름:X, 주소:A, 설치위치:Z</span></label></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

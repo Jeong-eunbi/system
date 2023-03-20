@@ -1,0 +1,83 @@
+@import "./var";
+
+
+.cont{
+    .contbox{
+        .scroll_wrap{
+            #talbewrap{
+                table#dengtype{
+                    tbody{
+                        tr{
+                            td{
+                                &:first-child{
+                                    width: 10%;
+                                }
+                            }
+                        }
+                    }
+                }
+                // 보안등 통계
+                table#botype{
+                    tbody{
+                        tr{
+                            td{
+                                &:not(td:first-child,td:last-child){
+                                    cursor: pointer;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                table.amount{
+                    .devide2{
+                        width: calc(22% / 2);
+                    }
+                    thead{
+                        tr{
+                            &:first-child{
+                                th{
+                                    &.widthfix{
+                                        width: 10%;
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                th{
+                                    &:not(.devide2, .widthfix){
+                                        width: calc(20% / 5);
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                table.settype{
+                    thead{
+                        tr{
+                            th{
+                                width: calc(100% / 10);
+                            }
+                        }
+                    }
+                }
+                table.boanlist{
+                    thead{
+                        tr{
+                            th{
+                                width: 40%;
+                                &:first-child{
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}
+

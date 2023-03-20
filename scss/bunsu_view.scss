@@ -1,0 +1,105 @@
+@import "./_var.scss";
+.bunsuevent{
+    @include full;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    
+    h2{
+        text-align: center;
+        color: #343434;
+        border-top: 2px solid #343434;
+        border-bottom: 1px solid #cac8c7;
+        padding: .5rem;
+        font-size: 21px;
+        font-weight: bold;
+        box-sizing: border-box;
+    }
+    span.small_title{
+        display: block;
+        font-size: 18px;
+        margin: 1rem 0;
+        color: #002f31;
+        i{
+            font-size: 10px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    }
+    .scroll{
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 3px;
+            height: 3px; 
+            background-color: rgba(0,0,0,0.15);
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #aaa;
+        }
+        table{
+            width: 100%;
+            border: $table_border;
+            border-top: 2px solid #006940;
+            thead{
+                tr{
+                    th{
+                        &.event_date{
+                            background-color:#f2f4f3;
+                            text-align: center;
+                            height: 35px;
+                            line-height: 35px;
+                            color: #002f31;
+                            border-bottom: 1px solid #cacdd4;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom: $table_border;
+                    &:nth-child(odd){
+                        td{
+                            height: 30px;
+                            background-color: #fbfbfb;
+                            color: #666;
+                        }
+                    }   
+                    &:nth-child(even){
+                        td{
+                            height: 50px;
+                            font-size: 15px;
+                            .wat{
+                                @include flex;
+                                flex-direction: column;
+                                @include center-c;
+                                $color: #d7d7d7;
+                                span{
+                                    display: block;
+                                    height: 14px;
+                                    font-size: 14px;
+                                    color: #545454;
+                                }
+                                span.font_color{
+                                    color: #8e8d8d;
+                                }
+                            }
+                        }
+                        
+                    }
+                    td{
+                        padding: 8px 0;
+                        text-align: center;
+                        width: calc(100% / 8);
+                        border-right: $table_border;
+                        box-sizing: border-box;
+                        &:last-child{
+                            border-right: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+   
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로등 이벤트내역 페이지</title>
+    
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tabprint.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <script type="text/javascript" defer src="js/index.js" ></script>
+    <script type="text/javascript" defer src="js/print.js" ></script>
+    <script type="text/javascript" defer src="js/tab.js" ></script>
+</head>
+<body onload="window.print()">
+    <div class="paper">
+        <div class="content">
+            <h2>가로등 이벤트 내역</h2>
+            <ul class="event">
+                <li>
+                    <b>이벤트 선택:</b>
+                    MG차단, 이상점등, 정전, 분기차단, 누전발생, 문열림, 강제
+                </li>
+                <li>
+                    <b>일시:</b>
+                    2023.01.12 ~ 2023.01.12
+                </li>
+            </ul>
+            <div class="tablebox">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>분전함</th>
+                            <th>이벤트내용</th>
+                            <th>일시</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="cursor" onclick="infopop1()">catm1_test<span class="smtxt">(YB80)</span></td>
+                            <td>이벤트 <span class="eventcont">분기차단 : 4</span></td>
+                            <td>2022.08.03 | 15:43:03</td>
+                        </tr>
+                        <tr>
+                            <td class="cursor" onclick="infopop1()">신형 GMC 전력값TEST<span class="smtxt">(YB185)</span></td>
+                            <td>이벤트</td>
+                            <td>2022.08.03 | 15:32:01</td>
+                        </tr>
+                        <tr>
+                            <td class="cursor" onclick="infopop1()">catm1_test<span class="smtxt">(YB80)</span></td>
+                            <td>점소등 상태변경 <span class="eventcont">정상소등</span></td>
+                            <td>2022.08.03 | 05:24:01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

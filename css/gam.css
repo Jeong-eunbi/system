@@ -1,0 +1,173 @@
+.wrapper .cont .eventgamsi_pop {
+  display: none;
+  width: 450px;
+  height: 600px;
+  position: absolute;
+  background-color: #fff;
+  border: 3px solid #d2d2d2;
+  box-shadow: 6px 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.wrapper .cont .eventgamsi_pop > iframe {
+  height: calc(100% - 35px);
+}
+.wrapper .cont .btnwrap .rightbtn {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.wrapper .cont .btnwrap .rightbtn > div:first-child {
+  margin-left: 0;
+}
+.wrapper .cont .btnwrap .rightbtn .bun_sel select {
+  padding: 6px 2.5rem 6px 4px;
+}
+.wrapper .cont .btnwrap .rightbtn input {
+  border: 1px solid #aaa;
+  height: 30px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wrapper .cont .btnwrap .rightbtn .search {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.wrapper .cont .btnwrap .rightbtn .search span {
+  padding-top: 0.2rem;
+  font-size: 15px;
+  margin: 0 2px;
+}
+.wrapper .cont .btnwrap .rightbtn .flex {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick > a {
+  width: 120px;
+  height: 30px;
+  line-height: 33px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #aaa;
+  color: #02652f;
+  font-weight: bold;
+  padding: 0 4px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick > a i {
+  font-size: 14px;
+  color: #02652f;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  top: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  z-index: 5;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.6);
+  transform: translate3d(0, 0, 0);
+  display: none;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select .off2 {
+  order: 2;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select ul {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select ul li {
+  font-size: 14px;
+  line-height: 1.8;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select ul li input {
+  display: none;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select ul li input + label {
+  cursor: pointer;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select ul li input + label::before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  border: 1px solid #cacdd4;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select ul li input:checked + label::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  color: #004287;
+  background-color: #f4f8fc;
+  border-color: #a1b5c9;
+  font-size: 13px;
+  text-align: center;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select .off {
+  order: 2;
+}
+.wrapper .cont .btnwrap .rightbtn .event_box .eventclick .event_select .off i {
+  font-size: 18px;
+  color: #666;
+}
+.wrapper .cont .btnwrap .rightbtn button {
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  padding: 0 8px;
+}
+.wrapper .cont .btnwrap .finder {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper .cont .btnwrap .r_move {
+  width: 100%;
+  justify-content: flex-end;
+}
+.wrapper .cont .btnwrap .twogroup {
+  width: auto;
+}
+.wrapper .cont table.gamsi tr td {
+  width: 33.3333333333% !important;
+}
+.wrapper .cont table.gamsi tr td:nth-child(1) {
+  cursor: pointer;
+}
+.wrapper .cont table.gamsi tr td:nth-child(1):hover {
+  background-color: #f8f8f8;
+}
+.wrapper .cont table.gamsi tr td span.eventcont {
+  color: #02652f;
+  cursor: pointer;
+}
+
+.write {
+  position: absolute;
+}

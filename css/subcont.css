@@ -1,0 +1,650 @@
+.wrapper .cont {
+  width: 100%;
+  height: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox {
+  width: 81.5%;
+  height: 100%;
+}
+.wrapper .cont .contbox span.smtxt {
+  font-size: 14px;
+  margin-left: 8px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox a.photobtn {
+  color: #8cc055;
+  margin-left: 8px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .btnwrap select, .wrapper .cont .contbox .detailpop select {
+  padding: 6px 1.5rem 6px 4px;
+  margin: 0 2px;
+  color: #555;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #aaa;
+  height: 30px;
+  min-width: 100px;
+  background: url(../img/selectborder.png) no-repeat right top/contain #fff;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .flex {
+  display: flex;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .flex span {
+  font-family: "GmarketSansLight";
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .flex span.data-gap {
+  margin: 0 2px;
+}
+.wrapper .cont .contbox .boanbtn_group .rightbtn select {
+  display: block;
+}
+.wrapper .cont .contbox .btnwrap {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  box-sizing: border-box;
+  background-color: #e7ebee;
+  flex-wrap: wrap;
+}
+.wrapper .cont .contbox .btnwrap > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.wrapper .cont .contbox .btnwrap > div > div, .wrapper .cont .contbox .btnwrap > div select {
+  border-radius: 4px;
+  cursor: pointer;
+}
+.wrapper .cont .contbox .btnwrap > div div span.b_icon {
+  color: #3162c7;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .btnwrap > div div span.b_icon i {
+  margin-right: 8px;
+  color: #3162c7;
+}
+.wrapper .cont .contbox .btnwrap > div div span.b_icon:last-child {
+  color: #189f00;
+}
+.wrapper .cont .contbox .btnwrap > div div span.b_icon:last-child i {
+  color: #189f00;
+  transform: rotate(180deg);
+}
+.wrapper .cont .contbox .btnwrap .btn_bg {
+  background-color: #3d3d3d;
+  margin-right: 8px;
+  padding: 0 8px;
+  height: 30px;
+  line-height: 30px;
+}
+.wrapper .cont .contbox .btnwrap .btn_bg a {
+  display: block;
+  padding-top: 2px;
+  color: #fff;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .search_box {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .search_box span {
+  margin: 0 4px;
+  padding-top: 4px;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .end {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .btn_bg {
+  margin-left: 8px;
+}
+.wrapper .cont .contbox .btnwrap .rightbtn .detail_btn, .wrapper .cont .contbox .btnwrap .rightbtn .detail_btn2 {
+  background-color: #4b4b4b;
+  display: none;
+}
+.wrapper .cont .contbox .detailpop {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #eee;
+  box-shadow: 0px 3px 1px #ddd;
+  width: 300px;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .detailpop .poptitle {
+  width: 100%;
+  padding: 8px;
+  background-color: #02652f;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .detailpop .poptitle h3 {
+  color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .detailpop .poptitle a i {
+  color: #fff;
+}
+.wrapper .cont .contbox .detailpop .border {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .detailpop .border span {
+  display: block;
+  margin: 8px 0;
+  color: #595959;
+  font-size: 15px;
+}
+.wrapper .cont .contbox .detailpop .border ul {
+  border-top: 2px solid #265c4e;
+  padding: 0 8px 8px 0;
+}
+.wrapper .cont .contbox .detailpop .border ul li {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px;
+}
+.wrapper .cont .contbox .detailpop .border ul li select {
+  border-radius: 0;
+}
+.wrapper .cont .contbox .detailpop .border ul li > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.wrapper .cont .contbox .detailpop .border ul li > div span {
+  margin: 0 4px;
+}
+.wrapper .cont .contbox .detailpop .border ul li input {
+  border: none;
+  height: 30px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .detailpop .border .group_sel {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.wrapper .cont .contbox .detailpop .border > div .search_box {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.wrapper .cont .contbox .detailpop button {
+  float: right;
+  padding: 3px 12px;
+  margin: 6px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap {
+  height: 70vh;
+  margin: 2rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+.wrapper .cont .contbox .scroll_wrap .txt {
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-family: "GmarketSansLight";
+  font-weight: 600;
+}
+.wrapper .cont .contbox .scroll_wrap .txt > span {
+  color: #116657;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap {
+  height: calc(100% - 64px);
+  overflow: auto;
+  border-top: 2px solid #006b54;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table {
+  border: 1px solid #d8d8d8;
+  border-top: none;
+  width: 100%;
+  position: relative;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table input[type=checkbox] {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table thead {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  max-width: 100%;
+  white-space: nowrap;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table thead tr th {
+  cursor: pointer;
+  padding: 18px 4px;
+  background-color: #f2f8f6;
+  border: 1px solid #d8d8d8;
+  color: #333;
+  border-top: none;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table thead tr th:first-child {
+  border-left: none;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table thead tr .w15 {
+  width: 15%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table thead tr .w30 {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr {
+  text-align: center;
+  transition: 0.5;
+  border-bottom: 1px solid #d8d8d8;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr:last-child td {
+  border-bottom: none;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr td {
+  word-break: keep-all;
+  color: #666;
+  border-left: 1px solid #d8d8d8;
+  font-family: "GmarketSansLight";
+  font-weight: bold;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr td > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr td.cursor:hover {
+  background-color: #ebf5df;
+  background-color: #f8f8f8;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr td.chk_w {
+  width: 5%;
+  min-width: 25px;
+  border-left: none;
+  border-right: 1px solid #d8d8d8;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table tbody tr td.thbg {
+  background-color: #f2f8f6;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table th, .wrapper .cont .contbox .scroll_wrap #tablewrap table td {
+  padding: 18px 0;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table th .col, .wrapper .cont .contbox .scroll_wrap #tablewrap table td .col {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table th .col > span, .wrapper .cont .contbox .scroll_wrap #tablewrap table td .col > span {
+  padding: 8px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table th .col > span:first-child::before, .wrapper .cont .contbox .scroll_wrap #tablewrap table td .col > span:first-child::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  width: 3px;
+  height: 3px;
+  background-color: #000;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table td {
+  padding: 12px 0;
+  font-size: 16px;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table td.type {
+  background-image: url(../img/A11N.gif);
+  background-repeat: no-repeat;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table td.cursor {
+  cursor: pointer;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.order tbody tr td {
+  width: 30%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.order tbody tr td:last-child {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.order tbody tr td:nth-child(2) {
+  color: #02652f;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.jeon tbody tr td {
+  width: 7.5%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.jeon tbody tr td:first-child, .wrapper .cont .contbox .scroll_wrap #tablewrap table.jeon tbody tr td:nth-child(2) {
+  width: 20%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.daychk tbody tr td {
+  width: 20%;
+  padding: 15px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bunset tbody tr td {
+  width: 7.4285714286%;
+  padding: 15px 8px;
+  box-sizing: border-box;
+  word-break: keep-all;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bunset tbody tr td.wide {
+  width: 15%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bunset tbody tr td.wide .mobile {
+  color: #0C4A3C;
+  background-color: #f6f8f8;
+  padding: 4px;
+  margin-right: 4px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.dengset tbody tr td {
+  width: 5%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.dengset tbody tr td.wide {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td span.erase, .wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td span.restore, .wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td span.add {
+  background-color: #942020;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin: 0 4px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td span.restore {
+  background-color: #265c4e;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td span.add {
+  background-color: #1b263c;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td button {
+  border: none;
+  background-color: transparent;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td button.restorebtn {
+  color: #265c4e;
+  border: 1px solid #265c4e;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.deletetable tbody tr td button.viewpop {
+  color: #f05022;
+  border: 1px solid #f05022;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.tong thead tr:nth-child(2) th {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.tong thead tr:nth-child(2).w30 {
+  width: 30%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.tong thead tr:nth-child(2).title_w {
+  width: 12.8571428571%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.tong tbody tr td:first-child {
+  width: 10%;
+  background-color: #f2f8f6;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.tong6 thead tr:nth-child(2) th {
+  width: auto;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bosu thead tr:nth-child(2) th {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bosu thead tr:nth-child(2) th:first-child {
+  width: 5%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth thead tr th.bltitle1 {
+  width: 25%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth thead tr th.bltitle2 {
+  width: 20%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth thead tr th.bltitle3 {
+  width: 35%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth thead tr th.bltitle4 {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth thead tr th.bltitle5 {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td.state_wrap {
+  width: 10%;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td.send {
+  color: #3162c7;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td.reply i {
+  color: #189f00;
+  transform: rotate(180deg);
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td ul {
+  width: 50%;
+  min-width: 320px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: left;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td ul li {
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.3;
+  font-size: 16px;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td ul li span {
+  font-size: 18px;
+  color: #3a3a3a;
+  margin-right: 8px;
+}
+.wrapper .cont .contbox .scroll_wrap #tablewrap table.bluetooth tbody tr td ul li span::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  left: 0;
+  top: 10%;
+  border-radius: 50%;
+  background-color: #006b54;
+}
+
+.qickmenu {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  transition: all 0.5s;
+  background-color: #fff;
+  z-index: 5;
+}
+.qickmenu #devidebox {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(30, 57, 50, 0.2392156863);
+  box-sizing: border-box;
+}
+.qickmenu #devidebox #menulist {
+  width: 100%;
+}
+.qickmenu #devidebox #menulist > div {
+  text-align: center;
+  padding: 18px 24px;
+  background-color: #1e3932;
+  box-sizing: border-box;
+}
+.qickmenu #devidebox #menulist > div span {
+  font-size: 20px;
+  color: #fff;
+}
+.qickmenu #devidebox #menulist .submenu {
+  margin-top: 10px;
+}
+.qickmenu #devidebox #menulist .submenu > li {
+  border-top: 1px solid #dcdcdc;
+}
+.qickmenu #devidebox #menulist .submenu > li > a {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  white-space: nowrap;
+  border-right: none;
+  padding: 15px 15px;
+  font-family: "GmarketSansLight";
+  font-weight: 600;
+  font-size: 17px;
+  box-sizing: border-box;
+}
+.qickmenu #devidebox #menulist .submenu > li > a i {
+  font-size: 12px;
+}
+.qickmenu #devidebox #menulist .submenu > li ul.submenu_list {
+  display: none;
+}
+.qickmenu #devidebox #menulist .submenu li.click {
+  background-color: #1e3932;
+  color: #fff;
+}
+.qickmenu #devidebox #menulist .submenu li.click > a {
+  color: inherit;
+  position: relative;
+}
+.qickmenu #devidebox #menulist .submenu li.click > a i {
+  color: inherit;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  left: 0;
+  top: 48px;
+  box-sizing: border-box;
+  text-align: left;
+  width: 100%;
+  background-color: #fff;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list > li {
+  width: 100%;
+  position: relative;
+  padding-left: 8px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list > li:last-child {
+  border-right: none;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list > li:hover * {
+  color: #468574;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list > li > a {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "GmarketSansLight";
+  font-weight: 600;
+  white-space: nowrap;
+  position: relative;
+  color: #6a6a6a;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  background-color: #6a6a6a;
+  width: 3px;
+  height: 3px;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list .on {
+  color: #468574;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list .on a {
+  color: inherit;
+}
+.qickmenu #devidebox #menulist .submenu li.click ul.submenu_list .on i {
+  padding: 4px;
+  border-radius: 50%;
+  margin-right: 3px;
+  font-size: 14px;
+  color: #3d3d3d;
+  color: #468574;
+  box-sizing: border-box;
+}
+.qickmenu #devidebox #open {
+  position: absolute;
+  height: auto;
+  background-color: #1e3932;
+  writing-mode: vertical-lr;
+  padding: 8px;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+  right: -32px;
+  top: 45%;
+}
+.qickmenu #devidebox #open a {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: inherit;
+}
+
+.menushow {
+  left: -200px;
+}

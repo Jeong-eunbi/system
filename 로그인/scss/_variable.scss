@@ -1,0 +1,53 @@
+
+body{
+    width: 100%;
+    height: 100%;;
+}
+
+$font_sm: 7.5px;
+$white: #fff;
+
+
+@mixin font {
+    font-size: 62.5%;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+@mixin center-r {
+    -webkit-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center;
+}
+@mixin center-c {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+@mixin column{
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+@mixin between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+@mixin rotate {
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vh;
+    height: 100vw;
+
+}

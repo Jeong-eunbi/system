@@ -1,0 +1,42 @@
+@import "./var", "./popup";
+
+.deng_change{
+
+    table{
+        border-top: 2px solid #666;
+        width: 100%;
+        tr{
+            &:first-child{
+                background-color: $td_color;
+            }
+            border-bottom: 1px solid $border;
+            td{
+                text-align: center;
+                border-right: 1px solid $border;
+                &:first-child{
+                    vertical-align: middle;
+                    text-align: center;
+                    background-color: $td_color;
+                    width: 19%;
+                }
+                @include td_style($height:auto,$line:auto);
+                padding: 5px;
+                select{
+                    border: 1px solid $in_select_border;
+                }
+                &.td_color{
+                    background-color: $td_color;
+                }
+            }
+        }
+    }
+    .btn_group{
+        margin: .5rem 0;
+        @include flex;
+        justify-content: flex-end;
+        div{
+            @include button_box($bg: $white);
+            border: 1px solid $button;
+        }
+    }
+}

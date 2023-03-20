@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>중계기 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/jung_pop.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/jung.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="jungbox">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>중계기</span>
+                <select name="" id="">
+                    <option value="">신형 중계기 테스트</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="popcon_wrap">
+            <ul class="nav">
+                <li><a href="junggye1.html" class="text">기본정보</a></li>
+                <li><a href="junggye2.html" class="text">운용데이터</a></li>
+                <li><a href="junggye3.html" class="text">점멸기 LIST</a></li>
+                <li><a href="junggye4.html" class="text_active">경로 LIST</a></li>
+                <li><a href="junggye5.html" class="text">개별감시내역</a></li>
+            </ul>
+            <span class="name"> MC 00/0001/CH:2</span>
+            <div class="nav_list">
+                <div class="jung_tab4">
+                    <div class="top-right-btn">
+                        <input type="text">
+                        <div class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </div>
+                    <div class="between">
+                        <div class="table_wrapper xscroll">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <input type="checkbox" name="" id="">
+                                        </th>
+                                        <th>No</th>
+                                        <th class="serial">Serial_1</th>
+                                        <th class="serial">Serial_2</th>
+                                        <th class="serial">Serial_3</th>
+                                        <th class="serial">Serial_4</th>
+                                        <th class="serial">Serial_5</th>
+                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" name="" id="">
+                                            </td>
+                                            <td><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                            <td class="serial"><input type="text"></td>
+                                        </tr>
+
+                                    </tbody>
+                                
+                                </thead>
+                            </table>
+    
+                        </div>
+                        <div class="btn_group">
+                            <div class="left">
+                                <div><a href="#a" onclick="testbtn()">통신시험</a></div>
+                                <div><a href="#a" onclick="channelbtn()">채널설정</a></div>
+                                <div><a href="">추가</a></div>
+                                <div><a href="">수정</a></div>
+                                <div><a href="#a">삭제</a></div>
+                            </div>
+                            <div class="right">
+                                <div id="button2"><a href="#">점검</a></div>
+                                <div><a href="#a" onclick="routebtn()">경로설정</a></div>
+                                <div><a href="">경로제어</a></div>
+                                <div><a href="">경로점검</a></div>
+                                <div><a href="">경로삭제</a></div>
+                                <div><a href="">닫기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

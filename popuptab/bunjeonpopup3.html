@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <!-- <link rel="stylesheet" href="css/popup.css"> -->
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css" >
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+</head>
+<body> 
+    <div class="bun_tab3 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분전함</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>그래프</a>
+                    </li>
+                    <li class="lock">
+                        <a href="#a" onclick="lockbtn()"><i class="fas fa-lock"></i>도어락 관리</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <ul class="nav" id="nav">
+                <li><a href="bunjeonpopup1.html" class="text" target="iframe">기본정보</a></li>
+                <li><a href="bunjeonpopup2.html" class="text" target="iframe">상태정보</a></li>
+                <li><a href="bunjeonpopup3.html" class="text_active" target="iframe">운용정보</a></li>
+                <li><a href="bunjeonpopup4.html" class="text" target="iframe">분기정보</a></li>
+                <li><a href="bunjeonpopup5.html" class="text" target="iframe">가로등</a></li>
+                <li><a href="bunjeonpopup6.html" class="text" target="iframe">PLC</a></li>
+                <li><a href="bunjeonpopup7.html" class="text" target="iframe">감시내역</a></li>
+                <li><a href="bunjeonpopup8.html" class="text" target="iframe">보수일지</a></li>
+            </ul>
+            <div class="table_wrapper">
+                <table class="table1">
+                    <tbody>
+                        <tr>
+                            <td>분전함번호</td>
+                            <td class="left_align">
+                                <input type="text">
+                            </td>
+                            <td>지역ID</td>
+                            <td class="left_align">
+                                <select name="" id="">
+                                    <option value="">(1)서울- 서울경기</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>운영모드</td>
+                            <td class="left_align">
+                                <select name="" id="">
+                                    <option value="">단독</option>
+                                </select>
+                            </td>
+                            <td>점등편차</td>
+                            <td class="left_align">
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">-</option>
+                                    </select>
+                                    <input type="text">
+                                    <span>분</span>
+                                    <span class="small_text">(18:10)</span>
+                                </div>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>접속간격</td>
+                            <td class="left_align">
+                                <div>   
+                                    <select name="" id="">
+                                        <option value="">60</option>
+                                    </select>
+                                    <span>분</span>
+                                </div>
+                                
+                            </td>
+                            <td>소등편차</td>
+                            <td class="left_align">
+                                <div>   
+                                    <select name="" id="">
+                                        <option value="">+</option>
+                                    </select>
+                                    <input type="text">
+                                    <span>분</span>
+                                    <span class="small_text">(07:10)</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>순차제어시간</td>
+                            <td class="left_align">
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">00</option>
+                                    </select>
+                                    <span>초</span>
+                                </div>
+                     
+                            </td>
+                            <td>
+                                수동유지
+                            </td>
+                            <td class="left_align">
+                                <div>
+                                    <select name="" id="">
+                                        <option value="">60</option>
+                                    </select>
+                                    <span>분</span>
+                                    <span class="small_text">최대값(240)</span>
+                                </div>
+                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>격일격등</td>
+                            <td class="left_align">
+                                <select name="" id="">
+                                    <option value="">격등</option>
+                                </select>
+                            </td>
+                            <td>측정시간</td>
+                            <td class="left_align">
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                </select>
+                                <span>분</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">격등기간</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">01</option>
+                                        </select>
+                                        <span>월</span>
+                                        <select name="" id="">
+                                            <option value="">02</option>
+                                        </select>
+                                        <span>일</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">12</option>
+                                        </select>
+                                        <span>월</span>
+                                        <select name="" id="">
+                                            <option value="">31</option>
+                                        </select>
+                                        <span>일</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">격등 시간</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">XX</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">심야소등기간</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">01</option>
+                                        </select>
+                                        <span>월</span>
+                                        <select name="" id="">
+                                            <option value="">02</option>
+                                        </select>
+                                        <span>일</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">12</option>
+                                        </select>
+                                        <span>월</span>
+                                        <select name="" id="">
+                                            <option value="">31</option>
+                                        </select>
+                                        <span>일</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">심야소등시간</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">XX</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="dengfull">심야소등선택</td>
+                            <td colspan="3" class="deng_sel fullbox">
+                                <ul class="deng">
+                                    <li>
+                                        <input type="checkbox" name="" id="a"><label for="a" onclick="">A접점</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id="b"><label for="b" onclick="">B접점</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id="c"><label for="c" onclick="">C접점</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="" id="d"><label for="d" onclick="">D접점</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">A접점사용용도</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">XX</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <select name="" id="">
+                                        <option value="">상시</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">B접점사용용도</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">XX</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <select name="" id="">
+                                        <option value="">격등</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">C접점사용용도</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">XX</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <select name="" id="">
+                                        <option value="">NONE</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="h60">D접점사용용도</td>
+                            <td colspan="3" class="fullbox">
+                                <div class="td_full">
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">XX</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <span>~</span>
+                                    <div>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>시</span>
+                                        <select name="" id="">
+                                            <option value="">00</option>
+                                        </select>
+                                        <span>분</span>
+                                    </div>
+                                    <select name="" id="">
+                                        <option value="">NONE</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+           
+            </div>
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>   
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,650 @@
+.jung_set {
+  height: 100%;
+  box-sizing: border-box;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.jung_set table.jungsetting {
+  width: 100%;
+  margin-top: 1rem;
+}
+.jung_set table.jungsetting tbody tr {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-bottom: 1px solid #cacdd4;
+}
+.jung_set table.jungsetting tbody tr:first-child {
+  border-top: 2px solid #666;
+  box-sizing: border-box;
+}
+.jung_set table.jungsetting tbody tr td {
+  font-weight: normal;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+.jung_set table.jungsetting tbody tr td:first-child {
+  background-color: #efefef;
+  text-align: center;
+  width: 30%;
+}
+.jung_set table.jungsetting tbody tr td:last-child {
+  width: 60%;
+  padding-left: 8px;
+}
+.jung_set table.jungsetting tbody tr td:last-child > select, .jung_set table.jungsetting tbody tr td:last-child input {
+  height: 30px;
+  width: 100px;
+}
+.jung_set table.jungsetting tbody tr td span {
+  font-size: 15px;
+}
+.jung_set table.jungsetting tbody tr td input, .jung_set table.jungsetting tbody tr td select {
+  -webkit-appearance: none; /* for chrome */
+  -moz-appearance: none; /*for firefox*/
+  appearance: none;
+  border: 1px solid #dbdee1;
+  box-sizing: border-box;
+}
+.jung_set table.jungsetting tbody tr td .term {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.jung_set table.jungsetting tbody tr td .term select {
+  width: 80px;
+  height: 30px;
+  margin-right: 4px;
+}
+.jung_set table.jungsetting tbody tr td .term span.margin {
+  margin: 0 4px;
+}
+.jung_set table.jungsetting tbody tr td .term > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  font-size: 15px;
+}
+.jung_set .gsdata .index {
+  border-top: 2px solid #666;
+  background-color: #efefef;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.jung_set .gsdata ul.check_wrap {
+  margin-top: 0;
+}
+.jung_set .btn_group {
+  margin-top: 0;
+}
+
+.jungbox {
+  height: 100%;
+}
+.jungbox .popcon_wrap {
+  height: calc(100% - 49px);
+}
+.jungbox .popcon_wrap .nav_list {
+  height: calc(100% - 84px);
+}
+.jungbox .popcon_wrap .nav_list table {
+  border-top: 2px solid #666;
+}
+.jungbox .popcon_wrap .nav_list table tr {
+  padding: 3px;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.jungbox .popcon_wrap .nav_list table tr th {
+  height: 30px;
+  line-height: 30px;
+  border-right: 1px solid #cacdd4;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 {
+  height: 100%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td {
+  text-align: center;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td:first-child {
+  width: 30%;
+  background-color: #efefef;
+  height: 30px;
+  line-height: 30px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td:last-child {
+  text-align: left;
+  padding-left: 10px;
+  width: 70%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td:last-child select {
+  border: 1px solid #dbdee1;
+  height: 30px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td span {
+  font-size: 15px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td.smbox {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td.smbox select {
+  margin-right: 4px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td.smbox div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td.smbox div > span {
+  margin: 0 4px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab2 .table_wrapper table tr td.smbox > span {
+  margin-right: 4px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 {
+  height: 100%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll {
+  border-top: 2px solid #666;
+  flex-direction: column;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll thead tr:first-child {
+  background-color: #efefef;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll thead tr th {
+  width: 22.5%;
+  vertical-align: middle;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll thead tr th:last-child {
+  border-right: none;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll thead tr th:nth-child(3n+1) {
+  width: 5%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll tr {
+  padding: 0;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll tr td {
+  text-align: center;
+  padding: 4px 0;
+  border-right: 1px solid #cacdd4;
+  width: 22.5%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll tr td:nth-child(3n+1) {
+  width: 5%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab3 .tab3_scroll tr td:last-child {
+  border-right: none;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between {
+  height: calc(100% - 44px - 1rem);
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr th {
+  border-right: 1px solid #cacdd4;
+  background-color: #efefef;
+  width: 15.8333333333%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 4px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr th:first-child {
+  width: 5%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr th:last-child {
+  border-right: none;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr td {
+  padding: 0 4px;
+  width: 15.8333333333%;
+  text-align: center;
+  border-right: 1px solid #cacdd4;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr td:first-child {
+  width: 5%;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr td:last-child {
+  border-right: none;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between table tr td input[type=text] {
+  width: 70%;
+  border: 1px solid #dbdee1;
+  height: 25px;
+  margin: 2px 0;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab4 .between .btn_group .right > div {
+  margin-top: 2px;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab5 .table_wrapper {
+  border-top: 2px solid #666;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab5 .table_wrapper table {
+  border-top: none;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab5 .table_wrapper table thead tr {
+  background-color: #efefef;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab5 .table_wrapper table tbody tr {
+  padding: 0;
+}
+.jungbox .popcon_wrap .nav_list .jung_tab5 .table_wrapper table tbody tr td {
+  border-right: 1px solid #cacdd4;
+  padding: 4px 0;
+  box-sizing: border-box;
+}
+
+.testbox {
+  height: 100%;
+}
+.testbox .channel_sel {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.testbox .channel_sel select {
+  border: 1px solid #dbdee1;
+  height: 25px;
+  padding: 0 8px;
+  margin-right: 4px;
+}
+.testbox .channel_sel span {
+  margin-right: 4px;
+}
+.testbox .jung_tab4 {
+  height: calc(100% - 25px - 0.5rem);
+  border-top: 2px solid #666;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+}
+.testbox .jung_tab4 table thead {
+  background-color: #efefef;
+  height: 30px;
+  line-height: 30px;
+}
+.testbox .jung_tab4 table thead th:first-child {
+  width: 10%;
+}
+.testbox .jung_tab4 table th, .testbox .jung_tab4 table td {
+  width: 45%;
+  text-align: center;
+  border-right: 1px solid #cacdd4;
+}
+.testbox .jung_tab4 table th:last-child, .testbox .jung_tab4 table td:last-child {
+  border-right: none;
+}
+.testbox .jung_tab4 table tr {
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.testbox .jung_tab4 table tr td:first-child {
+  width: 10%;
+  background-color: #efefef;
+}
+.testbox .jung_tab4 table tr td input[type=text] {
+  margin: 2px 0;
+  width: 80%;
+  height: 25px;
+  border: 1px solid #dbdee1;
+  box-sizing: border-box;
+}
+.testbox .jung_tab4 .minibtn_group {
+  margin: 0;
+}
+
+h3.name {
+  padding: 0.3rem 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+span i {
+  color: #2a3b5e;
+}
+
+.btn_group {
+  padding: 0.5rem;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: #f5f5f5;
+}
+.btn_group .right {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn_group .right div {
+  border: 2px solid #cac3c3;
+  box-sizing: border-box;
+  background-color: #2a3b5e;
+  padding: 0;
+  margin-right: 5px;
+  width: 80px;
+  height: 30px;
+  border-radius: 3px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.btn_group .right div a {
+  font-size: 14px;
+  color: #919191;
+}
+
+.channel_inner {
+  height: 100%;
+}
+.channel_inner h3.name {
+  height: 25px;
+}
+.channel_inner .between {
+  height: calc(100% - 25px);
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.channel_inner table {
+  width: 100%;
+  border-top: 2px solid #666;
+}
+.channel_inner table tr {
+  border-bottom: 1px solid #cacdd4;
+}
+.channel_inner table tr td {
+  background-color: #efefef;
+  text-align: center;
+}
+.channel_inner table tr td:last-child {
+  background-color: #fff;
+  padding: 4px 0 4px 8px;
+  text-align: left;
+}
+.channel_inner table tr td select {
+  height: 25px;
+  border: 1px solid #dbdee1;
+  box-sizing: border-box;
+}
+
+.route_inner {
+  height: 100%;
+}
+.route_inner .between {
+  height: calc(100% - 40px);
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.route_inner > span {
+  margin-top: 0.5rem;
+}
+.route_inner .routesel_box {
+  border-top: 2px solid #666;
+  border-bottom: 1px solid #cacdd4;
+  text-align: center;
+  padding: 4px 0;
+}
+.route_inner .routesel_box > span {
+  font-size: 14px;
+}
+.route_inner .routesel_box select {
+  border: 1px solid #dbdee1;
+  height: 25px;
+}
+
+.gamsibox table {
+  width: 100%;
+  border-top: 2px solid #666;
+}
+.gamsibox table tr {
+  border-bottom: 1px solid #cacdd4;
+}
+.gamsibox table tr .red {
+  color: red;
+}
+.gamsibox .toptable tr td {
+  height: 30px;
+  vertical-align: middle;
+  width: 30%;
+  padding: 6px 0;
+  padding-left: 10px;
+  font-weight: normal;
+  font-size: 15px;
+}
+.gamsibox .toptable tr td span {
+  display: block;
+  width: 100%;
+  word-break: keep-all;
+  padding-top: 2px;
+}
+.gamsibox .toptable tr td:nth-child(odd) {
+  padding-left: 0;
+  width: 20%;
+  background-color: #efefef;
+  text-align: center;
+  font-size: 16px;
+}
+.gamsibox .listtable {
+  margin-top: 0.5rem;
+}
+.gamsibox .listtable thead {
+  background-color: #efefef;
+}
+.gamsibox .listtable tr th, .gamsibox .listtable tr td {
+  width: 20%;
+  border-right: 1px solid #cacdd4;
+  text-align: center;
+  padding: 6px 0;
+}
+.gamsibox .listtable tr th:nth-child(3n+1), .gamsibox .listtable tr td:nth-child(3n+1) {
+  width: 10%;
+}
+.gamsibox .listtable tr td {
+  font-weight: normal;
+  font-size: 15px;
+}
+
+.jum_eventbox {
+  overflow: auto;
+}
+.jum_eventbox table {
+  border: 1px solid #cacdd4;
+  border-top: 2px solid #666;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  box-sizing: border-box;
+}
+.jum_eventbox table td {
+  padding: 6px 0 6px 4px;
+  vertical-align: middle;
+}
+.jum_eventbox table td:nth-child(odd) {
+  background-color: #efefef;
+  text-align: center;
+  font-family: "GmarketSansLight";
+  font-weight: 600;
+}
+.jum_eventbox table td:nth-child(even) {
+  font-size: 15px;
+  font-weight: normal;
+}
+.jum_eventbox table.jum1 td:first-child {
+  width: 30%;
+}
+.jum_eventbox table.jum2 td {
+  width: 25%;
+  word-break: keep-all;
+  vertical-align: middle;
+}
+.jum_eventbox .minibtn_group {
+  box-sizing: border-box;
+}
+
+.jumbox {
+  height: 100%;
+}
+.jumbox .popcon_wrap {
+  height: calc(100% - 49px);
+}
+.jumbox .popcon_wrap .nav_list {
+  height: calc(100% - 74px);
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td:nth-child(odd) {
+  width: 23%;
+  line-height: 1;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td:nth-child(even) {
+  width: 27%;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.line {
+  width: 75%;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.line span.colornone i {
+  color: red;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.h90 {
+  height: 90px;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td textarea {
+  width: 90%;
+  height: 90px;
+  border: 1px solid #dbdee1;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address {
+  width: 75%;
+  height: auto;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .input_group {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .input_group input {
+  margin-right: 4px;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .address_text .blbox {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .address_text .blbox span {
+  padding: 0 8px;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .address_text .blbox span i {
+  margin: 0;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .address_text .blbox .blackbox {
+  margin-left: 6px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .address_text .blbox .blackbox label {
+  padding-left: 4px;
+  padding-top: 5px;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.address .address_text input {
+  width: 16px;
+  height: 16px;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.etc {
+  height: 90px;
+  line-height: 90px;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.modem_sch {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.modem_sch button {
+  width: 25px;
+  height: 25px;
+  background-color: #2a3b5e;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.modem_sch button i {
+  color: #fff;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.flex {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.flex > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.jumbox .popcon_wrap .navwrap .table_wrapper table tbody tr td.flex select {
+  margin-right: 2px;
+  width: auto;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.jumbox .popcon_wrap .jum_tab4 {
+  height: 100%;
+}
+.jumbox .popcon_wrap .jum_tab4 .work_con {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.jumbox .popcon_wrap .jum_tab4 .work_con span {
+  margin: 0 4px;
+}
+.jumbox .popcon_wrap .jum_tab4 .between {
+  height: calc(100% - 42px - 16px);
+}
+.jumbox .popcon_wrap .jum_tab4 .between table thead {
+  background-color: #efefef;
+}
+.jumbox .popcon_wrap .jum_tab4 .between table th, .jumbox .popcon_wrap .jum_tab4 .between table td {
+  border-right: 1px solid #cacdd4;
+  text-align: center;
+  padding: 4px 0;
+}
+.jumbox .popcon_wrap .jum_tab4 .between table th:first-child, .jumbox .popcon_wrap .jum_tab4 .between table td:first-child {
+  width: 5%;
+}
+.jumbox .popcon_wrap .jum_tab4 .between table th:last-child, .jumbox .popcon_wrap .jum_tab4 .between table td:last-child {
+  border-right: none;
+}

@@ -1,0 +1,89 @@
+.pgpop table {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-top: 2px solid #666;
+}
+.pgpop table tr {
+  width: 100%;
+  display: flex;
+  padding: 3px;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.pgpop table tr td:first-child {
+  background-color: #efefef;
+  width: 25%;
+  word-break: keep-all;
+  text-align: center;
+  line-height: 30px;
+}
+.pgpop table tr td.align {
+  line-height: initial;
+  vertical-align: middle;
+}
+.pgpop table tr td.benefit {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pgpop table tr td:last-child {
+  width: 75%;
+  padding-left: 8px;
+}
+.pgpop table tr td input[type=text] {
+  height: 28px;
+  border: 1px solid #dbdee1;
+  box-sizing: border-box;
+}
+.pgpop table tr td.mailcheck {
+  line-height: initial;
+}
+.pgpop table tr td.chkbox {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.pgpop table tr td.chkbox input {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+.pgpop table tr td select {
+  padding: 0 8px;
+  height: 30px;
+  border: 1px solid #dbdee1;
+  box-sizing: border-box;
+}
+.pgpop table tr td ul {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pgpop table tr td ul li {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+.pgpop table tr td ul li input {
+  margin-right: 4px;
+  cursor: pointer;
+}
+.pgpop table tr td ul li label {
+  cursor: pointer;
+  font-size: 15px;
+  padding-top: 3px;
+  color: #333;
+}
+.pgpop .btn_group {
+  margin-top: 0;
+}
+
+.userin > .btn_group {
+  margin-top: 0;
+}

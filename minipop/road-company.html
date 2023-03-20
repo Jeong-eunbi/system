@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펌프장 명령내역</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/doro.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/main.js" ></script>
+    <script type="text/javascript" defer src="../js/menu.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/doro.js" ></script>
+    <script type="text/javascript" defer src="../js/print.js" ></script>
+</head>
+<body>
+    <div class="pgpop between userin">
+        <table>
+            <tr>
+                <td>이름</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>전화번호</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>소속</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td class="align">권한</td>
+                <td>
+                    <div class="authority">
+                        <select name="" id="">
+                            <option value="">전체권한 A</option>
+                        </select>
+                        <ul>
+                            <li><input type="checkbox" id="access1"><label for="access1">가로등</label></li>
+                            <li><input type="checkbox" id="access2"><label for="access2">보안등</label></li>
+                            <li><input type="checkbox" id="access3"><label for="access3">분수대</label></li>
+                            <li><input type="checkbox" id="access4"><label for="access4">펌프장</label></li>
+                            <li><input type="checkbox" id="access5"><label for="access5">단방향</label></li>
+                            <li><input type="checkbox" id="access6"><label for="access6">공원등</label></li>
+                            <li><input type="checkbox" id="access7"><label for="access7">도로조명관리</label></li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>설명</td>
+                <td>
+                    <input type="text">
+                </td>
+            </tr>
+        </table>
+        <div class="btn_group">
+
+            <div class="right">
+                <div class="btn_bg"><a href="">등록</a></div>
+                <div class="btn_bg off"><a href="#a">삭제</a></div>
+            </div>
+        </div>
+    </div>
+</body>

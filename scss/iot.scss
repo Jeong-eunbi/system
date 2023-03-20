@@ -1,0 +1,43 @@
+.cont{
+    .scroll_wrap{
+        #tablewrap{
+            table.iot_tong{
+
+                tbody{
+                    tr{
+                        td{
+                            width: calc(100% / 25);
+                            &:first-child{
+                                background-color: #f2f8f6;
+                                width: 5%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            table.set_type{
+                thead{
+                    tr{
+                        th{
+                            padding: 18px 10px;
+                            // width: 100px;
+                            word-break: keep-all;
+                            word-wrap: break-word;
+                            // padding: 18px 8px;
+                            // box-sizing: border-box;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            word-break: keep-all;
+                            padding: 18px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

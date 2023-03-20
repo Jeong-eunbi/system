@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가로등보수일지</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <link rel="stylesheet" href="../css/gam.css">
+    <link rel="stylesheet" href="../css/commonre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+        
+    <script type="text/javascript" defer src="../js/weather.js" ></script>
+
+    <script type="text/javascript" defer src="../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/gam.js" ></script>
+    <script type="text/javascript" defer src="../js/print.js" ></script>
+    <script type="text/javascript" defer src="../js/chk.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li>
+                                        <a href="#a" class="bunpopbtn" onclick="bunpopbtn()">분전함</a>
+                                    </li>
+                                    <li>
+                                        <a href="#a" class="gapopbtn" onclick="gapopbtn()">가로등</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../garo/subcontrol.html">분전함선택제어</a></li>
+                                    <li><a href="#a" id="all_cont" onclick="bunshow()">분전함전체제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../garo/gadata.html">분전함선택설정</a></li>
+                                    <li><a href="#a" onclick="setshow()">분전함전체설정</a></li>
+                                    <li><a href="../garo/gadata3.html">분전함당일예약설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/gam.html">감시내역</a></li>
+                                    <li><a href="../list/myeong.html">명령내역</a></li>
+                                    <li><a href="../list/jeon.html">전력값보기</a></li>
+                                    <li class="on"><a href="../list/garobosu.html">가로등보수일지</a></li>
+                                    <li><a href="../list/bun.html">분전함설치현황</a></li>
+                                    <li><a href="../list/bundelete.html">분전함삭제내역</a></li>
+                                    <li><a href="../list/checklist.html">일일점검내역</a></li>
+                                </ul>                
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../sms/susin.html">수신자관리</a></li>
+                                    <li><a href="../sms/messageset.html">메시지관리</a></li>
+                                    <li><a href="../sms/messagecont.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>                
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../buga/tonggye1.html">통계자료</a></li>
+                                    <li><a href="../buga/time.html">점소등시간</a></li>
+                                    <li><a href="../buga/local.html">지역설정</a></li>
+                                    <li><a href="../buga/local.html">램프설정</a></li>
+                                    <li><a href="#a" onclick="error_set()">등고장설정</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap">
+                    <div class="leftbtn w_auto">
+                        <div class="btn_bg"><a href="">엑셀저장</a></div>
+                        <div class="btn_bg print"><a href="#a" onclick="garobosu_print()">프린트</a></div>
+                        <div class="btn_bg"><a href="">삭제</a></div>
+                    </div>
+                    <div class="rightbtn w_auto">
+                        <div class="bun_sel">
+                            <span>분전함선택</span>
+                            <select name="" id="">
+                                <option value="">분전함선택</option>
+                                <option value="">11223344</option>
+                            </select>
+                        </div>
+                        <div class="search_box">
+                            <span>검색일자</span>
+                            <input type="date" name="" id="">
+                            <span>~</span>
+                            <input type="date" name="" id="">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                       
+                        <div class="btn_bg detail_btn" onclick="searchpop()"><a href="#a">상세검색</a></div>
+                    </div>
+                </div>
+
+                <div class="detailpop" id="seachpop1">
+                    <div class="poptitle">
+                        <h3>상세검색</h3>
+                        <a href="#a" onclick="off_screen()"><i class="far fa-window-close"></i></a>
+                    </div>
+                    <div class="border">
+                        <span>검색</span>
+                        <ul>
+                            <li>
+                                <span>분전함선택</span>
+                                <select name="" id="">
+                                    <option value="">분전함선택</option>
+                                </select>
+                            </li>
+                            <li>
+                                <span>검색일자</span>
+                                <div>
+                                    <input type="date">
+                                    <span>~</span>
+                                    <input type="date">
+                                </div>
+                            </li>
+                        </ul>
+                        <button>검색</button>
+                    </div>
+                </div>
+
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="length"></span>건</div>
+                    <div id="tablewrap" class="custom_scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="list" class="checkall" onclick="checkAll(this)"></th>
+                                    <th>분전함이름</th>
+                                    <th>표찰번호</th>
+                                    <th>분기-등주ID</th>
+                                    <th>지번</th>
+                                    <th>보수일자</th>
+                                    <th>보수내용</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="chk_w"><input type="checkbox" name="list" class="chk" onclick="checksel()"></td>
+                                    <td class="cursor" onclick="infopop1()">(임)북-신규03</td>
+                                    <td class="cursor"></td>
+                                    <td>분전함</td>
+                                    <td>북면용대리</td>
+                                    <td>2022.07.01</td>
+                                    <td>램프교체</td>
+                                    <td>232323</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w"><input type="checkbox" name="list" class="chk" onclick="checksel()"></td>
+                                    <td class="cursor" onclick="infopop1()">(임)북-신규03</td>
+                                    <td class="cursor"></td>
+                                    <td>분전함</td>
+                                    <td>북면용대리</td>
+                                    <td>2022.07.02</td>
+                                    <td>글러브교체</td>
+                                    <td>12121</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w"><input type="checkbox" name="list" class="chk" onclick="checksel()"></td>
+                                    <td class="cursor" onclick="infopop1()">(임)북-신규03</td>
+                                    <td class="cursor"></td>
+                                    <td>분전함</td>
+                                    <td>북면용대리</td>
+                                    <td>2022.07.03</td>
+                                    <td>램프교체</td>
+                                    <td>램프교체입니다</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

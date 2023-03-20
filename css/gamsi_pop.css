@@ -1,0 +1,29 @@
+.gampop .gamwrap {
+  background-color: #fff;
+}
+.gampop .gamwrap .table1, .gampop .gamwrap .table2 {
+  margin-top: 1rem;
+}
+.gampop .gamwrap .table1 tr, .gampop .gamwrap .table2 tr {
+  padding: 3px;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.gampop .gamwrap .table1 tr td, .gampop .gamwrap .table2 tr td {
+  height: 30px;
+  line-height: 30px;
+}
+.gampop .gamwrap .table1 tr td:nth-child(odd), .gampop .gamwrap .table2 tr td:nth-child(odd) {
+  width: 30%;
+  text-align: center;
+  background-color: #efefef;
+}
+.gampop .gamwrap .table1 tr td:nth-child(even), .gampop .gamwrap .table2 tr td:nth-child(even) {
+  padding-left: 10px;
+  box-sizing: border-box;
+  width: 70%;
+}
+.gampop .gamwrap .table2 tr td {
+  width: 25% !important;
+}

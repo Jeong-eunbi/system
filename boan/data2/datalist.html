@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보안등 점멸기 운용데이터현황</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/boan_pop.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.css" ></script>
+    
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/tab.js" ></script>
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/print.js" ></script>
+    <script type="text/javascript" defer src="../../js/index.js" ></script>
+
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" class="jungpopbtn" onclick="jungpopbtn()">중계기</a></li>
+                                    <li><a href="#a" class="gapopbtn" onclick="jumpopbtn()">점멸기</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../boan/selectcontrol.html">중계기선택제어</a></li>
+                                    <li><a href="#a" onclick="jung_show()">중계기전체제어</a></li>
+                                    <li><a href="../boan/iotcontrol.html">IoT점멸기선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../data2/jungset.html">중계기선택설정</a></li>
+                                    <li><a href="#a" onclick="j_setbox()">중계기전체설정</a></li>
+                                    <li><a href="../data2/iotselect.html">IoT점멸기선택설정</a></li>
+                                    <li class="on"><a href="../data2/datalist.html">점멸기운용데이터현황</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/iotgam.html">IoT감시내역</a></li>
+                                    <li><a href="../list/iotmyeong.html">IoT명령내역</a></li>
+                                    <li><a href="../list/rfgam.html">RF감시내역</a></li>
+                                    <li><a href="../list/rfmyeong.html">RF명령내역</a></li>
+                                    <li><a href="../list/boanbosu.html">보수일지</a></li>
+                                    <li><a href="../list/junglist.html">중계기현황</a></li>
+                                    <li><a href="../list/jumlist.html">점멸기현황</a></li>
+                                    <li><a href="../list/jumdelete.html">점멸기삭제내역</a></li>
+                                    <li><a href="../list/blue.html">블루투스</a></li>
+                                </ul>                     
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="smsset/message1.html">수신자관리</a></li>
+                                    <li><a href="../sms/messageset.html">메시지관리</a></li>
+                                    <li><a href="../sms/messagecont.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../user/user.html">사용자관리</a></li>
+                                    <li><a href="../user/conector.html">접속자관리</a></li>
+                                </ul>              
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="state/state1.html"><i class="fa-solid fa-check"></i>통계자료</a></li>
+                                    <li><a href="state/onofftime1.html">점소등시간</a></li>
+                                    <li><a href="state/local2.html">지역설정</a></li>
+                                    <li><a href="state/lamp2.html">램프설정</a></li>
+                                </ul>             
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap btnbox">
+                    <div class="leftbtn">
+                        <div class="btn_bg"><a href="">엑셀저장</a></div>
+                        <div class="btn_bg print"><a href="#a" onclick="datalist_print()">프린트</a></div>
+                    </div>
+                    <div class="rightbtn select_group">
+                        <select name="" id="">
+                            <option value="">구선택</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">동선택</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="boancount5"></span>건</div>
+                    <div id="tablewrap" class="custom_scroll boanlength5">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>점멸기(시리얼)</th>
+                                    <th>구읍면/동리</th>
+                                    <th>설치주소</th>
+                                    <th>점등편차</th>
+                                    <th>소등편차</th>
+                                    <th>심야소등시간</th>
+                                    <th>심야소등기간</th>
+                                    <th>강제지속시간</th>
+                                    <th>지역</th>
+                                    <th>접속간격</th>
+                                    <th>디머예약1</th>
+                                    <th>디머예약2</th>
+                                    <th>디머예약3</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="chk_w">1</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            연구소<span class="smtxt">LS</span>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥동</td>
+                                    <td>32</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+05분 (05:26)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">2</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            1223344<span class="smtxt">NS</span><a href="#a" class="photobtn" onclick="photobtn()"><i class="fa-solid fa-image"></i></a>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥2동</td>
+                                    <td>6951</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+15분 (05:36)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">3</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            연구소<span class="smtxt">LS</span>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥동</td>
+                                    <td>32</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+05분 (05:26)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">4</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            1223344<span class="smtxt">NS</span><a href="#a" class="photobtn" onclick="photobtn()"><i class="fa-solid fa-image"></i></a>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥2동</td>
+                                    <td>6951</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+15분 (05:36)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">5</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            연구소<span class="smtxt">LS</span>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥동</td>
+                                    <td>32</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+05분 (05:26)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">6</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            1223344<span class="smtxt">NS</span><a href="#a" class="photobtn" onclick="photobtn()"><i class="fa-solid fa-image"></i></a>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥2동</td>
+                                    <td>6951</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+15분 (05:36)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">7</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            연구소<span class="smtxt">LS</span>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥동</td>
+                                    <td>32</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+05분 (05:26)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">8</td>
+                                    <td class="cursor" onclick="jum_info()">
+                                        <div>
+                                            1223344<span class="smtxt">NS</span><a href="#a" class="photobtn"  onclick="photobtn()"><i class="fa-solid fa-image"></i></a>
+                                        </div>
+                                    </td>
+                                    <td>수정구신흥2동</td>
+                                    <td>6951</td>
+                                    <td>-15분 (19:36)</td>
+                                    <td>+15분 (05:36)</td>
+                                    <td>XX시00분 ~ 00시00분</td>
+                                    <td>01월01일 ~ 12월31일</td>
+                                    <td>10분</td>
+                                    <td>서울-경기</td>
+                                    <td>240분</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                    <td>사용 안 함</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

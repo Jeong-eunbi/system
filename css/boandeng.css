@@ -1,0 +1,24 @@
+.cont .contbox .scroll_wrap #talbewrap table#dengtype tbody tr td:first-child {
+  width: 10%;
+}
+.cont .contbox .scroll_wrap #talbewrap table#botype tbody tr td:not(td:first-child, td:last-child) {
+  cursor: pointer;
+}
+.cont .contbox .scroll_wrap #talbewrap table.amount .devide2 {
+  width: 11%;
+}
+.cont .contbox .scroll_wrap #talbewrap table.amount thead tr:first-child th.widthfix {
+  width: 10%;
+}
+.cont .contbox .scroll_wrap #talbewrap table.amount thead tr:nth-child(2) th:not(.devide2, .widthfix) {
+  width: 4%;
+}
+.cont .contbox .scroll_wrap #talbewrap table.settype thead tr th {
+  width: 10%;
+}
+.cont .contbox .scroll_wrap #talbewrap table.boanlist thead tr th {
+  width: 40%;
+}
+.cont .contbox .scroll_wrap #talbewrap table.boanlist thead tr th:first-child {
+  width: 20%;
+}

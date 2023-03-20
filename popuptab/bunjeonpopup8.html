@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <!-- <link rel="stylesheet" href="css/popup.css"> -->
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+  
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab8 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분전함</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>그래프</a>
+                    </li>
+                    <li class="lock">
+                        <a href="#a" onclick="lockbtn()"><i class="fas fa-lock"></i>도어락 관리</a>
+                    </li>
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            
+            <div>
+                <ul class="nav" id="nav">
+                    <li><a href="bunjeonpopup1.html" class="text" target="iframe">기본정보</a></li>
+                    <li><a href="bunjeonpopup2.html" class="text" target="iframe">상태정보</a></li>
+                    <li><a href="bunjeonpopup3.html" class="text" target="iframe">운용정보</a></li>
+                    <li><a href="bunjeonpopup4.html" class="text" target="iframe">분기정보</a></li>
+                    <li><a href="bunjeonpopup5.html" class="text" target="iframe">가로등</a></li>
+                    <li><a href="bunjeonpopup6.html" class="text" target="iframe">PLC</a></li>
+                    <li><a href="bunjeonpopup7.html" class="text" target="iframe">감시내역</a></li>
+                    <li><a href="bunjeonpopup8.html" class="text_active" target="iframe">보수일지</a></li>
+                </ul>
+                <div class="top-right-btn">
+                    <div class="datebox">
+                        <input type="date" name="" id="">
+                        <span>~</span>
+                        <input type="date" name="" id="">
+                    </div>
+                    <div class="work_con">
+                        <span>작업내용</span>
+                        <select name="" id="">
+                            <option value="">전체</option>
+                            <option value="">글러브교체</option>
+                            <option value="">등기구교체</option>
+                            <option value="">램프교체</option>
+                            <option value="">안정기교체</option>
+                            <option value="">전선휴즈교체</option>
+                            <option value="">점멸기교체</option>
+                            <option value="">케이블교체</option>
+                        </select>
+                        <div class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                    </div>    
+                </div>
+                <div class="table_wrapper">
+                    <table class="table1">
+                        <tbody>
+                            <tr>
+                                <td>날짜</td>
+                                <td>시간</td>
+                                <td>세부사항</td>
+                            </tr>
+                            <tr>
+                                <td class="empty" colspan="3">작업내역이없습니다</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="btn_group">
+                <div class="right">
+                    <div class="bun_bosuadd"><a href="#a" onclick="on()">추가</a></div>
+                    <div><a href="">삭제</a></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

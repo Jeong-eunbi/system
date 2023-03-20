@@ -1,0 +1,364 @@
+$main_btn: #323844;
+
+// flex 관련
+@mixin flex {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+@mixin center-r {
+    -webkit-box-pack: center; 
+    -ms-flex-pack: center; 
+    justify-content: center;
+}
+@mixin center-c {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+@mixin column{
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+@mixin between {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+@mixin height_full {
+    height: 100%;
+    @include flex;
+    flex-direction: column;
+    @include between;
+}
+
+// table 스타일
+@mixin tablebox{
+    overflow: auto;
+    border-top: $tabletop;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling:touch;
+}
+@mixin tablestyle{
+    border: $tablelist;
+    border-top: none;
+    width: 100%;
+    position: relative;
+}
+@mixin thead{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 2;
+}
+@mixin theadth{
+    padding: 18px 0;
+    background-color: $thbg;
+    border: $tablelist;
+    color: #333;
+    border-top: none;
+}
+
+@mixin tbodytr{
+    text-align: center;
+    transition: .5;
+    border-bottom: 1px solid #d8d8d8;
+}
+@mixin tbodytd {
+
+    color: #666;
+    border-left: $tablelist;
+    
+}
+// 너비높이
+
+@mixin full {
+    width: 100%;
+    height: 100%;
+}
+
+//페이지내 서브 탭
+@mixin subtab {
+    @include flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+}
+
+// 상단 아이콘
+@mixin icon{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    background-size: contain;
+    margin-right: 5px;
+    background-repeat: no-repeat;
+}
+@mixin scroll_style{
+    ::-webkit-scrollbar {
+        width: 3px; 
+        background-color: rgba(0,0,0,0.15);
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #000;
+    }
+}
+
+// color
+
+// 메인페이지 
+$primary: #0C4A3C;
+$primary_in: #9be3bf;
+$primary_light: #116657;
+$list_hover: #f1f8fd;
+$dot: #547291;
+$list_line: #9b9b9b;
+$alert: #f43d38;
+$green_bg: #e9f5ef;
+
+// sub
+$select_btn: #1e3932;
+$tabletop: 2px solid #006b54;
+$mainbg: #f6f5ef;
+
+//paging 컬러
+$pgclick: #333;
+$pghover: #f7f7f7;
+
+// 팝업창관련
+$menu_active: #146ebe;
+$in_select_border: #dbdee1;
+$btn_bg: #f5f5f5;
+$pop_head: #2a3b5e;
+
+$subcolor: #eef0f5;
+$button: #33353a;
+$btn_border: #cac3c3;
+$white: #fff;
+$pointer: pointer;
+$txtb: #121212;
+$txts: #212529;
+$table_border: 1px solid #cbcbcb;
+$red: #f43d38;
+$blue: #3952fb;
+$blue2: #0779f9;
+$greybg: #f5f5f5;
+$table_border: 1px solid #cacdd4;
+$button: #2a3b5e;
+$td_color: #efefef;
+$in_select_border: #dbdee1;
+$mininame:#5a6f85;
+$border:#c5c9d6;
+$minibtn: #3464ab;
+$top_text : #a3aab1;
+$name: #15142f;
+
+// 서브페이지 테이블표
+$tablelist: 1px solid #d8d8d8;
+$thbg: #f2f8f6;
+// dropshadow
+$shadow4: 0 4px 8px rgba(0,0,0, .1);
+$shadow8: 0 8px 16px rgba(0,0,0, .1);
+$shadow16: 0 16px 32px rgba(0,0,0, .1); 
+$shadow24: 0 24px 32px rgba(0,0,0, .1); 
+
+
+
+@mixin scroll{
+    width: 100%;
+    $scroll: calc(670px - 14.188rem);
+    height: $scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+@mixin btn_text{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-align: center;
+    padding-top: 2px;
+    color: $white;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+@mixin button_box($bg: #141924){
+    background-color: $bg;
+    padding: 8px 16px;
+}
+@mixin buttons{
+    background-color: $button;
+    padding: 0;
+    margin-right: 5px;
+    width: 80px;
+    height: 30px;
+    border-radius: 3px;
+    @include flex;
+    @include center-c;
+    @include center-r;
+}
+
+@mixin pop_title {
+    background-color: $pop_head;
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    border-radius: 5px;
+}
+@mixin select_style {
+    @include pop_border;
+    width: 80px;
+    height: 30px;
+}
+@mixin pop_border{
+    border: 1px solid #dbdee1;
+    box-sizing: border-box;
+}
+@mixin shape {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 22px;
+    right: -13px;
+}
+
+@mixin nav {
+    background-color: #fff;
+    @include flex;
+    @include between;
+    align-items: center;
+}
+@mixin navli {
+    color: #888;
+    position: relative;
+    display: block;
+    font-size: 14px;
+}
+
+@mixin iframe {
+    width: 100%;
+    height: 100%;
+}
+@mixin mini_iframebox {
+    width: 400px;
+    overflow: hidden;
+    background-color: $white;
+    position: absolute;
+    // border: 1px solid $pop_head;
+    border: 3px solid #d2d2d2;
+    left: 1%;
+    top: 10%;
+    box-sizing: border-box;
+    box-shadow: 6px 5px 10px rgba(0,0,0,.2);
+    z-index: 10;
+}
+
+@mixin hover_shadow {
+
+    box-shadow: 0 27px 55px rgba(0, 0, 0, 0.3),
+    0 17px 17px rgba(0, 0, 0, 0.15), 
+    0 0 0 1px rgba(0, 0, 0, 0);
+
+}
+@mixin borderbutton {
+    border: 2px solid #b4b4b4;
+    background-color: $greybg;
+    
+}
+
+
+@mixin table_top{
+    width: 100%;
+    height: 100%;
+}
+@mixin button_box($bg: #141924){
+    background-color: $bg;
+    // border-radius: 5px;
+    padding: 8px 16px;
+}
+@mixin pop_border{
+    border: 1px solid #dbdee1;
+    box-sizing: border-box;
+}
+@mixin select_style {
+    @include pop_border;
+    width: 80px;
+    height: 25px;
+}
+@mixin topbtn {
+    display: block;
+    height: 30px;
+    padding: 4px 8px;
+    border: 1px solid #2a3b5e;
+    margin: 0 4px;
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #2a3b5e;
+}
+
+@mixin event_hover {
+    color: $red;
+
+}
+@mixin fix {
+    width: 100%;
+    position: sticky;
+    top: 0;
+}
+@mixin first_tr{
+    border-top: 2px solid #666;
+    @include flex;
+}
+@mixin td_style($height:30px, $line:30px){
+    font-weight: normal;
+    color: #222;
+    height: $height;
+    line-height: $line;
+    box-sizing: border-box;
+
+}
+@mixin first_td {
+    color: #666;
+    font-weight: bold;   
+}
+
+@mixin tab {
+    background-color: #fff;
+    position: absolute;
+    bottom: 1rem;
+    width: 98%;
+    left: 1%;
+    right: 1%;
+    padding: .5rem;
+    box-sizing: border-box;
+    border: 2px solid #ddd;
+    // display: none;
+    // z-index: 9;
+}
+@mixin reply{
+    color: #189f00;
+    transform: rotate(180deg);
+}
+
+//  아이폰
+@mixin ios{
+    // touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hideen;
+    /* 이외의 브라우저 */
+    overscroll-behavior: none;
+}
+
+
+

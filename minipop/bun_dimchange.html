@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimm일괄변경</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bun_dimchange.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+</head>
+<body>
+    <div class="dimgrid_box between">
+        <span>[1분기 등주감시기 일괄 변경]</span>
+        <table class="grid">
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="center"><i class="fa-regular fa-circle-dot"></i>개별제어</td>
+                    <td>
+                        1등설정
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Off(1등)</option>
+                            <option value="">On(1등)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2등설정</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">Off/Off(2등)</option>
+                            <option value="">On/Off(2등)</option>
+                            <option value="">Off/On(2등)</option>
+                            <option value="">On/On(2등)</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="minibtn_group">
+            <div class="left">
+                <div><a href="#a">수정</a></div>
+            </div>
+        </div>
+        <table class="grid">
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="center">
+                        <i class="fa-regular fa-circle-dot"></i>모션센서
+                    </td>
+                    <td>1등설정</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">스케줄</option>
+                            <option value="">센서</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2등설정
+                    </td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">스케줄/스케줄</option>
+                            <option value="">스케줄/센서</option>
+                            <option value="">센서/스케줄</option>
+                            <option value="">센서/센서</option>
+                        </select>
+                    </td>    
+                </tr>
+            </tbody>
+        </table>
+        <div class="minibtn_group">
+            <div class="left">
+                <div><a href="#a">수정</a></div>
+            </div>
+        </div>
+
+        <table class="grid">
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="center"><i class="fa-regular fa-circle-dot"></i>Dimmer</td>
+                    <td>1등설정</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">XX</option>
+                            <option value="">90%</option>
+                            <option value="">80%</option>
+                            <option value="">70%</option>
+                            <option value="">60%</option>
+                            <option value="">50%</option>
+                            <option value="">40%</option>
+                            <option value="">30%</option>
+                            <option value="">20%</option>
+                            <option value="">10%</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2등설정</td>
+                    <td>
+                        <select name="" id="">
+                            <option value="">XX</option>
+                            <option value="">90%</option>
+                            <option value="">80%</option>
+                            <option value="">70%</option>
+                            <option value="">60%</option>
+                            <option value="">50%</option>
+                            <option value="">40%</option>
+                            <option value="">30%</option>
+                            <option value="">20%</option>
+                            <option value="">10%</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="minibtn_group">
+            <div class="left">
+                <div><a href="#a">수정</a></div>
+            </div>
+        </div>
+        <p>
+            * 변경된 개별제어값, 모션센서, 디머값은 '제어설정','Dim설정' 버튼을 클릭하셔야 반영됩니다.
+        </p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>분전함 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="bun_tab4 bun">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li>
+                        <a href="#" class="graph"><i class="fa-solid fa-chart-area"></i>분수대 연결</a>
+                    </li>
+                    <li class="print">
+                        <a href="minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="between">
+            <div>
+                <ul class="nav">
+                    <li><a href="bunsulamp1.html" class="text">기본정보</a></li>
+                    <li><a href="bunsulamp2.html" class="text">상태정보</a></li>
+                    <li><a href="bunsulamp3.html" class="text">운용데이터</a></li>
+                    <li><a href="bunsulamp4.html" class="text_active">분기별데이터</a></li>
+                    <li><a href="bunsulamp5.html" class="text">개별감시내역</a></li>
+                </ul>
+                <div class="table_wrapper">
+                    <div class="termbox">
+                        <table class="term">
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>1분기</td>
+                                    <td>2분기</td>
+                                    <td>3분기</td>
+                                    <td>4분기</td>
+                                    <td>5분기</td>
+                                    <td>6분기</td>
+                                    <td>7분기</td>
+                                    <td>8분기</td>
+                                </tr>
+                                <tr>
+                                    <td>접점설정</td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select name="" id="">
+                                            <option value="">AR</option>
+                                            <option value="">BR</option>
+                                            <option value="">CR</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>등주개수</td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>등개수</td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>등감기</td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                    <td>
+                                        <input type="text" name="" id="">
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                            
+                    <ul class="check_wrap">
+                        <li>
+                            <input type="checkbox" name="" id="term1"><label for="term1">점소등변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term2"><label for="term2">램프 고장 변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term3"><label for="term3">이상점등 변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term4"><label for="term4">누전상태 변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term5"><label for="term5">디머여부 변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term6"><label for="term6">통신이상 변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term7"><label for="term7">누전릴레이변화</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="" id="term8"><label for="term8">지그비통신</label>
+                        </li>
+                    </ul>
+           
+                </div>
+            </div>
+         
+            <div class="btn_group">
+                <div class="right">
+                    <div><a href="">등주계산</a></div>
+                    <div><a href="">수정</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

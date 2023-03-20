@@ -1,0 +1,91 @@
+.bunsuevent {
+  width: 100%;
+  height: 100%;
+  padding: 10px 5px;
+  box-sizing: border-box;
+}
+.bunsuevent h2 {
+  text-align: center;
+  color: #343434;
+  border-top: 2px solid #343434;
+  border-bottom: 1px solid #cac8c7;
+  padding: 0.5rem;
+  font-size: 21px;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.bunsuevent span.small_title {
+  display: block;
+  font-size: 18px;
+  margin: 1rem 0;
+  color: #002f31;
+}
+.bunsuevent span.small_title i {
+  font-size: 10px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.bunsuevent .scroll {
+  overflow: auto;
+}
+.bunsuevent .scroll::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.bunsuevent .scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #aaa;
+}
+.bunsuevent .scroll table {
+  width: 100%;
+  border: 1px solid #cacdd4;
+  border-top: 2px solid #006940;
+}
+.bunsuevent .scroll table thead tr th.event_date {
+  background-color: #f2f4f3;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  color: #002f31;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.bunsuevent .scroll table tbody tr {
+  border-bottom: 1px solid #cacdd4;
+}
+.bunsuevent .scroll table tbody tr:nth-child(odd) td {
+  height: 30px;
+  background-color: #fbfbfb;
+  color: #666;
+}
+.bunsuevent .scroll table tbody tr:nth-child(even) td {
+  height: 50px;
+  font-size: 15px;
+}
+.bunsuevent .scroll table tbody tr:nth-child(even) td .wat {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bunsuevent .scroll table tbody tr:nth-child(even) td .wat span {
+  display: block;
+  height: 14px;
+  font-size: 14px;
+  color: #545454;
+}
+.bunsuevent .scroll table tbody tr:nth-child(even) td .wat span.font_color {
+  color: #8e8d8d;
+}
+.bunsuevent .scroll table tbody tr td {
+  padding: 8px 0;
+  text-align: center;
+  width: 12.5%;
+  border-right: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.bunsuevent .scroll table tbody tr td:last-child {
+  border-right: none;
+}

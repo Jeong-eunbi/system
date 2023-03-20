@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>펌프장 감시내역보기</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/bunsu.css">
+    <link rel="stylesheet" href="../../css/oldbunsu.css">
+    <link rel="stylesheet" href="../../css/pump.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="jquery-ui-1.13.1.custom/jquery-ui.css" >
+    
+        
+    <script type="text/javascript" defer src="../../js/pump.js" ></script>
+
+    <script type="text/javascript" defer src="../../js/garo.js" ></script>
+    <script type="text/javascript" defer src="../../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="#a" onclick="pump_pop()">펌프장</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../pcontrol/pumpsel.html">펌프장선택제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../plist/pgamsi_list.html">감시내역보기</a></li>
+                                    <li><a href="../plist/pmyeong.html">명령내역보기</a></li>
+                                </ul>               
+                            </li>
+                            <li class="subbar">
+                                <a href="#a">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../psmsset/psusinset.html">수신자관리</a></li>
+                                    <li><a href="../psmsset/psms_set.html">메시지관리</a></li>
+                                    <li><a href="../psmsset/psms_content.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#a">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../accountset/account1.html">사용자관리</a></li>
+                                    <li><a href="../accountset/account2.html">접속자관리</a></li>
+                                </ul>                
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="bunsubtn pumplist">
+                    <div class="search_bg">
+                        <h3>펌프장</h3>
+                        <select name="" id="">
+                            <option value="">펌프장선택</option>
+                            <option value="">112233</option>
+                        </select>                        
+                    </div>
+                    <ul class="custom_scroll">
+                        <li><a href="" class="active">총감시기<span>(2건)</span></a></li>
+                        <li><a href="">경보<span>(0건)</span></a></li>
+                        <li><a href="">통신이상(감)<span>(0건)</span></a></li>
+                        <li><a href="">총펌프장<span>(0건)</span></a></li>
+                        <li><a href="">펌프가동<span>(1건)</span></a></li>
+                        <li><a href="">통신이상<span>(0건)</span></a></li>
+                        <li><a href="">정전<span>(0건)</span></a></li>
+                        <li><a href="">위험수위<span>(0건)</span></a></li>
+                        <li><a href="">고수위알람<span>(0건)</span></a></li>
+                    </ul>
+                    <div class="in_selbox">
+                        <select name="" id="">
+                            <option value="">분류선택</option>
+                            <option value="">이름</option>
+                            <option value="">설치위치</option>
+                        </select>
+                        <input type="text">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                    </div>
+                </div>
+
+                <div class="btnwrap">
+                    <div class="leftbtn">
+                        <ul class="bunsu_color">
+                            <li><img src="../../img/90_s.png" alt="차단아이콘"><span class="state_text">차단</span></li>
+                            <li><img src="../../img/104_s.png" alt="이상동작아이콘"></span><span class="state_text">이상동작</span></li>
+                            <li><img src="../../img/105_1.png" alt="운전아이콘"><span class="state_text">운전</span></li>
+                            <li><img src="../../img/91_s.png" alt="정지아이콘"><span class="state_text">정지</span></li>
+                        </ul>
+                    </div>
+                    <div class="rightbtn pumpbox">
+                        <div class="bun_sel">
+                            <span>펌프장선택</span>
+                            <select name="" id="">
+                                <option value="">분전함선택</option>
+                                <option value="">11223344</option>
+                            </select>
+                        </div>
+                        <div class="bun_sel">
+                            <span>이벤트선택</span>
+                            <select name="" id="">
+                                <option value="">분전함선택</option>
+                                <option value="">11223344</option>
+                            </select>
+                        </div>
+                        <div class="search_box">
+                            <span>검색일자</span>
+                            <input type="date" name="" id="">
+                            <span>~</span>
+                            <input type="date" name="" id="">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="length"></span>건</div>
+                    <div id="tablewrap" class="custom_scroll">
+                        <table class="bunsu_gamsi">
+                            <thead>
+                                <tr>
+                                    <th>펌프장</th>
+                                    <th>펌프측</th>
+                                    <th>수위측</th>
+                                    <th>감시</th>
+                                    <th class="day">이벤트 내용</th>
+                                    <th>펌프상태</th>
+                                    <th>수위</th>
+                                    <th class="day">일시</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="cursor" onclick="pump_info()">동두천지하도<span class="smtxt">YB1</span></td>
+                                    <td>정상</td>
+                                    <td>없음</td>
+                                    <td>닫힘</td>
+                                    <td class="state_icon">이벤트 : <span class="red">정상소등</span></td>
+                                    <td class="state_icon">
+                                        <div class="recbox">
+                                            <img src="../../img/104_s.png" alt="">
+                                            <img src="../../img/104_s.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td>정상</td>
+                                    <td class="day">2022.10.07 / 15:10:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="cursor" onclick="pump_info()">동두천지하도<span class="smtxt">YB1</span></td>
+                                    <td>정상</td>
+                                    <td>없음</td>
+                                    <td>닫힘</td>
+                                    <td class="state_icon">이벤트 : <span class="red">정상소등</span></td>
+                                    <td class="state_icon">
+                                        <div class="recbox">
+                                            <img src="../../img/90_s.png" alt="">
+                                            <img src="../../img/90_s.png" alt="">
+                                        </div>
+                                    </td>
+                                    <td>정상</td>
+                                    <td class="day">2022.10.07 / 15:10:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="cursor" onclick="pump_info()">동두천지하도<span class="smtxt">YB1</span></td>
+                                    <td>정상</td>
+                                    <td>없음</td>
+                                    <td>닫힘</td>
+                                    <td class="state_icon">이벤트 : <span class="red">정상소등</span></td>
+                                    <td class="state_icon"></td>
+                                    <td>정상</td>
+                                    <td class="day">2022.10.07 / 15:10:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="cursor" onclick="pump_info()">동두천지하도<span class="smtxt">YB1</span></td>
+                                    <td>정상</td>
+                                    <td>없음</td>
+                                    <td>닫힘</td>
+                                    <td class="state_icon">이벤트 : <span class="red">정상소등</span></td>
+                                    <td class="state_icon"></td>
+                                    <td>정상</td>
+                                    <td class="day">2022.10.07 / 15:10:04</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

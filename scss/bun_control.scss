@@ -1,0 +1,655 @@
+@import "./_var", "./_popup";
+
+
+@include scroll_style;
+// 분수전체제어
+.padding{
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.innerbox{
+    table{
+        margin-top: .5rem;
+        @include first_tr;
+        tr{
+            width: 100%;
+            border-bottom: $table_border;
+            @include flex;
+            padding: 3px;
+            box-sizing: border-box;
+            &:first-child{
+                // @include first_tr;
+                background-color: $white;
+            }
+            td{
+                box-sizing: border-box;
+                @include flex;
+                @include td_style($height:auto, $line: auto);
+                &:first-child{
+                    @include center-c;
+                    @include center-r;
+                    background-color: $td_color;
+                    width: 30%;
+                    text-align: center;
+                }
+                &:last-child{
+                    width: 70%;
+                    padding-left: 8px;
+                }
+                select,input{
+                    border: 1px solid $in_select_border;
+                }
+                input[type="text"],select{
+                    width: 50%;
+                    height: 25px;
+                }
+                .time_input{
+                    @include flex;
+                    @include center-c;
+                    span{
+                        padding-top: 3px;
+                    }
+                }
+            }
+        }
+    }
+    .minibtn_group{
+        margin-top: 0;
+    }
+    .dengtxt{
+        margin-top: .5rem;
+        label{
+            margin-left: 4px;
+            cursor: pointer;
+        }
+    }
+    table.buntable{
+
+        tbody{
+            tr{
+                td{
+                    ul{
+                        margin-top: 4px;
+                        @include flex;
+                        justify-content: space-around;
+                        li{
+                            margin-left: 4px;
+                            input{
+                                vertical-align: middle;
+                            }
+                            label{
+                                cursor: pointer;
+                                font-size: 15px;
+                            }
+                        }
+
+                    }
+                    .time_input{
+                        span.small_text{
+                            margin-left: 4px;
+                            display: inline-block;
+                            width: auto;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    table.jungtable{
+        tr{
+            @include flex;
+            @include center-c;
+    
+            td{
+                height: 30px;
+                line-height: 30px;
+                padding: 0;
+                &:first-child{
+                    width: 30%;
+                }
+                &:last-child{
+                    width: 70%;
+                    padding-left: 10px;
+                    select{
+                        width: 50%;
+                    }
+                }
+            }
+        }
+    }
+    // 구형분수대 전체제어팝업창
+    table.oldbunsu_order{
+        tbody{
+            tr{
+                @include flex;
+                td{
+                    @include flex;
+                    @include center-c;
+                    &:first-child{
+                        width: 30%;
+                        justify-content: center;
+                    }
+                    &:last-child{
+                        width: 70%;
+                        padding: 0;
+                        padding-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+    //분수대 경관조명 연결 팝업창
+    table.lamplink{
+        flex-direction: column;
+        width: 100%;
+        thead{
+            tr{
+                padding: 0;
+                height: 30px;
+                background-color: $td_color;
+                &:first-child{
+                    justify-content: center;
+                }
+                &:last-child{
+                    th{
+                        &:first-child{
+                            border-right: $table_border;
+                            box-sizing: border-box;
+                        }
+                    }
+                }
+                th{
+                    @include flex;
+                    @include center-c;
+                    @include center-r;
+                    &:first-child{
+                        width: 30%;
+                    }
+                    &:last-child{
+                        width: 70%;
+                    }
+                }
+            }
+    
+        }
+        tbody{
+            tr{
+                padding: 0;
+                td{
+                    &:first-child{
+                        border-right: $table_border;
+                    }
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    //구형분수대 제어버튼 클릭시 팝업창
+    .oldcont_table{
+        tr{
+            td{
+                padding: 4px 0;
+                >div{
+                    width: 100%;
+                }
+                &:nth-child(even){
+                    font-size: 15px;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+
+.pop, .errorbox , .delbox, .deng_error{
+    display: none;
+    background-color: $white;
+    position: absolute !important;
+    left: 10%;
+    top: 10%;
+    border:1px solid #2a3b5e;
+    box-shadow: 0 24px 32px rgba(0,0,0, .1);
+    border-radius: .5rem;
+    padding: 0.188rem;
+    box-sizing: border-box;
+
+    >iframe{
+        height: calc(100% - 40px - 0.188rem);
+    }   
+}
+
+
+
+// 등고장설정 팝업창
+.deng_error{
+    height: 200px;
+}
+
+.jung_controlbox{
+    width: 400px;
+    height: 170px;
+}
+.jungcont{
+    .btn_group{
+        .left{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+// 통신시험
+#tongsin{
+    height: 320px;
+}
+
+.susininfo, .susinadd{
+    width: 400px;
+    height: 270px;
+}
+
+.bun{
+    .between{
+        height: calc(100% - 40px - 0.188rem);
+    }
+    @include scroll_style;
+}
+
+
+.bun_tab1{
+    .table_wrapper{
+        table{
+            tbody{
+                tr{
+                    @include flex;
+                    flex-wrap: wrap;
+                    border-bottom: $table_border;
+                    @include center-c;
+                    padding: 3px;
+                    box-sizing: border-box;
+                    td{
+                        @include td_style;                            
+                        &:nth-child(odd){
+                            width: 25%;
+                            background-color: $td_color;
+                            text-align: center;
+                            word-break: keep-all;
+                        }
+                        &:nth-child(even){
+                            width: 25%;
+                            text-align: left;
+                            font-size: 14px;
+                            padding-left: 5px;
+                            input,select{
+                                height: 25px;
+                                border: 1px solid $in_select_border;
+                                box-sizing: border-box;
+                                background-color: $white;
+                                width: 90%;
+    
+                            }
+                            div{
+                                input[type="checkbox"]{
+                                    vertical-align: middle;
+                                }
+                            }
+                        }
+
+                        &.in_span{
+                            width: 75%;
+                            input{
+                                width: 60%;
+                            }
+                            span.colornone{
+                                i{
+                                    margin-right: 5px;
+                                }
+                                cursor: pointer;
+                                color: red;
+                                padding: 6px;
+                                border: 1px solid red;
+                                border-radius: 3px;
+                                box-sizing: border-box;
+                            }
+                        }
+
+                        &.placeno{
+                            @include flex;
+                            @include center-c;
+                            line-height: initial;
+                        }
+                        
+                        &.mg{
+                            @include flex;
+                            input{
+                                width: 50%;
+                                &:first-child{
+                                    margin-right: 5px;
+                                    box-sizing: border-box;
+                                }
+                            }
+                        }
+                        &.h60{
+                            height: 60px;
+                            line-height: 60px;
+                        }
+                        &.in_span{
+                            height: 60px;
+                        }
+                        &.wide{
+                            width: 75%;
+                            input{
+                                width: 70%;
+                            }
+                        }
+                        &.lamp{
+                            height: initial;
+                        }
+                        div{
+                            &.twoselect{
+                                @include flex;
+                                @include center-c;
+                                select{
+                                    width: 48%;
+                                    box-sizing: border-box;
+                                    &:first-child{
+                                        margin-right: 1%;
+                                    }
+                                }
+                            }
+                        }
+
+                
+                    }
+                }
+    
+            }
+        }
+    }
+}
+
+// 삭제내역
+
+.deletepop{
+    .table_wrapper{
+        height: 100%;
+        border-top: 2px solid #666;
+        margin-top: 1rem;
+        box-sizing: border-box;
+        table{
+            tbody{
+                tr{
+                    width: 100%;
+                    &:last-child{
+                        @include flex;
+                        align-items: flex-start;
+                        
+                    }
+                    td{
+                       
+                        &.height{
+                            height: 80px;
+                            line-height: 80px;
+                        }
+                        &.etc{
+                            width: 75%;
+                            textarea{
+                                height: 80px;
+                                width: 100%;
+                                border: 1px solid $in_select_border;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+          
+        }
+    }
+
+}
+.between{
+    .btn_group{
+        margin-top: 0;
+    }
+}
+
+.d_error{
+    >div{
+        margin-top: .5rem;
+        table{
+            width: 100%;
+            display: flex;
+            tbody{
+                width: 100%;
+                display: flex;
+                tr{
+                    @include flex;
+                    width: 100%;
+                    padding: 3px 0;
+                    border-bottom: $table_border;
+                    box-sizing: border-box;
+                    &:first-child{
+                        border-top: 2px solid #666;
+                        line-height: 30px;
+                    } 
+                    td{
+                        font-weight: normal;
+                        color: #222;
+                        box-sizing: border-box;
+                        &:first-child{
+                            width: 40%;
+                            background-color: $td_color;
+                            text-align: center;
+                            word-break: keep-all;
+                            line-height: initial;
+                        }
+                        &:last-child{
+                            width: 60%;
+                            padding-left: 10px;
+                            box-sizing: border-box;
+                            @include flex;
+                            align-items: center;
+                            div{
+                                select{
+                                    height: 30px;
+                                    border: 1px solid $in_select_border;
+                                    
+                                }
+                            }
+                        }
+                      
+                    }
+                    
+                }
+            }
+        }
+        p{
+            margin: .5rem 0;
+            font-size: 14px;
+            color: #acacac;
+            box-sizing: border-box;
+        }
+    }
+    
+    .minibtn_group{
+        margin-top: 0;
+    }
+}
+
+.change_btn{
+    width: 80px;
+    height: 35px;
+    background-color: $minibtn;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 4px;
+    margin: 0 auto;
+    // margin-top: 1rem;
+    // margin-bottom: 1rem;
+    a{
+        font-size: 14px;
+        letter-spacing: 2px;
+        color: $white;
+    }
+}
+
+.all_list{
+    padding-top: 1rem;
+    box-sizing: border-box;
+    table{
+        @include first_tr;
+        tr{
+            width: 100%;
+            border-bottom: $table_border;
+            padding: 3px;
+            box-sizing: border-box;
+            td{
+                &:nth-child(odd){
+                    background-color: $td_color;
+                    width: 25%;
+                    text-align: center;
+                }
+                &:nth-child(even){
+                    padding: 4px 0 4px 8px;
+                    box-sizing: border-box;
+                    >div{
+                        @include flex;
+                        @include center-c;
+                        color: #666;
+                        font-weight: normal;
+                        font-size: 15px;
+                        input{
+                            width: 30px;
+                        }
+                        select{
+                            width: 70px;
+                        }   
+                        select.wordselect{
+                            width: 100px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }  
+                        input.margin{
+                            margin-left: 3px;
+                        }                       
+                    }
+                    
+                }
+                &.linefull{
+                    >div{
+                        select{
+                            width: 40px;
+                        }
+                        >span{
+                            margin: 0 8px;
+                        }
+                        
+                    }
+                }   
+                select,input{
+                    border: 1px solid $in_select_border;
+                    width: 30px;
+                    height: 30px;
+                    box-sizing: border-box;
+                }
+                
+            }
+        }
+    }
+    p{
+        margin-top: 1rem;
+        font-size: 14px;
+        color: #aaa;
+    }
+}
+
+.errorbox{
+    height: auto;
+    .tablebox{
+        @include flex;
+        border-top: 2px solid #666;
+        border-bottom: $table_border;
+        box-sizing: border-box;
+        h3{
+            font-size: 18px;
+            background-color:$td_color;
+            width: 40%;
+            padding: 3px;
+            height: 30px;
+            line-height: 30px;
+            font-weight: normal;
+        }
+        >div{
+            width: 60%;
+            padding: 4px 0 4px 8px;
+            select{
+                width: 60%;
+                height: 30px;
+                border: $in_select_border;
+                box-sizing: border-box;
+            }
+        }
+       
+    }
+    p{
+        margin-top: 10px;
+        font-size: 16px;
+        color: #666;
+    }
+
+}
+
+// 구형분수대
+
+
+.bunsubox{
+    overflow-x: hidden;
+    table{
+        border-top: 2px solid #666;
+        box-sizing: border-box;
+        width: 100%;
+        tbody{
+            tr{
+                @include flex;
+                width: 100%;
+                padding: 3px;
+                border-bottom: $table_border;
+                box-sizing: border-box;
+                td{
+                    &:nth-child(odd){
+                        width: 25%;
+                        background-color: $td_color;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    &:nth-child(even){
+                        width: 75%;
+                        div{
+                            width: 100%;
+                            padding-left: 4px;
+                            input, select{
+                                height: 25px;
+                                border: $table_border;
+                            }
+                            input{
+                                width: 80px;
+                            }
+                            p{
+                                font-size: 15px;
+                                margin-top: 10px;
+                                color: #222;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

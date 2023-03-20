@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자관리</title>
+
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/subcont.css">
+    <link rel="stylesheet" href="../../css/bun_control.css">
+    <link rel="stylesheet" href="../../css/gam.css">
+    <link rel="stylesheet" href="../../css/sms.css">
+    <link rel="stylesheet" href="../../css/commonre.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/subre.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <script type="text/javascript" defer src="../../jquery-ui-1.13.1.custom/jquery-ui.css" ></script>
+
+    <script type="text/javascript" defer src="../../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../../js/buga.js" ></script>
+    <script type="text/javascript" defer src="../../js/gam.js" ></script>
+</head>
+<body>
+    <div class="wrapper custom_scroll">
+        <div class="cont">
+            <div class="qickmenu">
+                <div id="devidebox">
+                    <div id="menulist">
+                        <div><span>메뉴</span></div>
+                        <ul class="submenu custom_scroll">
+                            <li class="subbar">
+                                <a href="#">등록하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="#a" onclick="bunpopbtn()">분수대</a></li>
+                                    <li><a href="#a" onclick="bunlampbtn()">경관조명</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">제어하기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li class="on"><a href="../bunsu/bunsusel.html">분수대선택제어</a></li>
+                                    <li><a href="#a" id="all_cont" onclick="bunshow()">분수대전체제어</a></li>
+                                    <li><a href="../bunsu/lampsel.html">경관조명선택제어</a></li>
+                                    <li><a href="#a" id="all_cont" onclick="bunshow1()">경관조명전체제어</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">운용데이터<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bunsu/bun_data/data.html">분수대운용데이터</a></li>
+                                    <li><a href="#a" onclick="setshow()">경관조명선택설정</a></li>
+                                    <li><a href="#a" onclick="setshow()">경관조명전체설정</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="#">내역보기<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../list/bunsugam.html">분수대감시내역</a></li>
+                                    <li><a href="../list/bunsu_myeng.html">분수대명령내역</a></li>
+                                    <li><a href="../list/bunlamp_g.html">경관조명감시내역</a></li>
+                                    <li><a href="../list/bunlamp_m.html">경관조명명령내역</a></li>
+                                    <li><a href="../list/bunsu_jeon.html">경관조명전력값</a></li>
+                                    <li><a href="../list/bunlamp_set.html">경관조명설치현황</a></li>
+                                </ul>                 
+                            </li>
+                            <li class="subbar">
+                                <a href="">SMS설정<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../bun_sms/bun_susin.html">수신자관리</a></li>
+                                    <li><a href="../bun_sms/bun_message1.html">메시지관리</a></li>
+                                    <li><a href="../bun_sms/bun_message2.html">메시지내역</a></li>
+                                </ul>
+                            </li>
+                            <li class="subbar">
+                                <a href="">계정관리<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../account/user.html">사용자관리</a></li>
+                                    <li class="on"><a href="../account/connector.html">접속자관리</a></li>
+                                </ul>            
+                            </li>
+                            <li class="subbar">
+                                <a href="">부가기능<i class="fa-solid fa-plus"></i></a>
+                                <ul class="submenu_list">
+                                    <li><a href="../buga/bunsu_localset.html">지역설정</a></li>
+                                    <li><a href="../buga/bunsu_lampset.html">램프설정</a></li>
+                                </ul>         
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div id="open">
+                        <a href="#a">MENU</a>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="contbox">
+                <div class="btnwrap">
+                    <div class="rightbtn">
+                        <div class="bun_sel">
+                            <span>아이디</span>
+                            <select name="" id="">
+                                <option value="">전체</option>
+                                <option value="">퍙성 평궁리 진입로(294)</option>
+                            </select>
+                        </div>
+                        <div class="search_box">
+                            <span>접속날짜</span>
+                            <input type="date" name="" id="">
+                            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div class="btn_bg detail_btn" onclick="userpop_btn()"><a href="#a">상세검색</a></div>
+              
+                    </div>
+                    
+                 
+                </div>
+                <div class="scroll_wrap">
+                    <div class="txt">총 <span class="length"></span>건</div>
+                    <div id="tablewrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>아이디</th>
+                                    <th>IP</th>
+                                    <th>로그인시간</th>
+                                    <th>마지막 접속시간</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="chk_w">1</td>
+                                    <td>rkqhxpzm</td>
+                                    <td>210.95.123.10</td>
+                                    <td>2022-08-04 13:58:04</td>
+                                    <td>20220804 13:58:04</td>
+                                </tr>
+                                <tr>
+                                    <td class="chk_w">2</td>
+                                    <td>rkqhxpzm</td>
+                                    <td>210.95.123.10</td>
+                                    <td>2022-08-04 13:58:04</td>
+                                    <td>20220804 13:58:04</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <div class="paging">
+                    <ul>
+                        <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="" title="현재페이지" class="active">1</a></li>
+                        <li><a href="">2</a></li>
+                        <li><a href="">3</a></li>
+                        <li><a href="">4</a></li>
+                        <li><a href="">5</a></li>
+                        <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                        <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                    </ul> 
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

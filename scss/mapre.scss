@@ -1,0 +1,37 @@
+@media all and (min-width:1140px) and (max-width:1300px){
+    .mapwrapper{
+        .rebtn{
+            display: block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 4;
+            select{
+                padding: 8px 10px;
+                border: none;
+                box-sizing: border-box;
+                background-color: #1e3932;
+                color: #fff;
+            }
+        }
+    }
+}
+@media all and (max-width:1139px){
+    .mapwrapper{
+        .open_btn{
+            width: 90vw !important;
+        }
+        
+        .main_icon{
+            .map_icon{
+                li{
+                    width: calc(100% / 4) !important;
+                    &:nth-child(4){
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+}

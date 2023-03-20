@@ -1,0 +1,186 @@
+@import "./var";
+
+.cont{
+    height: calc(100% - 3rem);
+
+    // 보안등타입별 현황 팝업창
+    .state_pop{
+        position: absolute;
+        width: 900px;
+        height: 500px;
+        left: 5%;
+        top: 10%;
+        padding: 0.188rem;
+        background-color: #fff;
+        border: 1px solid $pop_head;
+        box-sizing: border-box;
+        box-shadow: $shadow24;
+        border-radius: .5rem;
+        z-index: 99;
+        display: none;
+        >iframe{
+            height: calc(100% - 43px);
+        }
+    }
+    .contbox{
+        height: calc(100% - 168px);
+        .scroll_wrap{
+            height: calc(100% - 60px - 4rem);
+            #tablewrap{
+                height: 100%;
+                tr{
+                    td{
+                        &:not(td:first-child, td:last-child){
+                            cursor: pointer;
+                        }
+                    }
+                    
+                }
+                table#dengtype{
+                    tbody{
+                        tr{
+                            td{
+                                &:first-child{
+                                    width: 10%;
+                                }
+                            }
+                        }
+                    }
+                }
+                table#botype{
+                    tbody{
+                        tr{
+                            td{
+                                &:not(td:first-child,td:last-child){
+                                    cursor: pointer;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                table.amount{
+                    .devide2{
+                        width: calc(22% / 2);
+                    }
+                    thead{
+                        tr{
+                            &:first-child{
+                                th{
+                                    &.widthfix{
+                                        width: 10%;
+                                    }
+                                }
+                            }
+                            &:nth-child(2){
+                                th{
+                                    &:not(.devide2, .widthfix){
+                                        width: calc(20% / 5);
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+                table.settype{
+                    thead{
+                        tr{
+                            th{
+                                width: calc(100% / 10);
+                            }
+                        }
+                    }
+                }
+                table.boanlist, table.junglist{
+                    thead{
+                        tr{
+                            th{
+                                width: 40%;
+                                &:first-child{
+                                    width: 20%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 보안등 통계리스트 테이블 스타일
+.table_poplist{
+    height: 100%;
+    h3{
+        padding-top: 10px;
+        span{
+            font-size: 16px;
+            font-weight: normal;
+            color: #001c40;
+            i{
+                font-size: 14px;
+                text-align: center;
+                border-radius: 50px;
+                background-color: #74c0fc;
+                color: #001c40;
+            }
+        }
+    }
+    .auto{
+        max-width: 100%;
+        height: calc(100% - 56px);
+        white-space: nowrap;
+        padding: 10px 0;
+        overflow: auto;
+        // @include ios;
+        &::-webkit-scrollbar {
+            width: 3px; 
+            height: 3px;
+            background-color: rgba(0,0,0,0.15);
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: #000;
+            box-sizing: border-box;
+        }
+        table{
+            width: 100%;
+            border: $table_border;
+            border-top: 2px solid #666;
+            th,td{
+                padding: 0 8px;
+                border-left: $table_border;
+                text-align: center;
+                white-space: nowrap;
+                box-sizing: border-box;
+            }
+            thead{
+                tr{
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    background-color: #efefef;
+                    th{
+                        white-space: nowrap;
+                        width: 10%;
+                        height: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    border-bottom: $table_border;
+                    @include td_style;
+                }
+            }
+           
+        }
+    }
+   
+   
+    
+
+}

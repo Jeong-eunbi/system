@@ -1,0 +1,1574 @@
+@import "./var";
+.wrapper{
+    .cont{
+        // height: calc(100% - 48px);
+        .contbox{
+            height: calc(100% - 130px);
+            .scroll_wrap{
+                .txticonbox{
+                    @include flex;
+                    @include between;
+                    @include center-c;
+                    padding-top: 0;
+                    padding-bottom: 10px;
+                    box-sizing: border-box;
+                    >span{
+                        line-height: 40px;
+                        padding-top: 3px;
+                    }
+                    
+                }
+            }
+            .boanset{
+                tr{
+                    td{
+                        a{
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .minwon2{
+            .scroll_wrap{
+                height: calc(100% - 56px);
+                margin: 0;
+                #tablewrap{
+                    height: calc(100% - 173px);
+
+                }
+            }   
+        }
+        //공통
+        li.ontxt{
+            background-color: #006b54;
+            a{
+    
+                color: #fff !important;
+            }
+        }
+        button{
+            background-color: rgb(61, 61, 61); 
+            border: none; 
+            border-radius: 4px; 
+            color: rgb(255, 255, 255); 
+            height: 30px; 
+            padding: 0px 8px; 
+        }
+        .rowbox{
+            @include flex;
+            @include center-c;
+        }
+        table.table_search{
+            border-top: $tabletop;
+            width: 100%;
+            margin-bottom: 1rem;
+            tr{
+                td{
+                    border: $table_border;
+                    text-align: center;
+                    background-color: #f2f4f3;
+                    color: #002f31;
+                    padding: 3px ;
+                    box-sizing: border-box;
+                    vertical-align: middle;
+                    &:nth-child(even){
+                        padding-left: 8px;
+                        text-align: left;
+                        background-color: $white;
+                        width: 20%;
+                    }
+                    &:nth-child(odd){
+                        width: calc(40% / 3);
+                    }
+                    select, input{
+                        border: 1px solid $in_select_border;
+                        height: 30px;
+                        width: 100px;
+                    }
+                    select{
+                        margin-right: 3px;
+                    }
+                    >div{
+                        @include flex;
+                        align-items: center;
+                        >span{
+                            margin: 0 3px;
+                        }
+                    }
+                }
+                &:nth-child(3){
+                    td:last-child{
+                        background-color: $white;
+       
+                    }
+                }
+            }
+        }
+   
+        .iconbtn{
+            @include flex;
+            width: 5%;
+            button{
+                background-color: $white;
+                width: 35px;
+                height: 35px;
+                border: 1px solid #aaa;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: all 0.3s ease-out;
+                &:first-child{
+                    margin-right: 4px;
+                }
+                i{
+                    color: #494949;
+                    font-size: 17px;
+                }
+                &:hover{
+                    background-color: #006b54;
+                    i{
+                        color: $white;
+                    }
+                }
+            }
+                
+        }
+        
+        // 파일첨부
+        .filebox{
+            input[type="file"]{
+                position: absolute;
+                width: 0;
+                height: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 0;
+            }
+            label{
+                background-color: #484A4B;
+                color: #fff;
+                height: 40px;
+                line-height: 40px;
+                font-size: 15px;
+                width: 120px;
+                padding-top: 2px;
+                box-sizing: border-box;
+                cursor: pointer;
+                margin-left: 4px;
+            }
+            .nameinput{
+                height: 40px;
+                border: 1px solid $in_select_border;
+                width: 100%;
+                color: #999;
+                margin-left: 8px;
+                box-sizing: border-box;
+            }
+           
+        }
+        
+        // 버튼
+        .btn_bg{
+            background-color: #3d3d3d;
+            margin-right: 8px;
+            padding: 0 8px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            a{
+                display: block;
+                padding-top: 2px;
+                color: #fff;
+                box-sizing: border-box;                    
+            }
+        }
+        
+        //table안에 수정삭제 버튼
+        .table_btn{
+            @include flex;
+            @include center-c;
+            @include center-r;
+            
+            div{
+                @include flex;
+                @include center-c;
+                @include center-r;
+                height: 28px;
+                border: 1px solid #d5d5d5;
+                padding: 4px 8px;
+                box-sizing: border-box;
+                border-radius: 3px;
+                
+                &:first-child{
+                    margin-right: 8px;
+                    border: 1px solid #006b54;
+                    a{
+                        color: #006b54;
+                    }
+                }
+                a{
+                    padding-top: 2px;
+                    font-size: 15px;
+                    color: #555;
+                }
+            }
+        }
+
+        //불편신고
+        .dorobox{
+            width: 75%;
+            height: calc(100% - 120px);
+            .scroll_wrap{
+                overflow: hidden;
+                margin: 0;
+                height: calc(100% - 30px);
+                .doro_wrap{
+                    height: 100%;
+                    @include tablebox;
+                    table{
+                        @include tablestyle;
+                        tr{
+                            @include tbodytr;
+                            td{
+                                @include tbodytd;
+                                font-size: 16px;
+                                padding: 8px ;
+                                &:first-child{
+                                    background-color: #f2f8f6;
+                                    width: 20%;
+                                    vertical-align: middle;
+                                }
+                                &:last-child{
+                                    display: flex;
+                                    align-items: center;
+                                    span{
+                                        margin-left: 8px;
+                                        color: #888;
+                                        font-size: 14px;
+                                        padding-top: 4px;
+                                    }
+                                }
+                                ul.type-select{
+                                    li{
+                                        margin-right: 6px;
+                                        font-size: 15px;
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        &:last-child{
+                                            margin-right: 0;
+                                        }
+                                        input, label{
+                                            cursor: pointer;
+                                            vertical-align: middle;
+                                        }
+                                        label{
+                                            padding-top: 3px;
+                                        }
+                                        
+                                    }
+                                }
+                                select,input{
+                                    height: 30px;
+                                }
+                                .nameinput{
+                                    height: 40px;
+                                }
+                                select{
+                                    padding: 6px 2rem 6px 4px;
+                                    margin: 0 2px;
+                                    color: #555;
+                                    outline: none;
+                                    border: 1px solid #aaa;
+                                    height: 30px;
+                                    min-width: 100px;
+                                    background: url(../img/selectborder.png) no-repeat right top/contain #fff;
+                                }
+                            }
+                        }
+                    }
+                    .pag{
+                        height: calc(100% - 150px - 1rem);
+                        display: none;
+                        clear: both;
+                        .doro_cont{
+                            margin-top: 1rem;
+                            overflow: auto;
+                            height: calc(100% - 1rem - 2px);
+                            border-top: $tabletop;
+                            table{
+                                tr{
+                                    td{
+                                        >div{
+                                            @include flex;
+                                            @include center-c;
+                                        }
+                                 
+                                        .map_btn{
+                                            height: 30px;
+                                            line-height: 30px;
+                                            font-size: 15px;
+                                            letter-spacing: 1px;
+                                            border: 1px solid #006b54;
+                                            padding: 0 10px;
+                                            box-sizing: border-box;
+                                            margin-left: 8px;
+                                            a{
+                                                color: #006b54;
+                                            }
+                                        }
+                                        select,input[type="text"],textarea{
+                                            border: 1px solid #aaa;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .minwon_btn{
+                            margin-top: 1rem;
+                            float: right;
+                            padding: 6px;
+                            border: 1px solid #ddd;
+                            border-radius: 3px;
+                            box-sizing: border-box;
+                            a{
+                                display: flex;
+                                align-items: center;
+                                font-size: 15px;
+                                color: #666;
+                                img{
+                                    margin-right: 10px;
+                                    height: 35px;
+                                }
+                                
+                            }
+                            &:hover{
+                                transition: .3s;
+                                border: 1px solid #006b54;
+                                a{
+                                    color: #006b54;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+                
+                
+
+            }
+        }
+
+        .table_style{
+            height: calc(100% - 64px);
+            overflow: auto;
+            border-top: $tabletop;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling:touch;
+            table{
+                border: $tablelist;
+                border-top: none;
+                width: 100%;
+                position: relative;
+                input[type="checkbox"]{
+                    cursor: pointer;
+                    width: 16px;
+                    height: 16px;
+                }
+                
+                thead{
+                    width: 100%;
+                    position: sticky;
+                    top: 0;
+                    box-sizing: border-box;
+                    z-index: 2;
+                    tr{
+                        th{
+                            &:first-child{
+                                border-left: none;
+                            }
+                            padding: 12px 0;
+                            background-color: $thbg;
+                            border: $tablelist;
+                            color: #333;
+                            border-top: none;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        text-align: center;
+                        transition: .5;
+                        border-bottom: 1px solid #d8d8d8;
+                        &:last-child{
+                            td{
+                                border-bottom: none;
+                            }
+                        }
+                        td{
+                            color: #666;
+                            border-left: $tablelist;
+                            >div{
+                                @include flex;
+                                @include center-r;
+                                @include center-c;
+        
+                            }
+                            &.cursor:hover{
+                                background-color: #ebf5df;
+                                background-color: #f8f8f8;
+                            }
+                            &.chk_w{
+                                width: 5%;
+                                border-left: none;
+                                border-right: $tablelist;
+                            }
+                            &.thbg{
+                                background-color: $thbg;
+                            }
+                        }
+                    }
+                }
+                th, td{
+                    padding: 12px 0;
+                    text-align: center;
+                    vertical-align: middle;
+                    font-size: 16px;
+                    box-sizing: border-box;
+                    .col{
+                        @include flex;
+                        flex-direction: column;
+                        position: relative;
+                        >span{
+                            padding: 8px;
+                            box-sizing: border-box;
+                            &:first-child{
+                                
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    left: 50%;
+                                    top: 45%;
+                                    width: 3px;
+                                    height: 3px;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+                td.type{
+                    background-image: url(../img/A11N.gif);
+                    background-repeat: no-repeat;
+                }
+                td.cursor{
+                    cursor: pointer;
+                }
+        
+            }
+        }
+        
+        
+
+        ul.set_tab{
+            @include subtab;
+            li{
+                @include flex;
+                @include center-c;
+                @include center-r;
+                margin-right: 2px;
+                width: calc(100% / 5);
+                max-width: 145px;
+                border: 1px solid #e1e1e1;
+                height: 55px;
+                
+                box-sizing: border-box;
+                cursor: pointer;
+                a{
+                    @include flex;
+                    @include full;
+                    font-size: 15px;
+                    color: #484a4b;
+                    @include center-c;
+                    @include center-r;
+                }
+                
+            }
+    
+        }
+        .allset{
+            height: calc(100% - 76px);
+            .tabbox{
+                @include flex;
+                flex-direction: column;
+                height: 100%;
+                .tablist{
+                    height: 100%;
+                    margin-top: 30px;
+                    .tab_status{
+                        @include flex;
+                        margin-left: 3px;
+                        flex-direction: column;
+                        width: 20%;
+                        margin-bottom: 10px;
+                        h3{
+                            font-size: 17px;
+                            font-weight: bold;
+                            color: #494949;
+                            margin-bottom: 10px;
+                            img{
+                                margin-right: 10px;
+                                vertical-align: middle;
+                            }
+                        }
+                        .table-type{
+                            @include flex;
+                            table{
+                                margin-right: 3px;
+                            }
+                        }
+                        table{
+                            border: 1px solid #e3e3e3;
+                            border-top: $tabletop;
+                            tr{
+                                &:first-child{
+                                    background-color: #f2f4f3;
+                                    td{
+                                        color: #002f31;
+                                        box-sizing: border-box;
+                                        font-family: 'GmarketSansMedium';
+                                        text-align: center;
+                                    }
+                                }
+                                &:last-child{
+                                    td{
+                                        &:first-child{
+                                            background-color: #fbfbfb;
+                                        }
+                                    }
+                                }
+                                td{
+                                    padding: 10px;
+                                    vertical-align: middle;
+                                    word-break: keep-all;
+                                    border-bottom: 1px solid #cac8c7;
+                                    border-right: 1px solid #cac8c7;
+                                    text-align: center;
+                                    box-sizing: border-box;
+                                    font-family: 'GmarketSansLight';
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                    .btnwrap{
+                        margin-bottom: 10px;
+                        box-sizing: border-box;
+                    }
+                    .wide{
+                        display: flex;
+                        width: 40%;
+                    }
+                    &.on{
+                        border-color: #006b54;
+                        color: #006b54;
+                        
+                    }
+                }
+                #tab1{
+                    height: 90%;
+                    @include flex;
+                    overflow: auto;
+                    flex-wrap: wrap;
+                    flex-direction: row;
+                }
+        
+                
+            }
+            
+    
+        }
+    
+        // 공지관리
+        .doropage1{
+            height: calc(100% - 130px);
+            .writebox{
+                justify-content: flex-end;
+                
+                .rightbtn{
+                    .bun_sel{
+                        @include flex;
+                        @include center-c;
+                    }
+                    input{
+                        height: 30px;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                        border: 1px solid #aaa;
+                    }
+                    
+                    .write{
+                        margin-left: 4px;
+                        background-color: #fff;
+                        border: 1px solid #aaa;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 8px;
+                        box-sizing: border-box;
+                        border-radius: 4px;
+                        a{
+                            display: block;
+                            padding-top: 1px;
+                        }
+                    }
+                }
+            }
+            .scroll_wrap{
+                height: calc(100% - 148px);
+                margin: 1rem 0;
+            }
+            table.notice{
+                tr{
+                    th{
+                        &:first-child{
+                            width: 3%;
+                        }
+                    }
+                }
+            }
+        }
+        #bosubox{
+            height: calc(100% - 130px);
+            .devidebox{
+                @include flex;
+                flex-direction: column;
+                justify-content: space-between;
+                #tablescroll{
+                    height: 450px;
+                    max-height: 450px;
+                    overflow: auto;
+                    table{
+                        thead{
+                            @include fix;
+                        }
+                    }
+                }
+            }
+        }
+        //보수내역관리
+        .scroll_wrapper{
+            .non{
+                padding: 0;
+                margin-bottom: 8px;
+                @include flex;
+                @include between;
+                @include center-c;
+            }
+            #tablescroll{
+                border-top: 2px solid #006b54;
+                table.bosulist{
+                    width: 100%;
+                    border: 1px solid #d8d8d8;
+                   
+                    thead{
+                        tr{
+                            th{
+                                padding: 10px 0;
+                                background-color: $thbg;
+                                border-right: 1px solid #d8d8d8;
+                                box-sizing: border-box;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            &:first-child{
+                                border-top: 1px solid #d8d8d8;
+                               
+                            }
+                            border-bottom: 1px solid #d8d8d8;
+                            td{
+                                vertical-align: middle;
+                                text-align: center;
+                                padding: 10px 0;
+                                font-size: 15px;
+                                border-right: 1px solid #d8d8d8;
+                                box-sizing: border-box;
+                            
+                                &:first-child{
+                                    cursor: pointer;
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
+                                }
+                                
+                                
+                                ul{
+                                    text-align: left;
+                                    padding-left: 10px;
+                                    li{
+                                        line-height: 1.3;
+                                    }
+                                }
+                                .find{
+                                    text-align: left;
+                                    padding: 10px;
+                                    box-sizing: border-box;
+                                    a{
+                                        color: #0000ff;
+                                        
+                                    }
+                         
+                                }
+                                .deng_name{
+                                    text-align: left;
+                                    padding-left: 10px;
+                                    box-sizing: border-box;
+                                    div{
+                                        i{
+                            
+                                            margin-right: 4px;
+                                        }
+                                    }
+                                    .lo_name{
+                                        margin-bottom: 6px;
+                                        color: #444;
+                                        i{
+                                            font-size: 10px;
+                                            color: #aaa;
+                                        }
+                                    }
+                                    .infobtn{
+                                        a{
+                                            color: #006b54;
+                                            i{
+                                                font-size: 14px;
+                                                color: #006b54;
+                                            }
+                                        }
+                                        
+                                    }
+                                    
+                                }
+                                .deng_name >div:hover, .find:hover{
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+        }
+        
+        }
+        // 보수내역입력 페이지
+        .input_list{
+            width: 75%;
+            height: calc(100% - 178px);
+            #tablescroll{
+                height: 100%;
+                overflow: auto;
+                table.bosu_detail{
+                    width: 100%;
+                    border: 1px solid #d8d8d8;
+                    border-top: 2px solid #006b54;
+                    tr{
+                        border-bottom: 1px solid #d8d8d8;
+                        td{
+                            color: #666;
+                            vertical-align: middle;
+                            padding: 10px 0;
+                            border-right: 1px solid #d8d8d8;
+                            box-sizing: border-box;
+                            &:first-child{
+                                text-align: center;
+                                background-color: $thbg;
+                            }
+                            &:last-child{
+                                padding-left: 10px;
+                                font-size: 15px;
+                                box-sizing: border-box;
+                            }
+                            .filebox{
+                                @include flex;
+                                @include center-c;
+                                label{
+                                    text-align: center;
+                                }
+                            }
+                            ul{
+                                @include flex;
+                                li{
+                                    border-right: 1px solid #aaa;
+                                    padding: 0 8px;
+                                }
+                            }
+                            select, input[type="date"]{
+                                border: 1px solid $in_select_border;
+                                padding: 0 10px;
+                                height: 30px;
+                            }
+                            .nameinput{
+                                width: 30%;
+                            }
+                        }
+                    }
+                }
+            }
+            .completebtn{
+                @include flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                margin-top: 1rem;
+                box-sizing: border-box;
+                button{
+                    width: 120px;
+                    cursor: pointer;
+                    height: auto;
+                    padding: 6px 15px;
+                    background-color: $white;
+                    box-sizing: border-box;
+                    border: 1px solid #494949;
+                    word-break: keep-all;
+                    color: #494949;
+                    @include flex;
+                    margin-right: 4px;
+                    transition: .3s;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    border-radius: 3px;
+                    &:first-child{
+                        margin-right: 4px;
+                        border: 1px solid #006b54;
+                        color: #006b54;
+                    }
+                    &:hover{
+                        background-color: #006b54;
+                        color: $white;
+                    }
+                }
+            }
+           
+        }
+        
+        
+    
+        //청구내역관리
+        ul.bill_tab{
+            @include subtab;
+            li{
+                @include flex;
+                @include center-c;
+                @include center-r;
+                margin-right: 2px;
+                width: 145px;
+                border: 1px solid #e1e1e1;
+                height: 55px;
+                box-sizing: border-box;
+                cursor: pointer;
+                a{
+                    display: flex;
+                    @include full;
+                    @include center-c;
+                    @include center-r;
+                    font-size: 15px;
+                }
+                
+                
+            }
+        }
+        .commonbox{
+            margin-top: .5rem;
+            .table_search{
+                tr{
+                    td{
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .bill_scroll{
+            .combtn{
+                margin-bottom: 1rem;
+            }
+            #table_wrap{
+                .detail{
+                    width: 100%;
+                    height: 500px;
+                    max-height: 500px;
+                    border-top: $tabletop;
+                    overflow: auto;
+                    table{
+                        width: 100%;
+                        tr{
+                            color: #666;
+                            border-left: $tablelist;
+                        }
+                        thead{
+                            width: 100%;
+                            position: sticky;
+                            top: 0;
+                            box-sizing: border-box;
+                            z-index: 2;
+                            tr{
+                                
+                                th{
+                                    white-space: nowrap;
+                                    padding: 18px 0;
+                                    background-color: #f2f8f6;
+                                    border: $tablelist;
+                                    color: #333;
+                                    border-top: none;
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                text-align: center;
+                                transition: 0.5;
+                                border-bottom: $tablelist;
+                                td{
+                                    border-right: $tablelist;
+                                    vertical-align: middle;
+                                    padding: 18px 0;
+                                    word-break: keep-all;
+                                    box-sizing: border-box;
+                                }
+                                td.wid5{
+                                    width: 5%;
+                                }
+                            }
+                        }
+                        
+                    }
+                    //공종관리
+                    table.meterial1{
+                        tr{
+                            td{
+                                width: calc(100% / 6);
+                                &.bg{
+                                    background-color: $thbg;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .bill1{
+            .small_tab{
+                @include flex;
+                @include between;
+    
+            }
+            .boxwrap{
+                @include flex;
+                @include center-c;
+            }
+
+            table.billtable1{
+                tr{
+                    td{
+                        width: 10%;
+                        &.bg{
+                            background-color: $thbg;
+                        }
+                        &.wfix{
+                            width: 25%;
+                        }
+                        
+                    }
+                }
+            }
+            table.billtable2{
+                thead{
+                    tr{
+                        th{
+                            width: 10%;
+                            &:first-child, &:last-child{
+                                width: 15%;
+                            }
+                            &.wfix{
+                                width: 25%;
+                            }
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            &.w50{
+                                width: calc(25% / 2);
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+    
+        //자재입출고관리
+        .title_tab{
+            @include subtab;
+            li{
+                @include flex;
+                @include center-c;
+                @include center-r;
+                margin-right: 2px;
+                width: 145px;
+                border: 1px solid #e1e1e1;
+                height: 55px;
+                box-sizing: border-box;
+                cursor: pointer;
+                a{
+                    display: flex;
+                    @include full;
+                    @include center-c;
+                    @include center-r;
+                    font-size: 15px;
+                    
+                }
+                
+    
+    
+            }   
+        }
+        .small_tab{
+            width: 100%;
+            @include flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            @include center-c;
+            // @include center-r;
+            background-color: #fbfbfb;
+            margin: 1rem 0;
+            padding: 10px;
+            box-sizing: border-box;
+           
+            ul{
+                @include flex;
+                // padding-right: 1rem;
+                // border-right: 1px solid #ddd;
+                li{
+                    @include flex;
+                    @include center-c;
+                    span{
+                        font-size: 15px;
+                        padding-top: 3px;
+                        margin: 0 4px;
+                    }
+                    select, input{
+                        width: 150px;
+                        height: 28px;
+                        border: 1px solid $in_select_border;
+                    }
+
+                }
+                .mobile_debtn{
+                    display: none;
+                }
+            }
+            .iconbtn{
+                width: auto;
+                margin-left: 1rem;
+            }
+        }
+        .center{
+            @include center-r;
+            margin: 0;
+            padding: 0;
+            background-color: $white;
+        }
+        .button3{
+            justify-content: space-between;
+            .detail_tab{
+                width: auto;
+            }
+            .iconbtn{
+                width: auto;
+            }
+            .rightbox{
+                @include flex;
+                @include center-c;
+            }
+        }
+        .detail_tab{
+            @include flex;
+            @include center-r;
+            margin: 1rem 0;
+            overflow: auto;
+            li{
+                // width: 10%;
+                height: 35px;
+                background-color: $white;
+                margin-left: 3px;
+                box-sizing: border-box;
+                a{
+                    border: 1px solid #008357;
+                    font-size: 15px;
+                    color: #494949;
+                    @include full;
+                    @include flex;
+                    @include center-r;
+                    @include center-c;
+                    white-space: nowrap;
+                    padding: 0 6px;
+                    box-sizing: border-box;
+                    span{
+                        padding-left: 8px;
+                        box-sizing: border-box;
+                    }
+                }
+                &.onborder{
+                    background-color: #008357;
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+            
+      
+        }
+        .tab1{
+            
+            .inout_search{
+                tr{
+                    td{
+                        &.btnspace{
+                            background-color: $white;
+                        }
+                    }
+                    
+                }
+            }
+            .scroll_area{
+                table{
+                    box-sizing: border-box;
+                    width: 100%;
+                    border: 1px solid #d8d8d8;
+                    border-top: $tabletop;
+                    thead{
+                        tr{
+                            th{
+                                padding: 10px 0;
+                                background-color: #f2f8f6;
+                                border: 1px solid #d8d8d8;
+                                color: #333;
+                                border-top: none;
+                            }
+                        }
+                    }
+                    tbody{
+                        tr{
+                            text-align: center;
+                            border-bottom: 1px solid #d8d8d8;
+                            td{
+                                color: #666;
+                                border-left: 1px solid #d8d8d8;
+                                padding: 10px 0;
+                                font-size: 15px;
+                                text-align: center;
+                                vertical-align: middle;
+                                &.bg{
+                                    background-color: $thbg;
+                         
+                                }
+                                
+                            }
+                            
+                        }
+                    }
+                }
+                 // select
+                select{
+                    padding: 6px 2rem 6px 4px;
+                    margin: 0 2px;
+                    color: #555;
+                    outline: none;
+                    border: 1px solid #aaa;
+                    height: 30px;
+                    min-width: 100px;
+                    background: url(../img/selectborder.png) no-repeat right top/contain #fff;
+                }
+                
+            }
+            .hfix{
+                height: 300px;
+                max-height: 300px;
+                overflow-y: auto;
+            }
+            .inout_table2{
+                
+                width: 100%;
+                border: 1px solid #c4cbd2;
+                border-top: 2px solid #006b54;
+                margin-bottom: 10px;
+                tr{
+                    &:first-child{
+                        border-bottom: 1px dashed #c4cbd2;
+                        td{
+                            background-color: #f2f8f6;
+                        }
+                    }
+                    td{
+                        width: calc(100% / 4);
+                        border-right: 1px solid #c4cbd2;
+                        font-size: 15px;
+                        text-align: center;
+                        background-color: $white;
+                        padding: 18px 0;
+                    }
+                }
+            }
+            // 전체입출고 테이블
+            table.totaldetail{
+                border: 1px solid #e3e3e3;
+                thead{
+                    tr{
+                        th{
+                            background-color: #f2f2f2;
+                            border: 1px solid #e3e3e3;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            &:first-child{
+                                cursor: pointer;
+                            }
+                            &.bg{
+                                background-color: #f2f2f2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 입출고관리 등록하기 페이지
+            .add_area{
+                table{
+                    tr{
+                        td{
+                            &:nth-child(odd){
+                                width: 30%;
+                            }
+                            &:nth-child(even){
+                                width: 70%;
+                                padding-left: 10px;
+                                text-align: left;
+                                
+                            }
+                            &.memo{
+                                input{
+                                    width: 90%;
+                                }
+                               
+                            }
+                            select, input{
+                                width: 200px;
+                                height: 28px;
+                                border: 1px solid #aaa;
+                            }
+                        }
+                    }
+                }
+            }
+            .completebtn{
+                margin-top: 1rem;
+                @include flex;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                box-sizing: border-box;
+                button{
+                    width: 120px;
+                    cursor: pointer;
+                    height: auto;
+                    padding: 4px 15px;
+                    background-color: $white;
+                    box-sizing: border-box;
+                    border: 1px solid #494949;
+                    white-space: nowrap;
+                    color: #494949;
+                    @include flex;
+                    @include center-c;
+                    @include center-r;
+                    margin-right: 4px;
+                    transition: .3s;
+                    
+                    &:first-child{
+                        border: 1px solid #006b54;
+                        color: #006b54;
+                        i{
+                            font-size: 18px;
+                            margin-right: 4px;
+                        }
+                    }
+                
+                    &:hover{
+                        background-color: #006b54;
+                        color: $white;
+                    }
+                        
+                    
+                }
+                .resister_btn{
+                    border: 1px solid #006b54;
+                    color: #006b54;
+                    img{
+                        height: 26px;
+                        margin-right: 4px;
+                    }
+                }
+                .editbtn{
+                    padding: 6px 15px;
+                }
+            }
+            
+        }
+
+        
+        //통계자료 - 민원접수월별
+        table.minwon_month{
+            thead{
+                tr{
+                    th{
+                        width: calc(85% / 13);
+                        &:first-child{
+                            width: 15%;
+                        }
+                        .yearbtn_box{
+                            @include flex;
+                            @include center-c;
+                            @include center-r;
+                            span{
+                                margin: 0 10px;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                }
+            }
+            tbody{
+                tr{
+                    td{
+                        &:first-child{
+                            background-color: $thbg;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 업체관리
+        .contbox{
+            .combtn{
+                justify-content: flex-start;
+            }
+            table.company{
+                tr{
+                    td{
+                        cursor: pointer;
+                        
+                    }
+                }
+            }
+        }
+        //환경설정
+        .contbox{
+            .bosusetbox{
+                height: 100%;
+                .setbox{
+                    height: 100%;
+                    overflow: auto;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    .box{
+                        width: 30%;
+                        .itemwrap{
+                            .item{
+                                .local_add{
+                                    height: auto;
+                                    padding-bottom: 1rem;
+                                    flex-direction: column;
+                                    box-sizing: border-box;
+                                    >.btn{
+                                        @include flex;
+                                    }
+                                    .local{
+                                        flex-direction: row;
+                                        margin-top: 3px;
+                                        .btn{
+                                            margin-top: 0;
+                                            margin-left: 4px;
+                                        }
+                                        label{
+                                            input{
+                                                width: 100px;
+                                                margin-left: 0 !important;
+                                            }
+                                        }
+                                    }
+                                }
+                                .localsetbox{
+                                    flex-direction: column;
+                                    .input_box{
+                                        @include flex;
+                                        margin: 3px 0;
+                                    }
+                                }
+                            }
+                        }   
+                        
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+// 도로조명 팝업창
+.pgpop{
+    table{
+        tr{
+            td{
+                .authority{
+                    select{
+                        margin-bottom: 5px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// 도로조명 분전함상세보기
+.doro_info{
+    .between{
+        height: calc(100% - 51px);
+        .table_wrapper{
+            .imgbox{
+                @include flex;
+                @include center-c;
+                li{
+                    @include flex;
+                    @include center-c;
+                    @include center-r;
+                    width: calc(100% / 3);
+                    a{
+                        img{
+                            width: 100%;
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+            h3{
+                background-color: #f6f7f8;
+                color: #095b74;
+                border-bottom: 1px double #bdbdbd;
+                border-width: 4px;
+                padding: 8px 0 6px 0;
+                margin: 10px 0;
+            }
+            .table1{
+                tbody{
+                    tr{
+                        td{
+                            &:nth-child(odd){
+                                font-family: 'GmarketSansLight';
+                                font-weight: 700;
+                                font-size: 15px;
+                                width: 27%;
+                            }
+                            >div{
+                                @include flex;
+                                input{
+                                    margin-right: 2px;
+                                }
+                            }
+                            &:nth-child(even){
+                                width: 23%;
+                            }
+                            .version{
+                                width: 80px;
+                                background-color: $white;
+                                input{
+                                    width: 50px;
+                                    border: 1px solid $in_select_border;
+                                }
+                                
+                            }
+                            &.lineh{
+                                line-height: inherit;
+                            }
+                            &.address_text{
+                                @include flex;
+                                width: 73%;
+                                .addressbox{
+                                    @include center-c;
+                                    @include flex;
+                                    margin-right: 8px;
+                                    p{
+                                        margin-right: 5px;
+                                        line-height: initial;
+                                    }
+                                    span{
+                                        padding: 0 8px;
+                                        i{
+                                            margin-left: 0;
+                                        }
+                                    }
+                              
+                                }
+                            }
+                            &.vol{
+                                width: 73%;
+                                input{
+                                    width: 90%;
+                                }
+                            }
+                           
+                        }
+                        
+                    }
+                }
+            }
+            .bosulist{
+                
+                table{
+                    border-top: 2px solid #666;
+                    tr{
+                        display: table-row;
+                        th{
+                            padding: 6px 0;
+                            background-color: $td_color;
+                            box-sizing: border-box;
+                            border-right: $table_border;
+                        }
+                        td{
+                            width: 33.3% !important;
+                            padding: 6px 0;
+                            border-right: $table_border;
+                            box-sizing: border-box;
+                            &:nth-child(odd){
+                                background-color: $white;
+                            }   
+                            
+                        }
+                   
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+

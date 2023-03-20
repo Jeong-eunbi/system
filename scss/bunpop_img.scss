@@ -1,0 +1,127 @@
+@import "./var", "./popup";
+
+.img_view{
+    padding: 0 5px;
+    overflow: auto;
+    box-sizing: border-box;
+    h2{
+        background-color: rgb(246, 246, 246);
+        $border: 1px solid #ddd;
+        border-top: $border;
+        border-bottom: $border;
+        margin-bottom: 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+    ul.img_group{
+        width: 100%;
+        @include flex;
+        @include center-r;
+        li{
+            width: calc(100% / 3);
+            margin: 0 2px;
+            box-sizing: border-box;
+            img{
+                @include full;
+
+            }
+            span{
+                margin-top: 5px;
+            }
+        }
+    }
+    .filewrap{
+        margin-top: 10px;
+        box-sizing: border-box;
+        ul{
+            li{
+                @include flex;
+                border-radius: 4px;
+                @include center-c;
+                padding: .5rem;
+                box-sizing: border-box;
+                background-color: #fafcfe;
+                margin-bottom: .5rem;
+                border: 1px solid #e2e6e7;
+                transition: .5s;
+                &:hover{
+                    box-shadow: 2px 3px 5px rgba(0,0,0, .15);
+                }
+                .file_list{
+                    margin: 0 8px;
+                }
+                label.file_name{
+                    width: 100%;
+                    @include flex;
+                    @include center-c;
+                    @include between;
+                    cursor: pointer;
+                    i{
+                        color: #3464ab;
+                        font-size: 19px;
+                        margin: 0 1rem;
+                    }
+                    .file_text{
+                        @include flex;
+                        input[type="text"]{
+                            border: none;
+                            border: 1px solid $in_select_border;
+                        }
+                        input[type="file"] {
+                            position: absolute;
+                            width: 1px;
+                            height: 1px;
+                            padding: 0;
+                            overflow: hidden;
+                            clip: rect(0,0,0,0);
+                            border: 0;
+                        }
+                        .file_cont{
+                            padding: .5rem .7rem;
+                            background-color: $greybg;
+                            border: 1px solid #ebebeb;
+                            border-radius: .25rem;
+                            -webkit-appearance: none;
+                            -moz-appearance: none; 
+                            appearance: none;
+
+                        }
+                        label{
+                            font-size: 14px;
+                            padding: .5rem .75rem;
+                            background-color: #e4e4e5;
+                            border: 1px solid #ebebeb;
+                            border-radius: .25rem;
+                            border-bottom-color: #e2e2e2;
+                        }
+                    }
+                    p{
+                        line-height: 1.5;
+                    }
+                    a{
+                        i{
+                            color: #999;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .delete{
+        color: #bcbcbb;
+        display: block;
+        font-size: 14px;
+    }
+    .minibtn_group{
+        .clear{
+            margin-right: 5px;
+            border: 1px solid #3464ab;
+            background-color: transparent;
+            box-sizing: border-box;
+            a{
+                color: #3464ab;
+            }
+        }
+    }
+}

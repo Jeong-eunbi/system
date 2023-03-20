@@ -1,0 +1,774 @@
+.pop {
+  padding: 0.188rem;
+  background-color: #fff;
+  position: absolute !important;
+  border: 1px solid #2a3b5e;
+  left: 10%;
+  top: 10%;
+  box-sizing: border-box;
+  box-shadow: 0 24px 32px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 0.5rem;
+  display: none;
+}
+.pop input, .pop select {
+  border: 1px solid #dbdee1;
+}
+.pop tr {
+  padding: 3px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #cacdd4;
+}
+.pop div[class^=jung] {
+  width: 100%;
+  height: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: none;
+}
+.pop .popcon_wrap {
+  height: calc(100% - 86px);
+}
+.pop .popcon_wrap .nav_list {
+  height: calc(100% - 40px - 34px);
+}
+.pop .popcon_wrap .nav_list .table_wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td {
+  font-weight: normal;
+  color: #222;
+  height: 30px;
+  line-height: 30px;
+  box-sizing: border-box;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td:nth-child(odd) {
+  width: 25%;
+  background-color: #efefef;
+  text-align: center;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td:nth-child(even) {
+  width: 25%;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td input, .pop .popcon_wrap .nav_list .table_wrapper .table1 tr td select {
+  width: 90%;
+  height: 30px;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address {
+  width: 70%;
+  height: auto;
+  line-height: initial;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address .input_group {
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address .input_group input {
+  width: 100%;
+  margin-right: 2px;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address .address_text {
+  width: 100%;
+  padding: 0;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address .address_text p {
+  padding: 0;
+  margin: 5px 0;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address .address_text .text_address {
+  color: red;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.address .address_text .text_address i {
+  margin-right: 0.8rem;
+  color: red;
+  margin-left: 0;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.height {
+  height: 90px;
+  line-height: 90px;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.etc {
+  height: 90px;
+  width: 75%;
+  height: 90px;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.note {
+  width: 75%;
+  height: 90px;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.note textarea {
+  width: 90%;
+  border: 1px solid #dbdee1;
+  height: 90px;
+}
+.pop .popcon_wrap .nav_list .table_wrapper .table1 tr td.modem_sch {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 {
+  padding-top: 0;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.line {
+  width: 75%;
+  height: auto;
+  line-height: initial;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.line .flexbox {
+  width: 90%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.line .flexbox span.colornone {
+  padding: 6px;
+  box-sizing: border-box;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.line .input_group {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.line .input_group input {
+  width: 30%;
+  margin-right: 4px;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.flex {
+  width: 25%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.flex > div {
+  width: 98%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.flex > div select:first-child {
+  margin-right: 4px;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.flex .place {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr td.flex .place input[type=checkbox] {
+  width: 16px;
+  height: 16px;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr.location td > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr.location td > div span {
+  padding-top: 1.5px;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr.location td > div input {
+  vertical-align: middle;
+  margin-left: 4px;
+  width: 16px;
+  height: 16px;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 tr.location td.placeno {
+  line-height: initial;
+}
+.pop .popcon_wrap .nav_list .jung_tab1 .table1 .btn_group {
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td {
+  vertical-align: middle;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td:first-child {
+  width: 25%;
+  background-color: #efefef;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td:last-child {
+  width: 75%;
+  padding-left: 8px;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td:last-child select {
+  width: 50%;
+  height: 30px;
+  margin-right: 4px;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td.smbox {
+  display: flex;
+  align-items: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td.smbox select, .pop .popcon_wrap .nav_list .jung_tab2 table tr td.smbox input {
+  width: 50px;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td.smbox > span {
+  margin-right: 4px;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td.smbox div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab2 table tr td.smbox div span {
+  margin-right: 4px;
+}
+.pop .popcon_wrap .nav_list .jung_tab3 table {
+  border-top: 2px solid #666;
+}
+.pop .popcon_wrap .nav_list .jung_tab3 table thead tr th {
+  height: 30px;
+  vertical-align: middle;
+  background-color: #efefef;
+  border-right: 1px solid #cacdd4;
+}
+.pop .popcon_wrap .nav_list .jung_tab3 table thead tr th:first-child {
+  border-left: 1px solid #cacdd4;
+}
+.pop .popcon_wrap .nav_list .jung_tab3 table tbody tr td {
+  border-right: 1px solid #cacdd4;
+  text-align: center;
+  vertical-align: middle;
+  padding: 4px 8px;
+  font-size: 15px;
+}
+.pop .popcon_wrap .nav_list .jung_tab3 table tbody tr td:first-child {
+  border-left: 1px solid #cacdd4;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 .top-right-btn button {
+  height: 30px;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 tr {
+  display: flex;
+  align-items: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 input {
+  height: 30px;
+  box-sizing: border-box;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 .serial {
+  width: 17%;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 .serial input {
+  width: 90%;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 thead tr {
+  border-top: 2px solid #666;
+  background-color: #efefef;
+  height: 30px;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 thead tr th {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 thead tr th:first-child {
+  width: 5%;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 thead tr th:first-child input {
+  width: 16px;
+  height: 16px;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 thead tr th:nth-child(2) {
+  width: 10%;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 tbody tr td {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-sizing: border-box;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 tbody tr td:first-child {
+  width: 5%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 tbody tr td:first-child input {
+  width: 16px;
+  height: 16px;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 tbody tr td:nth-child(2) {
+  width: 10%;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 tbody tr td:nth-child(2) input {
+  width: 90%;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 .btn_group {
+  flex-wrap: wrap;
+}
+.pop .popcon_wrap .nav_list .jung_tab4 .btn_group .left {
+  margin-bottom: 4px;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between {
+  justify-content: flex-start;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .top-right-btn .event2 {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .top-right-btn .event2 .event_wrap2 {
+  right: 0;
+  top: 40px;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .top-right-btn .event2 .event_wrap2 .off2 {
+  order: 2;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper {
+  height: 100%;
+  overflow: auto;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table {
+  width: 100%;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #cacdd4;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr:first-child {
+  border-top: 2px solid #666;
+  width: 100%;
+  background-color: #efefef;
+  text-align: center;
+  font-weight: bold;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr:first-child td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  font-weight: bold;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr:first-child td:last-child {
+  justify-content: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td {
+  color: #666;
+  border-right: 1px solid #cacdd4;
+  font-weight: normal;
+  color: #222;
+  height: auto;
+  line-height: initial;
+  box-sizing: border-box;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td:nth-child(1), .pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td:nth-child(2) {
+  width: 25%;
+  justify-content: center;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td:last-child {
+  width: 50%;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td i {
+  margin-right: 5px;
+  padding: 4px;
+  font-size: 14px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td span.eventpop {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 4px;
+  color: #3952fb;
+  border: 1px solid #ececec;
+  word-break: keep-all;
+}
+.pop .popcon_wrap .nav_list .jung_tab5 .between .table_wrapper table tr td span.eventpop:hover {
+  background-color: rgba(234, 255, 4, 0.308);
+}
+
+#jum_sang .nav_list {
+  height: calc(100% - 48px - 8px);
+}
+#jum_sang .nav_list table tr td.add2 {
+  height: 100px;
+  line-height: 100px;
+}
+#jum_sang .nav_list table tr td .blackbox {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 4px 0;
+  box-sizing: border-box;
+}
+#jum_sang .nav_list table tr td .blackbox input {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+  box-sizing: border-box;
+}
+#jum_sang .nav_list .jum_tab3 .between {
+  width: 100%;
+}
+#jum_sang .nav_list .jum_tab4 {
+  height: 100%;
+  flex-direction: column;
+}
+#jum_sang .nav_list .jum_tab4 .top-right-btn .work_con {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+#jum_sang .nav_list .jum_tab4 .top-right-btn .work_con span {
+  margin: 0 4px;
+}
+#jum_sang .nav_list .jum_tab4 .between {
+  width: 100%;
+  height: calc(100% - 41px - 16px);
+}
+#jum_sang .nav_list .jum_tab4 .between table {
+  flex-direction: column;
+}
+#jum_sang .nav_list .jum_tab4 .between table input {
+  width: 16px;
+  height: 16px;
+}
+#jum_sang .nav_list .jum_tab4 .between table thead tr {
+  height: 30px;
+  border-bottom: none;
+  border-top: none;
+  background-color: #efefef;
+}
+#jum_sang .nav_list .jum_tab4 .between table thead tr th {
+  width: 31.6666666667%;
+}
+#jum_sang .nav_list .jum_tab4 .between table thead tr th:first-child {
+  width: 5%;
+}
+#jum_sang .nav_list .jum_tab4 .between table tbody tr {
+  background-color: #fff;
+}
+#jum_sang .nav_list .jum_tab4 .between table tbody tr td {
+  border-right: 1px solid #cacdd4;
+  background-color: #fff;
+  width: 31.6666666667%;
+}
+#jum_sang .nav_list .jum_tab4 .between table tbody tr td:first-child {
+  width: 5%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jung_setbox {
+  height: 650px;
+}
+.jung_setbox > iframe {
+  height: calc(100% - 40px);
+}
+
+.jung_add {
+  display: none;
+}
+
+.contwrap table {
+  width: 100%;
+  margin-top: 1rem;
+  border-top: 2px solid #666;
+}
+.contwrap table tr {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  padding: 3px;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.contwrap table tr td {
+  height: 30px;
+  line-height: 30px;
+}
+.contwrap table tr td:nth-child(odd) {
+  width: 25%;
+  background-color: #efefef;
+  text-align: center;
+}
+.contwrap table tr td:last-child {
+  padding-left: 10px;
+}
+.contwrap table tr td > div {
+  width: 100%;
+  height: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.contwrap table tr td > div select {
+  margin-right: 4px;
+  width: 100px;
+}
+.contwrap table tr td input, .contwrap table tr td select {
+  border: 1px solid #dbdee1;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.viewbox {
+  height: calc(100% - 1rem);
+  padding-top: 0 !important;
+  margin-top: 1rem;
+  border-top: 2px solid #666;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.viewbox input, .viewbox select {
+  border: 1px solid #dbdee1;
+  box-sizing: border-box;
+}
+.viewbox .table_wrapper {
+  height: 100%;
+  overflow: auto;
+}
+.viewbox .table_wrapper table.basic tr {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-bottom: 1px solid #cacdd4;
+  box-sizing: border-box;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(odd) {
+  padding: 4px 0;
+  width: 20%;
+  text-align: center;
+  background-color: #efefef;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(odd) > div input {
+  vertical-align: middle;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) {
+  width: 30%;
+  padding-left: 8px;
+  box-sizing: border-box;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) input {
+  width: 80%;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) input, .viewbox .table_wrapper table.basic tr td:nth-child(even) select {
+  height: 25px;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) textarea {
+  width: 80%;
+  height: 80px;
+  border: 1px solid #dbdee1;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) > div input[type=text], .viewbox .table_wrapper table.basic tr td:nth-child(even) > div select {
+  width: 48%;
+  margin-right: 4px;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) > div span {
+  font-size: 14px;
+}
+.viewbox .table_wrapper table.basic tr td:nth-child(even) > div > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.viewbox .table_wrapper table.basic tr td.height {
+  height: 80px;
+  line-height: 80px;
+}
+.viewbox .table_wrapper table.basic tr td.full {
+  width: 80%;
+}
+.viewbox .btn_group {
+  padding: 0.5rem;
+  margin-top: 0.9rem;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  background-color: #f5f5f5;
+}
+.viewbox .btn_group .right {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+.viewbox .btn_group .right div {
+  border: 2px solid #cac3c3;
+  box-sizing: border-box;
+  background-color: #2a3b5e;
+  padding: 0;
+  margin-right: 5px;
+  width: 80px;
+  height: 35px;
+  border-radius: 3px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.viewbox .btn_group .right div a {
+  font-size: 14px;
+  color: #919191;
+}
+
+.detailpop {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  border: 1px solid #eee;
+  box-shadow: 0px 3px 1px #ddd;
+  width: 300px;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  box-sizing: border-box;
+}
+.detailpop .poptitle {
+  width: 100%;
+  padding: 8px;
+  background-color: #02652f;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+.detailpop .poptitle h3 {
+  color: #fff;
+  margin: 0;
+  box-sizing: border-box;
+}
+.detailpop .poptitle a i {
+  color: #fff;
+}
+.detailpop .border {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}
+.detailpop .border select {
+  padding: 6px 1.5rem 6px 4px;
+  margin: 0 2px;
+  color: #555;
+  outline: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #aaa;
+  height: 30px;
+  min-width: 100px;
+  background: url(../img/selectborder.png) no-repeat right top/contain #fff;
+}
+.detailpop .border span {
+  display: block;
+  margin: 8px 0;
+  color: #595959;
+  font-size: 15px;
+}
+.detailpop .border ul {
+  border-top: 2px solid #265c4e;
+  padding: 0 8px 8px 0;
+}
+.detailpop .border ul li {
+  border-bottom: 1px solid #dfdfdf;
+  padding: 5px;
+}
+.detailpop .border ul li select {
+  border-radius: 0;
+}
+.detailpop .border ul li > div {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+}
+.detailpop .border ul li > div span {
+  margin: 0 4px;
+}
+.detailpop .border ul li input {
+  border: none;
+  height: 30px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+}
+.detailpop .border .group_sel {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.detailpop .border > div .search_box {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.detailpop button {
+  float: right;
+  padding: 3px 12px;
+  margin: 6px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  border: 1px solid;
+}

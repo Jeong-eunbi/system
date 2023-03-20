@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>구형분수대 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/bunsu.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/index.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>    
+    <div class="bun_tab4 oldwrap bunsu_tab4">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>분수대</span>
+                <select name="" id="">
+                    <option value="">(임)30-0474</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bunsu_height">
+            <ul class="nav">
+                <li><a href="oldbunsutab1.html" class="text">기본정보</a></li>
+                <li><a href="oldbunsutab2.html" class="text">상태정보</a></li>
+                <li><a href="oldbunsutab3.html" class="text">운용데이터</a></li>
+                <li><a href="oldbunsutab4.html" class="text_active">이벤트</a></li>
+            </ul>
+            <div class="between">
+                <!-- 이벤트버튼 -->
+                <div class="top-right-btn">
+                    <div class="datebox">
+                        <input type="date" name="" id="">
+                        <span>~</span>
+                        <input type="date" name="" id="">
+                    </div>
+                    <div class="event2">
+                        <select name="" id="">
+                            <option value="">이벤트전체</option>
+                            <option value="">MG차단</option>
+                            <option value="">분기차단</option>
+                            <option value="">이상점등</option>
+                            <option value="">정전</option>
+                            <option value="">문열림</option>
+                            <option value="">강제이벤트</option>
+                            <option value="">이상-강제</option>
+                        </select>
+                    </div>
+                    <div class="search_btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+                </div>
+                <div class="table_wrapper">
+                    <div class="gambox">
+                        <table class="bunsugam_list">
+                            <thead>
+                                <tr>
+                                    <th class="when">날짜</th>
+                                    <th class="when">시간</th>
+                                    <th>상태</th>
+                                    <th>내용</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state" onclick="bunsuevent_btn()">강제정지</span></td>
+                                    <td>이벤트</td>
+                                </tr>
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state" onclick="bunsuevent_btn()">강제정지</span></td>
+                                    <td>이벤트</td>
+                                </tr>  
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state">강제정지</span></td>
+                                    <td><span>이벤트</span><span class="comment" onclick="bunsuevent_btn()">분기차단</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state">강제정지</span></td>
+                                    <td><span>이벤트</span><span class="comment" onclick="bunsuevent_btn()">분기차단</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state">강제정지</span></td>
+                                    <td><span>이벤트</span><span class="comment" onclick="bunsuevent_btn()">분기차단</span></td>
+                                </tr> 
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state">강제정지</span></td>
+                                    <td><span class="comment" onclick="bunsuevent_btn()">분기차단</span></td>
+                                </tr>
+                                <tr>
+                                    <td class="when">2022.11.11</td>
+                                    <td class="when">17:30:03</td>
+                                    <td><span class="state">강제정지</span></td>
+                                    <td><span class="comment" onclick="bunsuevent_btn()">분기차단</span></td>
+                                </tr>
+    
+                            </tbody>
+                        </table>
+                    </div>                           
+    
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+</body>

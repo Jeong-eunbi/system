@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 아이폰 주소창 숨기기 -->
+    <meta name=”apple-mobile-web-app-capable” content=”yes” />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui, viewport-fit=cover">
+    <title>중계기 상세보기</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/bun_control.css">
+    <link rel="stylesheet" href="../css/jung_pop.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+    <link rel="stylesheet" href="../css/subcont.css">
+    <!-- <link rel="stylesheet" href="css/mobile.css"> -->
+    <link rel="stylesheet" href="../css/subre.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" defer src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" defer src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+    
+
+    <script type="text/javascript" defer src="../js/bun.js" ></script>
+    <script type="text/javascript" defer src="../js/sub.js" ></script>
+    <script type="text/javascript" defer src="../js/jung.js" ></script>
+    <script type="text/javascript" defer src="../js/responsive.js" ></script>
+
+</head>
+<body>
+    <div class="jungbox">
+        <div class="top_fix">
+            <div class="bun_select">
+                <span><i class="fas fa-check-circle"></i>중계기</span>
+                <select name="" id="">
+                    <option value="">신형 중계기 테스트</option>
+                    <option value="">마석우천1</option>
+                    <option value="">마석우천2</option>
+                    <option value="">마석우천3</option>
+                    <option value="">마석우천4</option>
+                </select>
+            </div>
+            <div class="floating_menu">
+                <a href="#a"><i class="fas fa-angle-double-down"></i></a>
+                <ul class="floating_icon">
+                    <li class="print">
+                        <a href="../minipop/bunpop_print.html" target="_blank"><i class="fas fa-print"></i>프린트</a>
+                    </li>
+                    <li class="img">
+                        <a href="#a" onclick="photobtn()"><i class="far fa-image"></i>이미지</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="popcon_wrap">
+            <ul class="nav">
+                <li><a href="junggye1.html" class="text_active">기본정보</a></li>
+                <li><a href="junggye2.html" class="text">운용데이터</a></li>
+                <li><a href="junggye3.html" class="text">점멸기 LIST</a></li>
+                <li><a href="junggye4.html" class="text">경로 LIST</a></li>
+                <li><a href="junggye5.html" class="text">개별감시내역</a></li>
+            </ul>
+            <span class="name"> MC 00/0001/CH:2</span>
+            <div class="nav_list">
+                <div class="bun_tab1 jung_tab1">
+                    <div class="between">
+                        <div class="table_wrapper">
+                            <table class="table1">
+                                <tbody>
+                                    <tr>
+                                        <td>중계기이름</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>ELB 상태</td>
+                                        <td>정상</td>
+                                    </tr>
+                                    <tr>
+                                        <td>정전</td>
+                                        <td>
+                                            정상
+                                        </td>
+                                        <td>무전번호</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>전주번호</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>모뎀타입</td>
+                                        <td>
+                                            <select name="" id="">
+                                                <option value="">Kt Olleh</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>변대주번호</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>모뎀IP</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>설치일자</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>SIM카드</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>설치위치</td>
+                                        <td>
+                                            <input type="text">
+                                        </td>
+                                        <td>위치정보</td>
+                                        <td class="placeno" colspan="3">37.719607 127 .20321</td>
+                                    </tr>
+                                    <tr>
+                                        <td>새주소</td>
+                                        <td colspan="3" class="address">
+                                            <input type="text">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height setaddress">설치 주소</td>
+                                        <td colspan="3" class="address etc">
+                                            <div class="input_group">
+                                                <input type="text">
+                                                <input type="text">
+                                                <input type="text">
+                                            </div>
+                                            <div class="address_text">
+                                                <p>진전읍 금곡리 1127-87</p>
+                                                <span class="text_address text_btn" onclick="addressbtn()"><i class="fas fa-address-book"></i>주소변경</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="height">비고</td>
+                                        <td class="etc" colspan="3">
+                                            <textarea name="" id="" cols="10" rows="10"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+    
+                        </div>
+                        <div class="btn_group">
+                            <div id="button" class="left">
+                                <div>
+                                    <a href="#a" onclick="elbbtn()">ELB제어</a>
+                                </div>
+                                <div>
+                                    <a href="#">점검</a>
+                                </div>
+                                <div><a href="">IP송출</a></div>
+                            </div>
+                            <div class="right">
+                                <div><a href="">삭제</a></div>
+                                <div><a href="">수정</a></div>
+                                <div><a href="">닫기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>

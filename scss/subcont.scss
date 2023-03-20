@@ -1,0 +1,809 @@
+@import "./var";
+.wrapper{
+    .cont{
+        @include full;
+        // margin: 0 auto;
+        @include flex;
+        @include center-c;
+        position: relative;
+        justify-content: center;
+        padding-top: 20px;
+        box-sizing: border-box;
+        //메뉴
+
+
+        .contbox{
+            width: 81.5%;
+            height: 100%;
+            //table 내부
+            span.smtxt{
+                font-size: 14px;
+                margin-left: 8px;
+                box-sizing: border-box
+            }
+            a.photobtn{
+                color: #8cc055;
+                margin-left: 8px;
+                box-sizing: border-box;
+            }
+    
+            .btnwrap select, .detailpop select{
+                padding: 6px 1.5rem 6px 4px;
+                margin: 0 2px;
+                color: #555;
+                outline: none;
+                appearance: none;
+                border: 1px solid #aaa;
+                height: 30px;
+                min-width: 100px;
+                background: url(../img/selectborder.png) no-repeat right top/contain #fff;
+            }
+            .btnwrap .rightbtn{
+                .flex{
+                    display: flex;
+                    span{
+                        font-family: 'GmarketSansLight';
+                    }
+                    span.data-gap{
+                        margin: 0 2px;
+                        
+                    }
+                }
+                
+            }
+                    
+        
+    
+            //중계기
+            .boanbtn_group{
+                .rightbtn{
+                    select{
+                        display: block;
+                    }
+                }
+            }
+    
+            // 분전함선택제어시작
+            .btnwrap{
+                @include flex;
+                @include between;
+                padding: 15px 25px;
+                box-sizing: border-box;
+                background-color: #e7ebee;
+                flex-wrap: wrap;
+                >div{
+                    @include flex;
+                    @include center-c;
+                    >div, select{
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                    
+        
+                    div{
+                        span.b_icon{
+                            color: #3162c7;
+                            padding: 4px;
+                            box-sizing: border-box;
+                            i{
+                                margin-right: 8px;
+                                color: #3162c7;
+                            }
+                            &:last-child{
+                                color: #189f00;
+                                i{
+                                    @include reply;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn_bg{
+                    background-color: #3d3d3d;
+                    margin-right: 8px;
+                    padding: 0 8px;
+                    height: 30px;
+                    line-height: 30px;
+                    a{
+                        display: block;
+                        padding-top: 2px;
+                        color: #fff;
+                        box-sizing: border-box;                    
+                    }
+                }
+                .rightbtn{
+                    .search_box{
+                        @include flex;
+                        @include center-c;
+                        span{
+                            margin: 0 4px;
+                            padding-top: 4px;
+                        }
+                     
+                    }
+                    .end{
+                        @include flex;
+                        @include center-c;
+                        justify-content: flex-end;
+                    }
+                    .btn_bg{
+                        margin-left: 8px;
+                    }
+                    .detail_btn, .detail_btn2{
+                        background-color: #4b4b4b;
+                        display: none;
+                    }
+                }
+           
+            }
+            .detailpop{
+                display: none;
+                background-color: $white;
+                position: absolute;
+                border: 1px solid #eee;
+                box-shadow: 0px 3px 1px #ddd;
+                width: 300px;
+                right: 0;
+                top: 0;
+                z-index: 9;
+                box-sizing: border-box;
+                .poptitle{
+                    width: 100%;
+                    padding: 8px;
+                    background-color: #02652f;
+                    @include flex;
+                    justify-content: space-between;
+                    @include center-c;
+                    border-radius: 0;
+                    box-sizing: border-box;
+                    h3{
+                        color: #fff;
+                        margin: 0;
+                        box-sizing: border-box;
+                    }
+                    a{
+                        i{
+                            color: #fff;
+                        }
+                    }
+                }
+                .border{
+                    width: 100%;
+                    padding: 4px;
+                    box-sizing: border-box;
+                    span{
+                        display: block;
+                        margin: 8px 0;
+                        color: #595959;
+                        font-size: 15px;
+                    }
+                    ul{
+                        border-top: 2px solid #265c4e;
+                        padding: 0 8px 8px 0;
+                        li{
+                            border-bottom: 1px solid #dfdfdf;
+                            padding: 5px;
+                            select{
+                                border-radius: 0;
+                            }
+                            >div{
+                                @include flex;
+                                @include center-c;
+                                span{
+                                    margin: 0 4px;
+                                }
+                            }
+                            input{
+                                border: none;
+                                height: 30px;
+                                border: 1px solid #aaa;
+                                box-sizing: border-box;
+                            }
+                        }
+                    }
+                    .group_sel{
+                        @include flex;
+                    }
+                    >div{
+                        .search_box{
+                            @include flex;
+                          
+                        }
+                    }
+                }
+                button{
+                    float: right;
+                    padding: 3px 12px;
+                    margin: 6px;
+                    box-sizing: border-box;
+                }
+            }
+            .scroll_wrap{
+                // height: 55vh;
+                height: 70vh;
+                margin: 2rem 0;
+                width: 100%;
+                overflow: hidden;
+
+                .txt{
+                    padding: 10px 0;
+                    box-sizing: border-box;
+                    font-family: 'GmarketSansLight';
+                    font-weight: 600;
+                    >span{
+                        color: #116657;
+                    }
+                }
+                #tablewrap{
+                    height: calc(100% - 64px);
+                    overflow: auto;
+                    border-top: $tabletop;
+                    box-sizing: border-box;
+                    -webkit-overflow-scrolling:touch;
+                    table{
+                        border: $tablelist;
+                        border-top: none;
+                        width: 100%;
+                        position: relative;
+                        input[type="checkbox"]{
+                            cursor: pointer;
+                            width: 16px;
+                            height: 16px;
+                        }
+                        
+                        thead{
+                            width: 100%;
+                            position: sticky;
+                            top: 0;
+                            box-sizing: border-box;
+                            z-index: 2;
+                            max-width: 100%;
+                            white-space: nowrap;
+                            tr{
+                                th{
+                                    cursor: pointer;
+                                    &:first-child{
+                                        border-left: none;
+                                    
+                                    }
+                                    padding: 18px 4px;
+                                    background-color: $thbg;
+                                    border: $tablelist;
+                                    color: #333;
+                                    border-top: none;
+                                    box-sizing: border-box;
+                                }
+                                .w15{
+                                    width: 15%;
+                                }
+                                .w30{
+                                    width: 10%;
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                text-align: center;
+                                transition: .5;
+                                border-bottom: 1px solid #d8d8d8;
+                                &:last-child{
+                                    td{
+                                        border-bottom: none;
+                                    }
+                                }
+                                td{
+                                    word-break: keep-all;
+                                    color: #666;
+                                    border-left: $tablelist;
+                                    font-family: 'GmarketSansLight';
+                                    font-weight: bold;
+                                    >div{
+                                        @include flex;
+                                        @include center-r;
+                                        @include center-c;
+    
+                                    }
+                                    &.cursor:hover{
+                                        background-color: #ebf5df;
+                                        background-color: #f8f8f8;
+                                    }
+                                    &.chk_w{
+                                        width: 5%;
+                                        min-width: 25px;
+                                        border-left: none;
+                                        border-right: $tablelist;
+                                    }
+                                    &.thbg{
+                                        background-color: $thbg;
+                                    }
+                                }
+                               
+    
+                            }
+                        }
+                        th, td{
+                            padding: 18px 0;
+                            text-align: center;
+                            vertical-align: middle;
+                            font-size: 18px;
+                            box-sizing: border-box;
+                            .col{
+                                @include flex;
+                                flex-direction: column;
+                                position: relative;
+                                >span{
+                                    padding: 8px;
+                                    box-sizing: border-box;
+                                    &:first-child{
+                                        
+                                        &::before{
+                                            content: "";
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 45%;
+                                            width: 3px;
+                                            height: 3px;
+                                            background-color: #000;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        td{
+                            padding: 12px 0;
+                            font-size: 16px;
+                        }
+                        td.type{
+                            background-image: url(../img/A11N.gif);
+                            background-repeat: no-repeat;
+                        }
+                        td.cursor{
+                            cursor: pointer;
+                        }
+    
+                    }
+                   
+                    table.order{
+                        tbody{
+                            tr{
+                                td{
+                                    width: 30%;
+                                    &:last-child{
+                                        width: 10%;
+                                    }
+                                    &:nth-child(2){
+                                        color: #02652f;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    table.jeon{
+                        tbody{
+                            tr{
+                                td{
+                                    width: calc(60% / 8);
+                                    &:first-child, &:nth-child(2){
+                                        width: 20%;
+                                    }
+                                }
+                                
+                            }
+                            
+                        
+                        }
+                    }
+                    table.daychk{
+                        tbody{
+                            tr{
+                                td{
+                                    width: calc(100% / 5);
+                                    padding: 15px 8px;
+                                    box-sizing: border-box;
+                                    text-align: center;
+                                    
+                                }
+                            }
+                        }
+                    }
+                    table.bunset{
+                        tbody{
+                            tr{
+                                td{
+                                    width: calc(52% / 7);
+                                    padding: 15px 8px;
+                                    box-sizing: border-box;
+                                    word-break: keep-all;
+                                    &.wide{
+                                        width: 15%;
+                                        .mobile{
+                                            color: $primary;
+                                            background-color: #f6f8f8;
+                                            padding: 4px;
+                                            margin-right: 4px;
+                                            box-sizing: border-box;
+                                        }
+                                    }
+    
+                                }
+                                
+                                
+                            }
+                        }
+                    }
+                    table.dengset{
+                        tbody{
+                            tr{
+                                
+                                td{
+                                    width: calc(55% / 11);
+                                    &.wide{
+                                        width: 10%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    table.deletetable{
+                        tbody{
+                            tr{
+                                td{
+                                    $re: #265c4e;
+                                    $view:#f05022;
+                                    $add: #1b263c;
+                                    span.erase, span.restore, span.add{
+                                        background-color: #942020;
+                                        color: $white;
+                                        padding: 4px 10px;
+                                        font-size: 12px;
+                                        margin: 0 4px;
+                                        box-sizing: border-box;
+                                        white-space: nowrap;
+                                    }
+                                    span.restore{
+                                        background-color: $re;
+                                    }
+                                    span.add{
+                                        background-color: $add;
+                                        
+                                    }
+                                    button{
+                                        border: none;
+                                        background-color: transparent;
+                                        padding: 4px 8px;
+                                        box-sizing: border-box;
+                                        cursor: pointer;
+                                        &.restorebtn{
+                                            color:$re;
+                                            border: 1px solid $re;
+                                        }
+                                        &.viewpop{
+                                            color: $view;
+                                            border: 1px solid $view;
+                                        }
+                                        
+    
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                     //가로등 부가
+                    table.tong{
+                        thead{
+                            tr{
+                                &:nth-child(2){
+                                    th{
+                                        width: 10%;
+                                    }
+                                    &.w30{
+                                        width: 30%;
+                                    }
+                                    &.title_w{
+                                        width: calc(90% / 7);
+                                    }
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                td{
+                                    &:first-child{
+                                        width: 10%;
+                                        background-color: $thbg;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    table.tong6{
+                        thead{
+                            tr{
+                                &:nth-child(2){
+                                    th{
+                                        width: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    table.bosu{
+                        thead{
+                            tr{
+                                &:nth-child(2){
+                                    th{
+                                        width: calc(90% / 9);
+                                        &:first-child{
+                                            width: 5%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    //블루투스
+                    table.bluetooth{
+                        thead{
+                            tr{
+                                th{
+                                    &.bltitle1{
+                                        width: 25%;
+                                    }
+                                    &.bltitle2{
+                                        width: 20%;
+                                    }
+                                    &.bltitle3{
+                                        width: 35%;
+                                    }
+                                    &.bltitle4{
+                                        width: 10%;
+                                    }
+                                    &.bltitle5{
+                                        width: 10%;
+                                    }
+                                }
+                            }
+                        }
+                        tbody{
+                            tr{
+                                
+                                td{
+                                    &.state_wrap{
+                                        width: 10%;
+                                    }
+                                   
+                                    &.send{
+                                        color: #3162c7;
+                                    }
+                                    &.reply{
+                                        i{
+                                            @include reply;
+                                        }
+                                    }
+                                    ul{
+                                        width: 50%;
+                                        min-width: 320px; 
+                                        @include flex;
+                                        flex-direction: column;
+                                        margin: 0 auto;
+                                        text-align: left;
+                        
+                                        li{
+                                            padding-left: 16px;
+                                            position: relative;
+                                            line-height: 1.3;
+                                            font-size: 16px;
+                                            span{
+                                                &::before{
+                                                    position: absolute;
+                                                    content: "";
+                                                    width: 10px;
+                                                    height: 10px;
+                                                    left: 0;
+                                                    top: 10%;
+                                                    border-radius: 50%;
+                                                    background-color: #006b54;
+                                                }
+                                                font-size: 18px;
+                                                color: #3a3a3a;
+                                                margin-right: 8px;
+                                            }
+                                        }
+                                    }
+                                }
+    
+                            }
+                        }
+    
+                    }
+                    
+                }
+                
+            }
+            
+        }
+    
+    
+    }
+}
+
+.qickmenu{
+    @include flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    transition: all .5s;
+    background-color: $white;
+    z-index: 5;
+    #devidebox{
+        @include flex;
+        @include full;
+        border: 1px solid #1e39323d;
+        box-sizing: border-box;
+        #menulist{
+            width: 100%;
+            >div{
+                text-align: center;
+                padding: 18px 24px;
+                background-color: #1e3932;
+                box-sizing: border-box;
+                span{
+                    font-size: 20px;
+                    color: $white
+                }
+            }
+            .submenu{
+                margin-top: 10px;
+                // @include flex;
+                // @include center-r;
+                // margin: 3rem 0 4.5rem;
+                // width: 100%;
+                // height: 3rem;
+                // box-sizing: border-box;
+                // position: relative;
+                >li{
+                    border-top: 1px solid #dcdcdc;
+                    // &:last-child > a{
+                    //     border-right: 1px solid $select_btn;
+                    // }
+                    >a{
+                        @include flex;
+                        @include full;
+                        // @include center-c;
+                        // @include center-r;
+                        // background-color: $mainbg;
+                        // border: 1px solid $select_btn;
+                        @include between;
+                        white-space: nowrap;
+                        border-right: none;
+                        // font-size: 1.313rem;
+                        padding: 15px 15px;
+                        font-family: 'GmarketSansLight';
+                        font-weight: 600;
+                        font-size: 17px;
+                        box-sizing: border-box;  
+                        i{
+                            font-size: 12px;
+                        }
+                    }
+                    
+                    ul.submenu_list{
+                        display: none;
+                    }
+                    
+                }
+                li.click{
+                    background-color: $select_btn;
+                    color: #fff;
+                    >a{  
+                        color: inherit;
+                        // background-color: $select_btn;
+                        position: relative;
+                        // color: $mainbg;
+                        i{
+                            color: inherit;
+                        }
+                    }
+                    ul.submenu_list{
+                        @include flex;
+                        flex-direction: column;
+                        // position: absolute;
+                        padding: 15px 20px;
+                        left: 0;
+                        top: 48px;
+                        box-sizing: border-box;
+                        text-align: left;
+                        width: 100%;
+                        background-color: $white;
+                        >li{
+                            width: 100%;
+                            position: relative;
+                            padding-left: 8px;
+                            margin-bottom: 4px;
+                            display: flex;
+                            align-items: center;
+                            // justify-content: center;
+                            // border-right: 1px solid #ddd;
+                            &:last-child{
+                                border-right: none;
+                            }
+                            &:hover *{
+                                color: #468574;
+                            }
+                            >a{
+                                display: flex;
+                                width: 100%;
+                                justify-content: space-between;
+                                align-items: center;
+                                font-family: 'GmarketSansLight';
+                                font-weight: 600;
+                                white-space: nowrap;
+                                // font-size: 1.125rem;
+                                position: relative;
+                                color: #6a6a6a;
+                                
+                            }
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                left: 0;
+                                top: 5px;
+                                background-color: #6a6a6a;
+                                width: 3px;
+                                height: 3px;
+                            }
+                            
+                        }
+                        .on{
+                            color: #468574;
+                            a{
+                                color: inherit;
+                            }
+                            i{
+                                padding: 4px;
+                                border-radius: 50%;
+                                margin-right: 3px;
+                                font-size: 14px;
+                                // border: 1px solid #3d3d3d;
+                                color: #3d3d3d;
+                                color: #468574;
+                                // background-color: #468574;
+                                // background-color: #1e3932;
+                                box-sizing: border-box;
+        
+                            }
+                        }
+                        
+        
+                    }
+                } 
+                
+            }
+        }
+        #open{
+            position: absolute;
+            height: auto;
+            background-color: #1e3932;
+            writing-mode: vertical-lr;
+            padding: 8px;
+            text-align: center;
+            color: $white;
+            border-radius: 0 8px 8px 0;
+            right: -32px;
+            top: 45%;
+            a{
+                font-size: 12px;
+                letter-spacing: 2px;
+                color: inherit;
+            }
+        }
+    }
+  
+    
+}
+.menushow{
+    left: -200px;
+}

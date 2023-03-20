@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중계기 개별감시내역 이벤트 정보팝업창</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/bun_eventinfo.css">
+    <link rel="stylesheet" href="../css/jung_pop.css">
+    <link rel="stylesheet" href="../css/popupre.css">
+
+    
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="../fontawesomeicon/fontawesome/css/all.min.css">
+
+    <!-- 제이쿼리-->
+    <script type="text/javascript" src="../js/jquery-3.6.0.js" ></script>
+    <script type="text/javascript" src="../js/jquery-3.6.0.min.js" ></script>
+    <!-- 제이쿼리ui -->
+    <script type="text/javascript" src="../jquery-ui-1.13.1.custom/jquery-ui.js" ></script>
+    <link rel="stylesheet" href="../jquery-ui-1.13.1.custom/jquery-ui.css">
+
+    
+    <script defer src="../js/jung.js"></script>
+
+</head>
+<body>
+    <div class="gamsibox">
+        <table class="toptable">
+            <tbody>
+                <tr>
+                    <td>중계기</td>
+                    <td colspan="3" >001 01 002</td>
+                </tr>
+                <tr>
+                    <td>이벤트종류</td>
+                    <td>이벤트</td>
+                    <td>이벤트일시</td>
+                    <td class="text_width">
+                        <span>20220302 16:03:50</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="listtable">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>이름</th>
+                    <th>현재상태</th>
+                    <th>No</th>
+                    <th>이름</th>
+                    <th>현재상태</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>001</td>
+                    <td>정상소등</td>
+                    <td>2</td>
+                    <td>002</td>
+                    <td>정상소등</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>001</td>
+                    <td>정상소등</td>
+                    <td>4</td>
+                    <td>002</td>
+                    <td>정상소등</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>001</td>
+                    <td>정상소등</td>
+                    <td>6</td>
+                    <td>002</td>
+                    <td class="red">통신이상</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>001</td>
+                    <td>정상소등</td>
+                    <td>8</td>
+                    <td>002</td>
+                    <td class="red">정전</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>001</td>
+                    <td>정상소등</td>
+                    <td colspan="3"></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</body>

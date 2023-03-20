@@ -1,0 +1,115 @@
+.wrapper .cont .contbox .rightbtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.wrapper .cont .contbox .rightbtn input {
+  border: 1px solid #aaa;
+  height: 30px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.wrapper .cont .contbox .rightbtn button {
+  background-color: #3d3d3d;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  padding: 0 8px;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox {
+  display: flex;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .boxtitle {
+  height: 40px;
+  background-color: #f2f8f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .boxtitle span {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .boxtitle input {
+  border: none;
+  height: 30px;
+  width: 120px;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox > div {
+  border: 1px solid #d8d8d8;
+  border-top: 3px solid #006b54;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .susin {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1%;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .susin ul.namelist {
+  padding: 10px;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .susin ul.namelist li {
+  list-style-type: disc;
+  list-style-position: inside;
+  line-height: 1.5;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort {
+  width: 70%;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort .boxtitle span {
+  margin: 0;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort .setlist {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort .setlist ul li {
+  line-height: 1.5;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort .setlist ul li label {
+  font-weight: bold;
+  color: #037a4e;
+  cursor: pointer;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort .setlist ul li label input {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.wrapper .cont .contbox .scroll_wrap .messagebox .messagesort .setlist ul li label span {
+  font-weight: normal;
+  color: #666;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.wrapper .cont .contbox .sms_scroll {
+  height: auto;
+}
+.wrapper .cont .contbox .sms_scroll .bunsu_mbox {
+  display: flex;
+}
+.wrapper .cont .contbox .sms_scroll .bunsu_mbox span.message_sort {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 17px;
+}
+.wrapper .cont .contbox .sms_scroll .bunsu_mbox span.pump_sms {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.wrapper .cont .contbox .sms_scroll .bunsu_mbox span.pump_sms::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #8cc055;
+  z-index: -1;
+}
