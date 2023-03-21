@@ -350,6 +350,8 @@
             .content{
                 // height: calc(100vh - 85px - 56px);
                 height: calc(100vh - 45px - 56px);
+                min-height: 100vh;
+                min-height: -webkit-fill-available; 
             }
 
             // 모바일하단메뉴바
