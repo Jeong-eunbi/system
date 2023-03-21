@@ -645,6 +645,8 @@
         .wrapper{
             overflow: auto;
             overflow-x: hidden;
+            min-height: 100vh;
+            min-height: -webkit-fill-available; 
             .cont{
                 height: 100%;
                 align-items: flex-start;
