@@ -17,6 +17,7 @@
   position: relative;
   background-color: #fff;
   overflow: hidden;
+  height: calc(var(--vh, 1vh) * 100);
 }
 .wrapper .min {
   color: #2d78ff;

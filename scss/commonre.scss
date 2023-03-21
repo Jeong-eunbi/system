@@ -851,6 +851,7 @@
 }
 @media all and (max-width:404px){
     @media (orientation: portrait){
+       
         .wrapper .cont{
             padding-top: 0;
             margin-top: 0;
@@ -861,5 +862,16 @@
         .wrapper .cont #bosubox .devidebox #tablescroll{
             height: 100%;
         }
+    }
+    @supports (-webkit-touch-callout: none) {
+        body {
+            min-height: 100vh;
+            /* mobile viewport bug fix */
+            min-height: -webkit-fill-available;
+        }
+        html{
+            height: -webkit-fill-available;
+        }
+       
     }
 }

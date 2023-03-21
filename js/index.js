@@ -288,7 +288,7 @@
 					main[j].className = "non";
 					$(".tongbox").css("display","none");
 					$(".tab_list").eq([j]).css("display","none");
-					$("ul#line_view").css({left:50});
+					// $("ul#line_view").css({left:50});
 				}
 			}
 

@@ -139,16 +139,11 @@
 // 	});
 // }
 
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', vh+"px");
+// resize
+window.addEventListener("resize", ()=>{
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', vh+"px");
+})
 
-
-// $(window).resize(function(){ 
-// 	if (window.innerWidth < 480) {  
-		
-// 		$('#line_view').style.left = 0;
-// 		for(var j = 0; j < mainlist.length; j++){
-// 			$('#line_view').animate({left:0}, 300);
-//         }
-//     }else{
-//         $('#line_view').style.left = 45;
-//     }
-// });

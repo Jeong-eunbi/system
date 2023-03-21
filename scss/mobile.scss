@@ -11,6 +11,17 @@
 
 
 @media (pointer:coarse) {
+    @media(orientation: portrait){
+        // body{
+        //     min-height: 100vh;
+        //     min-height: -webkit-fill-available;
+        // }
+        select option{
+            -webkit-appearance: none;
+            color: #000;
+        }
+
+    }
     @media(orientation: landscape){
         // html {
         //     transform: rotate(90deg);

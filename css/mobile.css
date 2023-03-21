@@ -5,3 +5,10 @@
 * {
   -webkit-text-size-adjust: none;
 }
+
+@media (pointer: coarse) and (orientation: portrait) {
+  select option {
+    -webkit-appearance: none;
+    color: #000;
+  }
+}
